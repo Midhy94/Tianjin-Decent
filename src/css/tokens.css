@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap');
+
+/* ============================================================
+   TIANJIN DECENT INTERNATIONAL TRADING — DESIGN TOKENS
+   Source: DESIGN-together.ai.md (adapted for Tianjin Decent brand)
+   ============================================================ */
+
+:root {
+
+  /* ── BRAND COLORS ── */
+  --color-primary:          #005BE3;   /* Cobalt Blue — primary brand accent, active blue */
+  --color-primary-mid:      #004FCE;   /* Deep cobalt — hover, key details */
+  --color-primary-light:    #009BFF;   /* Electric Cyan/Blue — highlight, active state */
+  --color-accent-steel:     #5F738E;   /* Steel blue-gray — technical labels */
+  --color-accent-silver:    #B2C0D1;   /* Polished Chrome/Silver — borders, muted */
+  --color-accent-cold:      #EBF2FA;   /* Ice cold blue — light tint surface */
+  --color-accent-gold:      #009BFF;   /* Precision detail accent — now electric blue highlight */
+
+  /* ── SURFACES ── */
+  --color-canvas:           #FFFFFF;
+  --color-canvas-soft:      #F4F7FB;   /* Off-white / light technical section bg */
+  --color-canvas-dark:      #06152B;   /* Abyss navy dark bands — matching logo globe dark shadow */
+  --color-canvas-dark-mid:  #0A2145;   /* Slightly lifted dark surface */
+  --color-hairline:         #DCE5F0;   /* Light surface dividers & borders */
+  --color-hairline-on-dark: #143566;   /* Dark surface dividers */
+  --color-surface-dark-soft:#0E2954;   /* Card backgrounds on dark bands */
+
+  /* ── TEXT ── */
+  --color-ink:              #06152B;   /* Dark abyss blue — primary text on light surfaces */
+  --color-body:             #3B516C;   /* Secondary body text */
+  --color-muted:            #71859E;   /* Muted / caption text */
+  --color-on-dark:          #FFFFFF;   /* Text on dark surfaces */
+  --color-on-dark-muted:    #7EB2FF;   /* Secondary blue-gray text on dark surfaces */
+  --color-on-dark-subtle:   #4A7BC0;   /* Very muted on dark */
+
+  /* ── SEMANTIC ── */
+  --color-success:          #2A7A4F;
+  --color-error:            #C0392B;
+
+
+  /* ── TYPOGRAPHY ── */
+  --font-display:    'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:       'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  --font-logo:       'Cinzel', serif;
+
+  /* Display Scale */
+  --text-display-xxl-size:   72px;
+  --text-display-xxl-line:   1.05;
+  --text-display-xxl-track:  -0.03em;
+  --text-display-xxl-weight: 500;
+
+  --text-display-xl-size:    52px;
+  --text-display-xl-line:    1.1;
+  --text-display-xl-track:   -0.025em;
+  --text-display-xl-weight:  500;
+
+  --text-display-lg-size:    36px;
+  --text-display-lg-line:    1.15;
+  --text-display-lg-track:   -0.02em;
+  --text-display-lg-weight:  500;
+
+  --text-display-md-size:    26px;
+  --text-display-md-line:    1.2;
+  --text-display-md-track:   -0.018em;
+  --text-display-md-weight:  500;
+
+  /* Body Scale */
+  --text-body-lg-size:       20px;
+  --text-body-lg-line:       1.6;
+  --text-body-lg-track:      -0.01em;
+  --text-body-lg-weight:     400;
+
+  --text-body-md-size:       16px;
+  --text-body-md-line:       1.65;
+  --text-body-md-track:      -0.008em;
+  --text-body-md-weight:     400;
+
+  --text-caption-size:       14px;
+  --text-caption-line:       1.6;
+  --text-caption-track:      0;
+  --text-caption-weight:     400;
+
+  /* Mono / Label Scale */
+  --text-mono-button-size:   13px;
+  --text-mono-button-line:   1;
+  --text-mono-button-track:  0.08em;
+  --text-mono-button-weight: 500;
+
+  --text-mono-eyebrow-size:  11px;
+  --text-mono-eyebrow-line:  1;
+  --text-mono-eyebrow-track: 0.12em;
+  --text-mono-eyebrow-weight:500;
+
+  --text-mono-label-size:    11px;
+  --text-mono-label-line:    1.4;
+  --text-mono-label-track:   0.08em;
+  --text-mono-label-weight:  500;
+
+  --text-mono-caption-size:  10px;
+  --text-mono-caption-line:  1.4;
+  --text-mono-caption-track: 0.05em;
+  --text-mono-caption-weight:400;
+
+
+  /* ── SPACING (4px base unit) ── */
+  --space-xxs:    2px;
+  --space-xs:     4px;
+  --space-sm:     8px;
+  --space-md:     12px;
+  --space-lg:     16px;
+  --space-xl:     20px;
+  --space-2xl:    24px;
+  --space-3xl:    32px;
+  --space-4xl:    44px;
+  --space-5xl:    56px;
+  --space-6xl:    72px;
+  --space-section: 96px;   /* Full section vertical padding */
+  --space-section-sm: 64px; /* Compact section vertical padding */
+
+
+  /* ── BORDER RADIUS ── */
+  --radius-none:  0px;
+  --radius-xs:    3px;
+  --radius-sm:    4px;    /* Canonical card/button radius */
+  --radius-md:    8px;
+  --radius-lg:    12px;
+  --radius-full:  9999px;
+
+
+  /* ── BORDERS ── */
+  --border-hairline:         1px solid var(--color-hairline);
+  --border-hairline-on-dark: 1px solid var(--color-hairline-on-dark);
+  --border-accent:           1px solid var(--color-accent-silver);
+
+
+  /* ── TRANSITIONS ── */
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:   240ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   380ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-reveal: 600ms cubic-bezier(0.16, 1, 0.3, 1);
+
+
+  /* ── CONTAINER ── */
+  --container-max:     1280px;
+  --container-wide:    1440px;
+  --container-narrow:  880px;
+  --gutter:            clamp(24px, 4vw, 48px);
+  --gutter-sm:         clamp(16px, 3vw, 32px);
+
+
+  /* ── Z-INDEX ── */
+  --z-base:     1;
+  --z-overlay:  10;
+  --z-nav:      100;
+  --z-menu:     200;
+  --z-modal:    300;
+
+
+  /* ── SHADOWS ── */
+  /* Brand uses minimal shadows — hairline borders carry elevation */
+  --shadow-soft: 0 2px 16px 0 rgba(10, 22, 40, 0.08);
+  --shadow-card: 0 1px 3px 0 rgba(10, 22, 40, 0.06);
+
+
+  /* ── TECHNICAL GRID OVERLAY (CSS custom) ── */
+  --grid-color:   rgba(255,255,255,0.04);
+  --grid-size:    40px;
+
+}
+
+
+/* ── RESPONSIVE TOKEN OVERRIDES ── */
+
+@media (max-width: 1024px) {
+  :root {
+    --text-display-xxl-size:  52px;
+    --text-display-xl-size:   40px;
+    --text-display-lg-size:   30px;
+    --space-section:          72px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --text-display-xxl-size:  40px;
+    --text-display-xl-size:   32px;
+    --text-display-lg-size:   26px;
+    --text-display-md-size:   22px;
+    --text-body-lg-size:      18px;
+    --space-section:          56px;
+    --space-section-sm:       44px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --text-display-xxl-size:  34px;
+    --text-display-xl-size:   28px;
+    --text-display-lg-size:   24px;
+    --space-section:          48px;
+  }
+}

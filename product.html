@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details — Tianjin Decent International Trading</title>
+  <meta name="description" content="Detailed technical parameters, loading capacities, dimensions tables, and structural features for Tianjin Decent scaffolding components." />
+  <link rel="icon" type="image/svg+xml" href="/src/assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/tokens.css" />
+  <link rel="stylesheet" href="/src/css/base.css" />
+  <link rel="stylesheet" href="/src/css/components.css" />
+  <style>
+    .p-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 64px;
+      align-items: center;
+      padding-top: 24px;
+    }
+    @media (max-width: 960px) {
+      .p-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    .p-image-card {
+      background-color: var(--color-canvas-soft);
+      border: var(--border-hairline);
+      border-radius: var(--radius-sm);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .p-image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .p-standards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: var(--space-2xl);
+    }
+    .p-standards__label {
+      font-family: var(--font-mono);
+      font-size: var(--text-mono-label-size);
+      font-weight: 500;
+      color: var(--color-muted);
+      letter-spacing: var(--text-mono-label-track);
+      margin-right: 8px;
+      align-self: center;
+    }
+    .p-standard-badge {
+      font-family: var(--font-mono);
+      font-size: var(--text-mono-caption-size);
+      font-weight: 500;
+      color: var(--color-primary-light);
+      background-color: var(--color-canvas-soft);
+      border: var(--border-hairline);
+      padding: 4px 8px;
+      border-radius: var(--radius-xs);
+    }
+    .p-content-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+    }
+    .p-block {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .p-block__header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: var(--border-hairline);
+      padding-bottom: 12px;
+    }
+    .p-block__num {
+      font-family: var(--font-mono);
+      font-size: var(--text-mono-eyebrow-size);
+      color: var(--color-primary-mid);
+      font-weight: 500;
+    }
+    .p-block__title {
+      font-family: var(--font-display);
+      font-size: var(--text-display-md-size);
+      color: var(--color-ink);
+      font-weight: 500;
+      letter-spacing: var(--text-display-md-track);
+    }
+    .p-body-paragraph {
+      font-family: var(--font-body);
+      font-size: var(--text-body-md-size);
+      line-height: var(--text-body-md-line);
+      color: var(--color-body);
+      max-width: 880px;
+    }
+    .p-spec-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .p-spec-table th, .p-spec-table td {
+      padding: 16px;
+      text-align: left;
+      border-bottom: var(--border-hairline);
+    }
+    .p-spec-table th {
+      font-family: var(--font-mono);
+      font-size: var(--text-mono-eyebrow-size);
+      color: var(--color-muted);
+      font-weight: 500;
+      background-color: var(--color-canvas-soft);
+    }
+    .p-spec-label {
+      font-family: var(--font-mono);
+      font-size: var(--text-mono-label-size);
+      color: var(--color-ink);
+      font-weight: 500;
+      width: 35%;
+    }
+    .p-spec-val {
+      font-family: var(--font-body);
+      font-size: var(--text-body-md-size);
+      color: var(--color-body);
+    }
+    .p-lists-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    @media (max-width: 768px) {
+      .p-lists-split {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+    .p-bullet-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .p-bullet-item {
+      display: flex;
+      gap: 12px;
+      align-items: start;
+    }
+    .p-bullet-dot {
+      color: var(--color-primary-light);
+      font-size: 16px;
+      line-height: 1;
+      margin-top: 2px;
+    }
+    .p-bullet-text {
+      font-family: var(--font-body);
+      font-size: var(--text-caption-size);
+      line-height: var(--text-caption-line);
+      color: var(--color-body);
+    }
+    .related-section {
+      border-top: var(--border-hairline);
+      padding-top: 64px;
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .related-title {
+      font-family: var(--font-display);
+      font-size: var(--text-display-md-size);
+      color: var(--color-ink);
+      font-weight: 500;
+      letter-spacing: var(--text-display-md-track);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main id="main-content">
+    <div id="product-detail-container">
+      
+      <!-- Dynamic Page Hero -->
+      <section class="page-hero">
+        <div class="container page-hero__inner">
+          <div class="breadcrumb">
+            <a href="/" class="breadcrumb__item">Home</a>
+            <span class="breadcrumb__sep">/</span>
+            <a href="/products.html" class="breadcrumb__item">Products</a>
+            <span class="breadcrumb__sep">/</span>
+            <span id="breadcrumb-current" class="breadcrumb__item breadcrumb__item--current">Loading...</span>
+          </div>
+          <div id="product-category" class="eyebrow eyebrow--on-dark reveal">PRODUCT DETAIL</div>
+          
+          <div class="p-hero-grid">
+            <div class="p-hero-left reveal reveal--delay-1">
+              <div class="p-image-card">
+                <img id="product-hero-image" src="" alt="Product Diagram" />
+              </div>
+            </div>
+            <div class="p-hero-right reveal reveal--delay-2">
+              <h1 id="product-name" class="page-hero__title" style="margin-bottom: 20px;">Loading...</h1>
+              <p id="product-short-desc" class="page-hero__sub" style="margin-bottom: 32px; margin-top: 0; max-width: 100%;">
+                Retrieving specification parameters...
+              </p>
+              
+              <div class="p-hero-actions" style="display: flex; gap: 16px;">
+                <a id="product-quote-btn" href="/contact.html" class="btn btn--white btn--lg">Request a Quote</a>
+              </div>
+
+              <div id="product-standards" class="p-standards">
+                <!-- Standards Badges -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Content Blocks -->
+      <section class="section">
+        <div class="container p-content-blocks">
+          
+          <!-- Block 1: Technical Overview -->
+          <div class="p-block reveal">
+            <div class="p-block__header">
+              <span class="p-block__num">01</span>
+              <h2 class="p-block__title">Technical Overview</h2>
+            </div>
+            <div class="p-block__body">
+              <p id="product-description" class="p-body-paragraph">Loading...</p>
+            </div>
+          </div>
+
+          <!-- Block 2: Parameters Matrix -->
+          <div class="p-block reveal">
+            <div class="p-block__header">
+              <span class="p-block__num">02</span>
+              <h2 class="p-block__title">Parameter Matrix</h2>
+            </div>
+            <div class="p-block__body">
+              <table class="p-spec-table">
+                <thead>
+                  <tr>
+                    <th>PARAMETER</th>
+                    <th>SPECIFIED VALUE</th>
+                  </tr>
+                </thead>
+                <tbody id="product-spec-rows">
+                  <!-- Spec Rows -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Block 3: Features & Applications -->
+          <div class="p-lists-split reveal">
+            <div class="p-block">
+              <div class="p-block__header">
+                <span class="p-block__num">03</span>
+                <h2 class="p-block__title">Key Features</h2>
+              </div>
+              <div class="p-block__body">
+                <div id="product-features" class="p-bullet-list">
+                  <!-- Bullet items -->
+                </div>
+              </div>
+            </div>
+
+            <div class="p-block">
+              <div class="p-block__header">
+                <span class="p-block__num">04</span>
+                <h2 class="p-block__title">Scenarios</h2>
+              </div>
+              <div class="p-block__body">
+                <div id="product-applications" class="p-bullet-list">
+                  <!-- Bullet items -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Block 4: Related Accessories -->
+          <div class="related-section reveal">
+            <h3 class="related-title">Related Accessories & Components</h3>
+            <div id="related-grid" class="products-catalog-grid" aria-label="Related accessories">
+              <!-- Related Product Cards -->
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script type="module" src="/src/js/main.js"></script>
+
+  <script type="module">
+    import { PRODUCTS, CATEGORY_META } from '/src/js/data/products.js';
+    import { initScrollReveal } from '/src/js/components/animations.js';
+
+    // Parse product slug
+    const urlParams = new URLSearchParams(window.location.search);
+    const slug = urlParams.get('slug');
+
+    const product = PRODUCTS.find(p => p.slug === slug);
+
+    if (!product) {
+      document.getElementById('product-detail-container').innerHTML = `
+        <div class="container" style="padding: 96px 0; text-align: center;">
+          <h1 class="page-hero__title" style="color: var(--color-ink);">Product Not Found</h1>
+          <p style="margin-top: 16px; color: var(--color-body);">The requested product could not be located in our database.</p>
+          <a href="/products.html" class="btn btn--primary" style="margin-top: 24px; display: inline-flex;">Back to Products</a>
+        </div>
+      `;
+    } else {
+      const cat = CATEGORY_META[product.category];
+
+      // Update document title
+      document.title = `${product.name} — Tianjin Decent International Trading`;
+
+      // Update breadcrumbs
+      document.getElementById('breadcrumb-current').textContent = product.name;
+
+      // Update category & main details
+      document.getElementById('product-category').textContent = cat ? cat.label.toUpperCase() : 'PRODUCT SPECIFICATION';
+      document.getElementById('product-name').textContent = product.name;
+      document.getElementById('product-short-desc').textContent = product.shortDescription;
+      document.getElementById('product-description').textContent = product.description;
+
+      // Update image
+      const imgPath = product.heroImage || cat?.image || '/src/assets/images/warehouse.jpg';
+      document.getElementById('product-hero-image').src = imgPath;
+      document.getElementById('product-hero-image').alt = `${product.name} - Technical Drawing`;
+
+      // Pre-fill contact quote button
+      document.getElementById('product-quote-btn').href = `/contact.html?product=${product.slug}`;
+
+      // Populate standards badges
+      const standardsContainer = document.getElementById('product-standards');
+      if (product.standards && product.standards.length > 0) {
+        standardsContainer.innerHTML = `<span class="p-standards__label">COMPLIANCE //</span>` +
+          product.standards.map(std => `<span class="p-standard-badge" title="${std.description}">${std.name}</span>`).join('');
+      } else {
+        standardsContainer.style.display = 'none';
+      }
+
+      // Populate specification rows
+      const specContainer = document.getElementById('product-spec-rows');
+      if (product.specifications && product.specifications.length > 0) {
+        specContainer.innerHTML = product.specifications.map(spec => `
+          <tr>
+            <td class="p-spec-label">${spec.label}</td>
+            <td class="p-spec-val">${spec.value}</td>
+          </tr>
+        `).join('');
+      } else {
+        specContainer.innerHTML = `<tr><td colspan="2" class="p-spec-val">Contact dispatch desk for full metallurgical certificate tables.</td></tr>`;
+      }
+
+      // Populate key features
+      const featuresContainer = document.getElementById('product-features');
+      if (product.features && product.features.length > 0) {
+        featuresContainer.innerHTML = product.features.map(feat => `
+          <div class="p-bullet-item">
+            <span class="p-bullet-dot">✓</span>
+            <span class="p-bullet-text">${feat}</span>
+          </div>
+        `).join('');
+      } else {
+        featuresContainer.innerHTML = `<p class="p-bullet-text">Refer to core load tables catalog.</p>`;
+      }
+
+      // Populate applications
+      const appsContainer = document.getElementById('product-applications');
+      if (product.applications && product.applications.length > 0) {
+        appsContainer.innerHTML = product.applications.map(app => `
+          <div class="p-bullet-item">
+            <span class="p-bullet-dot">→</span>
+            <span class="p-bullet-text">${app}</span>
+          </div>
+        `).join('');
+      } else {
+        appsContainer.innerHTML = `<p class="p-bullet-text">Refer to technical access manuals.</p>`;
+      }
+
+      // Populate related products
+      const relatedContainer = document.getElementById('related-grid');
+      if (product.relatedProducts && product.relatedProducts.length > 0) {
+        const relatedList = PRODUCTS.filter(p => product.relatedProducts.includes(p.slug));
+        if (relatedList.length > 0) {
+          relatedContainer.innerHTML = relatedList.map(p => {
+            const pCat = CATEGORY_META[p.category];
+            const pImg = p.heroImage || pCat?.image || '/src/assets/images/warehouse.jpg';
+            return `
+              <a href="/product.html?slug=${p.slug}" class="product-card" data-category="${p.category}" aria-label="${p.name}">
+                <div class="product-card__image">
+                  <img src="${pImg}" alt="${p.name}" loading="lazy" />
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__category">${pCat?.shortLabel || p.category}</div>
+                  <h2 class="product-card__title">${p.name}</h2>
+                  <p class="product-card__desc">${p.shortDescription}</p>
+                  <div class="product-card__footer">
+                    <span class="product-card__cta">
+                      View Product
+                      <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            `;
+          }).join('');
+        } else {
+          document.querySelector('.related-section').style.display = 'none';
+        }
+      } else {
+        document.querySelector('.related-section').style.display = 'none';
+      }
+    }
+
+    // Initialize animation triggers
+    initScrollReveal();
+  </script>
+
+</body>
+</html>

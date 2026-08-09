@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details — Tianjin Decent International Trading</title>
+  <meta name="description" content="Detailed technical parameters, loading capacities, dimensions tables, and structural features for Tianjin Decent scaffolding components." />
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-Cm98BFll.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .p-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 64px;
+      align-items: center;
+      padding-top: 24px;
+    }
+    @media (max-width: 960px) {
+      .p-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    .p-image-card {
+      background-color: var(--color-canvas-soft);
+      border: var(--border-hairline);
+      border-radius: var(--radius-sm);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .p-image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .p-standards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: var(--space-2xl);
+    }
+    .p-standards__label {
+      font-family: var(--font-mono);
+      font-size: var(--text-mono-label-size);
+      font-weight: 500;
+      color: var(--color-muted);
+      letter-spacing: var(--text-mono-label-track);
+      margin-right: 8px;
+      align-self: center;
+    }
+    .p-standard-badge {
+      font-family: var(--font-mono);
+      font-size: var(--text-mono-caption-size);
+      font-weight: 500;
+      color: var(--color-primary-light);
+      background-color: var(--color-canvas-soft);
+      border: var(--border-hairline);
+      padding: 4px 8px;
+      border-radius: var(--radius-xs);
+    }
+    .p-content-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+    }
+    .p-block {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .p-block__header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: var(--border-hairline);
+      padding-bottom: 12px;
+    }
+    .p-block__num {
+      font-family: var(--font-mono);
+      font-size: var(--text-mono-eyebrow-size);
+      color: var(--color-primary-mid);
+      font-weight: 500;
+    }
+    .p-block__title {
+      font-family: var(--font-display);
+      font-size: var(--text-display-md-size);
+      color: var(--color-ink);
+      font-weight: 500;
+      letter-spacing: var(--text-display-md-track);
+    }
+    .p-body-paragraph {
+      font-family: var(--font-body);
+      font-size: var(--text-body-md-size);
+      line-height: var(--text-body-md-line);
+      color: var(--color-body);
+      max-width: 880px;
+    }
+    .p-spec-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .p-spec-table th, .p-spec-table td {
+      padding: 16px;
+      text-align: left;
+      border-bottom: var(--border-hairline);
+    }
+    .p-spec-table th {
+      font-family: var(--font-mono);
+      font-size: var(--text-mono-eyebrow-size);
+      color: var(--color-muted);
+      font-weight: 500;
+      background-color: var(--color-canvas-soft);
+    }
+    .p-spec-label {
+      font-family: var(--font-mono);
+      font-size: var(--text-mono-label-size);
+      color: var(--color-ink);
+      font-weight: 500;
+      width: 35%;
+    }
+    .p-spec-val {
+      font-family: var(--font-body);
+      font-size: var(--text-body-md-size);
+      color: var(--color-body);
+    }
+    .p-lists-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    @media (max-width: 768px) {
+      .p-lists-split {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+    .p-bullet-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .p-bullet-item {
+      display: flex;
+      gap: 12px;
+      align-items: start;
+    }
+    .p-bullet-dot {
+      color: var(--color-primary-light);
+      font-size: 16px;
+      line-height: 1;
+      margin-top: 2px;
+    }
+    .p-bullet-text {
+      font-family: var(--font-body);
+      font-size: var(--text-caption-size);
+      line-height: var(--text-caption-line);
+      color: var(--color-body);
+    }
+    .related-section {
+      border-top: var(--border-hairline);
+      padding-top: 64px;
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .related-title {
+      font-family: var(--font-display);
+      font-size: var(--text-display-md-size);
+      color: var(--color-ink);
+      font-weight: 500;
+      letter-spacing: var(--text-display-md-track);
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/product-BKB5_DSk.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/animations-BxStJXFt.js">
+  <link rel="modulepreload" crossorigin href="/assets/main-DmiwO6hT.js">
+  <link rel="modulepreload" crossorigin href="/assets/products-JcpdNqFq.js">
+  <link rel="stylesheet" crossorigin href="/assets/animations-U38yzmSE.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main id="main-content">
+    <div id="product-detail-container">
+      
+      <!-- Dynamic Page Hero -->
+      <section class="page-hero">
+        <div class="container page-hero__inner">
+          <div class="breadcrumb">
+            <a href="/" class="breadcrumb__item">Home</a>
+            <span class="breadcrumb__sep">/</span>
+            <a href="/products.html" class="breadcrumb__item">Products</a>
+            <span class="breadcrumb__sep">/</span>
+            <span id="breadcrumb-current" class="breadcrumb__item breadcrumb__item--current">Loading...</span>
+          </div>
+          <div id="product-category" class="eyebrow eyebrow--on-dark reveal">PRODUCT DETAIL</div>
+          
+          <div class="p-hero-grid">
+            <div class="p-hero-left reveal reveal--delay-1">
+              <div class="p-image-card">
+                <img id="product-hero-image" src="" alt="Product Diagram" />
+              </div>
+            </div>
+            <div class="p-hero-right reveal reveal--delay-2">
+              <h1 id="product-name" class="page-hero__title" style="margin-bottom: 20px;">Loading...</h1>
+              <p id="product-short-desc" class="page-hero__sub" style="margin-bottom: 32px; margin-top: 0; max-width: 100%;">
+                Retrieving specification parameters...
+              </p>
+              
+              <div class="p-hero-actions" style="display: flex; gap: 16px;">
+                <a id="product-quote-btn" href="/contact.html" class="btn btn--white btn--lg">Request a Quote</a>
+              </div>
+
+              <div id="product-standards" class="p-standards">
+                <!-- Standards Badges -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Content Blocks -->
+      <section class="section">
+        <div class="container p-content-blocks">
+          
+          <!-- Block 1: Technical Overview -->
+          <div class="p-block reveal">
+            <div class="p-block__header">
+              <span class="p-block__num">01</span>
+              <h2 class="p-block__title">Technical Overview</h2>
+            </div>
+            <div class="p-block__body">
+              <p id="product-description" class="p-body-paragraph">Loading...</p>
+            </div>
+          </div>
+
+          <!-- Block 2: Parameters Matrix -->
+          <div class="p-block reveal">
+            <div class="p-block__header">
+              <span class="p-block__num">02</span>
+              <h2 class="p-block__title">Parameter Matrix</h2>
+            </div>
+            <div class="p-block__body">
+              <table class="p-spec-table">
+                <thead>
+                  <tr>
+                    <th>PARAMETER</th>
+                    <th>SPECIFIED VALUE</th>
+                  </tr>
+                </thead>
+                <tbody id="product-spec-rows">
+                  <!-- Spec Rows -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Block 3: Features & Applications -->
+          <div class="p-lists-split reveal">
+            <div class="p-block">
+              <div class="p-block__header">
+                <span class="p-block__num">03</span>
+                <h2 class="p-block__title">Key Features</h2>
+              </div>
+              <div class="p-block__body">
+                <div id="product-features" class="p-bullet-list">
+                  <!-- Bullet items -->
+                </div>
+              </div>
+            </div>
+
+            <div class="p-block">
+              <div class="p-block__header">
+                <span class="p-block__num">04</span>
+                <h2 class="p-block__title">Scenarios</h2>
+              </div>
+              <div class="p-block__body">
+                <div id="product-applications" class="p-bullet-list">
+                  <!-- Bullet items -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Block 4: Related Accessories -->
+          <div class="related-section reveal">
+            <h3 class="related-title">Related Accessories & Components</h3>
+            <div id="related-grid" class="products-catalog-grid" aria-label="Related accessories">
+              <!-- Related Product Cards -->
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+
+
+</body>
+</html>
