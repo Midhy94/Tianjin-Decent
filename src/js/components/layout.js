@@ -21,6 +21,7 @@ export function getNavHTML() {
 
           <!-- Desktop Links -->
           <div class="nav__links" role="list">
+            <a href="/index.html" class="nav__link" role="listitem">Home</a>
             <a href="/about.html" class="nav__link" role="listitem">About</a>
 
             <div class="nav__dropdown" role="listitem">
@@ -94,6 +95,7 @@ export function getNavHTML() {
       </div>
 
       <div class="mobile-menu__links">
+        <a href="/index.html" class="mobile-menu__link">Home</a>
         <a href="/about.html" class="mobile-menu__link">About</a>
         <a href="/products.html" class="mobile-menu__link">Products</a>
         <a href="/solutions.html" class="mobile-menu__link">Solutions</a>
