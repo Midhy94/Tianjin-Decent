@@ -8,7 +8,7 @@
   <meta property="og:title" content="Tianjin Decent International Trading" />
   <meta property="og:description" content="Industrial scaffolding systems and components for global markets." />
   <meta property="og:type" content="website" />
-  <link rel="canonical" href="/assets/index-C-SsUqq8.html" />
+  <link rel="canonical" href="/assets/index-B_l4_52F.html" />
 
   <link rel="icon" type="image/svg+xml" href="/assets/logo-Cm98BFll.svg" />
 
@@ -16,10 +16,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <script type="module" crossorigin src="/assets/animations-BxStJXFt.js"></script>
-  <script type="module" crossorigin src="/assets/main-DmiwO6hT.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/animations-U38yzmSE.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-Btvtco_Y.css">
+  <script type="module" crossorigin src="/assets/main-D0RJEPlg.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/animations-BnItFa_1.js">
+  <link rel="modulepreload" crossorigin href="/assets/main-DCmXHJI0.js">
+  <link rel="stylesheet" crossorigin href="/assets/animations-Ch9cym-I.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-Bo8dmoq0.css">
 </head>
 <body>
 
@@ -258,11 +259,17 @@
             </div>
           </a>
 
-          <!-- Technical Compliance Text Block (Column 1, Row 3) -->
-          <div class="products-grid__text-block reveal">
-            <div class="category-text-block__num">TD-02.C // COMPLIANCE</div>
-            <h3 class="category-text-block__title" style="font-size: 20px;">BS / EN Certified</h3>
-            <p class="category-text-block__desc">All scaffolding vertical standards, couplers, transoms, and deck boards comply with BS 1139, EN 74, and EN 12810 tolerances.</p>
+          <!-- Video Preview Card (Column 1, Row 3) -->
+          <div class="products-grid__video-card category-card reveal">
+            <div class="category-card__image" style="height: 100%; position: relative; min-height: 280px;">
+              <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85; position: absolute; top: 0; left: 0;">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-construction-site-with-cranes-and-scaffolding-41006-large.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-xl) var(--space-lg); background: linear-gradient(transparent, rgba(6, 21, 43, 0.9)); pointer-events: none; z-index: 2;">
+                <div class="category-card__num" style="color: var(--color-on-dark-muted); margin-bottom: 4px;">TD-02.V // PREVIEW</div>
+                <h3 class="category-card__title" style="color: var(--color-on-dark); font-size: 20px; margin-bottom: 0;">Tianjin Decent In Action</h3>
+              </div>
+            </div>
           </div>
 
           <!-- Safety & Accessories Wide Card (Column 2-3, Row 3) -->
@@ -291,6 +298,69 @@
 
       </div>
     </section>
+
+
+    <!-- ════════════════════════════════════════════════════
+         02.B — INTERACTIVE SPECIFICATION TERMINAL
+         ════════════════════════════════════════════════════ -->
+    <section class="section section--dark" id="spec-terminal" aria-label="Interactive Spec Terminal" style="background: var(--color-canvas-dark); color: var(--color-on-dark); border-top: 1px solid var(--color-hairline-on-dark); border-bottom: 1px solid var(--color-hairline-on-dark); padding-top: var(--space-4xl); padding-bottom: var(--space-4xl);">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="eyebrow" style="color: var(--color-on-dark-muted);">
+            <span class="tech-label__num" style="border-color: var(--color-on-dark-subtle); color: var(--color-on-dark);">TD-SYSTEMS</span> / METRIC TERMINAL
+          </div>
+          <h2 class="section-header__title" style="color: var(--color-on-dark); font-size: clamp(24px, 4vw, 36px); letter-spacing: -0.02em; font-weight: 500;">Interactive Spec Terminal.</h2>
+          <p class="section-header__body" style="color: var(--color-on-dark-muted); max-width: 600px; margin-top: 12px;">Query exact structural profiles, component dimensions, weights, and EN certifications for major scaffolding systems in real-time.</p>
+        </div>
+
+        <div class="spec-terminal__grid reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4xl); margin-top: 48px; align-items: start;">
+          
+          <!-- Controls -->
+          <div style="display: flex; flex-direction: column; gap: var(--space-xl);">
+            <div>
+              <h3 style="font-size: 16px; font-weight: 500; letter-spacing: -0.01em; margin-bottom: 12px; font-family: var(--font-display); color: var(--color-on-dark);">1. Select Scaffolding System</h3>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <button class="btn--spec-tab active" data-system="ringlock">Ringlock</button>
+                <button class="btn--spec-tab" data-system="cuplock">Cuplock</button>
+                <button class="btn--spec-tab" data-system="tubes">Tubes & Clamps</button>
+              </div>
+            </div>
+
+            <div style="margin-top: 12px;">
+              <h3 style="font-size: 16px; font-weight: 500; letter-spacing: -0.01em; margin-bottom: 12px; font-family: var(--font-display); color: var(--color-on-dark);">2. Choose Component</h3>
+              <select id="spec-component-select" style="width: 100%; padding: 14px; background: var(--color-canvas-dark-mid); border: 1px solid var(--color-hairline-on-dark); border-radius: var(--radius-sm); color: var(--color-on-dark); font-family: var(--font-display); font-size: 14px; cursor: pointer; outline: none;">
+                <!-- Dynamically populated -->
+              </select>
+            </div>
+            
+            <div style="font-size: 13px; color: var(--color-on-dark-muted); line-height: 1.6; border-left: 2px solid var(--color-primary-light); padding-left: 16px; margin-top: 12px;">
+              // Technical specifications reflect nominal design standards. Physical shipments accommodate minor mill tolerances conforming to EN 10219-1.
+            </div>
+          </div>
+
+          <!-- Screen -->
+          <div style="position: relative;">
+            <div style="position: absolute; top: -14px; right: 16px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.1em; color: var(--color-primary-light); text-transform: uppercase; display: flex; align-items: center; gap: 6px;">
+              <span style="display: inline-block; width: 6px; height: 6px; background: var(--color-primary-light); border-radius: 50%; animation: pulse 1.5s infinite;"></span>
+              METALLURGICAL STREAM ACTIVE
+            </div>
+            <div style="background: var(--color-canvas-dark-mid); border: 1px solid var(--color-hairline-on-dark); border-radius: var(--radius-md); padding: var(--space-xl); font-family: var(--font-mono); font-size: 13px; line-height: 1.8; color: var(--color-on-dark); box-shadow: inset 0 2px 8px rgba(0,0,0,0.45); min-height: 280px; box-sizing: border-box;">
+              <div style="color: var(--color-on-dark-subtle); border-bottom: 1px solid var(--color-hairline-on-dark); padding-bottom: 10px; margin-bottom: 16px; display: flex; justify-content: space-between; font-size: 11px;">
+                <span>TIANJIN DECENT // METRICS</span>
+                <span>TD-LOG v2.0.1</span>
+              </div>
+              <div id="terminal-content">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
 
 
     <!-- ════════════════════════════════════════════════════

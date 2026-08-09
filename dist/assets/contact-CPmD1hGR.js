@@ -1,0 +1,1 @@
+import"./animations-BnItFa_1.js";import"./main-DCmXHJI0.js";const e=new URLSearchParams(window.location.search),o=e.get("product");if(o){const t=document.getElementById("target-product");t&&(t.value=o)}

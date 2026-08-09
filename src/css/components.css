@@ -157,6 +157,17 @@
   box-shadow: var(--shadow-soft);
 }
 
+/* Invisible bridge to prevent hover loss over the 12px gap */
+.nav__mega::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background: transparent;
+}
+
 .nav__dropdown:hover .nav__mega,
 .nav__dropdown.open .nav__mega {
   opacity: 1;
