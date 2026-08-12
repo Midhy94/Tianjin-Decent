@@ -1,1 +1,0 @@
-import{b as o,i as n,e as a,d as i,g as l,a as r}from"./animations-D_NXettD.js";function d(){const e=document.getElementById("nav-placeholder"),t=document.getElementById("footer-placeholder");e&&(e.outerHTML=l()),t&&(t.outerHTML=r())}document.addEventListener("DOMContentLoaded",()=>{d(),o(),n(),a(),i()});

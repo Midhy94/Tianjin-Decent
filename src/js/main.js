@@ -28,4 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initCounters();
   initSmoothScroll();
+
+  // Client approval mode: block all links pointing to subpages (e.g. products, solutions, about)
+  document.body.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (link) {
+      const href = link.getAttribute('href');
+      if (href && (href.endsWith('.html') || href.includes('?')) && !href.includes('index.html')) {
+        e.preventDefault();
+      }
+    }
+  });
 });
