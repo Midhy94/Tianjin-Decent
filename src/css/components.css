@@ -1722,12 +1722,3 @@
     flex-direction: row;
   }
 }
-
-/* Client approval mode: hide header links, hamburger, mobile menus, and side footer columns */
-.nav__links,
-.nav__actions,
-.nav__hamburger,
-.mobile-menu,
-.footer__grid > div:not(.footer__brand-col) {
-  display: none !important;
-}
