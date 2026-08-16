@@ -6,6 +6,18 @@ export function getLogoSVG(variant = 'dark') {
 
 export function getNavHTML() {
   return `
+    <!-- Preloader Overlay -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader__inner">
+        <img src="${logoUrl}" alt="Tianjin Decent Logo" class="preloader__logo" />
+        <div class="preloader__progress">
+          <div class="preloader__bar"></div>
+        </div>
+        <div class="preloader__counter">00</div>
+        <div class="preloader__text">Tianjin Decent // Loading</div>
+      </div>
+    </div>
+
     <nav class="nav" id="main-nav" aria-label="Main navigation">
       <div class="container">
         <div class="nav__inner">

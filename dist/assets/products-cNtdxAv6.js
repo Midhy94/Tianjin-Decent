@@ -1,4 +1,4 @@
-import{g as s,a as i,b as d,i as l,c as n,d as g}from"./animations-D_NXettD.js";import{C as u,P as m}from"./products-JcpdNqFq.js";document.getElementById("nav-placeholder").outerHTML=s();document.getElementById("footer-placeholder").outerHTML=i();function h(t){const a=document.getElementById("product-grid");a&&(a.innerHTML=t.map(r=>{const e=u[r.category],c=r.heroImage||(e==null?void 0:e.image)||"/src/assets/images/warehouse.jpg";return`
+import{g as s,a as i,b as d,i as l,c as n,d as g}from"./animations-RawSA9-x.js";import{C as u,P as m}from"./products-JcpdNqFq.js";document.getElementById("nav-placeholder").outerHTML=s();document.getElementById("footer-placeholder").outerHTML=i();function h(t){const a=document.getElementById("product-grid");a&&(a.innerHTML=t.map(r=>{const e=u[r.category],c=r.heroImage||(e==null?void 0:e.image)||"/src/assets/images/warehouse.jpg";return`
           <a href="/product.html?slug=${r.slug}" class="product-card reveal" data-category="${r.category}" aria-label="${r.name}">
             <div class="product-card__image">
               <img src="${c}" alt="${r.name}" loading="lazy" />

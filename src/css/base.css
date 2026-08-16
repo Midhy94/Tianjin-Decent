@@ -265,10 +265,11 @@ table {
 
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(16px);
   transition:
     opacity var(--transition-reveal),
     transform var(--transition-reveal);
+  will-change: opacity, transform;
 }
 
 .reveal.revealed {

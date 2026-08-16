@@ -1,4 +1,4 @@
-import{i as g}from"./animations-D_NXettD.js";import"./main-HAuipYxo.js";import{P as i,C as d}from"./products-JcpdNqFq.js";const h=new URLSearchParams(window.location.search),y=h.get("slug"),e=i.find(s=>s.slug===y);if(!e)document.getElementById("product-detail-container").innerHTML=`
+import{i as g}from"./animations-RawSA9-x.js";import"./main-DLz9KVY6.js";import{P as i,C as d}from"./products-JcpdNqFq.js";const h=new URLSearchParams(window.location.search),y=h.get("slug"),e=i.find(s=>s.slug===y);if(!e)document.getElementById("product-detail-container").innerHTML=`
         <div class="container" style="padding: 96px 0; text-align: center;">
           <h1 class="page-hero__title" style="color: var(--color-ink);">Product Not Found</h1>
           <p style="margin-top: 16px; color: var(--color-body);">The requested product could not be located in our database.</p>
