@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap');
 
 /* ============================================================
-   TIANJIN DECENT INTERNATIONAL TRADING — DESIGN TOKENS
-   Source: DESIGN-together.ai.md (adapted for Tianjin Decent brand)
+   TIANJIN DECENT INTERNATIONAL TRADE CO., LTD. — DESIGN TOKENS
+   Modern Industrial B2B Aesthetic with Bright & Dark Harmony
    ============================================================ */
 
 :root {
@@ -11,31 +11,37 @@
   --color-primary:          #005BE3;   /* Cobalt Blue — primary brand accent, active blue */
   --color-primary-mid:      #004FCE;   /* Deep cobalt — hover, key details */
   --color-primary-light:    #009BFF;   /* Electric Cyan/Blue — highlight, active state */
-  --color-accent-steel:     #5F738E;   /* Steel blue-gray — technical labels */
-  --color-accent-silver:    #B2C0D1;   /* Polished Chrome/Silver — borders, muted */
-  --color-accent-cold:      #EBF2FA;   /* Ice cold blue — light tint surface */
-  --color-accent-gold:      #009BFF;   /* Precision detail accent — now electric blue highlight */
+  --color-accent-steel:     #4A607C;   /* Steel blue-gray — technical labels */
+  --color-accent-silver:    #CBD5E1;   /* Polished Chrome/Silver — borders, muted */
+  --color-accent-cold:      #F1F5F9;   /* Ice cold blue — light tint surface */
+  --color-accent-gold:      #009BFF;   /* Precision detail accent — electric blue highlight */
 
-  /* ── SURFACES ── */
+  /* ── WHATSAPP BRAND ── */
+  --color-whatsapp:         #25D366;   /* Official WhatsApp Emerald */
+  --color-whatsapp-hover:   #20BA5A;   /* Slightly deeper green on hover */
+  --color-whatsapp-bg:      rgba(37, 211, 102, 0.12);
+
+  /* ── SURFACES (BRIGHT & DARK COMBINATION) ── */
   --color-canvas:           #FFFFFF;
-  --color-canvas-soft:      #F4F7FB;   /* Off-white / light technical section bg */
-  --color-canvas-dark:      #06152B;   /* Abyss navy dark bands — matching logo globe dark shadow */
-  --color-canvas-dark-mid:  #0A2145;   /* Slightly lifted dark surface */
-  --color-hairline:         #DCE5F0;   /* Light surface dividers & borders */
-  --color-hairline-on-dark: #143566;   /* Dark surface dividers */
-  --color-surface-dark-soft:#0E2954;   /* Card backgrounds on dark bands */
+  --color-canvas-soft:      #F8FAFC;   /* Crisp off-white / light technical section bg */
+  --color-canvas-card:      #FFFFFF;   /* Pure white card surface */
+  --color-canvas-dark:      #081830;   /* Rich deep abyss navy for dark contrast bands */
+  --color-canvas-dark-mid:  #0E264C;   /* Lifted dark surface */
+  --color-hairline:         #E2E8F0;   /* Clean light dividers & borders */
+  --color-hairline-on-dark: #1E3A66;   /* Dark surface dividers */
+  --color-surface-dark-soft:#112C57;   /* Card backgrounds on dark bands */
 
   /* ── TEXT ── */
-  --color-ink:              #06152B;   /* Dark abyss blue — primary text on light surfaces */
-  --color-body:             #3B516C;   /* Secondary body text */
-  --color-muted:            #71859E;   /* Muted / caption text */
+  --color-ink:              #0A192F;   /* Deep industrial ink — primary text on light surfaces */
+  --color-body:             #334155;   /* Clean Slate body text (high readability) */
+  --color-muted:            #64748B;   /* Muted / caption text */
   --color-on-dark:          #FFFFFF;   /* Text on dark surfaces */
-  --color-on-dark-muted:    #7EB2FF;   /* Secondary blue-gray text on dark surfaces */
-  --color-on-dark-subtle:   #4A7BC0;   /* Very muted on dark */
+  --color-on-dark-muted:    #94A3B8;   /* Secondary slate text on dark surfaces */
+  --color-on-dark-subtle:   #64748B;   /* Very muted on dark */
 
   /* ── SEMANTIC ── */
-  --color-success:          #2A7A4F;
-  --color-error:            #C0392B;
+  --color-success:          #16A34A;
+  --color-error:            #DC2626;
 
 
   /* ── TYPOGRAPHY ── */

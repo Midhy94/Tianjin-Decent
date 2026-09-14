@@ -1,15 +1,8 @@
-import logoUrl from '../../assets/T-D-Logo.png';
-
-export function getLogoSVG(variant = 'dark') {
-  return `<img src="${logoUrl}" alt="Tianjin Decent Logo" class="nav__logo-mark" style="height: 44px; width: auto; object-fit: contain;" />`;
-}
-
-export function getNavHTML() {
-  return `
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const i of e)if(i.type==="childList")for(const r of i.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&o(r)}).observe(document,{childList:!0,subtree:!0});function a(e){const i={};return e.integrity&&(i.integrity=e.integrity),e.referrerPolicy&&(i.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?i.credentials="include":e.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function o(e){if(e.ep)return;e.ep=!0;const i=a(e);fetch(e.href,i)}})();const g="/assets/T-D-Logo-CoMgngHF.png";function C(s="dark"){return`<img src="${g}" alt="Tianjin Decent Logo" class="nav__logo-mark" style="height: 44px; width: auto; object-fit: contain;" />`}function b(){return`
     <!-- Preloader Overlay -->
     <div class="preloader" id="preloader" aria-hidden="true">
       <div class="preloader__inner">
-        <img src="${logoUrl}" alt="Tianjin Decent Logo" class="preloader__logo" />
+        <img src="${g}" alt="Tianjin Decent Logo" class="preloader__logo" />
         <div class="preloader__progress">
           <div class="preloader__bar"></div>
         </div>
@@ -24,7 +17,7 @@ export function getNavHTML() {
 
           <!-- Logo -->
           <a href="/" class="nav__logo" aria-label="TIANJIN DECENT INTERNATIONAL TRADE CO., LTD. — Home">
-            ${getLogoSVG('dark')}
+            ${C("dark")}
             <div class="nav__logo-text">
               <span class="nav__logo-name">TIANJIN DECENT</span>
               <span class="nav__logo-sub">International Trade Co., Ltd.</span>
@@ -150,11 +143,7 @@ export function getNavHTML() {
       </svg>
       <span class="whatsapp-float__text">WhatsApp Us</span>
     </a>
-  `;
-}
-
-export function getFooterHTML() {
-  return `
+  `}function L(){return`
     <footer class="footer" role="contentinfo">
       <div class="container">
 
@@ -165,7 +154,7 @@ export function getFooterHTML() {
           <div class="footer__brand-col">
             <div>
               <a href="/" class="nav__logo" aria-label="TIANJIN DECENT INTERNATIONAL TRADE CO., LTD. — Home" style="margin-bottom: 24px; text-decoration: none;">
-                ${getLogoSVG('dark')}
+                ${C("dark")}
                 <div class="nav__logo-text">
                   <span class="nav__logo-name" style="color: var(--color-on-dark);">TIANJIN DECENT</span>
                   <span class="nav__logo-sub" style="color: var(--color-on-dark-muted);">International Trade Co., Ltd.</span>
@@ -270,5 +259,4 @@ export function getFooterHTML() {
         </div>
       </div>
     </footer>
-  `;
-}
+  `}function A(){const s=document.querySelector(".nav"),t=document.querySelector(".nav__hamburger"),a=document.querySelector(".mobile-menu"),o=document.querySelector(".mobile-menu__close"),e=document.querySelectorAll(".mobile-menu__link");if(!s)return;const i=40;let r=!1;function m(){r||(requestAnimationFrame(()=>{const l=window.scrollY>i;s.classList.toggle("nav--scrolled",l),r=!1}),r=!0)}window.addEventListener("scroll",m,{passive:!0}),m();function v(){a==null||a.classList.add("open"),t==null||t.classList.add("open"),document.body.style.overflow="hidden",t==null||t.setAttribute("aria-expanded","true")}function d(){a==null||a.classList.remove("open"),t==null||t.classList.remove("open"),document.body.style.overflow="",t==null||t.setAttribute("aria-expanded","false")}t==null||t.addEventListener("click",()=>{(a==null?void 0:a.classList.contains("open"))?d():v()}),o==null||o.addEventListener("click",d),e.forEach(l=>{l.addEventListener("click",d)}),document.addEventListener("keydown",l=>{l.key==="Escape"&&d()});const u=window.location.pathname;document.querySelectorAll(".nav__link, .mobile-menu__link").forEach(l=>{const n=l.getAttribute("href");if(!n)return;const c=(n==="/"||n==="/index.html")&&(u==="/"||u==="/index.html"),f=!c&&u.includes(n.replace(".html",""));(c||f)&&l.classList.add("nav__link--active")});const _=document.querySelectorAll(".nav__dropdown");_.forEach(l=>{const n=l.querySelector(".nav__dropdown-trigger");n==null||n.addEventListener("click",c=>{c.stopPropagation(),_.forEach(p=>{var h;p!==l&&(p.classList.remove("open"),(h=p.querySelector(".nav__dropdown-trigger"))==null||h.setAttribute("aria-expanded","false"))}),l.classList.toggle("open");const f=l.classList.contains("open");n.setAttribute("aria-expanded",f?"true":"false")}),n==null||n.addEventListener("keydown",c=>{if(c.key==="Enter"||c.key===" "){c.preventDefault(),l.classList.toggle("open");const f=l.classList.contains("open");n.setAttribute("aria-expanded",f?"true":"false")}})}),document.addEventListener("click",()=>{_.forEach(l=>{var n;l.classList.remove("open"),(n=l.querySelector(".nav__dropdown-trigger"))==null||n.setAttribute("aria-expanded","false")})})}function T(){const s=document.querySelectorAll(".reveal");if(!s.length)return;if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){s.forEach(o=>o.classList.add("revealed"));return}const a=new IntersectionObserver(o=>{o.forEach(e=>{e.isIntersecting&&(e.target.classList.add("revealed"),a.unobserve(e.target))})},{threshold:.12,rootMargin:"0px 0px -40px 0px"});s.forEach(o=>a.observe(o))}function E(){const s=document.querySelectorAll("[data-count]");if(!s.length)return;if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){s.forEach(o=>{o.textContent=o.dataset.count});return}const a=new IntersectionObserver(o=>{o.forEach(e=>{e.isIntersecting&&(k(e.target),a.unobserve(e.target))})},{threshold:.5});s.forEach(o=>a.observe(o))}function k(s){const t=parseFloat(s.dataset.count),a=s.dataset.suffix||"",o=1200,e=performance.now();function i(r){const m=r-e,v=Math.min(m/o,1),d=1-Math.pow(1-v,3),u=Math.round(t*d);s.textContent=u+a,v<1?requestAnimationFrame(i):s.textContent=t+a}requestAnimationFrame(i)}function S(){const s=document.querySelectorAll(".filter-pill"),t=document.querySelectorAll("[data-category]");s.length&&s.forEach(a=>{a.addEventListener("click",()=>{const o=a.dataset.filter;s.forEach(e=>e.classList.remove("filter-pill--active")),a.classList.add("filter-pill--active"),t.forEach(e=>{const i=e.dataset.category,r=!o||o==="all"||i===o;e.style.display=r?"":"none",r&&(e.classList.remove("revealed"),setTimeout(()=>e.classList.add("revealed"),10))})})})}function N(){document.querySelectorAll('a[href^="#"]').forEach(s=>{s.addEventListener("click",t=>{const a=document.querySelector(s.getAttribute("href"));a&&(t.preventDefault(),a.scrollIntoView({behavior:"smooth",block:"start"}))})})}export{L as a,A as b,S as c,N as d,E as e,b as g,T as i};

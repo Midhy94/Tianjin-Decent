@@ -1,1 +1,0 @@
-import"./animations-RawSA9-x.js";import"./main-DLz9KVY6.js";const e=new URLSearchParams(window.location.search),o=e.get("product");if(o){const t=document.getElementById("target-product");t&&(t.value=o)}
