@@ -1,208 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap');
-
 /* ============================================================
    TIANJIN DECENT INTERNATIONAL TRADE CO., LTD. — DESIGN TOKENS
-   Modern Industrial B2B Aesthetic with Bright & Dark Harmony
+   Version 2: Apple-Level Precision × Industrial B2B Identity
+   Typography: Noto Sans (Multilingual Architecture)
+   Palette: Tianjin Decent Authentic Brand Palette
    ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
 
-  /* ── BRAND COLORS ── */
-  --color-primary:          #005BE3;   /* Cobalt Blue — primary brand accent, active blue */
-  --color-primary-mid:      #004FCE;   /* Deep cobalt — hover, key details */
-  --color-primary-light:    #009BFF;   /* Electric Cyan/Blue — highlight, active state */
-  --color-accent-steel:     #4A607C;   /* Steel blue-gray — technical labels */
-  --color-accent-silver:    #CBD5E1;   /* Polished Chrome/Silver — borders, muted */
-  --color-accent-cold:      #F1F5F9;   /* Ice cold blue — light tint surface */
-  --color-accent-gold:      #009BFF;   /* Precision detail accent — electric blue highlight */
+  /* ── 01. BRAND PALETTE (AUTHENTIC TIANJIN DECENT) ── */
+  --color-primary:          #005BE3;   /* Cobalt Action Blue — primary interactive signal */
+  --color-primary-hover:    #004FCE;   /* Deep Cobalt — active/hover state */
+  --color-primary-highlight:#009BFF;   /* Sky Action Blue — links & pills on dark tiles */
+  --color-accent-steel:     #4A607C;   /* Steel blue-gray — technical markers */
+  --color-accent-silver:    #CBD5E1;   /* Architectural Chrome — refined hairlines */
+  --color-accent-cold:      #F1F5F9;   /* Crisp cool surface tint */
 
-  /* ── WHATSAPP BRAND ── */
+  /* ── 02. WHATSAPP BRAND TOKEN ── */
   --color-whatsapp:         #25D366;   /* Official WhatsApp Emerald */
-  --color-whatsapp-hover:   #20BA5A;   /* Slightly deeper green on hover */
+  --color-whatsapp-hover:   #20BA5A;
   --color-whatsapp-bg:      rgba(37, 211, 102, 0.12);
+  --color-whatsapp-border:  rgba(37, 211, 102, 0.35);
 
-  /* ── SURFACES (BRIGHT & DARK COMBINATION) ── */
-  --color-canvas:           #FFFFFF;
-  --color-canvas-soft:      #F8FAFC;   /* Crisp off-white / light technical section bg */
-  --color-canvas-card:      #FFFFFF;   /* Pure white card surface */
-  --color-canvas-dark:      #081830;   /* Rich deep abyss navy for dark contrast bands */
-  --color-canvas-dark-mid:  #0E264C;   /* Lifted dark surface */
-  --color-hairline:         #E2E8F0;   /* Clean light dividers & borders */
-  --color-hairline-on-dark: #1E3A66;   /* Dark surface dividers */
-  --color-surface-dark-soft:#112C57;   /* Card backgrounds on dark bands */
+  /* ── 03. SURFACES: BALANCED BRIGHT & DARK RHYTHM ── */
+  /* Light Surfaces */
+  --color-canvas:           #FFFFFF;   /* Pure White — primary light tile */
+  --color-canvas-soft:      #F8FAFC;   /* Architectural Off-White — parchment-like light tile */
+  --color-canvas-subtle:    #F1F5F9;   /* Cool Neutral Surface */
+  --color-surface-card:     #FFFFFF;
+  
+  /* Dark Surfaces (Rich Industrial Abyss Navy) */
+  --color-canvas-dark:      #081830;   /* Deep Abyss Navy — main dark tile canvas */
+  --color-canvas-dark-tile: #0C203E;   /* Dark Tile Variant 1 */
+  --color-canvas-dark-elevated: #112C57; /* Dark Tile Variant 2 */
+  --color-surface-dark-card:#0E264C;   /* Technical Card on Dark */
+  
+  /* Hairline Dividers */
+  --color-hairline:         #E2E8F0;   /* Light surface border / separator */
+  --color-hairline-subtle:  #EDF2F7;
+  --color-hairline-dark:    rgba(255, 255, 255, 0.12); /* Dark surface divider */
+  --color-hairline-dark-active: rgba(255, 255, 255, 0.24);
 
-  /* ── TEXT ── */
-  --color-ink:              #0A192F;   /* Deep industrial ink — primary text on light surfaces */
-  --color-body:             #334155;   /* Clean Slate body text (high readability) */
-  --color-muted:            #64748B;   /* Muted / caption text */
-  --color-on-dark:          #FFFFFF;   /* Text on dark surfaces */
-  --color-on-dark-muted:    #94A3B8;   /* Secondary slate text on dark surfaces */
-  --color-on-dark-subtle:   #64748B;   /* Very muted on dark */
+  /* ── 04. TYPOGRAPHIC INK & TEXT ── */
+  /* On Light Surfaces */
+  --color-ink:              #0A192F;   /* Deep Industrial Ink — headlines */
+  --color-body:             #334155;   /* Slate text — European reading comfort */
+  --color-muted:            #64748B;   /* Secondary / metadata */
+  --color-caption:          #7A8CA3;   /* Captions & fine-print */
 
-  /* ── SEMANTIC ── */
+  /* On Dark Surfaces */
+  --color-on-dark:          #FFFFFF;   /* Pure white headlines on dark tiles */
+  --color-on-dark-body:     #E2E8F0;   /* High-contrast body text on dark */
+  --color-on-dark-muted:    #94A3B8;   /* Secondary text on dark */
+  --color-on-dark-subtle:   #64748B;   /* Monospace labels on dark */
+
+  /* Semantic */
   --color-success:          #16A34A;
   --color-error:            #DC2626;
 
+  /* ── 05. TYPOGRAPHY SYSTEM (NOTO SANS FOUNDATION) ── */
+  --font-primary: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-body:    'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono:    'JetBrains Mono', 'SF Mono', Consolas, Monaco, monospace;
 
-  /* ── TYPOGRAPHY ── */
-  --font-display:    'Inter', 'Helvetica Neue', Arial, sans-serif;
-  --font-mono:       'JetBrains Mono', 'SF Mono', Consolas, monospace;
-  --font-logo:       'Cinzel', serif;
+  /* Display Scale — Apple-tight negative tracking */
+  --text-hero-size:         clamp(42px, 5.5vw, 64px);
+  --text-hero-line:         1.06;
+  --text-hero-track:        -0.03em;
+  --text-hero-weight:       600;
 
-  /* Display Scale */
-  --text-display-xxl-size:   72px;
-  --text-display-xxl-line:   1.05;
-  --text-display-xxl-track:  -0.03em;
-  --text-display-xxl-weight: 500;
+  --text-display-lg-size:   clamp(32px, 4vw, 44px);
+  --text-display-lg-line:   1.12;
+  --text-display-lg-track:  -0.025em;
+  --text-display-lg-weight: 600;
 
-  --text-display-xl-size:    52px;
-  --text-display-xl-line:    1.1;
-  --text-display-xl-track:   -0.025em;
-  --text-display-xl-weight:  500;
+  --text-display-md-size:   clamp(24px, 2.8vw, 32px);
+  --text-display-md-line:   1.2;
+  --text-display-md-track:  -0.02em;
+  --text-display-md-weight: 600;
 
-  --text-display-lg-size:    36px;
-  --text-display-lg-line:    1.15;
-  --text-display-lg-track:   -0.02em;
-  --text-display-lg-weight:  500;
+  --text-display-sm-size:   22px;
+  --text-display-sm-line:   1.3;
+  --text-display-sm-track:  -0.015em;
+  --text-display-sm-weight: 600;
 
-  --text-display-md-size:    26px;
-  --text-display-md-line:    1.2;
-  --text-display-md-track:   -0.018em;
-  --text-display-md-weight:  500;
+  /* Body Scale — 17px reading standard */
+  --text-body-lead-size:    20px;
+  --text-body-lead-line:    1.5;
+  --text-body-lead-track:   -0.01em;
+  --text-body-lead-weight:  400;
 
-  /* Body Scale */
-  --text-body-lg-size:       20px;
-  --text-body-lg-line:       1.6;
-  --text-body-lg-track:      -0.01em;
-  --text-body-lg-weight:     400;
+  --text-body-size:         17px;
+  --text-body-line:         1.58;
+  --text-body-track:        -0.01em;
+  --text-body-weight:       400;
 
-  --text-body-md-size:       16px;
-  --text-body-md-line:       1.65;
-  --text-body-md-track:      -0.008em;
-  --text-body-md-weight:     400;
+  --text-caption-size:      14px;
+  --text-caption-line:      1.48;
+  --text-caption-track:     -0.005em;
+  --text-caption-weight:    400;
 
-  --text-caption-size:       14px;
-  --text-caption-line:       1.6;
-  --text-caption-track:      0;
-  --text-caption-weight:     400;
+  /* Monospace & Engineering Micro-Tokens */
+  --text-mono-label-size:   11px;
+  --text-mono-label-line:   1.2;
+  --text-mono-label-track:  0.1em;
+  --text-mono-label-weight: 600;
 
-  /* Mono / Label Scale */
-  --text-mono-button-size:   13px;
-  --text-mono-button-line:   1;
-  --text-mono-button-track:  0.08em;
-  --text-mono-button-weight: 500;
+  --text-mono-spec-size:    13px;
+  --text-mono-spec-line:    1.4;
+  --text-mono-spec-track:   0.02em;
+  --text-mono-spec-weight:  500;
 
-  --text-mono-eyebrow-size:  11px;
-  --text-mono-eyebrow-line:  1;
-  --text-mono-eyebrow-track: 0.12em;
-  --text-mono-eyebrow-weight:500;
+  --text-fine-print-size:   12px;
+  --text-fine-print-line:   1.4;
+  --text-fine-print-track:  0;
+  --text-fine-print-weight: 400;
 
-  --text-mono-label-size:    11px;
-  --text-mono-label-line:    1.4;
-  --text-mono-label-track:   0.08em;
-  --text-mono-label-weight:  500;
+  /* ── 06. SPACING (8px Base Rhythm) ── */
+  --space-xxs:              4px;
+  --space-xs:               8px;
+  --space-sm:               12px;
+  --space-md:               16px;
+  --space-lg:               24px;
+  --space-xl:               32px;
+  --space-2xl:              48px;
+  --space-3xl:              64px;
+  --space-4xl:              80px;
+  --space-section:          clamp(64px, 8vw, 104px);
+  --space-section-compact:  clamp(48px, 6vw, 72px);
 
-  --text-mono-caption-size:  10px;
-  --text-mono-caption-line:  1.4;
-  --text-mono-caption-track: 0.05em;
-  --text-mono-caption-weight:400;
+  /* ── 07. CONTAINERS & GUTTERS ── */
+  --container-max:          1360px;
+  --container-editorial:    1120px;
+  --container-prose:        780px;
+  --container-gutter:       clamp(20px, 4vw, 48px);
 
+  /* ── 08. BORDER RADIUS SCALE ── */
+  --radius-none:            0px;      /* Full-bleed tiles */
+  --radius-xs:              4px;      /* Micro-tags, technical indicators */
+  --radius-sm:              8px;      /* Compact utility buttons, inputs */
+  --radius-md:              12px;     /* Content cards */
+  --radius-lg:              18px;     /* Large visual cards */
+  --radius-pill:            9999px;   /* Signature Action Pill CTAs & filter chips */
 
-  /* ── SPACING (4px base unit) ── */
-  --space-xxs:    2px;
-  --space-xs:     4px;
-  --space-sm:     8px;
-  --space-md:     12px;
-  --space-lg:     16px;
-  --space-xl:     20px;
-  --space-2xl:    24px;
-  --space-3xl:    32px;
-  --space-4xl:    44px;
-  --space-5xl:    56px;
-  --space-6xl:    72px;
-  --space-section: 96px;   /* Full section vertical padding */
-  --space-section-sm: 64px; /* Compact section vertical padding */
+  /* ── 09. SHADOW SYSTEM (APPLE DISCIPLINE: PRODUCT SHADOW ONLY) ── */
+  /* No shadows on cards or buttons! Only photographic products resting on surfaces */
+  --shadow-product:         0 24px 48px -12px rgba(0, 0, 0, 0.28), 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-product-soft:    0 16px 32px -8px rgba(0, 0, 0, 0.2);
+  --shadow-elevated-chip:   0 8px 24px -4px rgba(0, 0, 0, 0.12);
 
+  /* ── 10. MICRO-INTERACTION & MOTION ── */
+  --transition-instant:     120ms cubic-bezier(0.2, 0, 0, 1);
+  --transition-press:       140ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-smooth:      280ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-section:     500ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* ── BORDER RADIUS ── */
-  --radius-none:  0px;
-  --radius-xs:    3px;
-  --radius-sm:    4px;    /* Canonical card/button radius */
-  --radius-md:    8px;
-  --radius-lg:    12px;
-  --radius-full:  9999px;
-
-
-  /* ── BORDERS ── */
-  --border-hairline:         1px solid var(--color-hairline);
-  --border-hairline-on-dark: 1px solid var(--color-hairline-on-dark);
-  --border-accent:           1px solid var(--color-accent-silver);
-
-
-  /* ── TRANSITIONS ── */
-  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base:   240ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow:   380ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-reveal: 800ms cubic-bezier(0.16, 1, 0.3, 1);
-
-
-  /* ── CONTAINER ── */
-  --container-max:     1280px;
-  --container-wide:    1440px;
-  --container-narrow:  880px;
-  --gutter:            clamp(24px, 4vw, 48px);
-  --gutter-sm:         clamp(16px, 3vw, 32px);
-
-
-  /* ── Z-INDEX ── */
-  --z-base:     1;
-  --z-overlay:  10;
-  --z-nav:      100;
-  --z-menu:     200;
-  --z-modal:    300;
-
-
-  /* ── SHADOWS ── */
-  /* Brand uses minimal shadows — hairline borders carry elevation */
-  --shadow-soft: 0 2px 16px 0 rgba(10, 22, 40, 0.08);
-  --shadow-card: 0 1px 3px 0 rgba(10, 22, 40, 0.06);
-
-
-  /* ── TECHNICAL GRID OVERLAY (CSS custom) ── */
-  --grid-color:   rgba(255,255,255,0.04);
-  --grid-size:    40px;
-
-}
-
-
-/* ── RESPONSIVE TOKEN OVERRIDES ── */
-
-@media (max-width: 1024px) {
-  :root {
-    --text-display-xxl-size:  52px;
-    --text-display-xl-size:   40px;
-    --text-display-lg-size:   30px;
-    --space-section:          72px;
-  }
-}
-
-@media (max-width: 768px) {
-  :root {
-    --text-display-xxl-size:  40px;
-    --text-display-xl-size:   32px;
-    --text-display-lg-size:   26px;
-    --text-display-md-size:   22px;
-    --text-body-lg-size:      18px;
-    --space-section:          56px;
-    --space-section-sm:       44px;
-  }
-}
-
-@media (max-width: 480px) {
-  :root {
-    --text-display-xxl-size:  34px;
-    --text-display-xl-size:   28px;
-    --text-display-lg-size:   24px;
-    --space-section:          48px;
-  }
+  /* ── 11. Z-INDEX LAYERS ── */
+  --z-base:                 1;
+  --z-sticky-nav:           100;
+  --z-dropdown:             150;
+  --z-mobile-drawer:        200;
+  --z-modal:                300;
 }

@@ -3,309 +3,272 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product Specifications — TIANJIN DECENT INTERNATIONAL TRADE CO., LTD.</title>
-  <meta name="description" content="Detailed technical parameters, ASTM/EN compliance, loading capacities, dimensions tables, and structural features from TIANJIN DECENT INTERNATIONAL TRADE CO., LTD." />
-  <link rel="icon" type="image/svg+xml" href="/assets/logo-Cm98BFll.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <title>Product Specification — TIANJIN DECENT INTERNATIONAL TRADE CO., LTD.</title>
+  <meta name="description" content="Technical specification, dimensional data, standards compliance, and quotation sheet from TIANJIN DECENT INTERNATIONAL TRADE CO., LTD." />
+  
+  <link rel="icon" type="image/png" href="/assets/T-D-Logo-CoMgngHF.png" />
+  
   <style>
-    .p-hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: 64px;
-      align-items: center;
-      padding-top: 24px;
+    .product-hero {
+      padding: clamp(48px, 6vw, 80px) 0 var(--space-3xl);
+      background-color: var(--color-canvas);
     }
-    @media (max-width: 960px) {
-      .p-hero-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-    }
-    .p-image-card {
-      background-color: var(--color-canvas-soft);
-      border: var(--border-hairline);
-      border-radius: var(--radius-sm);
-      aspect-ratio: 4/3;
+    
+    .breadcrumb-row {
       display: flex;
       align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .p-image-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .p-standards {
-      display: flex;
-      flex-wrap: wrap;
       gap: 8px;
-      margin-top: var(--space-2xl);
-    }
-    .p-standards__label {
-      font-family: var(--font-mono);
-      font-size: var(--text-mono-label-size);
-      font-weight: 500;
+      font-size: 13px;
       color: var(--color-muted);
-      letter-spacing: var(--text-mono-label-track);
-      margin-right: 8px;
-      align-self: center;
+      margin-bottom: var(--space-lg);
     }
-    .p-standard-badge {
-      font-family: var(--font-mono);
-      font-size: var(--text-mono-caption-size);
-      font-weight: 500;
-      color: var(--color-primary-light);
-      background-color: var(--color-canvas-soft);
-      border: var(--border-hairline);
-      padding: 4px 8px;
-      border-radius: var(--radius-xs);
+    
+    .breadcrumb-row a:hover {
+      color: var(--color-primary);
     }
-    .p-content-blocks {
-      display: flex;
-      flex-direction: column;
-      gap: 64px;
-    }
-    .p-block {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .p-block__header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      border-bottom: var(--border-hairline);
-      padding-bottom: 12px;
-    }
-    .p-block__num {
-      font-family: var(--font-mono);
-      font-size: var(--text-mono-eyebrow-size);
-      color: var(--color-primary-mid);
-      font-weight: 500;
-    }
-    .p-block__title {
-      font-family: var(--font-display);
-      font-size: var(--text-display-md-size);
-      color: var(--color-ink);
-      font-weight: 500;
-      letter-spacing: var(--text-display-md-track);
-    }
-    .p-body-paragraph {
-      font-family: var(--font-body);
-      font-size: var(--text-body-md-size);
-      line-height: var(--text-body-md-line);
-      color: var(--color-body);
-      max-width: 880px;
-    }
-    .p-spec-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .p-spec-table th, .p-spec-table td {
-      padding: 16px;
-      text-align: left;
-      border-bottom: var(--border-hairline);
-    }
-    .p-spec-table th {
-      font-family: var(--font-mono);
-      font-size: var(--text-mono-eyebrow-size);
-      color: var(--color-muted);
-      font-weight: 500;
-      background-color: var(--color-canvas-soft);
-    }
-    .p-spec-label {
-      font-family: var(--font-mono);
-      font-size: var(--text-mono-label-size);
-      color: var(--color-ink);
-      font-weight: 500;
-      width: 35%;
-    }
-    .p-spec-val {
-      font-family: var(--font-body);
-      font-size: var(--text-body-md-size);
-      color: var(--color-body);
-    }
-    .p-lists-split {
+
+    .detail-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-    }
-    @media (max-width: 768px) {
-      .p-lists-split {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-    }
-    .p-bullet-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .p-bullet-item {
-      display: flex;
-      gap: 12px;
+      grid-template-columns: 1.1fr 1fr;
+      gap: var(--space-3xl);
       align-items: start;
     }
-    .p-bullet-dot {
-      color: var(--color-primary-light);
-      font-size: 16px;
-      line-height: 1;
-      margin-top: 2px;
+    
+    .detail-media {
+      position: sticky;
+      top: 96px;
     }
-    .p-bullet-text {
-      font-family: var(--font-body);
-      font-size: var(--text-caption-size);
-      line-height: var(--text-caption-line);
-      color: var(--color-body);
+    
+    .detail-image-card {
+      background-color: var(--color-canvas-soft);
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-sm);
+      padding: var(--space-xl);
+      text-align: center;
     }
-    .related-section {
-      border-top: var(--border-hairline);
-      padding-top: 64px;
-      margin-top: 48px;
+    
+    .detail-image {
+      width: 100%;
+      height: auto;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: var(--radius-xs);
+      box-shadow: var(--shadow-product);
+    }
+
+    .detail-info {
       display: flex;
       flex-direction: column;
-      gap: 32px;
     }
-    .related-title {
-      font-family: var(--font-display);
-      font-size: var(--text-display-md-size);
+    
+    .detail-title {
+      font-size: var(--text-display-lg-size);
+      line-height: var(--text-display-lg-line);
+      letter-spacing: var(--text-display-lg-track);
       color: var(--color-ink);
-      font-weight: 500;
-      letter-spacing: var(--text-display-md-track);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .detail-desc {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-body);
+      margin-bottom: var(--space-xl);
+      white-space: pre-line;
+    }
+    
+    .features-list, .applications-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: var(--space-md) 0 var(--space-xl);
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--color-body);
+    }
+    
+    .feature-item::before {
+      content: '✓';
+      color: var(--color-primary);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .detail-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+      }
+      .detail-media {
+        position: static;
+      }
+      .features-list, .applications-list {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
-  <script type="module" crossorigin src="/assets/product-DvlBdvoG.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/animations-DnA7AFqM.js">
-  <link rel="modulepreload" crossorigin href="/assets/main-btRCfXhT.js">
-  <link rel="modulepreload" crossorigin href="/assets/products-CxSxeU8a.js">
-  <link rel="stylesheet" crossorigin href="/assets/animations-hweXj8c2.css">
+  <script type="module" crossorigin src="/assets/product-DDKTyeI_.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/footer-S7LgaTH1.js">
+  <link rel="stylesheet" crossorigin href="/assets/footer-g8k_KCI-.css">
 </head>
 <body>
 
   <div id="nav-placeholder"></div>
 
   <main id="main-content">
-    <div id="product-detail-container">
-      
-      <!-- Dynamic Page Hero -->
-      <section class="page-hero">
-        <div class="container page-hero__inner">
-          <div class="breadcrumb">
-            <a href="/" class="breadcrumb__item">Home</a>
-            <span class="breadcrumb__sep">/</span>
-            <a href="/products.html" class="breadcrumb__item">Products</a>
-            <span class="breadcrumb__sep">/</span>
-            <span id="breadcrumb-current" class="breadcrumb__item breadcrumb__item--current">Loading...</span>
-          </div>
-          <div id="product-category" class="eyebrow eyebrow--on-dark reveal">PRODUCT DETAIL</div>
-          
-          <div class="p-hero-grid">
-            <div class="p-hero-left reveal reveal--delay-1">
-              <div class="p-image-card">
-                <img id="product-hero-image" src="" alt="Product Diagram" />
-              </div>
-            </div>
-            <div class="p-hero-right reveal reveal--delay-2">
-              <h1 id="product-name" class="page-hero__title" style="margin-bottom: 20px;">Loading...</h1>
-              <p id="product-short-desc" class="page-hero__sub" style="margin-bottom: 32px; margin-top: 0; max-width: 100%;">
-                Retrieving specification parameters...
-              </p>
-              
-              <div class="p-hero-actions" style="display: flex; gap: 16px;">
-                <a id="product-quote-btn" href="/contact.html" class="btn btn--white btn--lg">Request a Quote</a>
-              </div>
-
-              <div id="product-standards" class="p-standards">
-                <!-- Standards Badges -->
-              </div>
-            </div>
-          </div>
-
+    
+    <section class="product-hero">
+      <div class="container">
+        
+        <!-- Breadcrumbs -->
+        <div class="breadcrumb-row" id="breadcrumb">
+          <a href="/index.html">Home</a>
+          <span>/</span>
+          <a href="/products.html">Products</a>
+          <span>/</span>
+          <span id="bc-category" style="color: var(--color-body);">Category</span>
+          <span>/</span>
+          <span id="bc-product" style="color: var(--color-ink); font-weight: 600;">Product</span>
         </div>
-      </section>
 
-      <!-- Content Blocks -->
-      <section class="section">
-        <div class="container p-content-blocks">
+        <div class="detail-grid">
           
-          <!-- Block 1: Technical Overview -->
-          <div class="p-block reveal">
-            <div class="p-block__header">
-              <span class="p-block__num">01</span>
-              <h2 class="p-block__title">Technical Overview</h2>
+          <!-- Left Column: Product Visual Render with Apple-level Shadow -->
+          <div class="detail-media">
+            <div class="detail-image-card">
+              <img id="product-img" src="/assets/hr-steel-coils-DAtFyHpr.jpg" alt="Product Specification" class="detail-image" />
             </div>
-            <div class="p-block__body">
-              <p id="product-description" class="p-body-paragraph">Loading...</p>
+
+            <!-- Quick Action Cluster below image -->
+            <div style="display: flex; gap: 12px; margin-top: var(--space-lg); justify-content: center;">
+              <a href="#inquiry-section" class="btn btn--primary" style="flex: 1;">
+                Request Quotation & MTC
+              </a>
+              <a id="product-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="flex: 1;">
+                Chat on WhatsApp
+              </a>
             </div>
           </div>
 
-          <!-- Block 2: Parameters Matrix -->
-          <div class="p-block reveal">
-            <div class="p-block__header">
-              <span class="p-block__num">02</span>
-              <h2 class="p-block__title">Parameter Matrix</h2>
-            </div>
-            <div class="p-block__body">
-              <table class="p-spec-table">
-                <thead>
-                  <tr>
-                    <th>PARAMETER</th>
-                    <th>SPECIFIED VALUE</th>
-                  </tr>
-                </thead>
-                <tbody id="product-spec-rows">
-                  <!-- Spec Rows -->
+          <!-- Right Column: Product Technical Data -->
+          <div class="detail-info">
+            <div class="section-kicker" id="product-category-eyebrow">STEEL COILS // SPECIFICATION</div>
+            <h1 class="detail-title" id="product-name">Loading Technical Specifications...</h1>
+            <p class="detail-desc" id="product-desc"></p>
+
+            <!-- Technical Specification Table -->
+            <h2 class="heading-display-sm" style="margin-bottom: var(--space-sm);">Technical Specifications</h2>
+            <div class="spec-table-card" style="margin-bottom: var(--space-2xl);">
+              <table class="spec-table">
+                <tbody id="specs-table-body">
+                  <!-- Dynamic Specs -->
                 </tbody>
               </table>
             </div>
-          </div>
 
-          <!-- Block 3: Features & Applications -->
-          <div class="p-lists-split reveal">
-            <div class="p-block">
-              <div class="p-block__header">
-                <span class="p-block__num">03</span>
-                <h2 class="p-block__title">Key Features</h2>
-              </div>
-              <div class="p-block__body">
-                <div id="product-features" class="p-bullet-list">
-                  <!-- Bullet items -->
-                </div>
-              </div>
+            <!-- Engineering Features -->
+            <h2 class="heading-display-sm" style="margin-bottom: var(--space-xs);">Key Engineering Features</h2>
+            <div class="features-list" id="features-list">
+              <!-- Dynamic Features -->
             </div>
 
-            <div class="p-block">
-              <div class="p-block__header">
-                <span class="p-block__num">04</span>
-                <h2 class="p-block__title">Scenarios</h2>
-              </div>
-              <div class="p-block__body">
-                <div id="product-applications" class="p-bullet-list">
-                  <!-- Bullet items -->
-                </div>
-              </div>
+            <!-- Certified Applications -->
+            <h2 class="heading-display-sm" style="margin-bottom: var(--space-xs);">Project Applications</h2>
+            <div class="applications-list" id="applications-list">
+              <!-- Dynamic Applications -->
             </div>
-          </div>
 
-          <!-- Block 4: Related Accessories -->
-          <div class="related-section reveal">
-            <h3 class="related-title">Related Accessories & Components</h3>
-            <div id="related-grid" class="products-catalog-grid" aria-label="Related accessories">
-              <!-- Related Product Cards -->
+            <!-- Applicable Standards -->
+            <h2 class="heading-display-sm" style="margin-bottom: var(--space-sm);">Governing International Standards</h2>
+            <div id="standards-list" style="display: flex; flex-direction: column; gap: 8px; margin-bottom: var(--space-2xl);">
+              <!-- Dynamic Standards -->
             </div>
+
           </div>
 
         </div>
-      </section>
 
-    </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         DIRECT RFQ INQUIRY DESK (PRE-FILLED FOR THIS PRODUCT)
+         ══════════════════════════════════════════════════════════════════ -->
+    <section class="section surface-soft" id="inquiry-section">
+      <div class="container container--editorial">
+        
+        <div style="text-align: center; margin-bottom: var(--space-2xl);">
+          <div class="section-kicker">DIRECT B2B RFQ</div>
+          <h2 class="heading-display-md">Request specifications & price calculation.</h2>
+          <p style="color: var(--color-muted);">Our dispatch desk at Xingang Port, Tianjin will respond within 24 hours with certified technical quotes.</p>
+        </div>
+
+        <div class="inquiry-form-card">
+          
+          <div id="form-success" style="display: none; padding: 16px; background-color: rgba(22, 163, 74, 0.1); border: 1px solid var(--color-success); border-radius: var(--radius-sm); color: var(--color-success); margin-bottom: 20px;">
+            ✓ Your inquiry has been dispatched to TIANJIN DECENT export sales desk. A technical quotation will be delivered to your email shortly.
+          </div>
+
+          <form id="rfq-form" onsubmit="event.preventDefault(); document.getElementById('form-success').style.display = 'block'; this.reset();">
+            <div class="form-grid">
+              
+              <div class="form-group">
+                <label class="form-label" for="rfq-name">Full Name *</label>
+                <input type="text" id="rfq-name" class="form-input" placeholder="e.g. Marcus Vance" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="rfq-company">Company / Organization *</label>
+                <input type="text" id="rfq-company" class="form-input" placeholder="e.g. Vance Construction GmbH" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="rfq-email">Business Email *</label>
+                <input type="email" id="rfq-email" class="form-input" placeholder="e.g. marcus@vance-corp.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="rfq-country">Destination Country & Port *</label>
+                <input type="text" id="rfq-country" class="form-input" placeholder="e.g. Rotterdam, Netherlands" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="rfq-product">Selected Product *</label>
+                <input type="text" id="rfq-product" class="form-input" readonly />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="rfq-volume">Estimated Volume *</label>
+                <input type="text" id="rfq-volume" class="form-input" placeholder="e.g. 100 MT or 3x 40ft Containers" required />
+              </div>
+
+              <div class="form-group form-group--full">
+                <label class="form-label" for="rfq-message">Technical Notes / Dimensional Specifications</label>
+                <textarea id="rfq-message" class="form-textarea" rows="4" placeholder="Specify grade requirements, thickness, width, galvanization coating, couplers count..."></textarea>
+              </div>
+
+              <div class="form-group form-group--full" style="margin-top: 12px;">
+                <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">
+                  Submit B2B Quotation Request →
+                </button>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <div id="footer-placeholder"></div>
-
 
 
 </body>

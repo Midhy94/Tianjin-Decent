@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: '.',
@@ -6,20 +6,18 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        about: 'about.html',
         products: 'products.html',
         product: 'product.html',
-        solutions: 'solutions.html',
-        quality: 'quality.html',
-        company: 'company.html',
-        resources: 'resources.html',
+        about: 'about.html',
         contact: 'contact.html',
+        quality: 'quality.html',
+        solutions: 'solutions.html',
       },
     },
     outDir: 'dist',
   },
   server: {
     port: 3000,
-    open: '/',
+    open: false,
   },
-})
+});

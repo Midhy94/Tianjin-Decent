@@ -4,105 +4,199 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Catalog — TIANJIN DECENT INTERNATIONAL TRADE CO., LTD.</title>
-  <meta name="description" content="Browse the full product catalog of TIANJIN DECENT INTERNATIONAL TRADE CO., LTD. — Hot Rolled Coils, Pre-Galvanized Coils, Color Coated Coils, Structural Steel Profiles, and Modular Scaffolding Systems." />
-  <link rel="canonical" href="/assets/products-DcPsJ8eh.html" />
-  <link rel="icon" type="image/svg+xml" href="/assets/logo-Cm98BFll.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="description" content="Comprehensive catalog of Steel Coils, Structural Steel Profiles, Modular Scaffolding Systems, Tubes, Fittings, and Accessories supplied by TIANJIN DECENT INTERNATIONAL TRADE CO., LTD." />
+  
+  <link rel="icon" type="image/png" href="/assets/T-D-Logo-CoMgngHF.png" />
+  
   <style>
-    .products-hero-eyebrow { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
-    .products-filter-section { padding: 40px 0 0; }
-    .products-catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    @media (max-width: 1024px) { .products-catalog-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 640px) { .products-catalog-grid { grid-template-columns: 1fr; } }
-    .products-catalog-section { padding-top: 48px; padding-bottom: 96px; }
-    .category-section-title {
-      font-family: var(--font-mono);
-      font-size: 9px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-muted);
-      padding: 48px 0 24px;
-      border-top: var(--border-hairline);
-      margin-top: 48px;
+    .catalog-header {
+      padding: clamp(48px, 6vw, 80px) 0 clamp(24px, 4vw, 40px);
+      background-color: var(--color-canvas);
+      border-bottom: 1px solid var(--color-hairline);
     }
-    .category-section-title:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+    
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      flex-wrap: wrap;
+      margin-top: var(--space-xl);
+    }
+    
+    .filter-chip {
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: var(--radius-pill);
+      background-color: var(--color-canvas-soft);
+      border: 1px solid var(--color-hairline);
+      color: var(--color-body);
+      cursor: pointer;
+      transition: all var(--transition-instant);
+    }
+    
+    .filter-chip:hover {
+      background-color: var(--color-canvas);
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+    
+    .filter-chip.is-active {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #FFFFFF;
+    }
+    
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+      margin-top: var(--space-2xl);
+    }
+    
+    .product-card {
+      background-color: var(--color-canvas);
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      transition: transform var(--transition-instant), border-color var(--transition-instant);
+    }
+    
+    .product-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-primary);
+    }
+    
+    .product-card__img-wrap {
+      width: 100%;
+      height: 220px;
+      background-color: var(--color-canvas-soft);
+      overflow: hidden;
+    }
+    
+    .product-card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-smooth);
+    }
+    
+    .product-card:hover .product-card__img {
+      transform: scale(1.04);
+    }
+    
+    .product-card__body {
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    
+    .product-card__category {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 4px;
+    }
+    
+    .product-card__name {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-ink);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    
+    .product-card__desc {
+      font-size: 13px;
+      color: var(--color-muted);
+      line-height: 1.5;
+      margin-bottom: var(--space-md);
+      flex-grow: 1;
+    }
+    
+    .product-card__specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: var(--space-md);
+    }
+    
+    .product-card__footer {
+      border-top: 1px solid var(--color-hairline);
+      padding-top: var(--space-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+    
+    @media (max-width: 1024px) {
+      .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .catalog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
-  <script type="module" crossorigin src="/assets/products-CHc35wZ9.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/animations-DnA7AFqM.js">
-  <link rel="modulepreload" crossorigin href="/assets/products-CxSxeU8a.js">
-  <link rel="stylesheet" crossorigin href="/assets/animations-hweXj8c2.css">
+  <script type="module" crossorigin src="/assets/products-nUvYs5YU.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/footer-S7LgaTH1.js">
+  <link rel="stylesheet" crossorigin href="/assets/footer-g8k_KCI-.css">
 </head>
 <body>
 
   <div id="nav-placeholder"></div>
 
   <main id="main-content">
-
-    <!-- Page Hero -->
-    <section class="page-hero">
-      <div class="container page-hero__inner">
-        <div class="breadcrumb">
-          <a href="/" class="breadcrumb__item">Home</a>
-          <span class="breadcrumb__sep">/</span>
-          <span class="breadcrumb__item breadcrumb__item--current">Products</span>
-        </div>
-        <div class="eyebrow eyebrow--on-dark reveal">PRODUCT CATALOG</div>
-        <h1 class="page-hero__title reveal reveal--delay-1">
-          Steel coils, profiles &<br>scaffolding systems.
+    
+    <!-- Header -->
+    <section class="catalog-header">
+      <div class="container">
+        <div class="section-kicker">CATALOG // TIANJIN DECENT</div>
+        <h1 class="heading-display-lg" style="margin-bottom: var(--space-xs);">
+          Industrial Products & Specifications.
         </h1>
-        <p class="page-hero__sub reveal reveal--delay-2">
-          A comprehensive industrial supply portfolio: Hot Rolled Coils, Pre-Galvanized & Color Coated Coils, Structural Steel Profiles, and Modular Scaffolding Systems supplied with full technical specifications and Mill Test Certificates.
+        <p class="text-lead" style="color: var(--color-muted); max-width: 760px;">
+          Explore flat steel coils, structural sections, modular scaffolding systems, and access hardware conforming to international EN, ASTM, BS, and JIS standards.
         </p>
+
+        <!-- Category Filters -->
+        <div class="filter-bar" id="category-filters">
+          <button class="filter-chip is-active" data-category="all">All Products</button>
+          <button class="filter-chip" data-category="steel-coils">Steel Coils</button>
+          <button class="filter-chip" data-category="structural-profiles">Structural Steel & Pipes</button>
+          <button class="filter-chip" data-category="scaffolding-systems">Scaffolding Systems</button>
+          <button class="filter-chip" data-category="tubes-fittings">Tubes & Fittings</button>
+          <button class="filter-chip" data-category="platforms">Platforms & Boards</button>
+          <button class="filter-chip" data-category="mobile-towers">Mobile Towers</button>
+          <button class="filter-chip" data-category="safety-accessories">Accessories & Safety</button>
+        </div>
       </div>
     </section>
 
-    <!-- Filter + Catalog -->
-    <section class="products-catalog-section">
+    <!-- Products Grid Section -->
+    <section class="section surface-soft">
       <div class="container">
-
-        <!-- Filter Bar -->
-        <div class="products-filter-section reveal">
-          <div class="filter-bar" role="group" aria-label="Filter by category">
-            <button class="filter-pill filter-pill--active" data-filter="all">All Products</button>
-            <button class="filter-pill" data-filter="steel-coils">Steel Coils</button>
-            <button class="filter-pill" data-filter="structural-profiles">Structural Steel & Pipes</button>
-            <button class="filter-pill" data-filter="scaffolding-systems">Scaffolding Systems</button>
-            <button class="filter-pill" data-filter="tubes-fittings">Tubes & Fittings</button>
-            <button class="filter-pill" data-filter="platforms">Platforms & Boards</button>
-            <button class="filter-pill" data-filter="mobile-towers">Mobile Towers</button>
-            <button class="filter-pill" data-filter="safety-accessories">Safety & Parts</button>
-          </div>
+        
+        <div id="products-count" style="font-family: var(--font-mono); font-size: 12px; color: var(--color-muted); margin-bottom: var(--space-md);">
+          Showing all products
         </div>
 
-        <!-- Product Grid — rendered by JS -->
-        <div id="product-grid" class="products-catalog-grid" aria-label="Product catalog">
-          <!-- Populated by products-page.js -->
+        <div class="catalog-grid" id="catalog-grid">
+          <!-- Populated by products.js script -->
         </div>
 
-        <noscript>
-          <p style="margin-top: 48px; color: var(--color-body);">Please enable JavaScript to view the product catalog.</p>
-        </noscript>
-
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section quote-cta">
-      <div class="container">
-        <div class="quote-cta__inner">
-          <div class="reveal">
-            <div class="eyebrow eyebrow--on-dark">INQUIRY</div>
-            <h2 class="quote-cta__title">Request a<br>quotation.</h2>
-            <p class="quote-cta__sub">Contact the Tianjin Decent team with your product requirements, quantities, and project details.</p>
-          </div>
-          <div class="quote-cta__actions reveal reveal--delay-2">
-            <a href="/contact.html" class="btn btn--white btn--lg">Request a Quote</a>
-            <a href="/contact.html" class="btn btn--ghost-dark btn--lg">Contact Us</a>
-          </div>
-        </div>
       </div>
     </section>
 

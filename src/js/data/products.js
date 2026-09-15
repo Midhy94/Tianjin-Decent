@@ -702,3 +702,35 @@ Tianjin Decent International Trade Co., Ltd. supplies the complete inventory of 
     relatedProducts: ['aluminum-tower', 'scaffolding-accessories'],
   },
 ];
+
+/**
+ * Find a product by its slug
+ * @param {string} slug 
+ * @returns {object|undefined}
+ */
+export function getProductBySlug(slug) {
+  return PRODUCTS.find(p => p.slug === slug);
+}
+
+/**
+ * Get products filtered by category
+ * @param {string} category 
+ * @returns {Array}
+ */
+export function getProductsByCategory(category) {
+  if (!category || category === 'all') return PRODUCTS;
+  return PRODUCTS.filter(p => p.category === category);
+}
+
+/**
+ * Get all category definitions with counts
+ * @returns {Array}
+ */
+export function getAllCategories() {
+  return Object.entries(CATEGORY_META).map(([key, meta]) => ({
+    id: key,
+    ...meta,
+    count: PRODUCTS.filter(p => p.category === key).length
+  }));
+}
+

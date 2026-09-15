@@ -3,91 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Industrial Solutions — TIANJIN DECENT INTERNATIONAL TRADE CO., LTD.</title>
-  <meta name="description" content="Industrial supply solutions — Steel Coils, Structural Profiles, Scaffolding Access, Construction Shoring, and Global Project Delivery by TIANJIN DECENT INTERNATIONAL TRADE CO., LTD." />
-  <link rel="canonical" href="/solutions.html" />
-  <link rel="icon" type="image/svg+xml" href="/src/assets/logo.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <title>Engineering Applications & Solutions — TIANJIN DECENT INTERNATIONAL TRADE CO., LTD.</title>
+  <meta name="description" content="Industrial engineering solutions in civil infrastructure, commercial high-rise construction, industrial shoring, and pre-engineered buildings." />
+  
+  <link rel="icon" type="image/png" href="/src/assets/images/T-D-Logo.png" />
   <link rel="stylesheet" href="/src/css/tokens.css" />
   <link rel="stylesheet" href="/src/css/base.css" />
   <link rel="stylesheet" href="/src/css/components.css" />
+  
   <style>
-    .solution-list {
+    .solution-card {
+      background-color: var(--color-canvas);
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      border-top: var(--border-hairline);
     }
-    .solution-row {
+    
+    .solution-card__img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+    
+    .solution-card__body {
+      padding: var(--space-xl);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    
+    .solution-grid {
       display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 60px;
-      padding: 48px 0;
-      border-bottom: var(--border-hairline);
-      align-items: start;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
     }
-    @media (max-width: 768px) {
-      .solution-row {
+    
+    @media (max-width: 900px) {
+      .solution-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 32px 0;
       }
-    }
-    .solution-left__num {
-      font-family: var(--font-mono);
-      font-size: var(--text-mono-eyebrow-size);
-      font-weight: 500;
-      color: var(--color-primary-mid);
-      letter-spacing: var(--text-mono-eyebrow-track);
-      margin-bottom: 12px;
-    }
-    .solution-left__title {
-      font-family: var(--font-display);
-      font-size: var(--text-display-md-size);
-      font-weight: 500;
-      color: var(--color-ink);
-      letter-spacing: var(--text-display-md-track);
-    }
-    .solution-right__desc {
-      font-family: var(--font-body);
-      font-size: var(--text-body-md-size);
-      line-height: var(--text-body-md-line);
-      color: var(--color-body);
-      margin-bottom: 24px;
-    }
-    .solution-components {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .solution-components__label {
-      font-family: var(--font-mono);
-      font-size: var(--text-mono-label-size);
-      font-weight: 500;
-      color: var(--color-muted);
-      letter-spacing: var(--text-mono-label-track);
-      text-transform: uppercase;
-    }
-    .solution-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .solution-pill {
-      font-family: var(--font-mono);
-      font-size: var(--text-mono-caption-size);
-      color: var(--color-ink);
-      border: var(--border-hairline);
-      background-color: var(--color-canvas-soft);
-      padding: 6px 12px;
-      border-radius: var(--radius-full);
-      transition: all var(--transition-fast);
-    }
-    .solution-pill:hover {
-      background-color: var(--color-primary);
-      border-color: var(--color-primary);
-      color: var(--color-on-dark);
     }
   </style>
 </head>
@@ -96,111 +52,68 @@
   <div id="nav-placeholder"></div>
 
   <main id="main-content">
-
-    <!-- Page Hero -->
-    <section class="page-hero">
-      <div class="container page-hero__inner">
-        <div class="breadcrumb">
-          <a href="/" class="breadcrumb__item">Home</a>
-          <span class="breadcrumb__sep">/</span>
-          <span class="breadcrumb__item breadcrumb__item--current">Solutions</span>
-        </div>
-        <div class="eyebrow eyebrow--on-dark reveal">PROJECT APPLICATION</div>
-        <h1 class="page-hero__title reveal reveal--delay-1">
-          Supply integration<br>for B2B projects.
+    
+    <!-- Hero -->
+    <section class="section surface-light">
+      <div class="container container--editorial">
+        <div class="section-kicker">ENGINEERING SECTORS // PROJECT USE</div>
+        <h1 class="heading-hero" style="margin-bottom: var(--space-xs);">
+          Industry Applications & Solutions.
         </h1>
-        <p class="page-hero__sub reveal reveal--delay-2">
-          Providing specialized scaffolding material packages configured to exact field application loads, safety regulations, and shipping timelines.
+        <p class="text-lead" style="color: var(--color-muted); max-width: 800px;">
+          Engineered material packages tailored for civil contractors, industrial fabricators, roll-forming manufacturers, and scaffolding rental operators worldwide.
         </p>
       </div>
     </section>
 
-    <!-- Solutions List Section -->
-    <section class="section">
+    <!-- Solutions Grid -->
+    <section class="section surface-soft">
       <div class="container">
         
-        <div class="solution-list reveal">
+        <div class="solution-grid">
           
-          <!-- Solution 1 -->
-          <div class="solution-row">
-            <div class="solution-left">
-              <div class="solution-left__num">01 // STRUCTURAL</div>
-              <h2 class="solution-left__title">Industrial Access</h2>
-            </div>
-            <div class="solution-right">
-              <p class="solution-right__desc">
-                High-capacity access scaffold setups for industrial maintenance, brickwork, and construction. Designed using durable hot-dip galvanized steel components or fiberglass mobile towers to safeguard onsite workers.
+          <!-- Card 1: Civil Infrastructure -->
+          <div class="solution-card">
+            <img src="/src/assets/images/hero-scaffolding.jpg" alt="Civil infrastructure shoring" class="solution-card__img" />
+            <div class="solution-card__body">
+              <span class="tech-tag tech-tag--blue" style="align-self: flex-start; margin-bottom: 8px;">INFRASTRUCTURE</span>
+              <h3 style="font-size: 20px; margin-bottom: 8px;">Bridges, Viaducts & Heavy Shoring</h3>
+              <p style="font-size: 14px; color: var(--color-body); line-height: 1.55; margin-bottom: var(--space-md);">
+                High-capacity Cup Lock and Ring Lock heavy-duty falsework towers designed to support freshly poured concrete bridge decks, retaining walls, and heavy beam spans up to 60 kN per standard leg.
               </p>
-              <div class="solution-components">
-                <span class="solution-components__label">Required Components //</span>
-                <div class="solution-pills">
-                  <a href="/product.html?slug=cuplock-scaffolding-system" class="solution-pill">Cuplock System</a>
-                  <a href="/product.html?slug=scaffold-tube-48" class="solution-pill">Scaffold Tubes</a>
-                  <a href="/product.html?slug=aluminum-platform" class="solution-pill">Platforms & Boards</a>
-                </div>
-              </div>
+              <a href="/product.html?id=cuplock-scaffolding-system" class="btn btn--secondary-pill" style="margin-top: auto; align-self: flex-start;">
+                View Shoring Systems →
+              </a>
             </div>
           </div>
 
-          <!-- Solution 2 -->
-          <div class="solution-row">
-            <div class="solution-left">
-              <div class="solution-left__num">02 // HEAVY LOADS</div>
-              <h2 class="solution-left__title">Construction Shoring</h2>
-            </div>
-            <div class="solution-right">
-              <p class="solution-right__desc">
-                High-load modular grid scaffolding (such as Cuplock and Ring-Lock systems) combined with heavy-duty adjustable base jacks to prop concrete slab formworks and structural cantilevers, holding loads up to 40 KN per leg.
+          <!-- Card 2: Industrial Petrochemical -->
+          <div class="solution-card">
+            <img src="/src/assets/images/seamless-steel-pipes.jpg" alt="Seamless pipes and refinery access" class="solution-card__img" />
+            <div class="solution-card__body">
+              <span class="tech-tag tech-tag--blue" style="align-self: flex-start; margin-bottom: 8px;">OIL & GAS / PIPELINE</span>
+              <h3 style="font-size: 20px; margin-bottom: 8px;">Refinery Piping & Industrial Access</h3>
+              <p style="font-size: 14px; color: var(--color-body); line-height: 1.55; margin-bottom: var(--space-md);">
+                API Spec 5L line pipes and ASTM A106 high-temperature seamless tubing paired with EN 74-1 Class B drop-forged couplers and EN 39 scaffold tubes for offshore platforms and coastal gas plants.
               </p>
-              <div class="solution-components">
-                <span class="solution-components__label">Required Components //</span>
-                <div class="solution-pills">
-                  <a href="/product.html?slug=cuplock-scaffolding-system" class="solution-pill">Cuplock Standards</a>
-                  <a href="/product.html?slug=ringlock-system" class="solution-pill">Ringlock System</a>
-                  <a href="/product.html?slug=base-jack" class="solution-pill">Base Jacks</a>
-                </div>
-              </div>
+              <a href="/product.html?id=seamless-steel-pipes" class="btn btn--secondary-pill" style="margin-top: auto; align-self: flex-start;">
+                View Pipe Catalog →
+              </a>
             </div>
           </div>
 
-          <!-- Solution 3 -->
-          <div class="solution-row">
-            <div class="solution-left">
-              <div class="solution-left__num">03 // REFINE / MARINE</div>
-              <h2 class="solution-left__title">Petrochemical Access</h2>
-            </div>
-            <div class="solution-right">
-              <p class="solution-right__desc">
-                Dielectric, non-sparking fiberglass mobile towers and heavy-duty BS 1139 galvanized scaffolding tubes secured with drop-forged couplers to satisfy refinery and offshore platform safety certifications.
+          <!-- Card 3: PEB & Roll-Forming -->
+          <div class="solution-card">
+            <img src="/src/assets/images/color-coated-coils.jpg" alt="Color coated coils for roll forming" class="solution-card__img" />
+            <div class="solution-card__body">
+              <span class="tech-tag tech-tag--blue" style="align-self: flex-start; margin-bottom: 8px;">ROLL FORMING & PEB</span>
+              <h3 style="font-size: 20px; margin-bottom: 8px;">Roofing, Cladding & Purling Supply</h3>
+              <p style="font-size: 14px; color: var(--color-body); line-height: 1.55; margin-bottom: var(--space-md);">
+                Hot-dip pre-galvanized coils (Z120–Z275) and PPGI color-coated coils optimized for automated high-speed corrugation, sandwich panel manufacturing, and C/Z structural purlin cold roll-forming.
               </p>
-              <div class="solution-components">
-                <span class="solution-components__label">Required Components //</span>
-                <div class="solution-pills">
-                  <a href="/product.html?slug=fiberglass-scaffolding" class="solution-pill">Fiberglass Towers</a>
-                  <a href="/product.html?slug=right-angle-coupler" class="solution-pill">Right-Angle Couplers</a>
-                  <a href="/product.html?slug=scaffold-tube-48" class="solution-pill">Galvanized Tubes</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Solution 4 -->
-          <div class="solution-row">
-            <div class="solution-left">
-              <div class="solution-left__num">04 // B2B CONTRACTS</div>
-              <h2 class="solution-left__title">Project Direct Contracts</h2>
-            </div>
-            <div class="solution-right">
-              <p class="solution-right__desc">
-                For major developers and material leasing firms seeking standard supply channels directly from Chinese manufacturer yards. Includes customized logo embossment, shipping preparation, and mill test certificates (MTC).
-              </p>
-              <div class="solution-components">
-                <span class="solution-components__label">Required Components //</span>
-                <div class="solution-pills">
-                  <a href="/products.html" class="solution-pill">Complete Scaffolding Range</a>
-                  <a href="/contact.html" class="solution-pill">Supply Contract Desk</a>
-                </div>
-              </div>
+              <a href="/product.html?id=color-coated-steel-coils" class="btn btn--secondary-pill" style="margin-top: auto; align-self: flex-start;">
+                View Coil Options →
+              </a>
             </div>
           </div>
 
@@ -209,31 +122,16 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section quote-cta" id="cta" aria-label="Contact call to action">
-      <div class="container">
-        <div class="quote-cta__inner">
-          <div class="reveal">
-            <div class="eyebrow eyebrow--on-dark">
-              INQUIRY
-            </div>
-            <h2 class="quote-cta__title">
-              Request a<br>quotation.
-            </h2>
-            <p class="quote-cta__sub">
-              Discuss product requirements, quantities, and project needs with the Tianjin Decent team. Quotations provided promptly with full specification.
-            </p>
-          </div>
-          <div class="quote-cta__actions reveal reveal--delay-2">
-            <a href="/contact.html" class="btn btn--white btn--lg">
-              Request a Quote
-              <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
-            </a>
-            <a href="/contact.html" class="btn btn--ghost-dark btn--lg">
-              Contact Us
-            </a>
-          </div>
-        </div>
+    <!-- Consultation CTA -->
+    <section class="section surface-dark" style="text-align: center;">
+      <div class="container container--prose">
+        <h2 class="heading-display-md" style="color: #FFFFFF; margin-bottom: var(--space-sm);">Discuss your project specifications.</h2>
+        <p style="color: var(--color-on-dark-body); margin-bottom: var(--space-xl);">
+          Our technical export engineers will assist with section property calculations, container packing optimization, and delivery schedules to your port.
+        </p>
+        <a href="/contact.html" class="btn btn--white btn--lg">
+          Request Project Consultation →
+        </a>
       </div>
     </section>
 

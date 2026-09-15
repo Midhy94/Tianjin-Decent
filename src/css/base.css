@@ -1,63 +1,70 @@
 /* ============================================================
-   TIANJIN DECENT — BASE STYLES
-   Reset, typography, root elements, global utilities
+   TIANJIN DECENT INTERNATIONAL TRADE CO., LTD. — BASE STYLES
+   Version 2: Clean, Precise, International Typography & Layout
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
-@import './tokens.css';
-
-
-/* ── RESET ── */
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
+  font-family: var(--font-primary);
   font-size: 16px;
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
-
-body {
-  font-family: var(--font-display);
-  font-size: var(--text-body-md-size);
-  font-weight: var(--text-body-md-weight);
-  line-height: var(--text-body-md-line);
-  letter-spacing: var(--text-body-md-track);
+  line-height: 1.5;
   color: var(--color-ink);
   background-color: var(--color-canvas);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }
 
-img, video, svg {
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line);
+  letter-spacing: var(--text-body-track);
+  color: var(--color-body);
+  background-color: var(--color-canvas);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+img,
+svg,
+video {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  transition: color var(--transition-instant);
 }
 
 button {
-  cursor: pointer;
-  border: none;
-  background: none;
   font-family: inherit;
+  font-size: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
 }
 
 ul, ol {
   list-style: none;
-}
-
-input, textarea, select {
-  font-family: inherit;
 }
 
 table {
@@ -65,256 +72,197 @@ table {
   width: 100%;
 }
 
+/* ── TYPOGRAPHY HEADINGS ── */
 
-/* ── TYPOGRAPHY UTILITIES ── */
-
-.text-display-xxl {
-  font-family: var(--font-display);
-  font-size: var(--text-display-xxl-size);
-  font-weight: var(--text-display-xxl-weight);
-  line-height: var(--text-display-xxl-line);
-  letter-spacing: var(--text-display-xxl-track);
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-ink);
+  font-weight: 600;
 }
 
-.text-display-xl {
-  font-family: var(--font-display);
-  font-size: var(--text-display-xl-size);
-  font-weight: var(--text-display-xl-weight);
-  line-height: var(--text-display-xl-line);
-  letter-spacing: var(--text-display-xl-track);
+.heading-hero {
+  font-size: var(--text-hero-size);
+  line-height: var(--text-hero-line);
+  letter-spacing: var(--text-hero-track);
+  font-weight: var(--text-hero-weight);
 }
 
-.text-display-lg {
-  font-family: var(--font-display);
+.heading-display-lg {
   font-size: var(--text-display-lg-size);
-  font-weight: var(--text-display-lg-weight);
   line-height: var(--text-display-lg-line);
   letter-spacing: var(--text-display-lg-track);
+  font-weight: var(--text-display-lg-weight);
 }
 
-.text-display-md {
-  font-family: var(--font-display);
+.heading-display-md {
   font-size: var(--text-display-md-size);
-  font-weight: var(--text-display-md-weight);
   line-height: var(--text-display-md-line);
   letter-spacing: var(--text-display-md-track);
+  font-weight: var(--text-display-md-weight);
 }
 
-.text-body-lg {
-  font-family: var(--font-display);
-  font-size: var(--text-body-lg-size);
-  font-weight: var(--text-body-lg-weight);
-  line-height: var(--text-body-lg-line);
-  letter-spacing: var(--text-body-lg-track);
+.heading-display-sm {
+  font-size: var(--text-display-sm-size);
+  line-height: var(--text-display-sm-line);
+  letter-spacing: var(--text-display-sm-track);
+  font-weight: var(--text-display-sm-weight);
 }
 
-.text-body-md {
-  font-family: var(--font-display);
-  font-size: var(--text-body-md-size);
-  font-weight: var(--text-body-md-weight);
-  line-height: var(--text-body-md-line);
+.text-lead {
+  font-size: var(--text-body-lead-size);
+  line-height: var(--text-body-lead-line);
+  letter-spacing: var(--text-body-lead-track);
 }
 
 .text-caption {
   font-size: var(--text-caption-size);
   line-height: var(--text-caption-line);
+  letter-spacing: var(--text-caption-track);
+  color: var(--color-muted);
 }
 
-/* Mono / Technical labels */
-.mono-eyebrow {
+.text-mono {
   font-family: var(--font-mono);
-  font-size: var(--text-mono-eyebrow-size);
-  font-weight: var(--text-mono-eyebrow-weight);
-  line-height: var(--text-mono-eyebrow-line);
-  letter-spacing: var(--text-mono-eyebrow-track);
-  text-transform: uppercase;
 }
 
-.mono-label {
-  font-family: var(--font-mono);
-  font-size: var(--text-mono-label-size);
-  font-weight: var(--text-mono-label-weight);
-  line-height: var(--text-mono-label-line);
-  letter-spacing: var(--text-mono-label-track);
-  text-transform: uppercase;
-}
-
-.mono-button {
-  font-family: var(--font-mono);
-  font-size: var(--text-mono-button-size);
-  font-weight: var(--text-mono-button-weight);
-  line-height: var(--text-mono-button-line);
-  letter-spacing: var(--text-mono-button-track);
-  text-transform: uppercase;
-}
-
-.mono-caption {
-  font-family: var(--font-mono);
-  font-size: var(--text-mono-caption-size);
-  font-weight: var(--text-mono-caption-weight);
-  line-height: var(--text-mono-caption-line);
-  letter-spacing: var(--text-mono-caption-track);
-  text-transform: uppercase;
-}
-
-
-/* ── COLOR UTILITIES ── */
-
-.text-on-dark       { color: var(--color-on-dark); }
-.text-on-dark-muted { color: var(--color-on-dark-muted); }
-.text-muted         { color: var(--color-muted); }
-.text-body-color    { color: var(--color-body); }
-.text-accent-steel  { color: var(--color-accent-steel); }
-.bg-dark            { background-color: var(--color-canvas-dark); }
-.bg-soft            { background-color: var(--color-canvas-soft); }
-.bg-white           { background-color: var(--color-canvas); }
-
-
-/* ── CONTAINER ── */
+/* ── CONTAINERS & SECTION WRAPPERS ── */
 
 .container {
   width: 100%;
   max-width: var(--container-max);
-  margin-inline: auto;
-  padding-inline: var(--gutter);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-gutter);
+  padding-right: var(--container-gutter);
 }
 
-.container--wide {
-  max-width: var(--container-wide);
+.container--editorial {
+  max-width: var(--container-editorial);
 }
 
-.container--narrow {
-  max-width: var(--container-narrow);
+.container--prose {
+  max-width: var(--container-prose);
 }
 
-
-/* ── SECTION SPACING ── */
+/* ── SECTION TONAL MODES (BRIGHT & DARK RHYTHM) ── */
 
 .section {
-  padding-block: var(--space-section);
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+  position: relative;
 }
 
-.section--sm {
-  padding-block: var(--space-section-sm);
+.section--compact {
+  padding-top: var(--space-section-compact);
+  padding-bottom: var(--space-section-compact);
 }
 
-.section--dark {
+/* Light Surface Modes */
+.surface-light {
+  background-color: var(--color-canvas);
+  color: var(--color-body);
+}
+
+.surface-soft {
+  background-color: var(--color-canvas-soft);
+  color: var(--color-body);
+}
+
+.surface-subtle {
+  background-color: var(--color-canvas-subtle);
+  color: var(--color-body);
+}
+
+/* Dark Surface Modes (Abyss Navy) */
+.surface-dark {
   background-color: var(--color-canvas-dark);
+  color: var(--color-on-dark-body);
+}
+
+.surface-dark h1,
+.surface-dark h2,
+.surface-dark h3,
+.surface-dark h4 {
   color: var(--color-on-dark);
 }
 
-.section--soft {
-  background-color: var(--color-canvas-soft);
+.surface-dark .text-caption,
+.surface-dark .section-kicker {
+  color: var(--color-on-dark-muted);
 }
 
-
-/* ── GRID ── */
-
-.grid {
-  display: grid;
-  gap: var(--space-3xl);
+.surface-dark-tile {
+  background-color: var(--color-canvas-dark-tile);
+  color: var(--color-on-dark-body);
 }
 
-.grid--2 { grid-template-columns: repeat(2, 1fr); }
-.grid--3 { grid-template-columns: repeat(3, 1fr); }
-.grid--4 { grid-template-columns: repeat(4, 1fr); }
-
-@media (max-width: 1024px) {
-  .grid--4 { grid-template-columns: repeat(2, 1fr); }
-  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+.surface-dark-tile h1,
+.surface-dark-tile h2,
+.surface-dark-tile h3,
+.surface-dark-tile h4 {
+  color: var(--color-on-dark);
 }
 
-@media (max-width: 640px) {
-  .grid--4,
-  .grid--3,
-  .grid--2 { grid-template-columns: 1fr; }
+/* ── TECHNICAL KICKERS & LABELS ── */
+
+.section-kicker {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label-size);
+  font-weight: var(--text-mono-label-weight);
+  letter-spacing: var(--text-mono-label-track);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
 }
 
+.section-kicker--on-dark {
+  color: var(--color-primary-highlight);
+}
 
-/* ── FLEX UTILITIES ── */
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  background-color: var(--color-canvas-subtle);
+  color: var(--color-ink);
+  border: 1px solid var(--color-hairline);
+  white-space: nowrap;
+}
 
-.flex       { display: flex; }
-.flex-col   { flex-direction: column; }
-.flex-wrap  { flex-wrap: wrap; }
-.items-center { align-items: center; }
-.items-start  { align-items: flex-start; }
-.justify-between { justify-content: space-between; }
-.justify-center  { justify-content: center; }
-.gap-sm     { gap: var(--space-sm); }
-.gap-md     { gap: var(--space-md); }
-.gap-lg     { gap: var(--space-lg); }
-.gap-xl     { gap: var(--space-xl); }
-.gap-2xl    { gap: var(--space-2xl); }
-.gap-3xl    { gap: var(--space-3xl); }
+.tech-tag--on-dark {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-on-dark);
+  border-color: var(--color-hairline-dark);
+}
 
+.tech-tag--blue {
+  background-color: rgba(0, 91, 227, 0.08);
+  color: var(--color-primary);
+  border-color: rgba(0, 91, 227, 0.2);
+}
 
-/* ── DIVIDER ── */
+/* ── HAIRLINE SEPARATORS ── */
 
-.divider {
-  width: 100%;
+.hairline-divider {
   height: 1px;
-  background: var(--color-hairline);
-}
-
-.divider--dark {
-  background: var(--color-hairline-on-dark);
-}
-
-
-/* ── SCROLL REVEAL ── */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition:
-    opacity var(--transition-reveal),
-    transform var(--transition-reveal);
-  will-change: opacity, transform;
-}
-
-.reveal.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal--delay-1 { transition-delay: 100ms; }
-.reveal--delay-2 { transition-delay: 200ms; }
-.reveal--delay-3 { transition-delay: 300ms; }
-.reveal--delay-4 { transition-delay: 400ms; }
-.reveal--delay-5 { transition-delay: 500ms; }
-
-
-/* ── IMAGE ── */
-
-.img-cover {
+  background-color: var(--color-hairline);
+  border: none;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
-.img-ratio-16-9 {
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
+.hairline-divider--on-dark {
+  background-color: var(--color-hairline-dark);
 }
 
-.img-ratio-4-3 {
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-}
-
-.img-ratio-1-1 {
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-}
-
-.img-ratio-3-2 {
-  aspect-ratio: 3 / 2;
-  overflow: hidden;
-}
-
-
-/* ── VISUALLY HIDDEN (accessibility) ── */
+/* ── ACCESSIBILITY & UTILITY ── */
 
 .sr-only {
   position: absolute;
@@ -328,19 +276,7 @@ table {
   border: 0;
 }
 
-
-/* ── FOCUS STATES ── */
-
 :focus-visible {
-  outline: 2px solid var(--color-primary-light);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
-  border-radius: var(--radius-xs);
-}
-
-
-/* ── SELECTION ── */
-
-::selection {
-  background: var(--color-accent-cold);
-  color: var(--color-ink);
 }
