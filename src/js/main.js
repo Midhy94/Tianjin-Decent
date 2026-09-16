@@ -5,11 +5,13 @@
 
 import { initNav } from './components/nav.js';
 import { initFooter } from './components/footer.js';
+import { initHeroSlider } from './components/hero-slider.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Global Navigation & Footer
   initNav();
   initFooter();
+  initHeroSlider();
 
   // Scroll reveal observer (Apple-inspired quiet reveals)
   const revealElements = document.querySelectorAll('.reveal');

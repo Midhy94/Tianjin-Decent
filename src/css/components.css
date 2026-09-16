@@ -12,35 +12,47 @@
   right: 0;
   width: 100%;
   z-index: var(--z-sticky-nav);
-  background-color: rgba(8, 24, 48, 0.92);
+  background-color: rgba(8, 20, 36, 0.92);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0;
   padding: 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
-  transition: background-color var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+  transition: background-color var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth), backdrop-filter var(--transition-smooth);
 }
 
+/* Homepage Floating Transparent Navbar (Aurora Style) */
+.site-header--home {
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+.site-header--home.site-header--scrolled,
 .site-header--scrolled {
-  background-color: rgba(8, 24, 48, 0.97);
-  border-bottom-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  background-color: rgba(8, 20, 36, 0.88);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.38);
 }
 
 .site-header .container {
   max-width: 100%;
-  padding-left: clamp(14px, 2vw, 32px);
-  padding-right: clamp(14px, 2vw, 32px);
+  padding-left: clamp(16px, 3vw, 48px);
+  padding-right: clamp(16px, 3vw, 48px);
 }
 
 .site-header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
-  gap: clamp(12px, 1.8vw, 24px);
+  height: 68px;
+  gap: clamp(14px, 2vw, 32px);
 }
 
 /* Brand Identity */
@@ -83,22 +95,28 @@
   line-height: 1.2;
 }
 
-/* Nav Link on Floating Dark Bar */
+/* Nav Link on Floating Aurora Bar */
 .site-header .nav-link {
-  color: #E2E8F0;
+  color: rgba(255, 255, 255, 0.82);
   font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 6px 4px;
+  transition: color 0.18s ease, text-shadow 0.18s ease;
 }
 
 .site-header .nav-link:hover {
-  color: var(--color-primary-highlight);
+  color: #FFFFFF;
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.4);
 }
 
 .site-header .nav-link--active {
   color: #FFFFFF;
+  font-weight: 600;
 }
 
 .site-header .nav-link--active::after {
-  background-color: var(--color-primary-highlight);
+  display: none; /* Minimalist clean link style like Aurora */
 }
 
 .site-header .mobile-nav-toggle {
@@ -109,7 +127,7 @@
 .site-nav {
   display: flex;
   align-items: center;
-  gap: clamp(10px, 1.5vw, 22px);
+  gap: clamp(12px, 1.8vw, 26px);
   flex-shrink: 0;
 }
 
@@ -136,18 +154,7 @@
   font-weight: 600;
 }
 
-.nav-link--active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-primary);
-  border-radius: var(--radius-pill);
-}
-
-/* Nav Actions cluster */
+/* Nav Actions cluster (Aurora Glass Style) */
 .site-header__actions {
   display: flex;
   align-items: center;
@@ -155,14 +162,54 @@
   flex-shrink: 0;
 }
 
-.site-header__actions .btn--primary {
-  height: 38px;
-  padding: 0 18px;
-  font-size: 13.5px;
+.btn--whatsapp-glass {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.32);
+  color: #25D366;
+  font-size: 13px;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-decoration: none;
+  transition: all var(--transition-instant);
+}
+
+.btn--whatsapp-glass:hover {
+  background: #25D366;
+  color: #FFFFFF;
+  border-color: #25D366;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+}
+
+.btn--nav-pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
+  padding: 7px 22px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  color: #FFFFFF;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn--nav-pill:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.65);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
 }
 
 /* Mega-Menu / Products Dropdown */
@@ -744,63 +791,118 @@
   }
 }
 
-/* ── 08. SITEASSIST-INSPIRED CINEMATIC HERO ── */
+/* ── 08. AURORA-STYLE CINEMATIC HERO SECTION ── */
 
-.hero-siteassist {
+.hero-aurora {
   position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background: 
-    linear-gradient(180deg, rgba(8, 24, 48, 0.78) 0%, rgba(8, 24, 48, 0.40) 35%, rgba(8, 24, 48, 0.88) 85%, #081830 100%),
-    url('/src/assets/images/hero-scaffolding.jpg') center/cover no-repeat;
-  padding-top: clamp(140px, 16vw, 190px);
-  padding-bottom: clamp(64px, 7vw, 96px);
+  justify-content: center;
+  align-items: center;
+  padding-top: clamp(120px, 14vw, 160px);
+  padding-bottom: clamp(60px, 7vw, 84px);
   color: #FFFFFF;
+  overflow: hidden;
+  text-align: center;
 }
 
-.hero-siteassist__center {
+/* Background Crossfade Slider */
+.hero-aurora-bg {
+  position: absolute;
+  inset: 0;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
 }
 
-.hero-siteassist-kicker {
+.hero-aurora-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1.8s cubic-bezier(0.4, 0, 0.2, 1), transform 8s ease-out;
+  will-change: opacity, transform;
+}
+
+.hero-aurora-slide.is-active {
+  opacity: 1;
+  transform: scale(1.0);
+  z-index: 1;
+}
+
+/* Vignette Overlay: Top vignette for navbar contrast, soft center illumination, bottom fade */
+.hero-aurora-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: 
+    linear-gradient(180deg, 
+      rgba(6, 16, 30, 0.72) 0%, 
+      rgba(6, 16, 30, 0.25) 25%, 
+      rgba(6, 16, 30, 0.35) 60%, 
+      rgba(8, 24, 48, 0.96) 100%),
+    radial-gradient(ellipse at center 40%, rgba(0, 0, 0, 0.15) 0%, rgba(6, 16, 30, 0.55) 100%);
+  pointer-events: none;
+}
+
+/* Hero Center Layout */
+.hero-aurora__center {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Kicker Badge (Aurora's '● AI THAT WORKS WITH NATURE') */
+.hero-aurora-badge {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  padding: 7px 20px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-primary-highlight);
+  color: #FFFFFF;
   margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Pulsing Status Beacon */
-.pulsing-dot {
+.hero-aurora-beacon {
   position: relative;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 12px;
-  height: 12px;
-}
-
-.pulsing-dot__ring {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background-color: rgba(0, 155, 255, 0.4);
-  animation: pulse-ring 2.2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
-}
-
-.pulsing-dot__core {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--color-primary-highlight);
+  background-color: #86efac;
+  box-shadow: 0 0 10px #86efac;
+}
+
+.hero-aurora-beacon::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background-color: rgba(134, 239, 172, 0.45);
+  animation: pulse-ring 2.2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
 }
 
 @keyframes pulse-ring {
@@ -814,112 +916,256 @@
   }
 }
 
-.hero-siteassist-title {
+/* Headline using Design System's Heading Font (Noto Sans) */
+.hero-aurora-title {
   font-family: var(--font-heading);
-  font-size: clamp(34px, 5vw, 62px);
+  font-size: clamp(36px, 5.2vw, 66px);
   font-weight: 700;
   line-height: 1.12;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
   color: #FFFFFF;
-  text-transform: uppercase;
-  max-width: 1120px;
-  margin-bottom: 12px;
+  max-width: 1040px;
+  margin-bottom: 18px;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
-.hero-siteassist-divider {
-  width: 100%;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.22);
-  margin: 36px 0 28px;
-}
-
-.hero-siteassist-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: var(--space-3xl);
-  margin-bottom: 36px;
-}
-
-.hero-siteassist-desc {
-  max-width: 640px;
-  font-size: 16.5px;
+/* Centered Description */
+.hero-aurora-desc {
+  max-width: 660px;
+  font-size: 17px;
   line-height: 1.65;
-  color: #CBD5E1;
+  color: rgba(241, 245, 249, 0.9);
+  margin-bottom: 32px;
+  font-weight: 400;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
-.hero-siteassist-telemetry {
-  font-family: var(--font-mono);
-  text-align: right;
+/* Action Buttons */
+.hero-aurora-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+/* Primary CTA: Aurora Glowing Lime/Sage Pill Button */
+.hero-aurora-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  color: #064e3b;
+  font-size: 15.5px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(187, 247, 208, 0.38), 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.hero-aurora-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(187, 247, 208, 0.55), 0 4px 12px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.03);
+  color: #022c22;
+}
+
+.hero-aurora-arrow {
+  transition: transform 0.2s ease;
+}
+
+.hero-aurora-cta:hover .hero-aurora-arrow {
+  transform: translateX(4px);
+}
+
+/* Secondary Button: Frosted Glass Pill */
+.hero-aurora-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.hero-aurora-secondary:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+/* 3 Feature Cards (Aurora's 3 Cards) */
+.hero-aurora-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 960px;
+  margin-bottom: 48px;
+}
+
+.aurora-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  text-align: left;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.aurora-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.aurora-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #dcfce7;
   flex-shrink: 0;
 }
 
-.telemetry-coord {
-  font-size: 15px;
-  font-weight: 600;
-  color: #FFFFFF;
-  letter-spacing: 0.08em;
-}
-
-.telemetry-port {
-  font-size: 11.5px;
-  color: var(--color-primary-highlight);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-top: 6px;
-}
-
-.hero-siteassist-actions {
+.aurora-card__text {
   display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-top: 24px;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-/* Bottom Standards Ribbon */
-.hero-siteassist-standards {
-  margin-top: clamp(56px, 7vw, 84px);
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-  padding-top: 28px;
-}
-
-.standards-ribbon-title {
+.aurora-card__title {
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #94A3B8;
-  margin-bottom: 14px;
+  color: #FFFFFF;
+  margin-bottom: 2px;
 }
 
-.standards-ribbon-items {
+.aurora-card__desc {
+  font-size: 12.5px;
+  color: #cbd5e1;
+  line-height: 1.35;
+}
+
+/* Bottom Trust Bar (Aurora's 'TRUSTED BY INNOVATIVE TEAMS') */
+.hero-aurora-trust {
+  width: 100%;
+  max-width: 960px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-top: 24px;
+}
+
+.trust-rule {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 16px;
+}
+
+.trust-badges {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
-.standard-badge {
-  padding: 8px 16px;
-  border-radius: var(--radius-xs);
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+.trust-badge {
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
-  color: #E2E8F0;
+  color: #e2e8f0;
   white-space: nowrap;
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.15s ease;
+}
+
+.trust-badge:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+}
+
+/* Slide Indicator Dots */
+.hero-aurora-dots {
+  position: absolute;
+  bottom: 24px;
+  right: clamp(20px, 4vw, 48px);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+.hero-aurora-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.hero-aurora-dot.is-active {
+  width: 24px;
+  border-radius: 9999px;
+  background: #FFFFFF;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 
 @media (max-width: 834px) {
-  .hero-siteassist-meta {
-    flex-direction: column;
-    gap: var(--space-md);
+  .hero-aurora-cards {
+    grid-template-columns: 1fr;
+    max-width: 480px;
   }
-  .hero-siteassist-telemetry {
-    text-align: left;
+  .hero-aurora-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 380px;
+  }
+  .hero-aurora-cta,
+  .hero-aurora-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-aurora-dots {
+    bottom: 12px;
+    right: 50%;
+    transform: translateX(50%);
   }
 }
+
+

@@ -1,1 +1,0 @@
-import{i as o,a,g as c}from"./footer-S7LgaTH1.js";o();a();document.getElementById("wa-contact-link").href=c();const n=new URLSearchParams(window.location.search),e=n.get("product");if(e){const t=document.getElementById("c-product");t&&(t.value=e)}

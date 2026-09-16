@@ -248,43 +248,48 @@
   <main id="main-content">
 
     <!-- ══════════════════════════════════════════════════════════════════
-         01. HERO OPENING (CINEMATIC SITEASSIST-STYLE FULL-VIEWPORT HERO)
+         01. HERO OPENING (AURORA-STYLE EDITORIAL HERO WITH IMAGE CROSSFADE)
          ══════════════════════════════════════════════════════════════════ -->
-    <section class="hero-siteassist">
-      <div class="container hero-siteassist__center">
+    <section class="hero-aurora">
+      <!-- Background Crossfade Slideshow (User-provided images fading smoothly) -->
+      <div class="hero-aurora-bg" id="hero-aurora-bg" aria-hidden="true">
+        <div class="hero-aurora-slide is-active" style="background-image: url('/src/assets/images/pexels-agastya-garg-1658347331-36529124.webp');"></div>
+        <div class="hero-aurora-slide" style="background-image: url('/src/assets/images/pexels-christian-reinke-197095744-16847989.webp');"></div>
+        <div class="hero-aurora-slide" style="background-image: url('/src/assets/images/pexels-mike-van-schoonderwalt-1884800-5511066.webp');"></div>
+        <div class="hero-aurora-slide" style="background-image: url('/src/assets/images/hero-scaffolding.jpg');"></div>
+        <div class="hero-aurora-overlay"></div>
+      </div>
+
+      <!-- Slide Indicator Dots -->
+      <div class="hero-aurora-dots" id="hero-aurora-dots" aria-label="Slideshow Controls">
+        <button class="hero-aurora-dot is-active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="hero-aurora-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="hero-aurora-dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="hero-aurora-dot" data-slide="3" aria-label="Slide 4"></button>
+      </div>
+
+      <div class="container hero-aurora__center">
         
-        <!-- Live Status Pulsing Beacon -->
-        <div class="hero-siteassist-kicker">
-          <div class="pulsing-dot">
-            <span class="pulsing-dot__ring"></span>
-            <span class="pulsing-dot__core"></span>
-          </div>
-          <span>TIANJIN DECENT // INTERNATIONAL INDUSTRIAL & STEEL SUPPLY</span>
+        <!-- Live Status Pulsing Kicker Badge (Aurora Style) -->
+        <div class="hero-aurora-badge">
+          <span class="hero-aurora-beacon"></span>
+          <span>CERTIFIED INDUSTRIAL STEEL &amp; SCAFFOLDING SUPPLY</span>
         </div>
 
-        <!-- Huge Display Title -->
-        <h1 class="hero-siteassist-title">
-          TOTAL CONTROL OF INDUSTRIAL STEEL & SCAFFOLDING SUPPLY
+        <!-- Majestic Editorial Serif Display Headline -->
+        <h1 class="hero-aurora-title">
+          Steel &amp; scaffolding that builds your world.
         </h1>
 
-        <!-- Fine Hairline Divider -->
-        <div class="hero-siteassist-divider"></div>
-
-        <!-- Sub-row: Description + Port of Tianjin Coordinates & Telemetry -->
-        <div class="hero-siteassist-meta">
-          <div class="hero-siteassist-desc">
-            TIANJIN DECENT INTERNATIONAL TRADE CO., LTD. is a premier global export supplier of flat steel coils, structural sections, and modular scaffolding systems — certified to ASTM, EN, BS, and JIS standards.
-          </div>
-          <div class="hero-siteassist-telemetry">
-            <div class="telemetry-coord">38.9870°N &nbsp; 117.7533°E</div>
-            <div class="telemetry-port">PORT OF TIANJIN (CNTSN) // DISPATCH DESK</div>
-          </div>
-        </div>
+        <!-- Centered Atmospheric Subtitle -->
+        <p class="hero-aurora-desc">
+          Tianjin Decent delivers premier global export supply of flat steel coils, structural sections, and modular scaffolding systems — certified to ASTM, EN, BS, and JIS standards.
+        </p>
 
         <!-- High-Impact Action Cluster -->
-        <div class="hero-siteassist-actions">
+        <div class="hero-aurora-actions">
           <a href="/products.html" class="btn btn--primary btn--lg">
-            Explore Product Catalog
+            <span>Explore Product Catalog</span>
             <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M2 7h10M8 3l4 4-4 4"/>
             </svg>
@@ -300,18 +305,62 @@
           </a>
         </div>
 
-        <!-- Verified Standards & Certification Ribbon (SiteAssist-inspired bottom strip) -->
-        <div class="hero-siteassist-standards">
-          <div class="standards-ribbon-title">VERIFIED METALLURGICAL & LOAD-BEARING STANDARDS</div>
-          <div class="standards-ribbon-items">
-            <div class="standard-badge">ASTM A36 / A653</div>
-            <div class="standard-badge">EN 10025 / 10346</div>
-            <div class="standard-badge">EN 12810 / 12811</div>
-            <div class="standard-badge">BS 1139 SCAFFOLDING</div>
-            <div class="standard-badge">API SPEC 5L PIPES</div>
-            <div class="standard-badge">MTC EN 10204 3.1 / 3.2</div>
-            <div class="standard-badge">SGS & BV WITNESS</div>
-            <div class="standard-badge">PORT OF TIANJIN CNTSN</div>
+        <!-- 3 Frosted Glass Feature Cards (Matching Aurora's 3 Feature Cards) -->
+        <div class="hero-aurora-cards">
+          <div class="aurora-card">
+            <div class="aurora-card__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div class="aurora-card__text">
+              <span class="aurora-card__title">CERTIFIED COMPLIANCE</span>
+              <span class="aurora-card__desc">ASTM, EN, BS &amp; JIS certified</span>
+            </div>
+          </div>
+
+          <div class="aurora-card">
+            <div class="aurora-card__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                <path d="M2 12h20"/>
+              </svg>
+            </div>
+            <div class="aurora-card__text">
+              <span class="aurora-card__title">PORT OF TIANJIN</span>
+              <span class="aurora-card__desc">Direct container dispatch desk</span>
+            </div>
+          </div>
+
+          <div class="aurora-card">
+            <div class="aurora-card__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <div class="aurora-card__text">
+              <span class="aurora-card__title">MILL-DIRECT QUALITY</span>
+              <span class="aurora-card__desc">Full MTC 3.1 &amp; SGS witness</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Standards Strip (Aurora's 'TRUSTED BY INNOVATIVE TEAMS' strip) -->
+        <div class="hero-aurora-trust">
+          <div class="trust-rule">
+            <span>VERIFIED METALLURGICAL &amp; LOAD-BEARING STANDARDS</span>
+          </div>
+          <div class="trust-badges">
+            <span class="trust-badge">ASTM A36 / A653</span>
+            <span class="trust-badge">EN 10025 / 10346</span>
+            <span class="trust-badge">EN 12810 / 12811</span>
+            <span class="trust-badge">BS 1139 SCAFFOLDING</span>
+            <span class="trust-badge">API SPEC 5L PIPES</span>
+            <span class="trust-badge">MTC EN 10204 3.1 / 3.2</span>
+            <span class="trust-badge">SGS &amp; BV WITNESS</span>
+            <span class="trust-badge">PORT OF TIANJIN CNTSN</span>
           </div>
         </div>
 

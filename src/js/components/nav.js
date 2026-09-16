@@ -53,8 +53,12 @@ export function initNav() {
   // WhatsApp click-to-chat URL
   const whatsappUrl = getWhatsAppUrl();
 
+  // Detect if on homepage
+  const isHomePage = currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html') || currentPath.endsWith('/');
+  const headerClass = isHomePage ? 'site-header site-header--home' : 'site-header';
+
   navPlaceholder.innerHTML = `
-    <header class="site-header" id="site-header">
+    <header class="${headerClass}" id="site-header">
       <div class="container site-header__inner">
         
         <!-- Brand Identity -->
