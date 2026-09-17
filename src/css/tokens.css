@@ -143,6 +143,7 @@
   --radius-sm:              8px;      /* Compact utility buttons, inputs */
   --radius-md:              12px;     /* Content cards */
   --radius-lg:              18px;     /* Large visual cards */
+  --radius-card-premium:    28px;     /* Classy atmospheric rounded cards */
   --radius-pill:            9999px;   /* Signature Action Pill CTAs & filter chips */
 
   /* ── 09. SHADOW SYSTEM (APPLE DISCIPLINE: PRODUCT SHADOW ONLY) ── */

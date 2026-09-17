@@ -9,43 +9,228 @@
   <link rel="icon" type="image/png" href="/assets/T-D-Logo-CoMgngHF.png" />
   
   <style>
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    
+    @media (max-width: 1024px) {
+      .solution-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+    
     .solution-card {
-      background-color: var(--color-canvas);
-      border: 1px solid var(--color-hairline);
-      border-radius: var(--radius-sm);
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-card-premium, 28px);
+      box-shadow: none; /* No drop shadows */
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      justify-content: flex-end;
+      min-height: 520px;
+      color: #FFFFFF;
+      background-color: #0b1524;
+      transition: border-color 0.25s ease;
+    }
+    
+    .solution-card:hover {
+      /* Subtle outline highlight, NO pop animation */
+      border-color: rgba(255, 255, 255, 0.38);
+    }
+    
+    .solution-card__img-wrap {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: #0b1524;
+      overflow: hidden;
     }
     
     .solution-card__img {
       width: 100%;
-      height: 240px;
+      height: 100%;
       object-fit: cover;
+      object-position: center top;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      display: block;
     }
     
+    .solution-card:hover .solution-card__img {
+      transform: scale(1.03); /* Subtle micro scale, no pop */
+    }
+
+    .solution-card__bookmark {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 4;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      box-shadow: none;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+      padding: 0;
+    }
+
+    .solution-card__bookmark:hover {
+      background: rgba(255, 255, 255, 0.38);
+      border-color: rgba(255, 255, 255, 0.55);
+    }
+
+    .solution-card__bookmark.is-saved {
+      background: #FFFFFF;
+      color: #0b1524;
+    }
+
+    .solution-card__bookmark svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+    }
+    
+    /* 
+      Frosted Glass Text Overlay sitting over the bottom of the photo.
+      The blur captures and reflects the photo's colors naturally!
+    */
     .solution-card__body {
-      padding: var(--space-xl);
+      position: relative;
+      z-index: 2;
+      margin-top: auto;
+      padding: 22px 22px 22px 22px;
       display: flex;
       flex-direction: column;
+      background: linear-gradient(
+        180deg,
+        rgba(10, 20, 32, 0.38) 0%,
+        rgba(10, 20, 32, 0.74) 42%,
+        rgba(10, 20, 32, 0.94) 100%
+      );
+      backdrop-filter: blur(28px) saturate(140%);
+      -webkit-backdrop-filter: blur(28px) saturate(140%);
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .solution-card__header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .solution-card__title-group {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .solution-card__category {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      margin-bottom: 3px;
+    }
+    
+    .solution-card__title {
+      font-family: var(--font-heading);
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: #FFFFFF;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    .solution-card__badge {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 9999px;
+      padding: 4px 12px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      color: #FFFFFF;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    
+    .solution-card__desc {
+      font-size: 13.5px;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.5;
+      margin: 0 0 18px 0;
       flex-grow: 1;
     }
     
-    .solution-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-xl);
+    .solution-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 22px;
+      margin-top: auto;
+    }
+
+    .solution-card__tag {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 9999px;
+      padding: 4px 11px;
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.92);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
     }
     
-    @media (max-width: 900px) {
-      .solution-grid {
-        grid-template-columns: 1fr;
-      }
+    .solution-card__cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #FFFFFF;
+      color: #0b1524;
+      font-family: var(--font-primary);
+      font-size: 14.5px;
+      font-weight: 700;
+      padding: 13px 20px;
+      border-radius: 9999px;
+      text-decoration: none;
+      box-shadow: none;
+      border: none;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .solution-card__cta:hover {
+      background: #F1F5F9;
+      color: #020617;
     }
   </style>
-  <script type="module" crossorigin src="/assets/footer-COQYqE8C.js"></script>
-  <script type="module" crossorigin src="/assets/main-DmPXn6gJ.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/footer-zmU3yRKE.css">
+  <script type="module" crossorigin src="/assets/footer-A4nm93HK.js"></script>
+  <script type="module" crossorigin src="/assets/main-C9vcoerR.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/footer-CP8i2rW2.css">
 </head>
 <body>
 
@@ -56,7 +241,6 @@
     <!-- Hero -->
     <section class="section surface-light">
       <div class="container container--editorial">
-        <div class="section-kicker">ENGINEERING SECTORS // PROJECT USE</div>
         <h1 class="heading-hero" style="margin-bottom: var(--space-xs);">
           Industry Applications & Solutions.
         </h1>
@@ -74,45 +258,90 @@
           
           <!-- Card 1: Civil Infrastructure -->
           <div class="solution-card">
-            <img src="/assets/hero-scaffolding-CB9fVLxV.jpg" alt="Civil infrastructure shoring" class="solution-card__img" />
+            <div class="solution-card__img-wrap">
+              <img src="/assets/hero-scaffolding-CB9fVLxV.jpg" alt="Civil infrastructure shoring" class="solution-card__img" />
+              <button class="solution-card__bookmark" type="button" aria-label="Save Solution" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              </button>
+            </div>
             <div class="solution-card__body">
-              <span class="tech-tag tech-tag--blue" style="align-self: flex-start; margin-bottom: 8px;">INFRASTRUCTURE</span>
-              <h3 style="font-size: 20px; margin-bottom: 8px;">Bridges, Viaducts & Heavy Shoring</h3>
-              <p style="font-size: 14px; color: var(--color-body); line-height: 1.55; margin-bottom: var(--space-md);">
-                High-capacity Cup Lock and Ring Lock heavy-duty falsework towers designed to support freshly poured concrete bridge decks, retaining walls, and heavy beam spans up to 60 kN per standard leg.
+              <div class="solution-card__header">
+                <div class="solution-card__title-group">
+                  <span class="solution-card__category">INFRASTRUCTURE &amp; HEAVY CIVIL</span>
+                  <h3 class="solution-card__title">Bridges, Viaducts &amp; Falsework</h3>
+                </div>
+                <span class="solution-card__badge">60 kN / Leg</span>
+              </div>
+              <p class="solution-card__desc">
+                High-capacity Cup Lock and Ring Lock heavy-duty falsework towers designed to support freshly poured concrete bridge decks, retaining walls, and heavy beam spans.
               </p>
-              <a href="/product.html?id=cuplock-scaffolding-system" class="btn btn--secondary-pill" style="margin-top: auto; align-self: flex-start;">
-                View Shoring Systems →
+              <div class="solution-card__tags">
+                <span class="solution-card__tag">⭐ Heavy Falsework</span>
+                <span class="solution-card__tag">EN 12810 / 12811</span>
+                <span class="solution-card__tag">Civil Shoring</span>
+              </div>
+              <a href="/product.html?id=cuplock-scaffolding-system" class="solution-card__cta">
+                View Shoring Systems
               </a>
             </div>
           </div>
 
           <!-- Card 2: Industrial Petrochemical -->
           <div class="solution-card">
-            <img src="/assets/seamless-steel-pipes-CC2xUeA4.jpg" alt="Seamless pipes and refinery access" class="solution-card__img" />
+            <div class="solution-card__img-wrap">
+              <img src="/assets/seamless-steel-pipes-CC2xUeA4.jpg" alt="Seamless pipes and refinery access" class="solution-card__img" />
+              <button class="solution-card__bookmark" type="button" aria-label="Save Solution" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              </button>
+            </div>
             <div class="solution-card__body">
-              <span class="tech-tag tech-tag--blue" style="align-self: flex-start; margin-bottom: 8px;">OIL & GAS / PIPELINE</span>
-              <h3 style="font-size: 20px; margin-bottom: 8px;">Refinery Piping & Industrial Access</h3>
-              <p style="font-size: 14px; color: var(--color-body); line-height: 1.55; margin-bottom: var(--space-md);">
-                API Spec 5L line pipes and ASTM A106 high-temperature seamless tubing paired with EN 74-1 Class B drop-forged couplers and EN 39 scaffold tubes for offshore platforms and coastal gas plants.
+              <div class="solution-card__header">
+                <div class="solution-card__title-group">
+                  <span class="solution-card__category">OIL &amp; GAS / PETROCHEMICAL</span>
+                  <h3 class="solution-card__title">Refinery Piping &amp; Access</h3>
+                </div>
+                <span class="solution-card__badge">API Spec 5L</span>
+              </div>
+              <p class="solution-card__desc">
+                API Spec 5L line pipes and ASTM A106 high-temperature seamless tubing paired with EN 74-1 Class B drop-forged couplers and EN 39 scaffold tubes for offshore platforms.
               </p>
-              <a href="/product.html?id=seamless-steel-pipes" class="btn btn--secondary-pill" style="margin-top: auto; align-self: flex-start;">
-                View Pipe Catalog →
+              <div class="solution-card__tags">
+                <span class="solution-card__tag">⭐ High Temperature</span>
+                <span class="solution-card__tag">EN 74-1 Class B</span>
+                <span class="solution-card__tag">Refinery Spec</span>
+              </div>
+              <a href="/product.html?id=seamless-steel-pipes" class="solution-card__cta">
+                View Pipe Catalog
               </a>
             </div>
           </div>
 
           <!-- Card 3: PEB & Roll-Forming -->
           <div class="solution-card">
-            <img src="/assets/color-coated-coils-CP-vPWs7.jpg" alt="Color coated coils for roll forming" class="solution-card__img" />
+            <div class="solution-card__img-wrap">
+              <img src="/assets/color-coated-coils-CP-vPWs7.jpg" alt="Color coated coils for roll forming" class="solution-card__img" />
+              <button class="solution-card__bookmark" type="button" aria-label="Save Solution" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              </button>
+            </div>
             <div class="solution-card__body">
-              <span class="tech-tag tech-tag--blue" style="align-self: flex-start; margin-bottom: 8px;">ROLL FORMING & PEB</span>
-              <h3 style="font-size: 20px; margin-bottom: 8px;">Roofing, Cladding & Purling Supply</h3>
-              <p style="font-size: 14px; color: var(--color-body); line-height: 1.55; margin-bottom: var(--space-md);">
-                Hot-dip pre-galvanized coils (Z120–Z275) and PPGI color-coated coils optimized for automated high-speed corrugation, sandwich panel manufacturing, and C/Z structural purlin cold roll-forming.
+              <div class="solution-card__header">
+                <div class="solution-card__title-group">
+                  <span class="solution-card__category">ROLL FORMING &amp; PEB</span>
+                  <h3 class="solution-card__title">Roofing, Cladding &amp; Purlins</h3>
+                </div>
+                <span class="solution-card__badge">Z120–Z275</span>
+              </div>
+              <p class="solution-card__desc">
+                Hot-dip pre-galvanized coils (Z120–Z275) and PPGI color-coated coils optimized for automated high-speed corrugation, sandwich panel manufacturing, and purlins.
               </p>
-              <a href="/product.html?id=color-coated-steel-coils" class="btn btn--secondary-pill" style="margin-top: auto; align-self: flex-start;">
-                View Coil Options →
+              <div class="solution-card__tags">
+                <span class="solution-card__tag">⭐ High-Speed Forming</span>
+                <span class="solution-card__tag">PPGI Coating</span>
+                <span class="solution-card__tag">PEB Profiles</span>
+              </div>
+              <a href="/product.html?id=color-coated-steel-coils" class="solution-card__cta">
+                View Coil Options
               </a>
             </div>
           </div>

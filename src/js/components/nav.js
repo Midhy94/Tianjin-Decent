@@ -149,4 +149,49 @@ export function initNav() {
       toggleBtn.setAttribute('aria-expanded', isOpen);
     });
   }
+
+  // Desktop dropdown click & toggle handling
+  const dropdownWrappers = navPlaceholder.querySelectorAll('.nav-dropdown-wrapper');
+  dropdownWrappers.forEach(wrapper => {
+    const trigger = wrapper.querySelector('.nav-link');
+    if (trigger) {
+      trigger.addEventListener('click', (e) => {
+        // Toggle dropdown on click
+        e.preventDefault();
+        const isOpen = wrapper.classList.contains('is-open');
+        dropdownWrappers.forEach(w => w.classList.remove('is-open'));
+        if (!isOpen) {
+          wrapper.classList.add('is-open');
+        }
+      });
+    }
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-dropdown-wrapper')) {
+      dropdownWrappers.forEach(w => w.classList.remove('is-open'));
+    }
+  });
+
+  // Handle clicking items inside dropdown
+  const dropdownItems = navPlaceholder.querySelectorAll('.nav-dropdown-item');
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      dropdownWrappers.forEach(w => w.classList.remove('is-open'));
+      const url = new URL(item.href, window.location.origin);
+      const cat = url.searchParams.get('category');
+
+      // If already on products page, trigger dynamic filter smoothly
+      if (cat && (window.location.pathname.endsWith('/products.html') || window.location.pathname === '/products.html')) {
+        e.preventDefault();
+        const targetChip = document.querySelector(`.filter-chip[data-category="${cat}"]`);
+        if (targetChip) {
+          targetChip.click();
+        } else {
+          window.location.href = item.href;
+        }
+      }
+    });
+  });
 }

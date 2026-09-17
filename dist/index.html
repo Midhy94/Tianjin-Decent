@@ -88,30 +88,50 @@
     .families-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: var(--space-lg);
+      gap: 24px;
       margin-top: var(--space-2xl);
     }
     
+    @media (max-width: 1200px) {
+      .families-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .families-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
     .family-card {
-      background-color: var(--color-canvas);
-      border: 1px solid var(--color-hairline);
-      border-radius: var(--radius-sm);
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-card-premium, 28px);
+      box-shadow: none; /* No drop shadow */
       overflow: hidden;
       text-decoration: none;
       display: flex;
       flex-direction: column;
-      transition: transform var(--transition-instant), border-color var(--transition-instant);
+      justify-content: flex-end;
+      min-height: 490px;
+      background-color: #0b1524;
+      color: #FFFFFF;
+      transition: border-color 0.25s ease;
     }
     
     .family-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--color-primary);
+      /* Subtle outline highlight, NO pop animation */
+      border-color: rgba(255, 255, 255, 0.38);
     }
     
     .family-card__img-wrap {
+      position: absolute;
+      inset: 0;
       width: 100%;
-      height: 200px;
-      background-color: var(--color-canvas-soft);
+      height: 100%;
+      z-index: 1;
+      background-color: #0b1524;
       overflow: hidden;
     }
     
@@ -119,18 +139,86 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform var(--transition-smooth);
+      object-position: center top;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      display: block;
     }
     
     .family-card:hover .family-card__img {
-      transform: scale(1.04);
+      transform: scale(1.03); /* Subtle micro scale, no pop */
+    }
+
+    .family-card__bookmark {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 4;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      box-shadow: none;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+      padding: 0;
+    }
+
+    .family-card__bookmark:hover {
+      background: rgba(255, 255, 255, 0.38);
+      border-color: rgba(255, 255, 255, 0.55);
+    }
+
+    .family-card__bookmark.is-saved {
+      background: #FFFFFF;
+      color: #0b1524;
+    }
+
+    .family-card__bookmark svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
     }
     
+    /* 
+      Frosted Glass Text Overlay sitting over the bottom of the photo.
+      The blur captures and reflects the photo's colors naturally!
+    */
     .family-card__body {
-      padding: var(--space-lg);
+      position: relative;
+      z-index: 2;
+      margin-top: auto;
+      padding: 22px 22px 22px 22px;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
+      background: linear-gradient(
+        180deg,
+        rgba(10, 20, 32, 0.38) 0%,
+        rgba(10, 20, 32, 0.74) 42%,
+        rgba(10, 20, 32, 0.94) 100%
+      );
+      backdrop-filter: blur(28px) saturate(140%);
+      -webkit-backdrop-filter: blur(28px) saturate(140%);
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .family-card__header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .family-card__title-group {
+      display: flex;
+      flex-direction: column;
     }
     
     .family-card__category {
@@ -138,33 +226,86 @@
       font-size: 10px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--color-primary);
-      margin-bottom: 4px;
+      color: #38bdf8;
+      margin-bottom: 3px;
     }
     
     .family-card__title {
-      font-size: 17px;
+      font-family: var(--font-heading);
+      font-size: 18.5px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: #FFFFFF;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    .family-card__badge {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 9999px;
+      padding: 4px 11px;
+      font-family: var(--font-mono);
+      font-size: 12px;
       font-weight: 600;
-      color: var(--color-ink);
-      line-height: 1.3;
-      margin-bottom: 6px;
+      color: #FFFFFF;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     
     .family-card__desc {
       font-size: 13px;
-      color: var(--color-muted);
-      line-height: 1.45;
-      margin-bottom: var(--space-md);
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.48;
+      margin: 0 0 16px 0;
       flex-grow: 1;
     }
-    
-    .family-card__link {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--color-primary);
+
+    .family-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+      margin-top: auto;
+    }
+
+    .family-card__tag {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 9999px;
+      padding: 4px 11px;
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.92);
       display: inline-flex;
       align-items: center;
       gap: 4px;
+      white-space: nowrap;
+    }
+    
+    .family-card__cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #FFFFFF;
+      color: #0b1524;
+      font-family: var(--font-primary);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 12px 18px;
+      border-radius: 9999px;
+      box-shadow: none;
+      border: none;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .family-card:hover .family-card__cta {
+      background: #F1F5F9;
+      color: #020617;
     }
 
     /* Metric stats row */
@@ -236,9 +377,9 @@
       }
     }
   </style>
-  <script type="module" crossorigin src="/assets/footer-COQYqE8C.js"></script>
-  <script type="module" crossorigin src="/assets/main-DmPXn6gJ.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/footer-zmU3yRKE.css">
+  <script type="module" crossorigin src="/assets/footer-A4nm93HK.js"></script>
+  <script type="module" crossorigin src="/assets/main-C9vcoerR.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/footer-CP8i2rW2.css">
 </head>
 <body>
 
@@ -375,7 +516,6 @@
         
         <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
           <div>
-            <div class="section-kicker">01 // CORE PRODUCT FAMILIES</div>
             <h2 class="heading-display-lg">Industrial supply architecture.</h2>
           </div>
           <a href="/products.html" class="btn btn--secondary-pill">
@@ -389,12 +529,25 @@
           <a href="/product.html?id=hr-steel-coils" class="family-card">
             <div class="family-card__img-wrap">
               <img src="/assets/hr-steel-coils-DAtFyHpr.jpg" alt="Hot Rolled Steel Coils" class="family-card__img" />
+              <button class="family-card__bookmark" type="button" aria-label="Save to Inquiry" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              </button>
             </div>
             <div class="family-card__body">
-              <span class="family-card__category">STEEL COILS</span>
-              <h3 class="family-card__title">Hot Rolled Coils (HR)</h3>
+              <div class="family-card__header">
+                <div class="family-card__title-group">
+                  <span class="family-card__category">STEEL COILS</span>
+                  <h3 class="family-card__title">Hot Rolled Coils (HR)</h3>
+                </div>
+                <span class="family-card__badge">EN 10025</span>
+              </div>
               <p class="family-card__desc">Commercial, structural and high-strength carbon steel coils (1.2–25 mm, 800–2,000 mm).</p>
-              <span class="family-card__link">View Specifications →</span>
+              <div class="family-card__tags">
+                <span class="family-card__tag">⭐ Mill MTC 3.1</span>
+                <span class="family-card__tag">1.2–25 mm</span>
+                <span class="family-card__tag">Seaworthy Pack</span>
+              </div>
+              <span class="family-card__cta">View Specifications</span>
             </div>
           </a>
 
@@ -402,12 +555,25 @@
           <a href="/product.html?id=pre-galvanized-steel-coils" class="family-card">
             <div class="family-card__img-wrap">
               <img src="/assets/galvanized-steel-coils---9jjJP5.jpg" alt="Pre-Galvanized Steel Coils" class="family-card__img" />
+              <button class="family-card__bookmark" type="button" aria-label="Save to Inquiry" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              </button>
             </div>
             <div class="family-card__body">
-              <span class="family-card__category">STEEL COILS</span>
-              <h3 class="family-card__title">Pre-Galvanized Coils</h3>
+              <div class="family-card__header">
+                <div class="family-card__title-group">
+                  <span class="family-card__category">STEEL COILS</span>
+                  <h3 class="family-card__title">Pre-Galvanized Coils</h3>
+                </div>
+                <span class="family-card__badge">Z40–Z275</span>
+              </div>
               <p class="family-card__desc">Zinc coated continuous flat steel for forming and structural ducting (Z40–Z275).</p>
-              <span class="family-card__link">View Specifications →</span>
+              <div class="family-card__tags">
+                <span class="family-card__tag">⭐ EN 10346</span>
+                <span class="family-card__tag">Zero Spangle</span>
+                <span class="family-card__tag">Slit Coils</span>
+              </div>
+              <span class="family-card__cta">View Specifications</span>
             </div>
           </a>
 
@@ -415,12 +581,25 @@
           <a href="/product.html?id=color-coated-steel-coils" class="family-card">
             <div class="family-card__img-wrap">
               <img src="/assets/color-coated-coils-CP-vPWs7.jpg" alt="Color Coated Steel Coils PPGI" class="family-card__img" />
+              <button class="family-card__bookmark" type="button" aria-label="Save to Inquiry" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              </button>
             </div>
             <div class="family-card__body">
-              <span class="family-card__category">STEEL COILS</span>
-              <h3 class="family-card__title">Color Coated Coils (PPGI)</h3>
+              <div class="family-card__header">
+                <div class="family-card__title-group">
+                  <span class="family-card__category">STEEL COILS</span>
+                  <h3 class="family-card__title">Color Coated Coils (PPGI)</h3>
+                </div>
+                <span class="family-card__badge">RAL Colors</span>
+              </div>
               <p class="family-card__desc">Organic coated coil steel for roofing, wall cladding, and roll-forming profiles.</p>
-              <span class="family-card__link">View Specifications →</span>
+              <div class="family-card__tags">
+                <span class="family-card__tag">⭐ JIS G3312</span>
+                <span class="family-card__tag">PE / PVDF</span>
+                <span class="family-card__tag">Roll Forming</span>
+              </div>
+              <span class="family-card__cta">View Specifications</span>
             </div>
           </a>
 
@@ -428,12 +607,25 @@
           <a href="/product.html?id=structural-steel-profiles" class="family-card">
             <div class="family-card__img-wrap">
               <img src="/assets/structural-steel-profiles-CaLnAuU3.jpg" alt="Structural Steel Profiles" class="family-card__img" />
+              <button class="family-card__bookmark" type="button" aria-label="Save to Inquiry" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              </button>
             </div>
             <div class="family-card__body">
-              <span class="family-card__category">STRUCTURAL PROFILES</span>
-              <h3 class="family-card__title">Structural Sections & Beams</h3>
+              <div class="family-card__header">
+                <div class="family-card__title-group">
+                  <span class="family-card__category">STRUCTURAL PROFILES</span>
+                  <h3 class="family-card__title">Sections & Beams</h3>
+                </div>
+                <span class="family-card__badge">ASTM A36</span>
+              </div>
               <p class="family-card__desc">H-Beams, I-Beams, UPN Channels, Equal Angles, Square/Flat Bars, and Hollow Sections.</p>
-              <span class="family-card__link">View Specifications →</span>
+              <div class="family-card__tags">
+                <span class="family-card__tag">⭐ S355JR/J2</span>
+                <span class="family-card__tag">HEA / HEB</span>
+                <span class="family-card__tag">Shot-Blasted</span>
+              </div>
+              <span class="family-card__cta">View Specifications</span>
             </div>
           </a>
 
@@ -441,12 +633,25 @@
           <a href="/product.html?id=cuplock-scaffolding-system" class="family-card">
             <div class="family-card__img-wrap">
               <img src="/assets/cuplock-system-DEcjBQZQ.jpg" alt="Cup Lock Scaffolding System" class="family-card__img" />
+              <button class="family-card__bookmark" type="button" aria-label="Save to Inquiry" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              </button>
             </div>
             <div class="family-card__body">
-              <span class="family-card__category">SCAFFOLDING SYSTEMS</span>
-              <h3 class="family-card__title">Cup Lock Scaffolding</h3>
+              <div class="family-card__header">
+                <div class="family-card__title-group">
+                  <span class="family-card__category">SCAFFOLDING SYSTEMS</span>
+                  <h3 class="family-card__title">Cup Lock Scaffolding</h3>
+                </div>
+                <span class="family-card__badge">BS 1139</span>
+              </div>
               <p class="family-card__desc">Modular multi-directional system for heavy facade access and high-load civil shoring.</p>
-              <span class="family-card__link">View Specifications →</span>
+              <div class="family-card__tags">
+                <span class="family-card__tag">⭐ 60 kN / Leg</span>
+                <span class="family-card__tag">HDG Zinc</span>
+                <span class="family-card__tag">Node Locking</span>
+              </div>
+              <span class="family-card__cta">View Specifications</span>
             </div>
           </a>
 
@@ -454,12 +659,25 @@
           <a href="/product.html?id=ringlock-system" class="family-card">
             <div class="family-card__img-wrap">
               <img src="/assets/ringlock-scaffolding-1Hd4BAjz.jpg" alt="Ring Lock Scaffolding System" class="family-card__img" />
+              <button class="family-card__bookmark" type="button" aria-label="Save to Inquiry" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              </button>
             </div>
             <div class="family-card__body">
-              <span class="family-card__category">SCAFFOLDING SYSTEMS</span>
-              <h3 class="family-card__title">Ring / Pin Lock System</h3>
+              <div class="family-card__header">
+                <div class="family-card__title-group">
+                  <span class="family-card__category">SCAFFOLDING SYSTEMS</span>
+                  <h3 class="family-card__title">Ring Lock System</h3>
+                </div>
+                <span class="family-card__badge">EN 12810</span>
+              </div>
               <p class="family-card__desc">Precision 8-connection rosette system conforming to EN 12810 & ANSI SC100-5/05.</p>
-              <span class="family-card__link">View Specifications →</span>
+              <div class="family-card__tags">
+                <span class="family-card__tag">⭐ 8-Hole Rosette</span>
+                <span class="family-card__tag">Q355 Steel</span>
+                <span class="family-card__tag">TÜV Tested</span>
+              </div>
+              <span class="family-card__cta">View Specifications</span>
             </div>
           </a>
 
@@ -467,12 +685,25 @@
           <a href="/product.html?id=tube-fittings-scaffolding" class="family-card">
             <div class="family-card__img-wrap">
               <img src="/assets/scaffold-tubes-fittings-BKQN_UnA.jpg" alt="Scaffold Tubes & Fittings" class="family-card__img" />
+              <button class="family-card__bookmark" type="button" aria-label="Save to Inquiry" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              </button>
             </div>
             <div class="family-card__body">
-              <span class="family-card__category">TUBES & FITTINGS</span>
-              <h3 class="family-card__title">Tubes & Forged Couplers</h3>
+              <div class="family-card__header">
+                <div class="family-card__title-group">
+                  <span class="family-card__category">TUBES & FITTINGS</span>
+                  <h3 class="family-card__title">Tubes & Forged Couplers</h3>
+                </div>
+                <span class="family-card__badge">EN 74-1</span>
+              </div>
               <p class="family-card__desc">EN 39 48.3 mm steel tubes, drop-forged right-angle and swivel couplers (EN 74-1 Class B).</p>
-              <span class="family-card__link">View Specifications →</span>
+              <div class="family-card__tags">
+                <span class="family-card__tag">⭐ Drop-Forged</span>
+                <span class="family-card__tag">Ø 48.3 mm</span>
+                <span class="family-card__tag">15 kN Slip</span>
+              </div>
+              <span class="family-card__cta">View Specifications</span>
             </div>
           </a>
 
@@ -480,12 +711,25 @@
           <a href="/product.html?id=aluminum-tower" class="family-card">
             <div class="family-card__img-wrap">
               <img src="/assets/aluminum-tower-BT97hCh1.jpg" alt="Mobile Aluminum Scaffolding Tower" class="family-card__img" />
+              <button class="family-card__bookmark" type="button" aria-label="Save to Inquiry" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              </button>
             </div>
             <div class="family-card__body">
-              <span class="family-card__category">MOBILE ACCESS</span>
-              <h3 class="family-card__title">Mobile Aluminum Towers</h3>
+              <div class="family-card__header">
+                <div class="family-card__title-group">
+                  <span class="family-card__category">MOBILE ACCESS</span>
+                  <h3 class="family-card__title">Mobile Aluminum Towers</h3>
+                </div>
+                <span class="family-card__badge">EN 1004</span>
+              </div>
               <p class="family-card__desc">Lightweight EN 1004 access towers with castor wheels and anti-slip platform decks.</p>
-              <span class="family-card__link">View Specifications →</span>
+              <div class="family-card__tags">
+                <span class="family-card__tag">⭐ Class 3 Deck</span>
+                <span class="family-card__tag">Lock Castors</span>
+                <span class="family-card__tag">Rapid Setup</span>
+              </div>
+              <span class="family-card__cta">View Specifications</span>
             </div>
           </a>
 
@@ -503,7 +747,6 @@
         <div class="editorial-split">
           
           <div class="editorial-split__content">
-            <div class="section-kicker section-kicker--on-dark">02 // FLAT-ROLLED METALLURGY</div>
             <h2 class="heading-display-lg" style="color: #FFFFFF; margin-bottom: var(--space-md);">
               Precision carbon & galvanized coil supply.
             </h2>
@@ -547,9 +790,26 @@
           </div>
 
           <div class="editorial-split__media">
-            <img src="/assets/hr-steel-coils-DAtFyHpr.jpg" 
-                 alt="Hot Rolled Steel Coils in warehouse ready for dispatch" 
-                 class="product-render" />
+            <div class="editorial-media-trio">
+              <div class="editorial-media-trio__item editorial-media-trio__item--top">
+                <img src="/assets/hr-steel-coils-DAtFyHpr.jpg" 
+                     alt="Hot Rolled Steel Coils in warehouse ready for dispatch" 
+                     loading="lazy" />
+                <span class="editorial-media-trio__badge">Hot Rolled Carbon Steel Coils</span>
+              </div>
+              <div class="editorial-media-trio__item editorial-media-trio__item--bottom">
+                <img src="/assets/galvanized-steel-coils---9jjJP5.jpg" 
+                     alt="Hot-Dip Galvanized Steel Coils" 
+                     loading="lazy" />
+                <span class="editorial-media-trio__badge">Hot-Dip Galvanized (GI)</span>
+              </div>
+              <div class="editorial-media-trio__item editorial-media-trio__item--bottom">
+                <img src="/assets/color-coated-coils-CP-vPWs7.jpg" 
+                     alt="Prepainted Color Coated Galvanized Steel Coils (PPGI)" 
+                     loading="lazy" />
+                <span class="editorial-media-trio__badge">Color-Coated (PPGI)</span>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -592,7 +852,6 @@
           </div>
 
           <div class="editorial-split__content">
-            <div class="section-kicker">03 // STRUCTURAL STEEL & TUBING</div>
             <h2 class="heading-display-lg" style="margin-bottom: var(--space-md);">
               Heavy load structural profiles & seamless line pipes.
             </h2>
@@ -649,7 +908,6 @@
         <div class="editorial-split">
           
           <div class="editorial-split__content">
-            <div class="section-kicker section-kicker--on-dark">04 // MODULAR ACCESS & SHORING</div>
             <h2 class="heading-display-lg" style="color: #FFFFFF; margin-bottom: var(--space-md);">
               Engineered scaffolding systems for high-load projects.
             </h2>
@@ -710,7 +968,6 @@
       <div class="container">
         
         <div style="max-width: 760px; margin-bottom: var(--space-2xl);">
-          <div class="section-kicker">05 // TECHNICAL ASSURANCE</div>
           <h2 class="heading-display-lg" style="margin-bottom: var(--space-xs);">
             Testing protocols & mill certifications.
           </h2>
@@ -719,28 +976,37 @@
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg);">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
           
-          <div style="background-color: var(--color-canvas); padding: var(--space-xl); border: 1px solid var(--color-hairline); border-radius: var(--radius-sm);">
-            <span class="tech-tag tech-tag--blue" style="margin-bottom: var(--space-md);">DOCUMENTATION</span>
-            <h3 style="font-size: 18px; margin-bottom: 8px;">MTC EN 10204 3.1 & 3.2</h3>
-            <p style="font-size: 14px; color: var(--color-body); line-height: 1.55;">
+          <div class="white-card">
+            <div class="white-card__header">
+              <span class="white-card__tag">DOCUMENTATION</span>
+              <span class="white-card__badge">EN 10204</span>
+            </div>
+            <h3 class="white-card__title">MTC EN 10204 3.1 &amp; 3.2</h3>
+            <p class="white-card__desc">
               Every shipment of steel coils, hollow profiles, and scaffold tubes is accompanied by authentic Mill Test Certificates stating chemical heats (C, Mn, Si, P, S) and mechanical yield / tensile ratings.
             </p>
           </div>
 
-          <div style="background-color: var(--color-canvas); padding: var(--space-xl); border: 1px solid var(--color-hairline); border-radius: var(--radius-sm);">
-            <span class="tech-tag tech-tag--blue" style="margin-bottom: var(--space-md);">VERIFICATION</span>
-            <h3 style="font-size: 18px; margin-bottom: 8px;">Third-Party Inspection</h3>
-            <p style="font-size: 14px; color: var(--color-body); line-height: 1.55;">
+          <div class="white-card">
+            <div class="white-card__header">
+              <span class="white-card__tag">VERIFICATION</span>
+              <span class="white-card__badge">SGS / BV</span>
+            </div>
+            <h3 class="white-card__title">Third-Party Inspection</h3>
+            <p class="white-card__desc">
               We welcome and coordinate on-site third-party inspections (SGS, Bureau Veritas, TÜV, or buyer-appointed inspectors) at our Tianjin storage yards before container sealing.
             </p>
           </div>
 
-          <div style="background-color: var(--color-canvas); padding: var(--space-xl); border: 1px solid var(--color-hairline); border-radius: var(--radius-sm);">
-            <span class="tech-tag tech-tag--blue" style="margin-bottom: var(--space-md);">PROTECTION</span>
-            <h3 style="font-size: 18px; margin-bottom: 8px;">Seaworthy Export Packing</h3>
-            <p style="font-size: 14px; color: var(--color-body); line-height: 1.55;">
+          <div class="white-card">
+            <div class="white-card__header">
+              <span class="white-card__tag">PROTECTION</span>
+              <span class="white-card__badge">Marine Ready</span>
+            </div>
+            <h3 class="white-card__title">Seaworthy Export Packing</h3>
+            <p class="white-card__desc">
               Multi-layer waterproof Kraft paper wrapping, galvanized metal edge protectors, heavy perimeter steel strapping, and wooden dunnage designed for harsh marine voyages.
             </p>
           </div>
@@ -759,7 +1025,6 @@
         <div class="editorial-split">
           
           <div class="editorial-split__content">
-            <div class="section-kicker section-kicker--on-dark">06 // DISPATCH DESK</div>
             <h2 class="heading-display-lg" style="color: #FFFFFF; margin-bottom: var(--space-md);">
               Strategic proximity to Port of Tianjin (CNTSN).
             </h2>
@@ -805,7 +1070,6 @@
       <div class="container" style="text-align: center;">
         
         <div style="max-width: 720px; margin: 0 auto;">
-          <div class="section-kicker">07 // DIRECT PROCUREMENT</div>
           <h2 class="heading-display-lg" style="margin-bottom: var(--space-md);">
             Request a technical quotation.
           </h2>
