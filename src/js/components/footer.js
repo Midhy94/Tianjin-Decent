@@ -4,6 +4,7 @@
  */
 
 import { SITE_CONFIG, getWhatsAppUrl } from '../config.js';
+import logoUrl from '../../assets/images/T-D-Logo.png';
 
 export function initFooter() {
   const footerPlaceholder = document.getElementById('footer-placeholder');
@@ -21,7 +22,7 @@ export function initFooter() {
           <!-- Col 1: Corporate Entity & Port Terminal -->
           <div class="footer-brand">
             <a href="/index.html" style="display: inline-block; margin-bottom: 14px;">
-              <img src="/src/assets/images/T-D-Logo.png" alt="TIANJIN DECENT Logo" style="height: 42px; width: auto;" />
+              <img src="${logoUrl}" alt="TIANJIN DECENT Logo" style="height: 42px; width: auto;" />
             </a>
             <h3 class="footer-brand__name">${SITE_CONFIG.companyName}</h3>
             <p class="footer-brand__desc">

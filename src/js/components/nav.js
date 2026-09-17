@@ -5,6 +5,7 @@
 
 import { SITE_CONFIG, getWhatsAppUrl } from '../config.js';
 import { getAllCategories } from '../data/products.js';
+import logoUrl from '../../assets/images/T-D-Logo.png';
 
 export function initNav() {
   const navPlaceholder = document.getElementById('nav-placeholder');
@@ -63,7 +64,7 @@ export function initNav() {
         
         <!-- Brand Identity -->
         <a href="/index.html" class="site-brand" aria-label="TIANJIN DECENT Homepage">
-          <img src="/src/assets/images/T-D-Logo.png" alt="TIANJIN DECENT Logo" class="site-brand__logo" />
+          <img src="${logoUrl}" alt="TIANJIN DECENT Logo" class="site-brand__logo" />
           <div class="site-brand__text">
             <span class="site-brand__name">TIANJIN DECENT</span>
             <span class="site-brand__sub">INTERNATIONAL TRADE CO., LTD.</span>
