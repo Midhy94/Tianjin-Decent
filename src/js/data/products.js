@@ -309,28 +309,56 @@ Available in standard lengths of 6 m, 6.4 m, and 12 m with wall thickness rating
     category: PRODUCT_CATEGORIES.SCAFFOLDING_SYSTEMS,
     name: 'Cup Lock Scaffolding System',
     shortDescription: 'Modular steel scaffolding system featuring vertical standards with cup-and-wedge locking mechanism for rapid assembly.',
-    description: `Cup Lock scaffolding is a modular steel scaffolding system used extensively for access, support, and working platforms in building construction, maintenance, and heavy industrial projects.
+    description: `The Cuplock scaffolding system consists of vertical standards with cup-and-ledger blade locking nodes at regular intervals, typically 500 mm apart. Forged ledger and transom blades are secured into the cups using a wedge driven by a single hammer blow.
 
-Its defining operational feature is the vertical standard with cup-and-wedge locking nodes spaced at regular intervals (typically 500 mm). The top cup rotates and locks down over the forged blade ends of up to four horizontal ledgers in a single hammer blow, ensuring fast erection times, rigid node geometry, and high load-bearing capacity without loose bolts or nuts.`,
-    heroImage: '/src/assets/images/cuplock-system.jpg',
-    gallery: ['/src/assets/images/cuplock-system.jpg', '/src/assets/images/hero-scaffolding.jpg'],
+Each node can connect up to four horizontal members, providing fast erection and dismantling, rigid and stable connections, and high load-bearing capacity without loose bolts, nuts, or threaded fittings.`,
+    heroImage: '/src/assets/images/cuplock-scaffolding-setup.jpg',
+    gallery: [
+      '/src/assets/images/cuplock-scaffolding-setup.jpg',
+      '/src/assets/images/cuplock-system.jpg',
+      '/src/assets/images/cuplock-standard-post.jpg',
+      '/src/assets/images/cuplock-ledger.jpg',
+      '/src/assets/images/cuplock-intermediate-transom.jpg'
+    ],
     specifications: [
       { label: 'Scaffolding System', value: 'Cup Lock modular scaffolding' },
-      { label: 'Material', value: 'High-strength galvanized steel (S235 / S355 structural steel)' },
-      { label: 'Standard Mechanism', value: 'Vertical standards with cup-and-wedge locking mechanism' },
-      { label: 'Standard Spacing', value: 'Typically 0.60–2.5 m, depending on design and load requirements' },
-      { label: 'Lift Height', value: 'Typically 0.5–2.0 m; commonly 2.0 m standard' },
-      { label: 'Horizontal Ledgers', value: 'Available in required lengths to suit modular bay dimensions' },
+      { label: 'Material', value: 'High-strength Steel Grade using Q235 / Q355' },
+      { label: 'Standard Mechanism', value: 'Vertical standards with cup-and-wedge locking nodes (500 mm node spacing)' },
+      { label: 'Lift Height', value: 'Typically 0.5–2.5 m; commonly 3.0 m standard height' },
+      { label: 'Horizontal Ledgers', value: 'Available in required lengths to suit modular bay dimensions\nNormally 0.60 m to 2.50 m size' },
+      { label: 'Finish', value: 'Hot-dip galvanized or painted steel\n(Coating coverage as per client requirements)' },
       { label: 'Base Support', value: 'Adjustable base jacks / base plates' },
       { label: 'Working Platform', value: 'Steel planks or Wooden scaffold boards' },
       { label: 'Access Components', value: 'Ladders or integrated stair units as required' },
       { label: 'Safety Components', value: 'Guardrails, midrails, toe boards, and access gates' },
-      { label: 'Finish', value: 'Hot-dip galvanized (HDG ≥ 55 µm) or painted steel' },
       { label: 'Load Capacity', value: 'As per approved design and manufacturer certified load tables' },
       { label: 'Primary Use', value: 'Construction works, building façades, industrial plants, warehouses, and maintenance' },
     ],
+    accessories: [
+      {
+        name: 'Standard / Vertical Post',
+        image: '/src/assets/images/cuplock-standard-post.jpg',
+        sizes: '0.5 m / 1.0 m / 1.5 m / 2.0 m / 2.5 m / 3.0 m',
+        sizeList: ['0.5 m', '1.0 m', '1.5 m', '2.0 m', '2.5 m', '3.0 m'],
+        description: 'Vertical load-bearing member (48.3 mm OD) equipped with fixed bottom cups and captive sliding top locking cups spaced at 500 mm intervals, complete with integrated top spigot connector.'
+      },
+      {
+        name: 'Ledger / Transom',
+        image: '/src/assets/images/cuplock-ledger.jpg',
+        sizes: '0.60 m / 0.9 m / 1.0 m / 1.2 m / 1.3 m / 1.5 m / 1.6 m / 1.8 m / 2.0 m / 2.5 m',
+        sizeList: ['0.60 m', '0.9 m', '1.0 m', '1.2 m', '1.3 m', '1.5 m', '1.6 m', '1.8 m', '2.0 m', '2.5 m'],
+        description: 'Horizontal member manufactured from 48.3 mm high-strength steel tubing with forged solid blade ends welded at both ends, seating securely into bottom cups.'
+      },
+      {
+        name: 'Intermediate Transom',
+        image: '/src/assets/images/cuplock-intermediate-transom.jpg',
+        sizes: '1.2 m / 1.3 m / 1.5 m / 1.6 m / 1.8 m / 2.0 m / 2.5 m',
+        sizeList: ['1.2 m', '1.3 m', '1.5 m', '1.6 m', '1.8 m', '2.0 m', '2.5 m'],
+        description: 'Intermediate board-supporting member with inverted locking hook jaws designed to span across two horizontal ledgers without requiring cup nodes.'
+      }
+    ],
     features: [
-      'Single-node connection — up to four ledgers locked in one operation',
+      'Single-node connection — up to four ledgers locked in one operation with a single hammer blow',
       'Significantly faster assembly compared to conventional tube & coupler systems',
       'Suited for exterior access scaffolding, heavy falsework, and shoring',
       'Inherent lateral stability resulting from rigid cup-wedge node geometry',
@@ -367,13 +395,13 @@ Engineered with vertical standards fitted with rosette/ring connection plates at
       { label: 'Material', value: 'High-strength steel (Q355 / S355JR grade)' },
       { label: 'Standard Mechanism', value: 'Vertical standards with rosette/ring connection and locking pins' },
       { label: 'Standard Spacing', value: 'Typically 1.0–2.5 m, depending on required bay size and structural design' },
-      { label: 'Lift Height', value: 'Typically 0.5–2.0 m; commonly 2.0 m' },
+      { label: 'Lift Height', value: 'Typically 0.5–2.5 m; commonly 3.0 m standard height' },
       { label: 'Horizontal Members', value: 'Steel ledgers with compatible wedge locking connections' },
       { label: 'Base Support', value: 'Adjustable base jacks and heavy-duty base plates' },
       { label: 'Working Platform', value: 'Steel or aluminum scaffold planks / perforated anti-slip boards' },
       { label: 'Access Options', value: 'Ladders or modular stair towers with internal handrails' },
       { label: 'Safety Components', value: 'Guardrails, midrails, toe boards, and access safety gates' },
-      { label: 'Finish', value: 'Hot-dip galvanized (HDG) or painted steel' },
+      { label: 'Finish', value: 'Hot-dip galvanized or painted steel\n(Coating coverage as per client requirements)' },
       { label: 'Load Capacity', value: 'As per approved design and manufacturer certified load tables' },
       { label: 'Applications', value: 'Building construction, façade works, industrial plants, warehouses, maintenance, and access' },
     ],
@@ -409,26 +437,32 @@ Engineered with vertical standards fitted with rosette/ring connection plates at
 
 Because couplers can be fastened at any position along the 48.3 mm diameter tubes, this system can wrap around irregular building profiles, accommodate uneven terrain, bridge complex obstacles, and adapt where prefabricated modular systems are constrained. Supplied with hot-dip galvanized or painted finish with drop-forged EN 74 compliant couplers.`,
     heroImage: '/src/assets/images/scaffold-tubes-fittings.jpg',
-    gallery: ['/src/assets/images/scaffold-tubes-fittings.jpg', '/src/assets/images/hero-scaffolding.jpg'],
+    gallery: [
+      '/src/assets/images/scaffold-tubes-fittings.jpg',
+      '/src/assets/images/fitting-swivel-coupler.jpg',
+      '/src/assets/images/fitting-double-coupler.jpg',
+      '/src/assets/images/fitting-beam-clamp.jpg'
+    ],
     specifications: [
       { label: 'Scaffolding System', value: 'Tube & Fitting scaffolding' },
-      { label: 'Material', value: 'High-strength steel tubes (S235GT / S355 structural steel)' },
-      { label: 'Tube Diameter', value: 'Typically 48.3 mm nominal outside diameter (OD)' },
-      { label: 'Tube Thickness', value: 'Typically 3.2 mm or 4.0 mm, or as per approved design' },
-      { label: 'Tube Lengths', value: 'Available in 1.0 m to 6.4 m lengths to suit required arrangements' },
-      { label: 'Coupler Types', value: 'Right-angle (double), swivel, sleeve, and putlog approved couplers' },
+      { label: 'Material', value: 'High-strength steel tubes (S235GT / S355 / Q235 / Q355 structural steel)' },
+      { label: 'Tube Diameter', value: '48.3 mm nominal outside diameter (OD)' },
+      { label: 'Tube Thickness', value: '2.9 mm, 3.2 mm, 3.4/3.76 mm, 4.0 mm nominal wall thickness' },
+      { label: 'Tube Lengths', value: 'Any length as per client requirement (Suitable for Ocean freight by BB / Container)' },
+      { label: 'Coupler Types', value: 'Right-angle (double), swivel, sleeve, putlog, and girder approved couplers' },
+      { label: 'Coupler Compliance', value: 'EN 74-1 Class B Certified' },
       { label: 'Base Support', value: 'Adjustable screw base jacks and steel base plates' },
       { label: 'Working Platform', value: 'Steel or aluminum scaffold boards/planks' },
       { label: 'Access Solutions', value: 'Scaffold ladders or external stair towers as required' },
       { label: 'Safety Components', value: 'Guardrails, midrails, toe boards, and self-closing access gates' },
-      { label: 'Finish', value: 'Hot-dip galvanized (HDG) or painted steel' },
+      { label: 'Finish', value: 'Hot-dip galvanized or painted steel (Coating coverage as per client requirements)' },
       { label: 'Load Capacity', value: 'As per approved scaffolding design and certified load tables' },
       { label: 'Applications', value: 'Building construction, façade works, industrial plants, maintenance, temporary access, and support structures' },
     ],
     features: [
       'Complete geometric freedom for irregular structures, cantilevers, and tight spaces',
       'Standardized 48.3 mm OD tube compatible with universal couplers and accessories',
-      'Drop-forged carbon steel couplers meeting EN 74-1 Class A and Class B ratings',
+      'Drop-forged carbon steel couplers meeting EN 74-1 Class B certified ratings',
       'Hot-dip galvanized to EN ISO 1461 for long-term corrosion resistance',
       'Cost-effective and durable solution for industrial plant maintenance',
     ],
@@ -443,7 +477,7 @@ Because couplers can be fastened at any position along the 48.3 mm diameter tube
       { name: 'EN 74-1', description: 'Couplers, spigot pins and baseplates for use in falsework and scaffolds' },
       { name: 'BS 1139', description: 'Metal scaffolding — Specification for steel tube' },
     ],
-    relatedProducts: ['scaffolding-accessories', 'scaffold-tube-48', 'right-angle-coupler'],
+    relatedProducts: ['scaffolding-accessories', 'scaffold-tube-48', 'right-angle-coupler', 'swivel-coupler'],
   },
 
   {
@@ -454,15 +488,21 @@ Because couplers can be fastened at any position along the 48.3 mm diameter tube
     description: `Scaffolding components and accessories are used to assemble, support, access, protect, and stabilize scaffolding systems for safe construction and maintenance works. Every single component in a scaffold assembly has an indispensable engineering purpose—removing or incorrectly installing a single component affects the structural load transfer, worker safety, and stability of the entire scaffold structure.
 
 Tianjin Decent International Trade Co., Ltd. supplies the complete inventory of 17 essential components and accessories manufactured from suitable high-strength steel or aluminum, with hot-dip galvanized or approved protective finishes as applicable.`,
-    heroImage: '/src/assets/images/ringlock-scaffolding.jpg',
-    gallery: ['/src/assets/images/ringlock-scaffolding.jpg', '/src/assets/images/cuplock-system.jpg'],
+    heroImage: '/src/assets/images/fitting-double-coupler.jpg',
+    gallery: [
+      '/src/assets/images/fitting-double-coupler.jpg',
+      '/src/assets/images/fitting-swivel-coupler.jpg',
+      '/src/assets/images/fitting-sleeve-coupler.jpg',
+      '/src/assets/images/fitting-beam-clamp.jpg',
+      '/src/assets/images/cuplock-system.jpg'
+    ],
     specifications: [
       { label: '1. Standards / Uprights', value: 'Vertical load-bearing members that transfer the combined self-weight and live load to the foundation.' },
       { label: '2. Ledgers', value: 'Horizontal members connecting standards longitudinally and supporting the intermediate structure.' },
       { label: '3. Transoms / Bearers', value: 'Transverse members that span between ledgers, directly supporting scaffold boards and platform loads.' },
       { label: '4. Base Plates', value: 'Provide a rigid, stable flat footing at the bottom of standards to distribute vertical loads over sole boards.' },
       { label: '5. Adjustable Base Jacks', value: 'Heavy-duty Acme threaded jacks used for precise leveling and height adjustment on uneven site grounds.' },
-      { label: '6. Couplers / Clamps', value: 'High-tensile mechanical fittings used to securely connect tubes and structural members.' },
+      { label: '6. Couplers / Clamps', value: 'High-tensile drop-forged mechanical fittings certified to EN 74-1 Class B.' },
       { label: '7. Bracing', value: 'Diagonal members that provide lateral triangulation, shear stability, and prevent scaffold racking.' },
       { label: '8. Scaffold Boards / Planks', value: 'Perforated galvanized steel or aluminum boards that provide the safe working and walking platform.' },
       { label: '9. Guardrails', value: 'Horizontal barriers at platform perimeters that provide fall edge protection for workers.' },
@@ -470,7 +510,7 @@ Tianjin Decent International Trade Co., Ltd. supplies the complete inventory of 
       { label: '11. Ladders / Stair Units', value: 'Engineered non-slip climbing systems providing safe access between scaffold working tiers.' },
       { label: '12. Access Gates', value: 'Self-closing spring-hinged barriers that control safe entry and exit from working platform ladder bays.' },
       { label: '13. Castor Wheels', value: 'Heavy-duty polyurethane or rubber locking wheels used for mobile scaffold towers where permitted.' },
-      { label: '14. Swivel & Fixed Couplers', value: 'Drop-forged couplers used for connecting tubes at 90° right angles or arbitrary 360° brace angles.' },
+      { label: '14. Swivel & Fixed Couplers', value: 'Drop-forged EN 74-1 Class B couplers for connecting tubes at 90° right angles or arbitrary 360° brace angles.' },
       { label: '15. Joint Pins / Sleeve Couplers', value: 'Engineered alignment pins used to connect scaffold tubes or standards securely end-to-end.' },
       { label: '16. Scaffold Ties', value: 'Anchorage hardware that mechanically secures the scaffold frame to the building structure against wind loads.' },
       { label: '17. Netting & Scaffold Tags', value: 'Protective debris containment netting and color-coded safety inspection tags (SCAFFTAG system).' },
@@ -479,7 +519,7 @@ Tianjin Decent International Trade Co., Ltd. supplies the complete inventory of 
     features: [
       'Complete 17-point component catalog supplied from a single verified manufacturer',
       'Hot-dip galvanized finish across all structural steel items for maximum rust prevention',
-      'Drop-forged coupler hardware tested to EN 74 Class A and B slip resistance standards',
+      'Drop-forged coupler hardware tested to EN 74-1 Class B slip resistance standards',
       'Precision machined Acme threads on adjustable base jacks for smooth height leveling',
       'Non-slip perforated steel decking planks with integrated end hooks and safety lock pins',
       'Full compliance documentation and load tables available for civil engineering submittals',
@@ -492,70 +532,121 @@ Tianjin Decent International Trade Co., Ltd. supplies the complete inventory of 
     ],
     standards: [
       { name: 'EN 12811-1', description: 'Temporary works equipment — Scaffolds' },
-      { name: 'EN 74-1', description: 'Couplers, spigot pins and baseplates for scaffolding' },
+      { name: 'EN 74-1', description: 'Couplers, spigot pins and baseplates for scaffolding (Class B)' },
       { name: 'BS 1139-2.2', description: 'Access and working scaffolds — Aluminium couplers and fittings' },
     ],
-    relatedProducts: ['cuplock-scaffolding-system', 'ringlock-system', 'tube-fittings-scaffolding'],
+    relatedProducts: ['cuplock-scaffolding-system', 'ringlock-system', 'tube-fittings-scaffolding', 'swivel-coupler'],
   },
 
   {
     slug: 'scaffold-tube-48',
     category: PRODUCT_CATEGORIES.TUBES_FITTINGS,
-    name: '48.3 mm Scaffold Tubes',
-    shortDescription: 'Hot-dip galvanized high-strength steel scaffold tubes conforming to EN 39 / BS 1139 standards.',
-    description: `Standard 48.3 mm outside diameter scaffolding tubes manufactured from high-yield carbon steel. Available in standard 3.2 mm and 4.0 mm wall thicknesses with lengths up to 6.4 meters. Fully hot-dip galvanized for extreme weather resistance.`,
-    heroImage: '/src/assets/images/scaffold-tubes-fittings.jpg',
-    gallery: ['/src/assets/images/scaffold-tubes-fittings.jpg'],
-    specifications: [
-      { label: 'Outside Diameter', value: '48.3 mm' },
-      { label: 'Wall Thickness', value: '3.2 mm / 4.0 mm nominal' },
-      { label: 'Steel Grade', value: 'S235GT / S355 Structural Steel' },
-      { label: 'Surface Finish', value: 'Hot-Dip Galvanized to EN ISO 1461 (≥ 40 µm)' },
-      { label: 'Standard Lengths', value: '1.0 m, 2.0 m, 3.0 m, 4.0 m, 5.0 m, 6.0 m, 6.4 m' },
+    name: 'Scaffold Tubes Dia 48.3 MM',
+    shortDescription: 'Standard 48.3 mm outside diameter scaffolding tubes manufactured from high-yield carbon steel. Available in standard 3.2 mm and 4.0 mm wall thicknesses with standard lengths up to 6.0 meters.',
+    description: `Standard 48.3 mm outside diameter scaffolding tubes manufactured from high-yield carbon steel. Available in standard 3.2 mm and 4.0 mm wall thicknesses with standard lengths up to 6.0 meters. Fully hot-dip galvanized for extreme weather resistance.`,
+    heroImage: '/src/assets/images/scaffold-tubes-48mm.jpg',
+    gallery: [
+      '/src/assets/images/scaffold-tubes-48mm.jpg',
+      '/src/assets/images/scaffold-tubes-fittings.jpg',
+      '/src/assets/images/fitting-double-coupler.jpg',
+      '/src/assets/images/fitting-swivel-coupler.jpg'
     ],
+    specifications: [
+      { label: 'Outside Diameter', value: '48.3 mm (1.90 in)' },
+      { label: 'Wall Thickness Options', value: '2.9 mm, 3.2 mm, 3.4 mm / 3.76 mm, 4.0 mm nominal wall thickness' },
+      { label: 'Standard Lengths', value: 'Any length as per client requirement\n(Should be suitable to Ocean freight by BB / Container)' },
+      { label: 'Material Grades', value: 'High-yield Carbon Steel (EN 10219, ASTM A500 Gr B, EN 39, BS 1139)' },
+      { label: 'Surface Finish', value: 'Fully Hot-Dip Galvanized for extreme weather resistance\n(Coating coverage as per client requirements)' },
+      { label: 'End Finish', value: 'Square cut, deburred, plain ends (fitted with protective end caps upon request)' },
+      { label: 'Standard Certification', value: 'EN 10219, ASTM A500 Grade B, EN 39 Type 4, BS 1139 certified with full MTC 3.1' },
+    ],
+    wallThicknessSpecs: [
+      {
+        standard: 'EN 10219',
+        yieldStress: '460 N/mm² (67 ksi) minimum yield stress',
+        nominalWallThickness: '2.9 mm (0.114 in) nominal wall thickness',
+        description: 'High-tensile cold-formed welded structural tube with 460 MPa minimum yield stress and 2.9 mm nominal wall.'
+      },
+      {
+        standard: 'EN 10219',
+        yieldStress: '320 N/mm² (46 ksi) minimum yield stress',
+        nominalWallThickness: '3.2 mm (0.125 in) nominal wall thickness',
+        description: 'Standard modular high-yield scaffolding tube with 320 MPa minimum yield stress and 3.2 mm nominal wall.'
+      },
+      {
+        standard: 'ASTM A500, Grade B',
+        yieldStress: '290 N/mm² (42 ksi) minimum yield stress',
+        nominalWallThickness: '3.4 mm (0.13 in) or 3.76 mm (0.15 in) nominal wall thickness',
+        description: 'North American structural specification for cold-formed welded carbon steel hollow sections.'
+      },
+      {
+        standard: 'EN 39 thickness type 4',
+        yieldStress: '235 N/mm² (34 ksi) minimum yield stress',
+        nominalWallThickness: '4.0 mm (0.16 in) nominal wall thickness',
+        description: 'Heavy duty scaffolding tube specification (Note: BS 1139 tubing is equivalent and is acceptable).'
+      }
+    ],
+    wallThicknessNote: 'Note: BS 1139 tubing is equivalent and is acceptable.',
     features: [
-      'High structural rigidity and tensile strength',
-      'Precision dimensional control on outer diameter',
-      'Hot-dip galvanized coating inside and outside',
+      'Manufactured from certified high-yield carbon steel with strict concentricity control',
+      'Four international wall thickness grades tailored to global building codes',
+      'Custom cut lengths optimized for container loading (20GP / 40HQ) or break-bulk (BB)',
+      'Hot-dip galvanized inside and outside for maximum marine atmospheric corrosion defense',
+      'Full chemical composition, tensile yield, and flattening test verification provided via MTC 3.1',
     ],
     applications: [
-      'Tube & fitting scaffolding structures',
-      'Structural ties, bracing, and guardrails',
-      'Industrial falsework and shoring',
+      'Tube & fitting scaffolding and shoring arrangements',
+      'Structural ties, facade bracing, plan bracing, and perimeter guardrails',
+      'Industrial refinery, power station, and offshore platform maintenance',
+      'Civil falsework, bridge propping, and heavy load staging',
     ],
     standards: [
-      { name: 'EN 39', description: 'Loose steel tubes for tube and coupler scaffolds' },
-      { name: 'BS 1139', description: 'Metal scaffolding specifications' },
+      { name: 'EN 10219', description: 'Cold formed welded structural hollow sections of non-alloy steels' },
+      { name: 'ASTM A500 Grade B', description: 'Cold-Formed Welded and Seamless Carbon Steel Structural Tubing' },
+      { name: 'EN 39 Type 4', description: 'Loose steel tubes for tube and coupler scaffolds' },
+      { name: 'BS 1139', description: 'Metal scaffolding — loose steel tube specification (equivalent & acceptable)' },
     ],
-    relatedProducts: ['right-angle-coupler', 'swivel-coupler', 'base-jack'],
+    relatedProducts: ['swivel-coupler', 'right-angle-coupler', 'tube-fittings-scaffolding', 'base-jack'],
   },
 
   {
     slug: 'right-angle-coupler',
     category: PRODUCT_CATEGORIES.TUBES_FITTINGS,
     name: 'Right-Angle Coupler (Double Coupler)',
-    shortDescription: 'Drop-forged carbon steel right-angle coupler connecting two 48.3 mm tubes at 90 degrees.',
-    description: `Drop-forged high-strength double coupler designed to connect two 48.3 mm scaffold tubes at a fixed 90-degree right angle. Tested to exceed EN 74-1 Class B slip-resistance ratings with zinc electroplating or hot-dip galvanizing.`,
-    heroImage: '/src/assets/images/scaffold-tubes-fittings.jpg',
-    gallery: ['/src/assets/images/scaffold-tubes-fittings.jpg'],
+    shortDescription: 'Drop-forged carbon steel right-angle coupler connecting two 48.3 mm tubes at 90 degrees conforming to EN 74-1 Class B.',
+    description: `Drop-forged high-strength double coupler designed to connect two 48.3 mm scaffold tubes at a fixed 90-degree right angle. Engineered to exceed EN 74-1 Class B slip-resistance ratings with hot-dip galvanized or zinc electroplated finish.`,
+    heroImage: '/src/assets/images/fitting-double-coupler.jpg',
+    gallery: [
+      '/src/assets/images/fitting-double-coupler.jpg',
+      '/src/assets/images/fitting-swivel-coupler.jpg',
+      '/src/assets/images/fitting-putlog-coupler.jpg',
+      '/src/assets/images/fitting-sleeve-coupler.jpg'
+    ],
     specifications: [
       { label: 'Connection Angle', value: 'Fixed 90°' },
       { label: 'Tube Diameter', value: '48.3 mm × 48.3 mm' },
-      { label: 'Material', value: 'Drop-Forged Carbon Steel' },
+      { label: 'Material', value: 'Drop-Forged Carbon Steel (High-Tensile)' },
       { label: 'Tightening Torque', value: '54 Nm' },
       { label: 'Standard Compliance', value: 'EN 74-1 Class B Certified' },
+      { label: 'Slip Resistance Load', value: '≥ 15.0 kN (Class B tested)' },
+      { label: 'Failure Load', value: '≥ 30.0 kN' },
+      { label: 'Surface Finish', value: 'Hot-Dip Galvanized / Zinc Electroplated' },
+      { label: 'Fasteners', value: 'Grade 8.8 T-bolts with 21 mm / 22 mm flanged hex nuts' },
     ],
     features: [
-      'Drop-forged body for maximum load resistance',
-      'Corrosion resistant zinc coating',
-      'High slip load performance',
+      'Drop-forged heavy ribbed body for maximum load resistance without distortion',
+      'Corrosion-resistant hot-dip galvanized or electro-galvanized coating',
+      'Full compliance with EN 74-1 Class B slip-resistance testing',
+      'High-tensile forged T-bolts prevent thread stripping during impact wrench tightening',
     ],
     applications: [
-      'Connecting standards to ledgers at 90 degrees',
-      'Structural frame assembly',
+      'Connecting standards to ledgers and transoms at 90 degrees',
+      'Structural frame assembly and load-bearing falsework grids',
+      'Heavy-duty industrial and offshore scaffolding',
     ],
     standards: [
-      { name: 'EN 74-1', description: 'Couplers for scaffolding Class B' },
+      { name: 'EN 74-1 Class B', description: 'Couplers for scaffolding — Class B heavy duty rating' },
+      { name: 'BS 1139', description: 'Metal scaffolding — specifications for fittings' },
     ],
     relatedProducts: ['swivel-coupler', 'scaffold-tube-48', 'base-jack'],
   },
@@ -564,29 +655,44 @@ Tianjin Decent International Trade Co., Ltd. supplies the complete inventory of 
     slug: 'swivel-coupler',
     category: PRODUCT_CATEGORIES.TUBES_FITTINGS,
     name: 'Swivel Coupler',
-    shortDescription: 'Drop-forged steel universal coupler for connecting two 48.3 mm tubes at any arbitrary angle.',
-    description: `Heavy-duty drop-forged swivel coupler allowing two 48.3 mm scaffold tubes to be clamped at any required angle. Essential for diagonal bracing, ledger bracing, and triangular structural ties.`,
-    heroImage: '/src/assets/images/scaffold-tubes-fittings.jpg',
-    gallery: ['/src/assets/images/scaffold-tubes-fittings.jpg'],
+    shortDescription: 'Drop-forged steel universal swivel coupler for connecting two 48.3 mm tubes at any arbitrary angle conforming to EN 74-1 Class B.',
+    description: `Heavy-duty drop-forged swivel coupler allowing two 48.3 mm scaffold tubes to be clamped at any required angle. Essential for diagonal sway bracing, ledger bracing, and triangular structural ties. Fully certified to EN 74-1 Class B.`,
+    heroImage: '/src/assets/images/fitting-swivel-coupler.jpg',
+    gallery: [
+      '/src/assets/images/fitting-swivel-coupler.jpg',
+      '/src/assets/images/fitting-double-coupler.jpg',
+      '/src/assets/images/fitting-putlog-coupler.jpg',
+      '/src/assets/images/fitting-board-retaining-clamp.jpg',
+      '/src/assets/images/fitting-sleeve-coupler.jpg',
+      '/src/assets/images/fitting-beam-clamp.jpg'
+    ],
     specifications: [
+      { label: 'Standard Compliance', value: 'EN 74-1 Class B Certified' },
       { label: 'Connection Angle', value: '360° Swivel rotation' },
       { label: 'Tube Diameter', value: '48.3 mm × 48.3 mm' },
       { label: 'Material', value: 'Drop-Forged Carbon Steel' },
-      { label: 'Standard Compliance', value: 'EN 74-1 Class A Certified' },
+      { label: 'Tightening Torque', value: '54 Nm' },
+      { label: 'Slip Resistance Load', value: '≥ 15.0 kN (Class B requirement)' },
+      { label: 'Failure Load', value: '≥ 20.0 kN' },
+      { label: 'Surface Finish', value: 'Hot-Dip Galvanized / Zinc Electroplated' },
+      { label: 'Fasteners', value: 'Grade 8.8 T-bolts with 21 mm / 22 mm flanged hex nuts' },
     ],
     features: [
-      '360-degree rotation for diagonal bracing',
-      'Drop-forged heavy wall construction',
-      'Zinc electroplated or HDG finish',
+      '360-degree rotation for diagonal sway bracing and angular propping',
+      'Drop-forged heavy-gauge body ensures maximum tensile resistance',
+      'Certified to EN 74-1 Class B with physical test verification',
+      'Heavy-duty zinc passivation coating protects against marine and coastal atmospheres',
     ],
     applications: [
-      'Diagonal sway bracing',
-      'Plan bracing and tie-back tubes',
+      'Diagonal sway bracing and plan bracing',
+      'Triangulated structural ties and facade stabilizers',
+      'Tubular framework junctions on irregular structures',
     ],
     standards: [
-      { name: 'EN 74-1', description: 'Scaffolding couplers Class A' },
+      { name: 'EN 74-1 Class B', description: 'Scaffolding couplers — Class B Certified' },
+      { name: 'BS 1139', description: 'Metal scaffolding — specifications for fittings' },
     ],
-    relatedProducts: ['right-angle-coupler', 'scaffold-tube-48'],
+    relatedProducts: ['right-angle-coupler', 'scaffold-tube-48', 'base-jack'],
   },
 
   {
@@ -704,6 +810,84 @@ Tianjin Decent International Trade Co., Ltd. supplies the complete inventory of 
 ];
 
 /**
+ * Detailed Scaffolding Fittings & Couplers Catalog with high-resolution imagery and Class B specs
+ */
+export const SCAFFOLDING_FITTINGS_CATALOG = [
+  {
+    name: 'Drop-Forged Swivel Coupler',
+    standard: 'EN 74-1 Class B Certified',
+    image: '/src/assets/images/fitting-swivel-coupler.jpg',
+    tubeDiameter: '48.3 mm × 48.3 mm',
+    tighteningTorque: '54 Nm',
+    slipLoad: '≥ 15.0 kN (Class B requirement)',
+    failureLoad: '≥ 20.0 kN',
+    finish: 'Hot-Dip Galvanized / Zinc Electroplated',
+    fastener: 'Grade 8.8 T-bolts with 21 mm / 22 mm flanged hex nuts',
+    description: 'Universal swivel coupler enabling 360-degree rotation for diagonal sway bracing, ledger bracing, and triangular structural ties on 48.3 mm scaffold tubes.'
+  },
+  {
+    name: 'Drop-Forged Right-Angle (Double) Coupler',
+    standard: 'EN 74-1 Class B Certified',
+    image: '/src/assets/images/fitting-double-coupler.jpg',
+    tubeDiameter: '48.3 mm × 48.3 mm',
+    tighteningTorque: '54 Nm',
+    slipLoad: '≥ 15.0 kN (Class B requirement)',
+    failureLoad: '≥ 30.0 kN',
+    finish: 'Hot-Dip Galvanized / Zinc Electroplated',
+    fastener: 'Grade 8.8 T-bolts with 21 mm / 22 mm flanged hex nuts',
+    description: 'Heavy ribbed drop-forged construction connecting two scaffold tubes at a rigid 90-degree angle with maximum load transmission.'
+  },
+  {
+    name: 'Drop-Forged Putlog Coupler (Single Coupler)',
+    standard: 'EN 74-1 / BS 1139 Certified',
+    image: '/src/assets/images/fitting-putlog-coupler.jpg',
+    tubeDiameter: '48.3 mm × 48.3 mm',
+    tighteningTorque: '54 Nm',
+    slipLoad: 'Working Load Limit (WLL) 6.25 kN',
+    failureLoad: '≥ 12.0 kN',
+    finish: 'Hot-Dip Galvanized / Zinc Electroplated',
+    fastener: 'Grade 8.8 T-bolt with 21 mm flanged hex nut',
+    description: 'Drop-forged single putlog wrap coupler designed to securely connect transoms and putlogs across ledgers for board deck load distribution.'
+  },
+  {
+    name: 'Board Retaining Clamp (BRC)',
+    standard: 'BS 1139 / EN 74 Compliant',
+    image: '/src/assets/images/fitting-board-retaining-clamp.jpg',
+    tubeDiameter: '48.3 mm Tube to 38 mm / 50 mm Timber Board',
+    tighteningTorque: '30 Nm',
+    slipLoad: 'Uplift resistance ≥ 5.0 kN',
+    failureLoad: 'Heavy-Duty Forged Jaw',
+    finish: 'Hot-Dip Galvanized',
+    fastener: 'Grade 8.8 hex bolt & flanged lock nut',
+    description: 'Drop-forged clamp with serrated locking jaws designed to firmly secure timber scaffold boards or metal decks to 48.3 mm transom tubes, eliminating wind uplift risk.'
+  },
+  {
+    name: 'External Sleeve Coupler',
+    standard: 'EN 74-1 Class B Certified',
+    image: '/src/assets/images/fitting-sleeve-coupler.jpg',
+    tubeDiameter: '48.3 mm OD External',
+    tighteningTorque: '54 Nm',
+    slipLoad: 'Tensile ≥ 3.0 kN | Bending ≥ 1.4 kN·m',
+    failureLoad: 'Heavy duty external sleeve envelope',
+    finish: 'Hot-Dip Galvanized (HDG) to EN ISO 1461',
+    fastener: 'Twin Grade 8.8 clamping bolts & lock nuts',
+    description: 'External full-wrap clamp with central dividing register rib for joining two 48.3 mm scaffold tubes securely end-to-end.'
+  },
+  {
+    name: 'Drop-Forged Girder Coupler / Beam Clamp (SK Clamp)',
+    standard: 'BS 1139 / EN 74 Certified',
+    image: '/src/assets/images/fitting-beam-clamp.jpg',
+    tubeDiameter: '48.3 mm Scaffolding Tube to Steel Flange',
+    tighteningTorque: '54 Nm',
+    slipLoad: 'Working Load 30 kN per pair',
+    failureLoad: '≥ 45 kN',
+    finish: 'Hot-Dip Galvanized / Zinc Electroplated',
+    fastener: 'Dual Grade 8.8 clamping bolts',
+    description: 'Forged beam clamp designed to lock scaffold tubes securely directly onto universal beams, columns, and structural steel flanges up to 45 mm.'
+  }
+];
+
+/**
  * Find a product by its slug
  * @param {string} slug 
  * @returns {object|undefined}
@@ -733,4 +917,5 @@ export function getAllCategories() {
     count: PRODUCTS.filter(p => p.category === key).length
   }));
 }
+
 

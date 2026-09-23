@@ -54,6 +54,41 @@
       object-fit: cover;
       border-radius: var(--radius-xs);
       box-shadow: var(--shadow-product);
+      transition: opacity 0.25s ease;
+    }
+
+    /* Thumbnail Row */
+    .gallery-thumbs {
+      display: flex;
+      gap: 10px;
+      margin-top: var(--space-md);
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .gallery-thumb-btn {
+      width: 68px;
+      height: 68px;
+      border-radius: var(--radius-xs);
+      border: 2px solid var(--color-hairline);
+      overflow: hidden;
+      padding: 0;
+      background: var(--color-canvas-soft);
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .gallery-thumb-btn:hover {
+      border-color: var(--color-primary);
+    }
+    .gallery-thumb-btn.is-active {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 2px rgba(0, 91, 227, 0.25);
+    }
+    .gallery-thumb-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .detail-info {
@@ -99,6 +134,201 @@
       flex-shrink: 0;
     }
 
+    /* Wall Thickness Engineering Matrix */
+    .matrix-card {
+      background-color: var(--color-canvas-soft);
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    .matrix-table th {
+      background-color: var(--color-canvas-subtle);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-ink);
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--color-hairline);
+    }
+    .matrix-table td {
+      padding: 12px 14px;
+      font-size: 13px;
+      border-bottom: 1px solid var(--color-hairline-subtle);
+      color: var(--color-body);
+    }
+    .matrix-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--color-primary);
+      background: rgba(0, 91, 227, 0.08);
+      padding: 3px 8px;
+      border-radius: var(--radius-xs);
+      border: 1px solid rgba(0, 91, 227, 0.16);
+    }
+    .matrix-thickness {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-ink);
+    }
+
+    /* Cuplock Accessories Cards */
+    .accessory-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .accessory-card {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 16px;
+      background-color: var(--color-canvas-soft);
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      align-items: center;
+      transition: border-color 0.2s ease;
+    }
+    .accessory-card:hover {
+      border-color: var(--color-primary);
+    }
+    .accessory-media {
+      width: 130px;
+      height: 130px;
+      border-radius: var(--radius-xs);
+      overflow: hidden;
+      background-color: #0b1524;
+      flex-shrink: 0;
+      border: 1px solid var(--color-hairline);
+    }
+    .accessory-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .accessory-title {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin: 0 0 6px 0;
+    }
+    .accessory-sizes-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 4px;
+    }
+    .accessory-sizes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .size-chip {
+      background-color: #FFFFFF;
+      border: 1px solid var(--color-hairline);
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+    .accessory-desc {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--color-body);
+      margin: 0;
+    }
+
+    /* Fittings & Couplers Catalog Section */
+    .fittings-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .fitting-item-card {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 18px;
+      background: var(--color-canvas-soft);
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      align-items: start;
+    }
+    .fitting-media {
+      width: 140px;
+      height: 140px;
+      border-radius: var(--radius-xs);
+      overflow: hidden;
+      background: #0b1524;
+      flex-shrink: 0;
+      border: 1px solid var(--color-hairline);
+    }
+    .fitting-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .fitting-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .fitting-name {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin: 0;
+    }
+    .fitting-badge {
+      background: rgba(22, 163, 74, 0.1);
+      color: var(--color-success);
+      border: 1px solid rgba(22, 163, 74, 0.25);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .fitting-specs-mini {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px 12px;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+    .fitting-specs-mini span {
+      color: var(--color-muted);
+    }
+    .fitting-specs-mini strong {
+      color: var(--color-ink);
+      font-family: var(--font-mono);
+    }
+
     @media (max-width: 1024px) {
       .detail-grid {
         grid-template-columns: 1fr;
@@ -111,9 +341,22 @@
         grid-template-columns: 1fr;
       }
     }
+
+    @media (max-width: 640px) {
+      .accessory-card, .fitting-item-card {
+        grid-template-columns: 1fr;
+      }
+      .accessory-media, .fitting-media {
+        width: 100%;
+        height: 180px;
+      }
+      .fitting-specs-mini {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
-  <script type="module" crossorigin src="/assets/product-BsVgFxRY.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/footer-CKNZ30uu.js">
+  <script type="module" crossorigin src="/assets/product-DFmfOMRA.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/footer-H4YDPbGW.js">
   <link rel="stylesheet" crossorigin href="/assets/footer-CP8i2rW2.css">
 </head>
 <body>
@@ -138,11 +381,14 @@
 
         <div class="detail-grid">
           
-          <!-- Left Column: Product Visual Render with Apple-level Shadow -->
+          <!-- Left Column: Product Visual Render with Apple-level Shadow & Thumbnails -->
           <div class="detail-media">
             <div class="detail-image-card">
               <img id="product-img" src="/src/assets/images/hr-steel-coils.jpg" alt="Product Specification" class="detail-image" />
             </div>
+
+            <!-- Thumbnail Switcher Gallery -->
+            <div class="gallery-thumbs" id="gallery-thumbs" style="display: none;"></div>
 
             <!-- Quick Action Cluster below image -->
             <div style="display: flex; gap: 12px; margin-top: var(--space-lg); justify-content: center;">
@@ -168,6 +414,52 @@
                   <!-- Dynamic Specs -->
                 </tbody>
               </table>
+            </div>
+
+            <!-- Scaffold Tubes: Wall Thickness & Yield Stress Engineering Matrix -->
+            <div id="wall-thickness-section" style="display: none; margin-bottom: var(--space-2xl);">
+              <h2 class="heading-display-sm" style="margin-bottom: 4px;">Wall Thickness &amp; Yield Strength Specifications</h2>
+              <p style="font-size: 13px; color: var(--color-muted); margin-bottom: var(--space-sm);">
+                Certified tensile testing conforming to EN 10219, ASTM A500 Grade B, and EN 39 Type 4 / BS 1139.
+              </p>
+              <div class="matrix-card">
+                <table class="matrix-table">
+                  <thead>
+                    <tr>
+                      <th>Standard Spec</th>
+                      <th>Minimum Yield Stress</th>
+                      <th>Nominal Wall Thickness</th>
+                      <th>Application / Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody id="matrix-table-body">
+                    <!-- Dynamic Matrix Rows -->
+                  </tbody>
+                </table>
+              </div>
+              <div id="matrix-note-box" style="display: none; margin-top: 12px; padding: 12px 16px; background: rgba(0, 91, 227, 0.05); border-left: 3px solid var(--color-primary); border-radius: var(--radius-xs); font-size: 13px; color: var(--color-ink); line-height: 1.5;"></div>
+            </div>
+
+            <!-- Cuplock Modular Accessories Section -->
+            <div id="accessories-section" style="display: none; margin-bottom: var(--space-2xl);">
+              <h2 class="heading-display-sm" style="margin-bottom: 4px;">Cuplock Accessories &amp; Standard Sizes</h2>
+              <p style="font-size: 13px; color: var(--color-muted); margin-bottom: var(--space-sm);">
+                Modular vertical uprights, horizontal ledgers, and intermediate transoms manufactured from certified high-strength steel.
+              </p>
+              <div class="accessory-grid" id="accessory-grid">
+                <!-- Dynamic Accessories Cards -->
+              </div>
+            </div>
+
+            <!-- Fittings & Couplers Section -->
+            <div id="fittings-section" style="display: none; margin-bottom: var(--space-2xl);">
+              <h2 class="heading-display-sm" style="margin-bottom: 4px;">Drop-Forged Fittings &amp; Couplers Catalog</h2>
+              <p style="font-size: 13px; color: var(--color-muted); margin-bottom: var(--space-sm);">
+                Heavy-duty scaffolding hardware certified to EN 74-1 Class B standards with guaranteed slip-resistance.
+              </p>
+              <div class="fittings-grid" id="fittings-grid">
+                <!-- Dynamic Fittings Cards -->
+              </div>
             </div>
 
             <!-- Engineering Features -->
@@ -202,7 +494,7 @@
       <div class="container container--editorial">
         
         <div style="text-align: center; margin-bottom: var(--space-2xl);">
-          <h2 class="heading-display-md">Request specifications & price calculation.</h2>
+          <h2 class="heading-display-md">Request specifications &amp; price calculation.</h2>
           <p style="color: var(--color-muted);">Our dispatch desk at Xingang Port, Tianjin will respond within 24 hours with certified technical quotes.</p>
         </div>
 
@@ -231,7 +523,7 @@
               </div>
 
               <div class="form-group">
-                <label class="form-label" for="rfq-country">Destination Country & Port *</label>
+                <label class="form-label" for="rfq-country">Destination Country &amp; Port *</label>
                 <input type="text" id="rfq-country" class="form-input" placeholder="e.g. Rotterdam, Netherlands" required />
               </div>
 
