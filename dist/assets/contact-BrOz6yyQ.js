@@ -1,0 +1,1 @@
+import{i as c,a as r,S as s,g as i}from"./footer-Cxt2FOC8.js";c();r();const o=i(),n=document.getElementById("wa-contact-link");n&&(n.href=o);const t=document.getElementById("wa-number-text");t&&(t.href=o,t.textContent=s.whatsappNumber);const m=new URLSearchParams(window.location.search),a=m.get("product");if(a){const e=document.getElementById("c-product");e&&(e.value=a)}

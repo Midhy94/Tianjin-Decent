@@ -13,8 +13,8 @@ export const SITE_CONFIG = {
   tagline: 'International Industrial & Steel Supply',
   
   // WhatsApp Configuration (Single Source of Truth)
-  whatsappNumber: '+86 138 2000 0000',
-  whatsappNumberDigits: '8613820000000',
+  whatsappNumber: '+86 19902098440',
+  whatsappNumberDigits: '8619902098440',
   whatsappDefaultMessage: 'Hello TIANJIN DECENT INTERNATIONAL TRADE CO., LTD., I would like to inquire about your products.',
 
   // Direct Inquiries & Export Desk

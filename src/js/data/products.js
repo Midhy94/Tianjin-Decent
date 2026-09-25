@@ -135,6 +135,7 @@ Pre-galvanized steel offers exceptional corrosion resistance because zinc has mo
       { label: 'Zinc Coating Mass', value: '20–275 g/m² total both sides (Z20 to Z275), or as specified' },
       { label: 'Steel Grades', value: 'DX51D, DX52D, SGCC, GB, ASTM A653, JIS G3302 or equivalent' },
       { label: 'Surface Quality', value: 'Smooth, uniform coating free from peeling, excessive zinc build-up, or corrosion' },
+      { label: 'Spangle Structure', value: 'Regular Spangle, Minimized Spangle, Zero Spangle' },
       { label: 'Coil Width', value: '700–1250 mm; Strip: 20–600 mm OR as required by project/shop drawings' },
       { label: 'Mechanical Properties', value: 'Complies with ASTM A653/A653M or EN 10346 grade parameters' },
       { label: 'Edge Condition', value: 'Mill edge or slit edge as specified' },
@@ -142,6 +143,7 @@ Pre-galvanized steel offers exceptional corrosion resistance because zinc has mo
       { label: 'Service Life', value: '10–50 years under standard environmental exposure' },
     ],
     features: [
+      'Available in Regular Spangle, Minimized Spangle, and Zero Spangle surface finishes',
       'Excellent corrosion resistance via protective sacrificial zinc oxide film',
       'High cost-effectiveness compared to stainless steel or alloy alternatives',
       'Outstanding processing performance for cutting, roll-forming, bending, and punching',

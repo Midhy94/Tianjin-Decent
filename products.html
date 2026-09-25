@@ -352,7 +352,7 @@
         const catMeta = CATEGORY_META[product.category] || { label: 'Industrial' };
         const primaryStandard = product.standards && product.standards[0] ? product.standards[0].name.split('/')[0].trim() : 'ISO 9001';
         const spec2 = product.specifications && product.specifications[2] ? product.specifications[2].value.substring(0, 22) : 'Export Spec';
-        const spec3 = product.specifications && product.specifications[3] ? product.specifications[3].value.substring(0, 20) : 'Full MTC 3.1';
+        const spec3 = product.specifications && product.specifications[3] ? product.specifications[3].value.substring(0, 20) : 'Test Reports';
         
         return `
           <a href="/product.html?id=${product.slug}" class="product-card">
@@ -373,7 +373,7 @@
               <p class="product-card__desc">${product.shortDescription}</p>
               
               <div class="product-card__specs">
-                <span class="product-card__spec-pill">⭐ MTC 3.1</span>
+                <span class="product-card__spec-pill">⭐ Certified Test Report</span>
                 <span class="product-card__spec-pill">${spec2}</span>
                 <span class="product-card__spec-pill">${spec3}</span>
               </div>

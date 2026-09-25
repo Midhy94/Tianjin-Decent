@@ -89,6 +89,9 @@
 
             <div class="contact-point">
               <div class="contact-point__lbl">WHATSAPP DIRECT CHAT</div>
+              <div class="contact-point__val">
+                <a id="wa-number-text" href="#" target="_blank" rel="noopener noreferrer" style="color: var(--color-ink);">+86 19902098440</a>
+              </div>
               <div style="margin-top: 8px;">
                 <a id="wa-contact-link" 
                    href="#" 
@@ -202,13 +205,20 @@
   <script type="module">
     import { initNav } from '/src/js/components/nav.js';
     import { initFooter } from '/src/js/components/footer.js';
-    import { getWhatsAppUrl } from '/src/js/config.js';
+    import { SITE_CONFIG, getWhatsAppUrl } from '/src/js/config.js';
 
     initNav();
     initFooter();
 
-    // Set WhatsApp link
-    document.getElementById('wa-contact-link').href = getWhatsAppUrl();
+    // Set WhatsApp links
+    const waUrl = getWhatsAppUrl();
+    const waLink = document.getElementById('wa-contact-link');
+    if (waLink) waLink.href = waUrl;
+    const waNumText = document.getElementById('wa-number-text');
+    if (waNumText) {
+      waNumText.href = waUrl;
+      waNumText.textContent = SITE_CONFIG.whatsappNumber;
+    }
 
     // Pre-select product if passed in URL
     const urlParams = new URLSearchParams(window.location.search);

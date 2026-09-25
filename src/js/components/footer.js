@@ -65,7 +65,7 @@ export function initFooter() {
           <div class="footer-col">
             <div class="footer-col__title">Quality & Compliance</div>
             <ul class="footer-links">
-              <li><a href="/quality.html" class="footer-link">MTC EN 10204 3.1 / 3.2</a></li>
+              <li><a href="/quality.html" class="footer-link">Mill Test Certificates (EN 10204)</a></li>
               <li><a href="/quality.html" class="footer-link">Third-Party Inspection (SGS/BV)</a></li>
               <li><a href="/solutions.html" class="footer-link">Engineering Solutions</a></li>
               <li><a href="/about.html" class="footer-link">Corporate Credentials</a></li>
@@ -82,6 +82,13 @@ export function initFooter() {
             <div style="display: flex; flex-direction: column; gap: 10px;">
               <a href="mailto:${SITE_CONFIG.email}" class="footer-link" style="font-weight: 500;">
                 ✉ ${SITE_CONFIG.email}
+              </a>
+              <a href="${whatsappUrl}" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="footer-link" 
+                 style="font-weight: 500;">
+                WhatsApp: ${SITE_CONFIG.whatsappNumber}
               </a>
               <a href="${whatsappUrl}" 
                  target="_blank" 
