@@ -42,9 +42,9 @@ export function initFooter() {
               <li><a href="/products.html?category=steel-coils" class="footer-link">Hot Rolled Coils (HR)</a></li>
               <li><a href="/products.html?category=steel-coils" class="footer-link">Pre-Galvanized Coils</a></li>
               <li><a href="/products.html?category=steel-coils" class="footer-link">Color Coated Coils (PPGI)</a></li>
-              <li><a href="/products.html?category=structural-profiles" class="footer-link">H-Beams & I-Beams</a></li>
-              <li><a href="/products.html?category=structural-profiles" class="footer-link">Channels & Angles</a></li>
-              <li><a href="/products.html?category=structural-profiles" class="footer-link">Seamless Steel Pipes</a></li>
+              <li><a href="/products.html?category=structural-profiles" class="footer-link">Structural Steel (Beams & Channels)</a></li>
+              <li><a href="/products.html?category=steel-pipes" class="footer-link">Steel Pipes (Round & Rectangular)</a></li>
+              <li><a href="/product.html?id=seamless-steel-pipes" class="footer-link">Seamless & ERW Steel Pipes</a></li>
             </ul>
           </div>
 
@@ -52,12 +52,12 @@ export function initFooter() {
           <div class="footer-col">
             <div class="footer-col__title">Scaffolding Systems</div>
             <ul class="footer-links">
-              <li><a href="/products.html?category=scaffolding-systems" class="footer-link">Cup Lock System</a></li>
-              <li><a href="/products.html?category=scaffolding-systems" class="footer-link">Ring / Pin Lock System</a></li>
-              <li><a href="/products.html?category=scaffolding-systems" class="footer-link">Tube & Fitting System</a></li>
-              <li><a href="/products.html?category=tubes-fittings" class="footer-link">Drop-Forged Couplers</a></li>
-              <li><a href="/products.html?category=platforms" class="footer-link">Aluminum Platform Boards</a></li>
-              <li><a href="/products.html?category=mobile-towers" class="footer-link">Mobile Aluminum Towers</a></li>
+              <li><a href="/products.html?category=scaffolding-systems" class="footer-link">Cup Lock & Ring Lock</a></li>
+              <li><a href="/product.html?id=frame-scaffolding-system" class="footer-link">Frame Scaffolding System</a></li>
+              <li><a href="/product.html?id=scaffold-steel-props" class="footer-link">Steel Props & Shoring</a></li>
+              <li><a href="/product.html?id=scaffold-steel-planks" class="footer-link">Steel Planks & Boards</a></li>
+              <li><a href="/product.html?id=scaffold-staircase" class="footer-link">Scaffolding Staircases</a></li>
+              <li><a href="/product.html?id=scaffold-beam-ladder" class="footer-link">Beam Ladders & Couplers</a></li>
             </ul>
           </div>
 

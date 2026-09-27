@@ -7,6 +7,7 @@
 export const PRODUCT_CATEGORIES = {
   STEEL_COILS: 'steel-coils',
   STRUCTURAL_PROFILES: 'structural-profiles',
+  STEEL_PIPES: 'steel-pipes',
   SCAFFOLDING_SYSTEMS: 'scaffolding-systems',
   TUBES_FITTINGS: 'tubes-fittings',
   PLATFORMS: 'platforms',
@@ -23,10 +24,16 @@ export const CATEGORY_META = {
     image: '/src/assets/images/hr-steel-coils.jpg',
   },
   [PRODUCT_CATEGORIES.STRUCTURAL_PROFILES]: {
-    label: 'Structural Steel & Pipes',
+    label: 'Structural Steel',
     shortLabel: 'Structural Steel',
-    description: 'H-Beams, I-Beams, Channels, Angles, Square/Round Bars, Hollow Sections, and API Seamless Pipes.',
+    description: 'H-Beams, I-Beams, Channels, Angles, Square/Round Bars, Steel Flat Plates, and T-Sections.',
     image: '/src/assets/images/structural-steel-profiles.jpg',
+  },
+  [PRODUCT_CATEGORIES.STEEL_PIPES]: {
+    label: 'Steel Pipes',
+    shortLabel: 'Steel Pipes',
+    description: 'Round Pipe (CHS), Square & Rectangular Pipe (RHS/SHS), ERW Pipe, Seamless Pipe, Galvanized Pipe, and Painted Pipe.',
+    image: '/src/assets/images/seamless-steel-pipes.jpg',
   },
   [PRODUCT_CATEGORIES.SCAFFOLDING_SYSTEMS]: {
     label: 'Scaffolding Systems',
@@ -205,23 +212,21 @@ Available in all international standard RAL colors, with finishes ranging from M
       'Household electrical appliance outer casing and enclosure panels',
     ],
     standards: [
-      { name: 'EN 10169', description: 'Continuously organic coated (coil coated) steel flat products' },
-      { name: 'ASTM A755 / A755M', description: 'Steel sheet, metallic coated by the hot-dip process and prepainted by coil-coating' },
       { name: 'JIS G3312', description: 'Prepainted hot-dip zinc-coated steel sheets and coils' },
     ],
     relatedProducts: ['pre-galvanized-steel-coils', 'hr-steel-coils', 'structural-steel-profiles'],
   },
 
-  // ── STRUCTURAL STEEL PROFILES & PIPES ───────────────────
+  // ── STRUCTURAL STEEL PROFILES ─────────────────────────────
 
   {
     slug: 'structural-steel-profiles',
     category: PRODUCT_CATEGORIES.STRUCTURAL_PROFILES,
     name: 'Structural Steel Profiles & Sections',
-    shortDescription: 'Comprehensive range of fundamental structural sections: H-Beams, I-Beams, Channels, Angle Sections, Square/Round Bars, Flat Plates, and Hollow Sections.',
+    shortDescription: 'Comprehensive range of fundamental structural sections: H-Beams, I-Beams, Channels, Angle Sections, Square/Round Bars, Flat Plates, and T-Sections.',
     description: `Structural steel sections are fundamental engineering components in modern buildings, bridges, industrial plants, warehouse facilities, and infrastructure projects. Each profile manufactured and supplied by Tianjin Decent International Trade Co., Ltd. is uniquely shaped to withstand specific mechanical loads, moments of inertia, and shear forces with maximum efficiency.
 
-Our structural profiles portfolio covers wide-flange H-Beams, standard I-Beams, C-Channels, L-Angles, Square and Round Bars, Steel Flat Plates, T-Sections, and Hollow Sections (SHS, RHS, CHS). Sourced in standard lengths of 6 m, 12 m, or cut-to-length as required by project drawings.`,
+Our structural profiles portfolio covers wide-flange H-Beams, standard I-Beams, C-Channels, L-Angles, Square and Round Bars, Steel Flat Plates, and T-Sections. Sourced in standard lengths of 6 m, 12 m, or cut-to-length as required by project drawings. (Note: For tubular products and hollow sections, please view our dedicated Steel Pipes catalog).`,
     heroImage: '/src/assets/images/structural-steel-profiles.jpg',
     gallery: ['/src/assets/images/structural-steel-profiles.jpg', '/src/assets/images/seamless-steel-pipes.jpg'],
     specifications: [
@@ -232,9 +237,9 @@ Our structural profiles portfolio covers wide-flange H-Beams, standard I-Beams, 
       { label: 'Square & Round Bars', value: 'High-rigidity solid bars for machinery shafts, pins, anchor rods, gates, railings, and plain reinforcement.' },
       { label: 'Steel Plate (Flat Bar)', value: 'Base plates, gusset plates, column stiffeners, connection plates, and custom fabrication works.' },
       { label: 'T-Section Steel', value: 'Support members, floor framing stiffeners, and secondary structural elements.' },
-      { label: 'RHS & SHS (Hollow)', value: 'Rectangular & Square Hollow Sections for canopies, warehouses, and modern architectural steel frameworks.' },
-      { label: 'CHS (Circular Hollow)', value: 'Circular Hollow Sections offering excellent omnidirectional strength-to-weight ratio for columns and trusses.' },
       { label: 'Material Grades', value: 'Q235B, Q355B, S235JR, S275JR, S355JR, ASTM A36, A572 Gr 50, SS400' },
+      { label: 'Standard Lengths', value: '6.0 m, 12.0 m, or precision cut-to-length as required' },
+      { label: 'Surface Finish', value: 'Mill finish / black surface, shot-blasted (Sa 2.5), shop primed, or Hot-Dip Galvanized' },
     ],
     features: [
       'Comprehensive structural geometry options matching global building codes',
@@ -257,14 +262,16 @@ Our structural profiles portfolio covers wide-flange H-Beams, standard I-Beams, 
       { name: 'ASTM A36 / A572', description: 'Standard Specification for Carbon and High-Strength Low-Alloy Structural Steel' },
       { name: 'JIS G3101', description: 'Rolled steel for general structure (SS400 / SS490)' },
     ],
-    relatedProducts: ['seamless-steel-pipes', 'hr-steel-coils', 'pre-galvanized-steel-coils'],
+    relatedProducts: ['seamless-steel-pipes', 'welded-erw-steel-pipes', 'hr-steel-coils'],
   },
+
+  // ── STEEL PIPES (ROUND, SQUARE & RECTANGULAR) ───────────
 
   {
     slug: 'seamless-steel-pipes',
-    category: PRODUCT_CATEGORIES.STRUCTURAL_PROFILES,
+    category: PRODUCT_CATEGORIES.STEEL_PIPES,
     name: 'Seamless Industrial Steel Pipes',
-    shortDescription: 'Heavy-wall and standard API/GB seamless steel pipes for fluid, gas, oil transmission, and high-load structural columns.',
+    shortDescription: 'Heavy-wall and standard API/GB seamless steel pipes for fluid, gas, oil transmission, boiler tubes, and structural columns.',
     description: `Seamless industrial steel pipes supplied by Tianjin Decent International Trade Co., Ltd. are manufactured without welded seams for high pressure containment, uniform circumferential strength, and dependable structural durability. Conforming to rigorous API and GB standards for fluid, gas, and oil transport as well as heavy civil structural columns.
 
 Available in standard lengths of 6 m, 6.4 m, and 12 m with wall thickness ratings from Schedule 40 (sch40) up to Schedule 120 (sch120). Surface options include hot-rolled black finish or anti-corrosion black galvanized coating with beveled or plain ends fitted with protective end caps.`,
@@ -272,13 +279,14 @@ Available in standard lengths of 6 m, 6.4 m, and 12 m with wall thickness rating
     gallery: ['/src/assets/images/seamless-steel-pipes.jpg', '/src/assets/images/structural-steel-profiles.jpg'],
     specifications: [
       { label: 'Applications', value: 'Fluid Pipe, Gas Pipe, Oil Pipe, High-Pressure Transmission & Structural Columns' },
-      { label: 'Manufacturing Standard', value: 'GB Standards, API Spec 5L / 5CT, ASTM A53, ASTM A106' },
-      { label: 'Steel Grades', value: 'Grade B, A53, A369, A106 (B, C), Q195–Q345' },
-      { label: 'Certifications', value: 'API Certified, ISO 9001, Mill Test Certificate (EN 10204 3.1)' },
+      { label: 'Standard', value: 'GB Standards, API Spec 5L / 5CT, ASTM A53, ASTM A106' },
+      { label: 'Grade', value: 'Grade B, A53-A369, A106 (B, C), Q195–Q345' },
+      { label: 'Certificate', value: 'API Certified, ISO 9001, Mill Test Certificate (EN 10204 3.1)' },
       { label: 'Surface Treatment', value: 'Hot Rolled finish / Black Galvanized Coated with rust-preventive varnish' },
-      { label: 'Standard Lengths', value: '6.0 m, 6.4 m, 12.0 m (fixed or random lengths)' },
-      { label: 'Specialty Classes', value: 'API Pipe, Thick Wall Pipe, High-Pressure Boiler Tube' },
-      { label: 'Wall Thickness Schedule', value: 'sch40 to sch120 (and customized heavy wall thicknesses)' },
+      { label: 'Length', value: '12 m, 6 m, 6.4 m (fixed or random lengths)' },
+      { label: 'Special Pipe', value: 'API Pipe, Thick Wall Pipe, High-Pressure Boiler Tube' },
+      { label: 'Thickness', value: 'sch40 to sch120 (and customized heavy wall thicknesses)' },
+      { label: 'Surface', value: 'Black Galvanized Coated, Oiled, or Bare Mill Finish' },
       { label: 'End Protection', value: 'Plain end, beveled end (30°–35°), plastic end caps fitted' },
     ],
     features: [
@@ -301,7 +309,58 @@ Available in standard lengths of 6 m, 6.4 m, and 12 m with wall thickness rating
       { name: 'ASTM A106 / A53', description: 'Seamless Carbon Steel Pipe for High-Temperature Service' },
       { name: 'GB/T 8163', description: 'Seamless steel tubes for liquid service' },
     ],
-    relatedProducts: ['structural-steel-profiles', 'hr-steel-coils', 'scaffold-tube-48'],
+    relatedProducts: ['welded-erw-steel-pipes', 'structural-steel-profiles', 'scaffold-tube-48'],
+  },
+
+  {
+    slug: 'welded-erw-steel-pipes',
+    category: PRODUCT_CATEGORIES.STEEL_PIPES,
+    name: 'ERW & Welded Steel Pipes (Round, Square & Rectangular)',
+    shortDescription: 'Round Pipe (CHS), Square & Rectangular Pipe (RHS/SHS) in ERW welded fabrication with Galvanized and Painted finishes.',
+    description: `Tianjin Decent International Trade Co., Ltd. supplies high-precision ERW (Electric Resistance Welded) and cold-formed welded steel pipes tailored to global engineering standards. Our comprehensive steel pipe range encompasses Round Pipe (Circular Hollow Sections - CHS) as well as Square & Rectangular Pipe (Square and Rectangular Hollow Sections - SHS & RHS).
+
+Available in various high-durability surface executions including Hot-Dip Galvanized, Pre-Galvanized, Black Painted, and Anti-Rust Primer Coated to ensure exceptional longevity across demanding outdoor and industrial environments.`,
+    heroImage: '/src/assets/images/seamless-steel-pipes.jpg',
+    gallery: [
+      '/src/assets/images/seamless-steel-pipes.jpg',
+      '/src/assets/images/structural-steel-profiles.jpg',
+      '/src/assets/images/scaffold-tubes-48mm.jpg'
+    ],
+    specifications: [
+      { label: 'Product Scope', value: 'Round Pipe, Square & Rectangular Pipe' },
+      { label: 'Profile Types', value: 'RHS & SHS (Rectangular & Square Hollow Sections), CHS (Circular Hollow Section)' },
+      { label: 'Manufacturing Details', value: 'ERW Pipe (Electric Resistance Welded), Seamless Pipe, Galvanized Pipe, Painted Pipe' },
+      { label: 'RHS & SHS Characteristics', value: 'Popular for columns, beams, trusses, canopies, warehouses, and modern architectural steel structures due to their strength and clean appearance.' },
+      { label: 'CHS Characteristics', value: 'Offers an excellent strength-to-weight ratio and is widely used for columns, trusses, handrails, and bracing systems.' },
+      { label: 'Surface Finishes', value: 'Galvanized Pipe (Hot-Dip Galvanized / Pre-Galvanized), Painted Pipe (Black / Red Oxide / Anti-Corrosion Primer), Bare Mill Finish' },
+      { label: 'Applicable Standards', value: 'ASTM A500 (Grades A, B, C), EN 10219, EN 10210, BS 1387, JIS G3444, JIS G3466, GB/T 6728, GB/T 3091' },
+      { label: 'Steel Grades', value: 'Q195, Q215, Q235B, Q345B, Q355B, S235JR, S275JR, S355JR, ASTM A500 Grade B' },
+      { label: 'Wall Thickness', value: '0.8 mm up to 16.0 mm (sch10 to sch80 equivalent)' },
+      { label: 'Length Range', value: '5.8 m, 6.0 m, 11.8 m, 12.0 m, or customized precision cut lengths' },
+      { label: 'End Treatments', value: 'Plain square cut ends, beveled ends, threaded and coupled, roll grooved' },
+    ],
+    features: [
+      'Comprehensive geometry: Round (CHS), Square (SHS), and Rectangular (RHS) hollow sections',
+      'Advanced high-frequency ERW welding with internal and external weld bead removal',
+      'Superior strength-to-weight ratio providing structural economy and clean architectural lines',
+      'Extensive finish options: Hot-dip galvanized, pre-galvanized, and multi-layer painted finishes',
+      'Strict hydrostatic, ultrasonic, and eddy current non-destructive testing for all fluid/gas lines',
+      'Bundled with heavy-duty steel strapping and moisture-resistant seaworthy packaging',
+    ],
+    applications: [
+      'Architectural steel columns, roof trusses, canopy framing, and space frames',
+      'Industrial warehouse framing, pre-engineered buildings (PEB), and greenhouse structures',
+      'Civil infrastructure handrails, bridge guardrails, and highway signage gantries',
+      'Low to medium pressure fluid, water, gas, fire protection sprinkler systems',
+      'Mechanical manufacturing, equipment frames, agricultural machinery, and automotive chassis',
+    ],
+    standards: [
+      { name: 'ASTM A500', description: 'Cold-Formed Welded and Seamless Carbon Steel Structural Tubing' },
+      { name: 'EN 10219', description: 'Cold formed welded structural hollow sections of non-alloy and fine grain steels' },
+      { name: 'GB/T 6728', description: 'Cold formed hollow sections for general structure' },
+      { name: 'BS 1387', description: 'Screwed and socketed steel tubes and tubulars for water, gas, air and steam' },
+    ],
+    relatedProducts: ['seamless-steel-pipes', 'structural-steel-profiles', 'scaffold-tube-48'],
   },
 
   // ── SCAFFOLDING SYSTEMS ──────────────────────────────────
@@ -480,6 +539,184 @@ Because couplers can be fastened at any position along the 48.3 mm diameter tube
       { name: 'BS 1139', description: 'Metal scaffolding — Specification for steel tube' },
     ],
     relatedProducts: ['scaffolding-accessories', 'scaffold-tube-48', 'right-angle-coupler', 'swivel-coupler'],
+  },
+
+  {
+    slug: 'frame-scaffolding-system',
+    category: PRODUCT_CATEGORIES.SCAFFOLDING_SYSTEMS,
+    name: 'Modular Frame Scaffolding System (H-Frame & Walk-Through)',
+    shortDescription: 'Prefabricated portal frame scaffolding system with walk-through frames, mason frames, cross braces, and lock pins.',
+    description: `The Modular Frame Scaffolding System is engineered for rapid, tool-free erection on masonry construction, exterior building finishing, stucco work, and commercial maintenance projects. Built from high-tensile structural steel tubular uprights welded into rigid box geometries, each section locks securely with scissor cross braces and gravity flip-locks.
+
+Available in Walk-Through Frame and Mason H-Frame configurations, accommodating integrated steel walk boards, staircases, and heavy loading conditions conforming to ANSI and EN specifications.`,
+    heroImage: '/src/assets/images/frame-scaffolding.jpg',
+    gallery: [
+      '/src/assets/images/frame-scaffolding.jpg',
+      '/src/assets/images/scaffold-steel-plank.jpg',
+      '/src/assets/images/scaffold-staircase.jpg'
+    ],
+    specifications: [
+      { label: 'System Type', value: 'Walk-Through Frame & Mason H-Frame modular scaffolding' },
+      { label: 'Standard Dimensions', value: '1930 mm × 1219 mm (6\'4" × 4\'), 1700 mm × 1219 mm, 1524 mm × 1219 mm (5\' × 4\'), 1930 mm × 914 mm' },
+      { label: 'Main Leg Tube', value: 'Ø 42.7 mm / Ø 48.3 mm × 2.0 mm / 2.5 mm high-yield carbon steel' },
+      { label: 'Lock Types', value: 'Drop lock / Gravity flip lock / Fast lock pins' },
+      { label: 'Cross Braces', value: 'Galvanized tube scissor cross braces to suit 1.8 m, 2.0 m, 2.13 m, 2.5 m bays' },
+      { label: 'Surface Finish', value: 'High-durability powder-coated (Red / Yellow / Blue) or Hot-Dip Galvanized' },
+      { label: 'Platform Decking', value: 'Compatible with steel planks, aluminum platform boards, and access hatch decks' },
+      { label: 'Load Capacity', value: 'Heavy Duty rating up to 50 psf (2.4 kN/m²) uniform distributed load' },
+      { label: 'Applications', value: 'Brick masonry, exterior wall plastering, cladding installation, and interior maintenance' },
+    ],
+    features: [
+      'Rapid, tool-free assembly with drop-lock pins and captive gravity pins',
+      'Walk-through portal geometry allows unobstructed worker passage along scaffold bays',
+      'High-grade structural steel tubing ensures maximum buckling resistance',
+      'Available in durable powder-coated painted finish or hot-dip galvanized finish',
+      'Complete accessory compatibility: screw jacks, casters, guardrail posts, and stairs',
+      'Full compliance with international access safety and load standards',
+    ],
+    applications: [
+      'Exterior masonry, bricklaying, and stone facade construction',
+      'Stucco, plastering, exterior insulation and finish systems (EIFS)',
+      'Building painting, window glazing, and architectural panel installation',
+      'Industrial warehouse wall maintenance and internal ceiling access',
+    ],
+    standards: [
+      { name: 'ANSI/SSFI SC100-5/05', description: 'Standards for testing and rating scaffold assemblies and components' },
+      { name: 'EN 12810', description: 'Façade scaffolds made of prefabricated components' },
+      { name: 'OSHA 1926.451', description: 'Safety and Health Regulations for Construction — Scaffolds' },
+    ],
+    relatedProducts: ['steel-scaffold-planks', 'scaffold-staircase', 'scaffold-steel-props'],
+  },
+
+  {
+    slug: 'scaffold-steel-props',
+    category: PRODUCT_CATEGORIES.SCAFFOLDING_SYSTEMS,
+    name: 'Adjustable Heavy-Duty Steel Props (Acrow Shoring Props)',
+    shortDescription: 'Telescopic adjustable steel shoring props with rolled Acme threaded collar and forged G-pin across 0.69 m to 4.87 m heights.',
+    description: `Adjustable Steel Props (Acrow Props) supplied by Tianjin Decent International Trade Co., Ltd. are heavy-duty telescopic shoring devices designed to support vertical loads during concrete formwork pouring, slab falsework, and temporary structural propping.
+
+Fabricated with precision high-frequency welded steel inner (48.3 mm OD) and outer (56/60 mm OD) tubes, equipped with a forged ductile iron collar nut with dual handles and high-tensile G-pin for micro-level height adjustments. Conforming to EN 1065 Class A through E and BS 4074.`,
+    heroImage: '/src/assets/images/scaffold-steel-props.jpg',
+    gallery: [
+      '/src/assets/images/scaffold-steel-props.jpg',
+      '/src/assets/images/scaffold-tubes-fittings.jpg'
+    ],
+    specifications: [
+      { label: 'Prop Sizes & Heights', value: 'Prop Size 00: 0.69 m – 1.163 m\nProp Size 0: 1.07 m – 1.82 m\nProp Size 1: 1.75 m – 3.12 m\nProp Size 2: 1.98 m – 3.35 m\nProp Size 3: 2.59 m – 3.95 m\nProp Size 4: 3.20 m – 4.87 m' },
+      { label: 'Outer Tube Spec', value: 'Ø 56 mm / Ø 60 mm × 2.0 mm / 2.5 mm wall thickness' },
+      { label: 'Inner Tube Spec', value: 'Ø 48.3 mm × 2.5 mm / 3.0 mm wall thickness with punched pin holes at 100 mm pitch' },
+      { label: 'Adjustment Nut', value: 'Ductile cast iron collar nut with dual handles for rapid spin height setting' },
+      { label: 'Locking Pin', value: 'High-tensile forged steel G-pin (Ø 12 mm / 14 mm) with retention chain' },
+      { label: 'Base & Head Plates', value: '120 × 120 × 6 mm or 150 × 150 × 8 mm flat or flower plates with nail securing holes' },
+      { label: 'Surface Finish', value: 'Hot-Dip Galvanized, Electro-Galvanized, or High-Adhesion Powder Painted' },
+      { label: 'Safe Working Load', value: '10 kN to 35 kN axial load capacity (per EN 1065 certified load tables)' },
+    ],
+    features: [
+      'Six standard length ranges from 0.69 m up to 4.87 m to meet any ceiling or trench height',
+      'Heavy-duty rolled Acme threads ensure smooth adjustment without clogging or stripping',
+      'Self-cleaning thread design expels concrete debris and slurry during turning',
+      'High axial vertical load capacity with TÜV and EN 1065 certification test data',
+      'Punched base plate holes allow secure fastening to timber sole plates or concrete slabs',
+      'Available with U-head, fork head, or flat plate tops for timber beam / steel beam support',
+    ],
+    applications: [
+      'Cast-in-place concrete slab formwork and beam bottom shoring',
+      'Precast concrete panel installation and temporary wall stabilization',
+      'Civil engineering bridge formwork, culvert construction, and tunneling support',
+      'Structural renovation, lintel replacement, and trench shoring propping',
+    ],
+    standards: [
+      { name: 'EN 1065', description: 'Adjustable telescopic steel props — Product specifications, design and assessment' },
+      { name: 'BS 4074', description: 'Specification for steel trench struts and props' },
+    ],
+    relatedProducts: ['scaffold-beam-ladder', 'steel-scaffold-planks', 'frame-scaffolding-system'],
+  },
+
+  {
+    slug: 'scaffold-beam-ladder',
+    category: PRODUCT_CATEGORIES.SCAFFOLDING_SYSTEMS,
+    name: 'Scaffolding Beam Ladders & Lattice Girders',
+    shortDescription: 'High-tensile parallel-chord 48.3 mm tubular lattice beams engineered for bridging large spans, openings, and suspended scaffolds.',
+    description: `Scaffolding Beam Ladders and Lattice Girders are structural spanning components manufactured from 48.3 mm high-yield steel tubing. Designed to bridge over wide openings, vehicular roadways, pedestrian thoroughfares, and roof voids where continuous ground-supported scaffolding is impractical.
+
+Engineered with full-penetration welding between chords and diagonal lattice bracing, conforming to BS 1139 and EN 12811 for high bending moment capacity and point load resistance.`,
+    heroImage: '/src/assets/images/scaffold-beam-ladder.jpg',
+    gallery: [
+      '/src/assets/images/scaffold-beam-ladder.jpg',
+      '/src/assets/images/scaffold-beam-ladder-bundle.jpg',
+      '/src/assets/images/scaffold-tubes-fittings.jpg'
+    ],
+    specifications: [
+      { label: 'Lattice Depth', value: '300 mm, 450 mm, 500 mm, 750 mm (standard 450 mm / 18" deep lattice)' },
+      { label: 'Standard Lengths', value: '2.0 m, 3.0 m, 4.0 m, 5.0 m, 6.0 m, 8.0 m (custom lengths available)' },
+      { label: 'Chord Tubes', value: 'Ø 48.3 mm × 3.2 mm / 4.0 mm high-yield structural steel tubing' },
+      { label: 'Lacing Tubes', value: 'Ø 48.3 mm or Ø 38 mm diagonal and vertical welded lattice trussing' },
+      { label: 'Connection Details', value: 'Direct connection using standard EN 74-1 right-angle / swivel couplers or spigot connectors' },
+      { label: 'Surface Finish', value: 'Hot-Dip Galvanized to EN ISO 1461 for severe marine and industrial atmospheric protection' },
+      { label: 'Bending Capacity', value: 'High permissible bending moment engineered for heavy suspended staging and equipment decks' },
+      { label: 'Primary Use', value: 'Bridging openings, entrance portals, pedestrian canopies, and suspended scaffolding' },
+    ],
+    features: [
+      'Fabricated entirely from standardized 48.3 mm tubes for complete coupler compatibility',
+      'Continuous automated robotic MIG welding guarantees full weld penetration and joint strength',
+      'Provides clear wide-span access over building entrances, roadways, and sensitive equipment',
+      'End-to-end spigoting permits multi-section continuous beam spans exceeding 20 meters',
+      'Hot-dip galvanized coating ensures zero corrosion maintenance over extended project lifespans',
+    ],
+    applications: [
+      'Bridging over vehicular entrance gates and active construction site roadways',
+      'Pedestrian protection gantries and overhead debris catchment decks',
+      'Suspended access platforms on offshore platforms, bridges, and ship hulls',
+      'Heavy shoring transfer beams and cantilevered working bays',
+    ],
+    standards: [
+      { name: 'BS 1139', description: 'Metal scaffolding — specifications for system scaffolding and components' },
+      { name: 'EN 12811-1', description: 'Temporary works equipment — Scaffolds performance requirements' },
+    ],
+    relatedProducts: ['scaffold-steel-props', 'steel-scaffold-planks', 'frame-scaffolding-system'],
+  },
+
+  {
+    slug: 'scaffold-staircase',
+    category: PRODUCT_CATEGORIES.SCAFFOLDING_SYSTEMS,
+    name: 'Modular Steel Scaffolding Staircase Unit',
+    shortDescription: 'Prefabricated steel access stairs with non-slip perforated treads and ledger hooks for rapid, safe personnel stair towers.',
+    description: `Modular Steel Scaffolding Staircase Units provide safe, ergonomic vertical transit between scaffold working levels, replacing unsafe vertical ladders with compliant stair towers. Engineered with formed steel stringers and punched non-slip stair treads featuring drainage dimples.
+
+Equipped with heavy-duty end hooks that seat directly over scaffolding horizontal ledgers and transoms, providing quick installation and stable, wobble-free footing conforming to EN 12811 and OSHA standards.`,
+    heroImage: '/src/assets/images/scaffold-staircase.jpg',
+    gallery: [
+      '/src/assets/images/scaffold-staircase.jpg',
+      '/src/assets/images/scaffold-steel-plank.jpg',
+      '/src/assets/images/cuplock-system.jpg'
+    ],
+    specifications: [
+      { label: 'Lift Height / Rise', value: '1.5 m / 2.0 m standard scaffolding vertical bay lift height' },
+      { label: 'Clear Width', value: '600 mm / 900 mm ergonomic walking width' },
+      { label: 'Tread Construction', value: 'Pressed steel non-slip perforated treads with drainage holes' },
+      { label: 'Rise & Going', value: 'Rise ~200 mm, Going ~220 mm for natural, comfortable stair climbing' },
+      { label: 'Connection Hooks', value: 'Reinforced welded steel end hooks with integrated lift-off safety retainers' },
+      { label: 'Material & Finish', value: 'High-strength structural steel, Pre-galvanized or Hot-Dip Galvanized' },
+      { label: 'Access Handrails', value: 'Internal and external matching diagonal handrail units available' },
+      { label: 'Permissible Load', value: '1.5 kN/m² to 2.0 kN/m² live load rating (EN 12811 Class 3)' },
+    ],
+    features: [
+      'Replaces ladder climbing with ergonomic walking access, significantly reducing worker fatigue and fall risk',
+      'Perforated dimpled treads provide superior traction in wet, muddy, or icy working conditions',
+      'Hooks securely onto standard 48.3 mm ledgers across Cuplock, Ringlock, and Frame systems',
+      'Rapid drop-in installation requiring no specialized hand tools or loose fasteners',
+      'Hot-dip galvanized finish guarantees lasting protection against coastal and chemical exposure',
+    ],
+    applications: [
+      'High-rise construction public access and personnel evacuation stair towers',
+      'Industrial plant turnaround, boiler maintenance, and refinery overhaul access',
+      'Commercial facade refurbishment and multi-tiered staging platforms',
+    ],
+    standards: [
+      { name: 'EN 12811-1', description: 'Temporary works equipment — Scaffolds access and stairways' },
+      { name: 'OSHA 1926.451', description: 'Safety and Health Regulations for Construction — Scaffolds access requirements' },
+    ],
+    relatedProducts: ['steel-scaffold-planks', 'frame-scaffolding-system', 'ringlock-system'],
   },
 
   {
@@ -726,6 +963,50 @@ Tianjin Decent International Trade Co., Ltd. supplies the complete inventory of 
   },
 
   {
+    slug: 'steel-scaffold-planks',
+    category: PRODUCT_CATEGORIES.PLATFORMS,
+    name: 'Galvanized Steel Scaffold Planks & Boards',
+    shortDescription: 'Anti-slip perforated galvanized steel walk boards with reinforcing stiffeners and heavy-duty end hooks.',
+    description: `Galvanized Steel Scaffold Planks and Boards supplied by Tianjin Decent International Trade Co., Ltd. are engineered for high-durability working platforms across commercial, civil, and industrial scaffolding. Manufactured from high-strength pre-galvanized or hot-dip galvanized sheet steel with longitudinal box-channel ribs for maximum deflection resistance.
+
+Featuring a non-slip perforated dimpled surface that prevents slip hazards from water, oil, or mud accumulation, complete with heavy-duty welded end hooks that lock firmly onto scaffolding ledgers and transoms.`,
+    heroImage: '/src/assets/images/scaffold-steel-plank.jpg',
+    gallery: [
+      '/src/assets/images/scaffold-steel-plank.jpg',
+      '/src/assets/images/platform-board.jpg',
+      '/src/assets/images/scaffold-staircase.jpg'
+    ],
+    specifications: [
+      { label: 'Plank Widths', value: '210 mm, 225 mm, 240 mm, 250 mm, 480 mm' },
+      { label: 'Standard Lengths', value: '1.0 m, 1.5 m, 1.8 m, 2.0 m, 2.5 m, 3.0 m, 4.0 m' },
+      { label: 'Profile Height', value: '38 mm, 45 mm, 50 mm box-channel with welded bottom stiffeners' },
+      { label: 'Sheet Thickness', value: '1.1 mm, 1.2 mm, 1.5 mm, 1.8 mm, 2.0 mm structural galvanized steel' },
+      { label: 'Surface Pattern', value: 'Anti-slip raised perforated dimples with rapid drainage perforations' },
+      { label: 'End Connections', value: 'Dual or triple welded hooks with safety lock pins or plain box ends' },
+      { label: 'Surface Finish', value: 'Pre-galvanized (Z120–Z275) or Hot-Dip Galvanized (HDG)' },
+      { label: 'Load Rating', value: 'Conforms to EN 12811-1 Class 3 (2.0 kN/m²) through Class 6 (6.0 kN/m²)' },
+    ],
+    features: [
+      'Convex perforated anti-slip surface ensures secure worker footing even in rain or grease',
+      'Box-shaped longitudinal stiffeners prevent sagging and mid-span flexure under heavy worker loads',
+      'Fire-resistant, rot-proof, and significantly more durable than traditional timber boards',
+      'Welded end hooks fit securely over standard 48.3 mm scaffolding transoms and ledgers',
+      'Stackable design with interlocking edges for compact transport container loading',
+    ],
+    applications: [
+      'Main working platforms and walkway decking on Ringlock, Cuplock, and Tube scaffolds',
+      'Suspended access decks in industrial boiler houses, tank farms, and shipyards',
+      'Facade masonry access, bridge maintenance, and exterior plastering decks',
+    ],
+    standards: [
+      { name: 'EN 12811-1', description: 'Temporary works equipment — Working platforms and decking' },
+      { name: 'BS 1139', description: 'Metal scaffolding — specifications for steel scaffold boards' },
+      { name: 'OSHA 1926.451', description: 'General safety requirements for scaffolding platforms' },
+    ],
+    relatedProducts: ['aluminum-platform', 'scaffold-staircase', 'frame-scaffolding-system'],
+  },
+
+  {
     slug: 'aluminum-platform',
     category: PRODUCT_CATEGORIES.PLATFORMS,
     name: 'Aluminum Scaffold Platform Board',
@@ -842,7 +1123,7 @@ export const SCAFFOLDING_FITTINGS_CATALOG = [
   {
     name: 'Drop-Forged Putlog Coupler (Single Coupler)',
     standard: 'EN 74-1 / BS 1139 Certified',
-    image: '/src/assets/images/fitting-putlog-coupler.jpg',
+    image: '/src/assets/images/fitting-putlog-coupler-client.png',
     tubeDiameter: '48.3 mm × 48.3 mm',
     tighteningTorque: '54 Nm',
     slipLoad: 'Working Load Limit (WLL) 6.25 kN',
@@ -854,7 +1135,7 @@ export const SCAFFOLDING_FITTINGS_CATALOG = [
   {
     name: 'Board Retaining Clamp (BRC)',
     standard: 'BS 1139 / EN 74 Compliant',
-    image: '/src/assets/images/fitting-board-retaining-clamp.jpg',
+    image: '/src/assets/images/fitting-board-retaining-clamp-client.png',
     tubeDiameter: '48.3 mm Tube to 38 mm / 50 mm Timber Board',
     tighteningTorque: '30 Nm',
     slipLoad: 'Uplift resistance ≥ 5.0 kN',

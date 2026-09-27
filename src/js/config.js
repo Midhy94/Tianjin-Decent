@@ -18,8 +18,8 @@ export const SITE_CONFIG = {
   whatsappDefaultMessage: 'Hello TIANJIN DECENT INTERNATIONAL TRADE CO., LTD., I would like to inquire about your products.',
 
   // Direct Inquiries & Export Desk
-  email: 'info@tjdecent.com',
-  salesEmail: 'sales@tjdecent.com',
+  email: 'tjdecent@163.com',
+  salesEmail: 'tjdecent@163.com',
   
   // Strategic Logistics Hub
   portTerminal: 'Xingang Terminal, Port of Tianjin (CNTSN)',
