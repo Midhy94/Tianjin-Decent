@@ -1,4 +1,4 @@
-import{i as p,a as g,P as c,C as _}from"./footer-DShS3LAS.js";p();g();const u=document.getElementById("catalog-grid"),v=document.getElementById("products-count"),e=document.querySelectorAll(".filter-chip"),m=new URLSearchParams(window.location.search),i=m.get("category")||"all";function r(s="all"){const t=s==="all"?c:c.filter(a=>a.category===s);v.textContent=`Displaying ${t.length} technical product lines`,u.innerHTML=t.map(a=>{const o=_[a.category]||{label:"Industrial"},n=a.standards&&a.standards[0]?a.standards[0].name.split("/")[0].trim():"ISO 9001",l=a.specifications&&a.specifications[2]?a.specifications[2].value.substring(0,22):"Export Spec",d=a.specifications&&a.specifications[3]?a.specifications[3].value.substring(0,20):"Test Reports";return`
+import{i as g,a as _,b as v,P as e,C as u,e as m}from"./scroll-reveal-B5cS9Cju.js";g();_();v();const c=document.getElementById("catalog-grid"),h=document.getElementById("products-count"),i=document.querySelectorAll(".filter-chip"),f=new URLSearchParams(window.location.search),r=f.get("category")||"all";function l(s="all"){const t=s==="all"?e:e.filter(a=>a.category===s);h.textContent=`Displaying ${t.length} technical product lines`,c.innerHTML=t.map(a=>{const o=u[a.category]||{label:"Industrial"},n=a.standards&&a.standards[0]?a.standards[0].name.split("/")[0].trim():"ISO 9001",d=a.specifications&&a.specifications[2]?a.specifications[2].value.substring(0,22):"Export Spec",p=a.specifications&&a.specifications[3]?a.specifications[3].value.substring(0,20):"Test Reports";return`
           <a href="/product.html?id=${a.slug}" class="product-card">
             <div class="product-card__img-wrap">
               <img src="${a.heroImage}" alt="${a.name}" class="product-card__img" loading="lazy" />
@@ -18,11 +18,11 @@ import{i as p,a as g,P as c,C as _}from"./footer-DShS3LAS.js";p();g();const u=do
               
               <div class="product-card__specs">
                 <span class="product-card__spec-pill">⭐ Certified Test Report</span>
-                <span class="product-card__spec-pill">${l}</span>
                 <span class="product-card__spec-pill">${d}</span>
+                <span class="product-card__spec-pill">${p}</span>
               </div>
 
               <span class="product-card__cta">View Specifications</span>
             </div>
           </a>
-        `}).join("")}e.forEach(s=>{s.dataset.category===i?s.classList.add("is-active"):s.classList.remove("is-active"),s.addEventListener("click",()=>{e.forEach(a=>a.classList.remove("is-active")),s.classList.add("is-active"),r(s.dataset.category);const t=s.dataset.category==="all"?window.location.pathname:`${window.location.pathname}?category=${s.dataset.category}`;window.history.replaceState({},"",t)})});r(i);
+        `}).join(""),m(c)}i.forEach(s=>{s.dataset.category===r?s.classList.add("is-active"):s.classList.remove("is-active"),s.addEventListener("click",()=>{i.forEach(a=>a.classList.remove("is-active")),s.classList.add("is-active"),l(s.dataset.category);const t=s.dataset.category==="all"?window.location.pathname:`${window.location.pathname}?category=${s.dataset.category}`;window.history.replaceState({},"",t)})});l(r);

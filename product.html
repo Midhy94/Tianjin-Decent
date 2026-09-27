@@ -571,6 +571,7 @@
     import { initFooter } from '/src/js/components/footer.js';
     import { getWhatsAppUrl } from '/src/js/config.js';
     import { PRODUCTS, CATEGORY_META, getProductBySlug, SCAFFOLDING_FITTINGS_CATALOG } from '/src/js/data/products.js';
+    import { initScrollReveal } from '/src/js/components/scroll-reveal.js';
 
     initNav();
     initFooter();
@@ -742,6 +743,9 @@
         </div>
       `).join('');
     }
+
+    // Initialize subtle scroll reveal animations on product details, tables, cards and fittings
+    initScrollReveal();
   </script>
 
 </body>

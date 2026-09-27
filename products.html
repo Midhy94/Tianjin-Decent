@@ -330,9 +330,11 @@
     import { initNav } from '/src/js/components/nav.js';
     import { initFooter } from '/src/js/components/footer.js';
     import { PRODUCTS, CATEGORY_META } from '/src/js/data/products.js';
+    import { initScrollReveal, attachRevealTargets } from '/src/js/components/scroll-reveal.js';
 
     initNav();
     initFooter();
+    initScrollReveal();
 
     const grid = document.getElementById('catalog-grid');
     const countEl = document.getElementById('products-count');
@@ -384,6 +386,9 @@
           </a>
         `;
       }).join('');
+
+      // Trigger subtle reveal on the newly rendered cards
+      attachRevealTargets(grid);
     }
 
     // Set initial active button
