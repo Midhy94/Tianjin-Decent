@@ -39,7 +39,7 @@ export const CATEGORY_META = {
     label: 'Scaffolding Systems',
     shortLabel: 'Scaffolding',
     description: 'Cup Lock, Ring / Pin Lock, and Tube & Fitting modular scaffolding systems for building, access, and industrial shoring.',
-    image: '/src/assets/images/cuplock-system.jpg',
+    image: '/src/assets/images/cuplock-scaffolding-setup.jpg',
   },
   [PRODUCT_CATEGORIES.TUBES_FITTINGS]: {
     label: 'Tubes & Fittings',
@@ -376,7 +376,7 @@ Each node can connect up to four horizontal members, providing fast erection and
     heroImage: '/src/assets/images/cuplock-scaffolding-setup.jpg',
     gallery: [
       '/src/assets/images/cuplock-scaffolding-setup.jpg',
-      '/src/assets/images/cuplock-system.jpg',
+      '/src/assets/images/cuplock-components-diagram.jpg',
       '/src/assets/images/cuplock-standard-post.jpg',
       '/src/assets/images/cuplock-ledger.jpg',
       '/src/assets/images/cuplock-intermediate-transom.jpg'
@@ -688,7 +688,7 @@ Equipped with heavy-duty end hooks that seat directly over scaffolding horizonta
     gallery: [
       '/src/assets/images/scaffold-staircase.jpg',
       '/src/assets/images/scaffold-steel-plank.jpg',
-      '/src/assets/images/cuplock-system.jpg'
+      '/src/assets/images/cuplock-scaffolding-setup.jpg'
     ],
     specifications: [
       { label: 'Lift Height / Rise', value: '1.5 m / 2.0 m standard scaffolding vertical bay lift height' },
@@ -733,7 +733,7 @@ Tianjin Decent International Trade Co., Ltd. supplies the complete inventory of 
       '/src/assets/images/fitting-swivel-coupler.jpg',
       '/src/assets/images/fitting-sleeve-coupler.jpg',
       '/src/assets/images/fitting-beam-clamp.jpg',
-      '/src/assets/images/cuplock-system.jpg'
+      '/src/assets/images/cuplock-scaffolding-setup.jpg'
     ],
     specifications: [
       { label: '1. Standards / Uprights', value: 'Vertical load-bearing members that transfer the combined self-weight and live load to the foundation.' },
