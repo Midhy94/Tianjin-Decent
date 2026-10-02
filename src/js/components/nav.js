@@ -4,7 +4,7 @@
  */
 
 import { SITE_CONFIG, getWhatsAppUrl } from '../config.js';
-import { getAllCategories } from '../data/products.js';
+import { getAllCategories, YFGG_PIPE_PRODUCTS } from '../data/products.js';
 import logoUrl from '../../assets/images/T-D-Logo.png';
 
 export function initNav() {
@@ -14,13 +14,27 @@ export function initNav() {
   const currentPath = window.location.pathname;
   const categories = getAllCategories();
 
-  // Mega-menu product links
-  const categoryLinksHtml = categories.map(cat => `
-    <a href="/products.html?category=${cat.id}" class="nav-dropdown-item">
-      <span class="nav-dropdown-item__title">${cat.label}</span>
-      <span class="nav-dropdown-item__desc">${cat.description.substring(0, 75)}...</span>
-    </a>
-  `).join('');
+  // Mega-menu product items (from client reference snapshot)
+  const defaultProduct = YFGG_PIPE_PRODUCTS[1] || YFGG_PIPE_PRODUCTS[0]; // 'Straight seam high-frequency welded steel pipe'
+
+  const pipeMenuItemsHtml = YFGG_PIPE_PRODUCTS.map((prod, index) => {
+    const isActive = index === 1 ? 'is-active' : '';
+    
+    return `
+      <a href="/product.html?id=${prod.slug}" 
+         class="mega-menu-item ${isActive}" 
+         data-slug="${prod.slug}"
+         data-name="${prod.name}"
+         data-spec="${prod.specification}"
+         data-uses="${prod.uses}"
+         data-img="${prod.image}">
+        <span class="mega-menu-item__name">${prod.name}</span>
+        <svg class="mega-menu-item__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+    `;
+  }).join('');
 
   // Main navigation items
   const navLinksHtml = SITE_CONFIG.navLinks.map(link => {
@@ -31,14 +45,76 @@ export function initNav() {
     if (link.hasDropdown) {
       return `
         <div class="nav-dropdown-wrapper">
-          <a href="${link.href}" class="nav-link ${activeClass}">
+          <a href="${link.href}" class="nav-link ${activeClass}" aria-haspopup="true" aria-expanded="false">
             <span>${link.label}</span>
             <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M1 1l4 4 4-4"/>
             </svg>
           </a>
-          <div class="nav-dropdown-menu">
-            ${categoryLinksHtml}
+          <div class="nav-dropdown-menu mega-menu-container" role="menu">
+            
+            <!-- Mega Menu Top Bar -->
+            <div class="mega-menu__header">
+              <div class="mega-menu__header-title">
+                <strong>Steel Pipes & Tubes Catalog</strong>
+              </div>
+              <a href="/products.html" class="mega-menu__view-all">
+                Browse All Products →
+              </a>
+            </div>
+
+            <!-- Mega Menu Main Grid -->
+            <div class="mega-menu__grid">
+              
+              <!-- Left Column: Products List -->
+              <div class="mega-menu__list-col" id="mega-menu-list">
+                <div class="mega-menu__list-scroll">
+                  ${pipeMenuItemsHtml}
+                </div>
+              </div>
+
+              <!-- Right Column: Interactive Live Preview -->
+              <div class="mega-menu__preview-col">
+                <div class="mega-preview-card" id="mega-preview-card">
+                  <div class="mega-preview-card__img-wrap">
+                    <img id="mega-preview-img" 
+                         src="${defaultProduct.image}" 
+                         alt="${defaultProduct.name}" 
+                         class="mega-preview-card__img" />
+                    <span class="mega-preview-card__badge" id="mega-preview-badge">Standard Specification</span>
+                  </div>
+                  <div class="mega-preview-card__content">
+                    <h4 class="mega-preview-card__title" id="mega-preview-title">
+                      ${defaultProduct.name}
+                    </h4>
+                    
+                    <div class="mega-preview-card__info-group">
+                      <div class="mega-preview-card__row">
+                        <span class="mega-preview-card__label">Specification:</span>
+                        <span class="mega-preview-card__value mega-preview-card__value--mono" id="mega-preview-spec">
+                          ${defaultProduct.specification}
+                        </span>
+                      </div>
+                      
+                      <div class="mega-preview-card__row">
+                        <span class="mega-preview-card__label">Uses & Applications:</span>
+                        <p class="mega-preview-card__desc" id="mega-preview-uses">
+                          ${defaultProduct.uses}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="mega-preview-card__footer">
+                      <a href="/product.html?id=${defaultProduct.slug}" class="btn btn--primary btn--sm" id="mega-preview-cta">
+                        View Technical Specifications →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
       `;
@@ -112,12 +188,25 @@ export function initNav() {
         <nav class="mobile-nav-list">
           <a href="/index.html" class="mobile-nav-link">Home</a>
           <a href="/products.html" class="mobile-nav-link">All Products & Specifications</a>
+          
+          <!-- Mobile Pipe Products Accordion/Submenu -->
+          <div class="mobile-sub-group">
+            <span class="mobile-sub-group__title">Steel Pipes & Tubes Catalog</span>
+            <div class="mobile-sub-links">
+              ${YFGG_PIPE_PRODUCTS.map(p => `
+                <a href="/product.html?id=${p.slug}" class="mobile-sub-link">
+                  <span>${p.name}</span>
+                </a>
+              `).join('')}
+            </div>
+          </div>
+
           <a href="/quality.html" class="mobile-nav-link">Quality & Certified Testing</a>
           <a href="/solutions.html" class="mobile-nav-link">Applications & Projects</a>
           <a href="/about.html" class="mobile-nav-link">About Tianjin Decent</a>
           <a href="/contact.html" class="mobile-nav-link">B2B Quotation Desk</a>
         </nav>
-        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: auto;">
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: auto; padding-top: 24px;">
           <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--lg" style="width: 100%;">
             Direct WhatsApp Chat (${SITE_CONFIG.whatsappNumber})
           </a>
@@ -151,18 +240,40 @@ export function initNav() {
     });
   }
 
-  // Desktop dropdown click & toggle handling
+  // Desktop dropdown hover & click handling
   const dropdownWrappers = navPlaceholder.querySelectorAll('.nav-dropdown-wrapper');
   dropdownWrappers.forEach(wrapper => {
     const trigger = wrapper.querySelector('.nav-link');
+    let hoverTimer = null;
+
+    const showMenu = () => {
+      clearTimeout(hoverTimer);
+      dropdownWrappers.forEach(w => {
+        if (w !== wrapper) w.classList.remove('is-open');
+      });
+      wrapper.classList.add('is-open');
+      if (trigger) trigger.setAttribute('aria-expanded', 'true');
+    };
+
+    const hideMenu = () => {
+      hoverTimer = setTimeout(() => {
+        wrapper.classList.remove('is-open');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      }, 180);
+    };
+
+    wrapper.addEventListener('mouseenter', showMenu);
+    wrapper.addEventListener('mouseleave', hideMenu);
+
     if (trigger) {
       trigger.addEventListener('click', (e) => {
-        // Toggle dropdown on click
         e.preventDefault();
         const isOpen = wrapper.classList.contains('is-open');
-        dropdownWrappers.forEach(w => w.classList.remove('is-open'));
-        if (!isOpen) {
-          wrapper.classList.add('is-open');
+        if (isOpen) {
+          wrapper.classList.remove('is-open');
+          trigger.setAttribute('aria-expanded', 'false');
+        } else {
+          showMenu();
         }
       });
     }
@@ -171,28 +282,49 @@ export function initNav() {
   // Close dropdown on outside click
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.nav-dropdown-wrapper')) {
-      dropdownWrappers.forEach(w => w.classList.remove('is-open'));
+      dropdownWrappers.forEach(w => {
+        w.classList.remove('is-open');
+        const trigger = w.querySelector('.nav-link');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      });
     }
   });
 
-  // Handle clicking items inside dropdown
-  const dropdownItems = navPlaceholder.querySelectorAll('.nav-dropdown-item');
-  dropdownItems.forEach(item => {
-    item.addEventListener('click', (e) => {
-      dropdownWrappers.forEach(w => w.classList.remove('is-open'));
-      const url = new URL(item.href, window.location.origin);
-      const cat = url.searchParams.get('category');
+  // Mega-menu live preview interaction on hover/focus
+  const megaItems = navPlaceholder.querySelectorAll('.mega-menu-item');
+  const previewImg = navPlaceholder.querySelector('#mega-preview-img');
+  const previewTitle = navPlaceholder.querySelector('#mega-preview-title');
+  const previewSpec = navPlaceholder.querySelector('#mega-preview-spec');
+  const previewUses = navPlaceholder.querySelector('#mega-preview-uses');
+  const previewCta = navPlaceholder.querySelector('#mega-preview-cta');
 
-      // If already on products page, trigger dynamic filter smoothly
-      if (cat && (window.location.pathname.endsWith('/products.html') || window.location.pathname === '/products.html')) {
-        e.preventDefault();
-        const targetChip = document.querySelector(`.filter-chip[data-category="${cat}"]`);
-        if (targetChip) {
-          targetChip.click();
-        } else {
-          window.location.href = item.href;
-        }
+  megaItems.forEach(item => {
+    const activateItem = () => {
+      megaItems.forEach(i => i.classList.remove('is-active'));
+      item.classList.add('is-active');
+
+      const name = item.dataset.name;
+      const spec = item.dataset.spec;
+      const uses = item.dataset.uses;
+      const img = item.dataset.img;
+      const slug = item.dataset.slug;
+
+      if (previewTitle) previewTitle.textContent = name;
+      if (previewSpec) previewSpec.textContent = spec;
+      if (previewUses) previewUses.textContent = uses;
+      if (previewCta) previewCta.href = `/product.html?id=${slug}`;
+
+      if (previewImg && img && previewImg.getAttribute('src') !== img) {
+        previewImg.style.opacity = '0.3';
+        previewImg.src = img;
+        previewImg.alt = name;
+        previewImg.onload = () => {
+          previewImg.style.opacity = '1';
+        };
       }
-    });
+    };
+
+    item.addEventListener('mouseenter', activateItem);
+    item.addEventListener('focus', activateItem);
   });
 }

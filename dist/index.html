@@ -308,6 +308,154 @@
       color: #020617;
     }
 
+    /* Precision Steel Pipes Range Grid */
+    .pipes-range-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: var(--space-xl);
+    }
+
+    @media (max-width: 1024px) {
+      .pipes-range-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .pipes-range-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pipe-product-card {
+      background-color: var(--color-canvas);
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-card-premium, 24px);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      position: relative;
+    }
+
+    .pipe-product-card:hover {
+      border-color: rgba(224, 90, 71, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.08);
+    }
+
+    .pipe-product-card__img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background-color: #0b1524;
+      overflow: hidden;
+    }
+
+    .pipe-product-card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .pipe-product-card:hover .pipe-product-card__img {
+      transform: scale(1.04);
+    }
+
+
+
+    .pipe-product-card__body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 12px;
+    }
+
+    .pipe-product-card__title {
+      font-size: 17.5px;
+      font-weight: 700;
+      color: var(--color-ink);
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .pipe-product-card__spec-box {
+      background-color: var(--color-canvas-soft);
+      border: 1px solid var(--color-hairline);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .pipe-product-card__spec-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12.5px;
+      line-height: 1.4;
+    }
+
+    .pipe-product-card__spec-lbl {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--color-muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      min-width: 85px;
+    }
+
+    .pipe-product-card__spec-val {
+      color: var(--color-ink);
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    .pipe-product-card__uses {
+      font-size: 12.5px;
+      color: var(--color-body);
+      line-height: 1.45;
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .pipe-product-card__footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 8px;
+      border-top: 1px solid var(--color-hairline);
+    }
+
+    .pipe-product-card__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-primary);
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .pipe-product-card:hover .pipe-product-card__cta {
+      color: #C0392B;
+      transform: translateX(3px);
+    }
+
     /* Metric stats row */
     .metrics-row {
       display: grid;
@@ -377,9 +525,9 @@
       }
     }
   </style>
-  <script type="module" crossorigin src="/assets/scroll-reveal-BloW1ITc.js"></script>
-  <script type="module" crossorigin src="/assets/main-DvEM9Ayz.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/scroll-reveal-CS38cGAo.css">
+  <script type="module" crossorigin src="/assets/scroll-reveal-OuG8WUSp.js"></script>
+  <script type="module" crossorigin src="/assets/main-D3hfFTE6.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/scroll-reveal-CoaAbBpM.css">
 </head>
 <body>
 
@@ -733,6 +881,32 @@
             </div>
           </a>
 
+          <!-- Card 9: Steel Pipes (Client Reference Selection) -->
+          <a href="/product.html?id=hot-dip-galvanized-steel-pipe" class="family-card">
+            <div class="family-card__img-wrap">
+              <img src="/assets/hot-dip-galvanized-steel-pipe-DMAVylC4.jpg" alt="Hot-Dip Galvanized & Welded Steel Pipes" class="family-card__img" />
+              <button class="family-card__bookmark" type="button" aria-label="Save to Inquiry" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              </button>
+            </div>
+            <div class="family-card__body">
+              <div class="family-card__header">
+                <div class="family-card__title-group">
+                  <span class="family-card__category">STEEL PIPES</span>
+                  <h3 class="family-card__title">Galvanized & Welded Pipes</h3>
+                </div>
+                <span class="family-card__badge">DN15–DN300</span>
+              </div>
+              <p class="family-card__desc">Round, square & rectangular hot-dip galvanized and ERW welded steel pipes for fluid, gas & structural support.</p>
+              <div class="family-card__tags">
+                <span class="family-card__tag">⭐ ASTM A53 / API 5L</span>
+                <span class="family-card__tag">Hot-Dip Zinc</span>
+                <span class="family-card__tag">Fluid & Gas</span>
+              </div>
+              <span class="family-card__cta">View Specifications</span>
+            </div>
+          </a>
+
         </div>
 
       </div>
@@ -891,6 +1065,295 @@
               <a href="/products.html?category=steel-pipes" class="btn btn--secondary-pill">
                 Steel Pipes & Tubes Catalog →
               </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         04B. STEEL PIPES & TUBULAR SYSTEMS (CLIENT REFERENCED CATALOG)
+         ══════════════════════════════════════════════════════════════════ -->
+    <section class="section surface-soft" id="steel-pipes-catalog" style="border-top: 1px solid var(--color-hairline); border-bottom: 1px solid var(--color-hairline);">
+      <div class="container">
+        
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+          <div>
+            <div class="hero-v2__badge" style="margin-bottom: 12px;">
+              Pipeline &amp; Tubular Products
+            </div>
+            <h2 class="heading-display-lg" style="margin-bottom: 8px;">
+              Certified Steel Pipes &amp; Tubular Systems.
+            </h2>
+            <p class="text-lead" style="max-width: 780px; color: var(--color-body); margin: 0;">
+              Referenced directly from our pipeline manufacturing lines: hot dip galvanized, straight seam high-frequency welded (ERW), plastic-coated composite, galvanized seamless, and double-sided submerged arc spiral pipes conforming to ASTM, API, EN, and GB specifications.
+            </p>
+          </div>
+          <a href="/products.html?category=steel-pipes" class="btn btn--secondary-pill">
+            View All Pipeline Specifications →
+          </a>
+        </div>
+
+        <div class="pipes-range-grid">
+
+          <!-- 1. Hot Dip Galvanized Steel Pipe -->
+          <div class="pipe-product-card">
+            <div class="pipe-product-card__img-wrap">
+              <img src="/assets/hot-dip-galvanized-steel-pipe-DMAVylC4.jpg" 
+                   alt="Hot dip galvanized steel pipe" 
+                   class="pipe-product-card__img" 
+                   loading="lazy" />
+            </div>
+            <div class="pipe-product-card__body">
+              <h3 class="pipe-product-card__title">Hot Dip Galvanized Steel Pipe</h3>
+              
+              <div class="pipe-product-card__spec-box">
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Specification:</span>
+                  <span class="pipe-product-card__spec-val">DN15–DN300 (OD 21.3–323.9 mm)</span>
+                </div>
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Standards:</span>
+                  <span class="pipe-product-card__spec-val">ASTM A53, BS 1387, EN 10255, GB/T 3091</span>
+                </div>
+              </div>
+
+              <p class="pipe-product-card__uses">
+                <strong>Uses:</strong> Widely used in water, gas, air, oil and steam and other low-pressure fluid transportation and mechanical structure.
+              </p>
+
+              <div class="pipe-product-card__footer">
+                <a href="/product.html?id=hot-dip-galvanized-steel-pipe" class="pipe-product-card__cta">
+                  Explore Specs &amp; MTC →
+                </a>
+                <a href="/contact.html?product=hot-dip-galvanized-steel-pipe" class="btn btn--primary btn--sm">
+                  Quote
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Straight Seam High-Frequency Welded Steel Pipe -->
+          <div class="pipe-product-card">
+            <div class="pipe-product-card__img-wrap">
+              <img src="/assets/straight-seam-welded-steel-pipe-DhEy7RoU.jpg" 
+                   alt="Straight seam high-frequency welded steel pipe" 
+                   class="pipe-product-card__img" 
+                   loading="lazy" />
+            </div>
+            <div class="pipe-product-card__body">
+              <h3 class="pipe-product-card__title">Straight Seam High-Frequency Welded Steel Pipe</h3>
+              
+              <div class="pipe-product-card__spec-box">
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Specification:</span>
+                  <span class="pipe-product-card__spec-val">DN15–DN300 (OD 21.3–325 mm)</span>
+                </div>
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Standards:</span>
+                  <span class="pipe-product-card__spec-val">API 5L Gr. B–X60, ASTM A53, EN 10219</span>
+                </div>
+              </div>
+
+              <p class="pipe-product-card__uses">
+                <strong>Uses:</strong> Widely used in water, gas, air, oil and steam; oil &amp; gas line pipe, rotary pressure drill pipe, marine large diameter high frequency welded pipe.
+              </p>
+
+              <div class="pipe-product-card__footer">
+                <a href="/product.html?id=straight-seam-welded-steel-pipe" class="pipe-product-card__cta">
+                  Explore Specs &amp; MTC →
+                </a>
+                <a href="/contact.html?product=straight-seam-welded-steel-pipe" class="btn btn--primary btn--sm">
+                  Quote
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Plastic-Coated Composite Steel Pipe -->
+          <div class="pipe-product-card">
+            <div class="pipe-product-card__img-wrap">
+              <img src="/assets/plastic-coated-composite-steel-pipe-Cb2ldhIV.jpg" 
+                   alt="Plastic-coated composite steel pipe" 
+                   class="pipe-product-card__img" 
+                   loading="lazy" />
+            </div>
+            <div class="pipe-product-card__body">
+              <h3 class="pipe-product-card__title">Coated Composite Steel Pipe</h3>
+              
+              <div class="pipe-product-card__spec-box">
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Specification:</span>
+                  <span class="pipe-product-card__spec-val">DN15–DN2000 | Socket: DN100–DN1600</span>
+                </div>
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Standards:</span>
+                  <span class="pipe-product-card__spec-val">CJ/T 120, GB/T 5135.20, NFPA 13, AWWA</span>
+                </div>
+              </div>
+
+              <p class="pipe-product-card__uses">
+                <strong>Uses:</strong> Widely used in fire water supply systems, building water supply, chemical fluid transportation, and electrical cable threading protection.
+              </p>
+
+              <div class="pipe-product-card__footer">
+                <a href="/product.html?id=plastic-coated-composite-steel-pipe" class="pipe-product-card__cta">
+                  Explore Specs &amp; MTC →
+                </a>
+                <a href="/contact.html?product=plastic-coated-composite-steel-pipe" class="btn btn--primary btn--sm">
+                  Quote
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Galvanized Seamless Steel Pipe -->
+          <div class="pipe-product-card">
+            <div class="pipe-product-card__img-wrap">
+              <img src="/assets/galvanized-seamless-steel-pipe-C_nAGEf9.jpg" 
+                   alt="Galvanized seamless steel pipe" 
+                   class="pipe-product-card__img" 
+                   loading="lazy" />
+            </div>
+            <div class="pipe-product-card__body">
+              <h3 class="pipe-product-card__title">Galvanized Seamless Steel Pipe</h3>
+              
+              <div class="pipe-product-card__spec-box">
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Specification:</span>
+                  <span class="pipe-product-card__spec-val">DN22–DN325 (SCH20 to SCH160 / XXS)</span>
+                </div>
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Standards:</span>
+                  <span class="pipe-product-card__spec-val">ASTM A106, ASTM A53, API 5L, GB/T 8163</span>
+                </div>
+              </div>
+
+              <p class="pipe-product-card__uses">
+                <strong>Uses:</strong> Widely used in construction load-bearing structures, bridges, power equipment &amp; substations, petrochemical transmission pipelines, and seaport docks.
+              </p>
+
+              <div class="pipe-product-card__footer">
+                <a href="/product.html?id=galvanized-seamless-steel-pipe" class="pipe-product-card__cta">
+                  Explore Specs &amp; MTC →
+                </a>
+                <a href="/contact.html?product=galvanized-seamless-steel-pipe" class="btn btn--primary btn--sm">
+                  Quote
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Spiral Seam Submerged Arc Welded Steel Pipe -->
+          <div class="pipe-product-card">
+            <div class="pipe-product-card__img-wrap">
+              <img src="/assets/spiral-submerged-arc-welded-steel-pipe-Cjysp6T1.jpg" 
+                   alt="Spiral seam double-sided submerged arc welded steel pipe" 
+                   class="pipe-product-card__img" 
+                   loading="lazy" />
+            </div>
+            <div class="pipe-product-card__body">
+              <h3 class="pipe-product-card__title">Spiral Seam Submerged Arc Welded Pipe (SSAW)</h3>
+              
+              <div class="pipe-product-card__spec-box">
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Specification:</span>
+                  <span class="pipe-product-card__spec-val">φ219–2020 mm (Wall up to 20 mm)</span>
+                </div>
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Standards:</span>
+                  <span class="pipe-product-card__spec-val">API Spec 5L (PSL1/2), ASTM A252, GB/T 9711</span>
+                </div>
+              </div>
+
+              <p class="pipe-product-card__uses">
+                <strong>Uses:</strong> Oil and natural gas long-distance cross-country pipelines, urban water transmission, heating steam, deep civil bridge and harbor foundation piling.
+              </p>
+
+              <div class="pipe-product-card__footer">
+                <a href="/product.html?id=spiral-submerged-arc-welded-steel-pipe" class="pipe-product-card__cta">
+                  Explore Specs &amp; MTC →
+                </a>
+                <a href="/contact.html?product=spiral-submerged-arc-welded-steel-pipe" class="btn btn--primary btn--sm">
+                  Quote
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Hot Dip Galvanized Square & Rectangular Pipe -->
+          <div class="pipe-product-card">
+            <div class="pipe-product-card__img-wrap">
+              <img src="/assets/hot-dip-galvanized-square-rectangular-pipe-Bug80SwN.jpg" 
+                   alt="Hot dip galvanized square rectangular pipe" 
+                   class="pipe-product-card__img" 
+                   loading="lazy" />
+            </div>
+            <div class="pipe-product-card__body">
+              <h3 class="pipe-product-card__title">Hot Dip Galvanized Square Rectangular Pipe</h3>
+              
+              <div class="pipe-product-card__spec-box">
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Specification:</span>
+                  <span class="pipe-product-card__spec-val">25x25–200x200 mm | 25x50–150x200 mm</span>
+                </div>
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Standards:</span>
+                  <span class="pipe-product-card__spec-val">ASTM A500, EN 10219, JIS G3466, GB/T 6728</span>
+                </div>
+              </div>
+
+              <p class="pipe-product-card__uses">
+                <strong>Uses:</strong> Widely used in architectural curtain walls, construction, machinery manufacturing, shipbuilding, photovoltaic solar racking, and automotive chassis.
+              </p>
+
+              <div class="pipe-product-card__footer">
+                <a href="/product.html?id=hot-dip-galvanized-square-rectangular-pipe" class="pipe-product-card__cta">
+                  Explore Specs &amp; MTC →
+                </a>
+                <a href="/contact.html?product=hot-dip-galvanized-square-rectangular-pipe" class="btn btn--primary btn--sm">
+                  Quote
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Square Rectangular Welded Steel Pipe -->
+          <div class="pipe-product-card">
+            <div class="pipe-product-card__img-wrap">
+              <img src="/assets/square-rectangular-welded-steel-pipe-DeOlDijb.jpg" 
+                   alt="Square rectangular welded steel pipe" 
+                   class="pipe-product-card__img" 
+                   loading="lazy" />
+            </div>
+            <div class="pipe-product-card__body">
+              <h3 class="pipe-product-card__title">Square Rectangular Welded Steel Pipe</h3>
+              
+              <div class="pipe-product-card__spec-box">
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Specification:</span>
+                  <span class="pipe-product-card__spec-val">25x25–400x400 mm | 25x40–300x500 mm</span>
+                </div>
+                <div class="pipe-product-card__spec-row">
+                  <span class="pipe-product-card__spec-lbl">Standards:</span>
+                  <span class="pipe-product-card__spec-val">ASTM A500 Gr. B, EN 10219, GB/T 6728</span>
+                </div>
+              </div>
+
+              <p class="pipe-product-card__uses">
+                <strong>Uses:</strong> Steel structure construction, machinery manufacturing, PEB warehouse building columns, vehicle manufacturing, shipbuilding, and power plant frameworks.
+              </p>
+
+              <div class="pipe-product-card__footer">
+                <a href="/product.html?id=square-rectangular-welded-steel-pipe" class="pipe-product-card__cta">
+                  Explore Specs &amp; MTC →
+                </a>
+                <a href="/contact.html?product=square-rectangular-welded-steel-pipe" class="btn btn--primary btn--sm">
+                  Quote
+                </a>
+              </div>
             </div>
           </div>
 

@@ -354,8 +354,14 @@
       grid.innerHTML = filtered.map(product => {
         const catMeta = CATEGORY_META[product.category] || { label: 'Industrial' };
         const primaryStandard = product.standards && product.standards[0] ? product.standards[0].name.split('/')[0].trim() : 'ISO 9001';
-        const spec2 = product.specifications && product.specifications[2] ? product.specifications[2].value.substring(0, 22) : 'Export Spec';
-        const spec3 = product.specifications && product.specifications[3] ? product.specifications[3].value.substring(0, 20) : 'Test Reports';
+        
+        // Find specification label or use fallback
+        const specEntry = product.specifications && product.specifications.find(s => 
+          s.label.toLowerCase().includes('specification') || s.label.toLowerCase().includes('thickness')
+        );
+        const specText = specEntry ? specEntry.value.split('|')[0].split('\n')[0].trim().substring(0, 26) : 'Certified Spec';
+        
+        const spec2 = product.specifications && product.specifications[2] ? product.specifications[2].value.substring(0, 22) : 'Export Standard';
         
         return `
           <a href="/product.html?id=${product.slug}" class="product-card">
@@ -377,8 +383,8 @@
               
               <div class="product-card__specs">
                 <span class="product-card__spec-pill">⭐ Certified Test Report</span>
+                <span class="product-card__spec-pill">${specText}</span>
                 <span class="product-card__spec-pill">${spec2}</span>
-                <span class="product-card__spec-pill">${spec3}</span>
               </div>
 
               <span class="product-card__cta">View Specifications</span>
