@@ -1388,7 +1388,7 @@ Featuring a non-slip perforated dimpled surface that prevents slip hazards from 
     standards: [
       { name: 'EN 12811', description: 'Temporary works equipment — Working platforms' },
     ],
-    relatedProducts: ['scaffold-boards', 'aluminum-tower'],
+    relatedProducts: ['steel-scaffold-planks', 'aluminum-tower'],
   },
 
   {
@@ -1477,7 +1477,7 @@ Fitted with heavy-duty swell rubber pivoting safety shoes with serrated ice/grav
       { name: 'BS 2037 Class 1', description: 'Specification for portable aluminium ladders and steps' },
       { name: 'OSHA 1926.1053', description: 'Safety standards for ladders used in construction' },
     ],
-    relatedProducts: ['aluminum-tower', 'scaffolding-accessories', 'platform-board'],
+    relatedProducts: ['aluminum-tower', 'scaffolding-accessories', 'aluminum-platform'],
   },
 ];
 
