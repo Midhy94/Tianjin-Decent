@@ -1,6 +1,7 @@
 {
   "name": "tianjin-decent",
   "version": "2.0.0",
+  "type": "module",
   "description": "TIANJIN DECENT INTERNATIONAL TRADE CO., LTD. — Official Website Version 2",
   "scripts": {
     "dev": "vite",

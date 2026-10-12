@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Catalog — TIANJIN DECENT INTERNATIONAL TRADE CO., LTD.</title>
-  <meta name="description" content="Comprehensive catalog of Steel Coils, Structural Steel Profiles, Modular Scaffolding Systems, Tubes, Fittings, and Accessories supplied by TIANJIN DECENT INTERNATIONAL TRADE CO., LTD." />
+  <meta name="description" content="Comprehensive catalog of Steel plate& sheet, Steel Section&profile, Steel pipe &tube, steel wire&rod, and modular scaffolding systems by TIANJIN DECENT." />
   
   <link rel="icon" type="image/png" href="/src/assets/images/T-D-Logo.png" />
   <link rel="stylesheet" href="/src/css/tokens.css" />
@@ -45,6 +45,49 @@
     }
     
     .filter-chip.is-active {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #FFFFFF;
+    }
+
+    .subcategory-filter-bar {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--color-hairline);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    
+    .subcategory-filter-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-muted);
+      margin-right: 4px;
+    }
+
+    .subfilter-chip {
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: var(--radius-pill);
+      background-color: var(--color-canvas-soft);
+      border: 1px solid var(--color-hairline);
+      color: var(--color-body);
+      cursor: pointer;
+      transition: all var(--transition-instant);
+    }
+
+    .subfilter-chip:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .subfilter-chip.is-active {
       background-color: var(--color-primary);
       border-color: var(--color-primary);
       color: #FFFFFF;
@@ -289,22 +332,21 @@
           Industrial Products & Specifications.
         </h1>
         <p class="text-lead" style="color: var(--color-muted); max-width: 760px;">
-          Explore flat steel coils, structural sections, modular scaffolding systems, and access hardware conforming to international EN, ASTM, BS, and JIS standards.
+          Explore Steel plate&amp; sheet, Steel Section&amp;profile, Steel pipe &amp;tube, steel wire&amp;rod, and modular scaffolding system, and access hardware conforming to international EN, ASTM, BS, and JIS standards.
         </p>
 
         <!-- Category Filters -->
         <div class="filter-bar" id="category-filters">
           <button class="filter-chip is-active" data-category="all">All Products</button>
-          <button class="filter-chip" data-category="steel-coils">Steel Coils</button>
-          <button class="filter-chip" data-category="structural-profiles">Structural Steel</button>
-          <button class="filter-chip" data-category="steel-pipes">Steel Pipes</button>
-          <button class="filter-chip" data-category="scaffolding-systems">Scaffolding Systems</button>
-          <button class="filter-chip" data-category="tubes-fittings">Tubes & Fittings</button>
-          <button class="filter-chip" data-category="platforms">Platforms & Boards</button>
-          <button class="filter-chip" data-category="mobile-towers">Mobile Towers</button>
-          <button class="filter-chip" data-category="ladders">Ladders</button>
-          <button class="filter-chip" data-category="safety-accessories">Accessories & Safety</button>
+          <button class="filter-chip" data-category="steel-plate-sheet">Steel plate/sheet</button>
+          <button class="filter-chip" data-category="steel-section-profile">Steel section/profile</button>
+          <button class="filter-chip" data-category="steel-pipe-tube">Steel pipe/tube</button>
+          <button class="filter-chip" data-category="scaffolding-accessories">Scaffolding &amp; Accessories</button>
+          <button class="filter-chip" data-category="steel-wire-rod">Steel wire/rod</button>
         </div>
+
+        <!-- Subcategory Filters -->
+        <div class="subcategory-filter-bar" id="subcategory-filters" style="display: none;"></div>
       </div>
     </section>
 
@@ -330,7 +372,7 @@
   <script type="module">
     import { initNav } from '/src/js/components/nav.js';
     import { initFooter } from '/src/js/components/footer.js';
-    import { PRODUCTS, CATEGORY_META } from '/src/js/data/products.js';
+    import { PRODUCTS, CATEGORY_META, PRODUCT_HIERARCHY, normalizeCategory } from '/src/js/data/products.js';
     import { initScrollReveal, attachRevealTargets } from '/src/js/components/scroll-reveal.js';
 
     initNav();
@@ -339,21 +381,100 @@
 
     const grid = document.getElementById('catalog-grid');
     const countEl = document.getElementById('products-count');
-    const filterButtons = document.querySelectorAll('.filter-chip');
+    const categoryFilterContainer = document.getElementById('category-filters');
+    const subcategoryFilterContainer = document.getElementById('subcategory-filters');
 
-    // Parse URL parameter if user navigated from megamenu
+    // Parse URL parameters
     const urlParams = new URLSearchParams(window.location.search);
-    const initialCategory = urlParams.get('category') || 'all';
+    let currentCategory = normalizeCategory(urlParams.get('category')) || 'all';
+    let currentSubcategory = urlParams.get('subcategory') || 'all';
 
-    function renderProducts(category = 'all') {
-      const filtered = category === 'all' 
-        ? PRODUCTS 
-        : PRODUCTS.filter(p => p.category === category);
+    function updateUrl() {
+      const params = new URLSearchParams();
+      if (currentCategory && currentCategory !== 'all') {
+        params.set('category', currentCategory);
+        if (currentSubcategory && currentSubcategory !== 'all') {
+          params.set('subcategory', currentSubcategory);
+        }
+      }
+      const newQuery = params.toString();
+      const newUrl = newQuery ? `${window.location.pathname}?${newQuery}` : window.location.pathname;
+      window.history.replaceState({}, '', newUrl);
+    }
 
-      countEl.textContent = `Displaying ${filtered.length} technical product lines`;
+    function renderSubcategoryFilters() {
+      if (!currentCategory || currentCategory === 'all' || !PRODUCT_HIERARCHY[currentCategory]) {
+        subcategoryFilterContainer.style.display = 'none';
+        subcategoryFilterContainer.innerHTML = '';
+        return;
+      }
+
+      const hier = PRODUCT_HIERARCHY[currentCategory];
+      subcategoryFilterContainer.style.display = 'flex';
+
+      let html = `<span class="subcategory-filter-label">${hier.name}:</span>`;
+      html += `<button class="subfilter-chip ${currentSubcategory === 'all' ? 'is-active' : ''}" data-sub="all">All ${hier.name}</button>`;
+
+      hier.subcategories.forEach(sub => {
+        const isActive = currentSubcategory === sub ? 'is-active' : '';
+        html += `<button class="subfilter-chip ${isActive}" data-sub="${sub}">${sub}</button>`;
+      });
+
+      subcategoryFilterContainer.innerHTML = html;
+
+      // Attach click events
+      subcategoryFilterContainer.querySelectorAll('.subfilter-chip').forEach(btn => {
+        btn.addEventListener('click', () => {
+          subcategoryFilterContainer.querySelectorAll('.subfilter-chip').forEach(b => b.classList.remove('is-active'));
+          btn.classList.add('is-active');
+          currentSubcategory = btn.dataset.sub;
+          updateUrl();
+          renderProducts();
+        });
+      });
+    }
+
+    function renderProducts() {
+      let filtered = PRODUCTS;
+
+      // Filter by Category
+      if (currentCategory && currentCategory !== 'all') {
+        filtered = filtered.filter(p => p.category === currentCategory);
+      }
+
+      // Filter by Subcategory
+      if (currentSubcategory && currentSubcategory !== 'all') {
+        filtered = filtered.filter(p => p.subcategory === currentSubcategory);
+      }
+
+      const categoryLabel = currentCategory !== 'all' && PRODUCT_HIERARCHY[currentCategory] 
+        ? PRODUCT_HIERARCHY[currentCategory].name 
+        : 'All Products';
+      const subLabel = currentSubcategory !== 'all' ? ` — ${currentSubcategory}` : '';
+
+      countEl.textContent = `Displaying ${filtered.length} technical product lines (${categoryLabel}${subLabel})`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--color-muted);">
+            <p style="font-size: 16px; margin-bottom: 12px;">No products found in this category / subcategory.</p>
+            <button class="btn btn--primary" id="reset-filter-btn">Reset Filters</button>
+          </div>
+        `;
+        document.getElementById('reset-filter-btn')?.addEventListener('click', () => {
+          currentCategory = 'all';
+          currentSubcategory = 'all';
+          syncCategoryChips();
+          renderSubcategoryFilters();
+          updateUrl();
+          renderProducts();
+        });
+        return;
+      }
 
       grid.innerHTML = filtered.map(product => {
-        const catMeta = CATEGORY_META[product.category] || { label: 'Industrial' };
+        const catName = product.categoryName || (CATEGORY_META[product.category]?.label || 'Industrial');
+        const subName = product.subcategory || '';
         const primaryStandard = product.standards && product.standards[0] ? product.standards[0].name.split('/')[0].trim() : 'ISO 9001';
         
         // Find specification label or use fallback
@@ -361,7 +482,6 @@
           s.label.toLowerCase().includes('specification') || s.label.toLowerCase().includes('thickness')
         );
         const specText = specEntry ? specEntry.value.split('|')[0].split('\n')[0].trim().substring(0, 26) : 'Certified Spec';
-        
         const spec2 = product.specifications && product.specifications[2] ? product.specifications[2].value.substring(0, 22) : 'Export Standard';
         
         return `
@@ -375,7 +495,7 @@
             <div class="product-card__body">
               <div class="product-card__header">
                 <div class="product-card__title-group">
-                  <span class="product-card__category">${catMeta.label}</span>
+                  <span class="product-card__category">${catName}${subName ? ' • ' + subName : ''}</span>
                   <h2 class="product-card__name">${product.name}</h2>
                 </div>
                 <span class="product-card__badge">${primaryStandard}</span>
@@ -394,32 +514,52 @@
         `;
       }).join('');
 
-      // Trigger subtle reveal on the newly rendered cards
+      // Trigger subtle reveal on newly rendered cards
       attachRevealTargets(grid);
     }
 
-    // Set initial active button
-    filterButtons.forEach(btn => {
-      if (btn.dataset.category === initialCategory) {
-        btn.classList.add('is-active');
-      } else {
-        btn.classList.remove('is-active');
-      }
+    function syncCategoryChips() {
+      const chips = categoryFilterContainer.querySelectorAll('.filter-chip');
+      chips.forEach(btn => {
+        const cat = normalizeCategory(btn.dataset.category);
+        if (cat === currentCategory) {
+          btn.classList.add('is-active');
+        } else {
+          btn.classList.remove('is-active');
+        }
+      });
+    }
 
+    // Attach click listeners to main category filter chips
+    categoryFilterContainer.querySelectorAll('.filter-chip').forEach(btn => {
       btn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('is-active'));
-        btn.classList.add('is-active');
-        renderProducts(btn.dataset.category);
-        
-        // Update URL query without page reload
-        const newUrl = btn.dataset.category === 'all' 
-          ? window.location.pathname 
-          : `${window.location.pathname}?category=${btn.dataset.category}`;
-        window.history.replaceState({}, '', newUrl);
+        const targetCategory = normalizeCategory(btn.dataset.category);
+        if (currentCategory === targetCategory) return;
+
+        currentCategory = targetCategory;
+        currentSubcategory = 'all'; // Reset subcategory when switching category
+
+        syncCategoryChips();
+        renderSubcategoryFilters();
+        updateUrl();
+        renderProducts();
       });
     });
 
-    renderProducts(initialCategory);
+    // Support browser back/forward navigation
+    window.addEventListener('popstate', () => {
+      const params = new URLSearchParams(window.location.search);
+      currentCategory = normalizeCategory(params.get('category')) || 'all';
+      currentSubcategory = params.get('subcategory') || 'all';
+      syncCategoryChips();
+      renderSubcategoryFilters();
+      renderProducts();
+    });
+
+    // Initial render
+    syncCategoryChips();
+    renderSubcategoryFilters();
+    renderProducts();
   </script>
 
 </body>

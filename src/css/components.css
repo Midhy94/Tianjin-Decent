@@ -337,6 +337,33 @@
   border-radius: 4px;
 }
 
+.mega-menu-cat-header {
+  padding: 10px 14px 4px 14px;
+  margin-top: 6px;
+}
+.mega-menu-cat-header:first-child {
+  margin-top: 0;
+}
+.mega-menu-cat-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+.mega-menu-cat-title:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+.mobile-sub-group__title-link {
+  text-decoration: none;
+  display: block;
+}
+
 .mega-menu-item {
   display: flex;
   align-items: center;

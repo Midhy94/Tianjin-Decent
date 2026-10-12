@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Catalog — TIANJIN DECENT INTERNATIONAL TRADE CO., LTD.</title>
-  <meta name="description" content="Comprehensive catalog of Steel Coils, Structural Steel Profiles, Modular Scaffolding Systems, Tubes, Fittings, and Accessories supplied by TIANJIN DECENT INTERNATIONAL TRADE CO., LTD." />
+  <meta name="description" content="Comprehensive catalog of Steel plate& sheet, Steel Section&profile, Steel pipe &tube, steel wire&rod, and modular scaffolding systems by TIANJIN DECENT." />
   
   <link rel="icon" type="image/png" href="/src/assets/images/T-D-Logo.png" />
   
@@ -42,6 +42,49 @@
     }
     
     .filter-chip.is-active {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #FFFFFF;
+    }
+
+    .subcategory-filter-bar {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--color-hairline);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    
+    .subcategory-filter-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-muted);
+      margin-right: 4px;
+    }
+
+    .subfilter-chip {
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: var(--radius-pill);
+      background-color: var(--color-canvas-soft);
+      border: 1px solid var(--color-hairline);
+      color: var(--color-body);
+      cursor: pointer;
+      transition: all var(--transition-instant);
+    }
+
+    .subfilter-chip:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .subfilter-chip.is-active {
       background-color: var(--color-primary);
       border-color: var(--color-primary);
       color: #FFFFFF;
@@ -272,9 +315,9 @@
       }
     }
   </style>
-  <script type="module" crossorigin src="/assets/products-CV1c3Zo5.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/scroll-reveal-C1fBGJyb.js">
-  <link rel="stylesheet" crossorigin href="/assets/scroll-reveal-CoaAbBpM.css">
+  <script type="module" crossorigin src="/assets/products-s9VSA0bN.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/scroll-reveal-BdkMt7qn.js">
+  <link rel="stylesheet" crossorigin href="/assets/scroll-reveal-B6ZKna1L.css">
 </head>
 <body>
 
@@ -289,22 +332,21 @@
           Industrial Products & Specifications.
         </h1>
         <p class="text-lead" style="color: var(--color-muted); max-width: 760px;">
-          Explore flat steel coils, structural sections, modular scaffolding systems, and access hardware conforming to international EN, ASTM, BS, and JIS standards.
+          Explore Steel plate&amp; sheet, Steel Section&amp;profile, Steel pipe &amp;tube, steel wire&amp;rod, and modular scaffolding system, and access hardware conforming to international EN, ASTM, BS, and JIS standards.
         </p>
 
         <!-- Category Filters -->
         <div class="filter-bar" id="category-filters">
           <button class="filter-chip is-active" data-category="all">All Products</button>
-          <button class="filter-chip" data-category="steel-coils">Steel Coils</button>
-          <button class="filter-chip" data-category="structural-profiles">Structural Steel</button>
-          <button class="filter-chip" data-category="steel-pipes">Steel Pipes</button>
-          <button class="filter-chip" data-category="scaffolding-systems">Scaffolding Systems</button>
-          <button class="filter-chip" data-category="tubes-fittings">Tubes & Fittings</button>
-          <button class="filter-chip" data-category="platforms">Platforms & Boards</button>
-          <button class="filter-chip" data-category="mobile-towers">Mobile Towers</button>
-          <button class="filter-chip" data-category="ladders">Ladders</button>
-          <button class="filter-chip" data-category="safety-accessories">Accessories & Safety</button>
+          <button class="filter-chip" data-category="steel-plate-sheet">Steel plate/sheet</button>
+          <button class="filter-chip" data-category="steel-section-profile">Steel section/profile</button>
+          <button class="filter-chip" data-category="steel-pipe-tube">Steel pipe/tube</button>
+          <button class="filter-chip" data-category="scaffolding-accessories">Scaffolding &amp; Accessories</button>
+          <button class="filter-chip" data-category="steel-wire-rod">Steel wire/rod</button>
         </div>
+
+        <!-- Subcategory Filters -->
+        <div class="subcategory-filter-bar" id="subcategory-filters" style="display: none;"></div>
       </div>
     </section>
 

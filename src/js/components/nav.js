@@ -4,7 +4,7 @@
  */
 
 import { SITE_CONFIG, getWhatsAppUrl } from '../config.js';
-import { getAllCategories, YFGG_PIPE_PRODUCTS } from '../data/products.js';
+import { PRODUCT_HIERARCHY, PRODUCTS, getAllCategories } from '../data/products.js';
 import logoUrl from '../../assets/images/T-D-Logo.png';
 
 export function initNav() {
@@ -14,25 +14,45 @@ export function initNav() {
   const currentPath = window.location.pathname;
   const categories = getAllCategories();
 
-  // Mega-menu product items (from client reference snapshot)
-  const defaultProduct = YFGG_PIPE_PRODUCTS[1] || YFGG_PIPE_PRODUCTS[0]; // 'Straight seam high-frequency welded steel pipe'
+  // Mega-menu default preview product
+  const defaultProduct = PRODUCTS[0];
 
-  const pipeMenuItemsHtml = YFGG_PIPE_PRODUCTS.map((prod, index) => {
-    const isActive = index === 1 ? 'is-active' : '';
-    
+  const megaMenuItemsHtml = PRODUCT_HIERARCHY.map(cat => {
+    const subItemsHtml = cat.subcategories.map((subcat, idx) => {
+      const prod = PRODUCTS.find(p => p.category === cat.id && p.subcategory === subcat) ||
+                   PRODUCTS.find(p => p.category === cat.id) ||
+                   PRODUCTS[0];
+      const specVal = (prod.specifications && prod.specifications[0]) ? prod.specifications[0].value : 'Certified Standard';
+      const usesVal = prod.shortDescription || (prod.applications && prod.applications[0]) || '';
+      const imgVal = prod.heroImage || '/src/assets/images/hr-steel-coils.jpg';
+      const isInitialActive = cat.id === 'steel-plate-sheet' && idx === 0 ? 'is-active' : '';
+
+      return `
+        <a href="/products.html?category=${cat.id}&subcategory=${encodeURIComponent(subcat)}" 
+           class="mega-menu-item ${isInitialActive}" 
+           data-slug="${prod.slug}"
+           data-name="${subcat}"
+           data-cat="${cat.name}"
+           data-spec="${specVal}"
+           data-uses="${usesVal}"
+           data-img="${imgVal}">
+          <span class="mega-menu-item__name">${subcat}</span>
+          <svg class="mega-menu-item__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      `;
+    }).join('');
+
     return `
-      <a href="/product.html?id=${prod.slug}" 
-         class="mega-menu-item ${isActive}" 
-         data-slug="${prod.slug}"
-         data-name="${prod.name}"
-         data-spec="${prod.specification}"
-         data-uses="${prod.uses}"
-         data-img="${prod.image}">
-        <span class="mega-menu-item__name">${prod.name}</span>
-        <svg class="mega-menu-item__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-      </a>
+      <div class="mega-menu-cat-group">
+        <div class="mega-menu-cat-header">
+          <a href="/products.html?category=${cat.id}" class="mega-menu-cat-title">
+            ${cat.name}
+          </a>
+        </div>
+        ${subItemsHtml}
+      </div>
     `;
   }).join('');
 
@@ -56,7 +76,7 @@ export function initNav() {
             <!-- Mega Menu Top Bar -->
             <div class="mega-menu__header">
               <div class="mega-menu__header-title">
-                <strong>Steel Pipes & Tubes Catalog</strong>
+                <strong>Industrial Products Catalog</strong>
               </div>
               <a href="/products.html" class="mega-menu__view-all">
                 Browse All Products →
@@ -69,7 +89,7 @@ export function initNav() {
               <!-- Left Column: Products List -->
               <div class="mega-menu__list-col" id="mega-menu-list">
                 <div class="mega-menu__list-scroll">
-                  ${pipeMenuItemsHtml}
+                  ${megaMenuItemsHtml}
                 </div>
               </div>
 
@@ -78,28 +98,28 @@ export function initNav() {
                 <div class="mega-preview-card" id="mega-preview-card">
                   <div class="mega-preview-card__img-wrap">
                     <img id="mega-preview-img" 
-                         src="${defaultProduct.image}" 
+                         src="${defaultProduct.heroImage}" 
                          alt="${defaultProduct.name}" 
                          class="mega-preview-card__img" />
-                    <span class="mega-preview-card__badge" id="mega-preview-badge">Standard Specification</span>
+                    <span class="mega-preview-card__badge" id="mega-preview-badge">${defaultProduct.categoryName}</span>
                   </div>
                   <div class="mega-preview-card__content">
                     <h4 class="mega-preview-card__title" id="mega-preview-title">
-                      ${defaultProduct.name}
+                      ${defaultProduct.subcategory || defaultProduct.name}
                     </h4>
                     
                     <div class="mega-preview-card__info-group">
                       <div class="mega-preview-card__row">
                         <span class="mega-preview-card__label">Specification:</span>
                         <span class="mega-preview-card__value mega-preview-card__value--mono" id="mega-preview-spec">
-                          ${defaultProduct.specification}
+                          ${defaultProduct.specifications[0]?.value || 'Certified Standard'}
                         </span>
                       </div>
                       
                       <div class="mega-preview-card__row">
                         <span class="mega-preview-card__label">Uses & Applications:</span>
                         <p class="mega-preview-card__desc" id="mega-preview-uses">
-                          ${defaultProduct.uses}
+                          ${defaultProduct.shortDescription}
                         </p>
                       </div>
                     </div>
@@ -189,17 +209,21 @@ export function initNav() {
           <a href="/index.html" class="mobile-nav-link">Home</a>
           <a href="/products.html" class="mobile-nav-link">All Products & Specifications</a>
           
-          <!-- Mobile Pipe Products Accordion/Submenu -->
-          <div class="mobile-sub-group">
-            <span class="mobile-sub-group__title">Steel Pipes & Tubes Catalog</span>
-            <div class="mobile-sub-links">
-              ${YFGG_PIPE_PRODUCTS.map(p => `
-                <a href="/product.html?id=${p.slug}" class="mobile-sub-link">
-                  <span>${p.name}</span>
-                </a>
-              `).join('')}
+          <!-- Mobile Products Hierarchy Groups -->
+          ${PRODUCT_HIERARCHY.map(cat => `
+            <div class="mobile-sub-group">
+              <a href="/products.html?category=${cat.id}" class="mobile-sub-group__title-link">
+                <span class="mobile-sub-group__title">${cat.name}</span>
+              </a>
+              <div class="mobile-sub-links">
+                ${cat.subcategories.map(subcat => `
+                  <a href="/products.html?category=${cat.id}&subcategory=${encodeURIComponent(subcat)}" class="mobile-sub-link">
+                    <span>${subcat}</span>
+                  </a>
+                `).join('')}
+              </div>
             </div>
-          </div>
+          `).join('')}
 
           <a href="/quality.html" class="mobile-nav-link">Quality & Certified Testing</a>
           <a href="/solutions.html" class="mobile-nav-link">Applications & Projects</a>
@@ -294,6 +318,7 @@ export function initNav() {
   const megaItems = navPlaceholder.querySelectorAll('.mega-menu-item');
   const previewImg = navPlaceholder.querySelector('#mega-preview-img');
   const previewTitle = navPlaceholder.querySelector('#mega-preview-title');
+  const previewBadge = navPlaceholder.querySelector('#mega-preview-badge');
   const previewSpec = navPlaceholder.querySelector('#mega-preview-spec');
   const previewUses = navPlaceholder.querySelector('#mega-preview-uses');
   const previewCta = navPlaceholder.querySelector('#mega-preview-cta');
@@ -304,12 +329,14 @@ export function initNav() {
       item.classList.add('is-active');
 
       const name = item.dataset.name;
+      const cat = item.dataset.cat;
       const spec = item.dataset.spec;
       const uses = item.dataset.uses;
       const img = item.dataset.img;
       const slug = item.dataset.slug;
 
       if (previewTitle) previewTitle.textContent = name;
+      if (previewBadge && cat) previewBadge.textContent = cat;
       if (previewSpec) previewSpec.textContent = spec;
       if (previewUses) previewUses.textContent = uses;
       if (previewCta) previewCta.href = `/product.html?id=${slug}`;
@@ -328,3 +355,4 @@ export function initNav() {
     item.addEventListener('focus', activateItem);
   });
 }
+

@@ -160,15 +160,40 @@
                   <label class="form-label" for="c-product">Target Product Family *</label>
                   <select id="c-product" class="form-select" required>
                     <option value="" disabled selected>Select product...</option>
-                    <option value="hr-steel-coils">Hot Rolled Steel Coils (HR)</option>
-                    <option value="pre-galvanized-steel-coils">Pre-Galvanized Steel Coils</option>
-                    <option value="color-coated-steel-coils">Color Coated Coils (PPGI)</option>
-                    <option value="structural-steel-profiles">Structural Steel Profiles (H-Beam / Channels)</option>
-                    <option value="seamless-steel-pipes">Seamless Industrial Steel Pipes (API 5L)</option>
-                    <option value="cuplock-scaffolding-system">Cup Lock Scaffolding System</option>
-                    <option value="ringlock-system">Ring / Pin Lock Scaffolding System</option>
-                    <option value="tube-fittings-scaffolding">Tube & Fitting Scaffolding System</option>
-                    <option value="scaffolding-accessories">Scaffolding Accessories & Couplers</option>
+                    <optgroup label="Steel plate/sheet">
+                      <option value="hr-steel-coils">Hot rolled coils (HR)</option>
+                      <option value="cold-rolled-coils">Cold rolled coils (CCR)</option>
+                      <option value="pre-galvanized-steel-coils">Pre-galvanized coils</option>
+                      <option value="color-coated-steel-coils">Color coated coils (PPGZI)</option>
+                    </optgroup>
+                    <optgroup label="Steel section/profile">
+                      <option value="h-i-u-beams-channel">H/I/U Beams &amp; Channel</option>
+                      <option value="ipe-upn">IPE / UPN</option>
+                      <option value="angle-bar">Angle Bar</option>
+                      <option value="square-bar">Square Bar</option>
+                      <option value="round-bar">Round Bar</option>
+                      <option value="flut-bar">Flut Bar</option>
+                    </optgroup>
+                    <optgroup label="Steel pipe/tube">
+                      <option value="round-pipe">Round Pipe</option>
+                      <option value="rectangular-pipe">Rectangular Pipe</option>
+                      <option value="seamless-steel-pipes">Seamless pipe</option>
+                      <option value="straight-seam-welded-steel-pipe">ERW Pipe (Electro welded pipe)</option>
+                    </optgroup>
+                    <optgroup label="Scaffolding &amp; Accessories">
+                      <option value="ringlock-system">Ringlock System</option>
+                      <option value="cuplock-scaffolding-system">Cuplock</option>
+                      <option value="kwikstage-scaffolding-system">Kwikstage</option>
+                      <option value="steel-prop-shoring">Steel prop/shoring</option>
+                      <option value="steel-scaffold-planks">Steel plank/board</option>
+                      <option value="scaffolding-ladder">Staircase/beam ladder/ladder</option>
+                      <option value="tube-fittings-scaffolding">Couplers</option>
+                    </optgroup>
+                    <optgroup label="Steel wire/rod">
+                      <option value="steel-wire-rod">Wire rod</option>
+                      <option value="high-speed-wire-rod">High speed wire rod</option>
+                      <option value="ordinary-wire-rod">ordinary wire rod</option>
+                    </optgroup>
                   </select>
                 </div>
 
@@ -207,7 +232,7 @@
     import { initFooter } from '/src/js/components/footer.js';
     import { SITE_CONFIG, getWhatsAppUrl } from '/src/js/config.js';
     import { initScrollReveal } from '/src/js/components/scroll-reveal.js';
-    import { PRODUCTS, CATEGORY_META } from '/src/js/data/products.js';
+    import { PRODUCTS, CATEGORY_META, PRODUCT_HIERARCHY } from '/src/js/data/products.js';
 
     initNav();
     initFooter();
@@ -233,14 +258,15 @@
       });
 
       let optionsHtml = '<option value="" disabled selected>Select product...</option>';
-      for (const [catKey, prods] of Object.entries(categories)) {
-        const catLabel = CATEGORY_META[catKey]?.label || catKey;
+      const orderedKeys = Object.keys(PRODUCT_HIERARCHY).filter(k => categories[k]);
+      orderedKeys.forEach(catKey => {
+        const catLabel = PRODUCT_HIERARCHY[catKey]?.name || CATEGORY_META[catKey]?.label || catKey;
         optionsHtml += `<optgroup label="${catLabel}">`;
-        prods.forEach(p => {
+        categories[catKey].forEach(p => {
           optionsHtml += `<option value="${p.slug}">${p.name}</option>`;
         });
         optionsHtml += `</optgroup>`;
-      }
+      });
       dropdown.innerHTML = optionsHtml;
     }
 

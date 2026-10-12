@@ -15,7 +15,7 @@ export const SITE_CONFIG = {
   // WhatsApp Configuration (Single Source of Truth)
   whatsappNumber: '+86 19902098440',
   whatsappNumberDigits: '8619902098440',
-  whatsappDefaultMessage: 'Hello TIANJIN DECENT INTERNATIONAL TRADE CO., LTD., I would like to inquire about your products.',
+  whatsappDefaultMessage: 'Hello TIANJIN DECENT, I would like to inquire about your products.',
 
   // Direct Inquiries & Export Desk
   email: 'tjdecent@163.com',

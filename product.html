@@ -30,6 +30,22 @@
       color: var(--color-primary);
     }
 
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 1024px) {
+      .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .detail-grid {
       display: grid;
       grid-template-columns: 1.1fr 1fr;
@@ -380,7 +396,9 @@
           <span>/</span>
           <a href="/products.html">Products</a>
           <span>/</span>
-          <span id="bc-category" style="color: var(--color-body);">Category</span>
+          <span id="bc-category"><a href="/products.html">Category</a></span>
+          <span id="bc-sub-sep" style="display: none;">/</span>
+          <span id="bc-subcategory" style="display: none;"><a href="/products.html">Subcategory</a></span>
           <span>/</span>
           <span id="bc-product" style="color: var(--color-ink); font-weight: 600;">Product</span>
         </div>
@@ -409,6 +427,10 @@
 
           <!-- Right Column: Product Technical Data -->
           <div class="detail-info">
+            <div id="product-tax-badges" style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
+              <a id="badge-cat" href="/products.html" class="tech-tag tech-tag--blue" style="text-decoration: none;">Category</a>
+              <a id="badge-sub" href="/products.html" class="tech-tag" style="display: none; text-decoration: none;">Subcategory</a>
+            </div>
             <h1 class="detail-title" id="product-name">Loading Technical Specifications...</h1>
             <p class="detail-desc" id="product-desc"></p>
 
@@ -490,6 +512,27 @@
 
         </div>
 
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         RELATED PRODUCTS IN CATEGORY
+         ══════════════════════════════════════════════════════════════════ -->
+    <section class="section surface-light" id="related-section" style="border-top: 1px solid var(--color-hairline); display: none;">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--space-2xl); flex-wrap: wrap; gap: 16px;">
+          <div>
+            <span class="tech-tag tech-tag--blue" style="margin-bottom: 8px; display: inline-block;">PRODUCT HIERARCHY</span>
+            <h2 class="heading-display-md" id="related-heading">Related Products</h2>
+          </div>
+          <a id="related-view-all" href="/products.html" class="btn btn--secondary-pill">
+            View All in Category →
+          </a>
+        </div>
+
+        <div class="related-grid" id="related-grid">
+          <!-- Populated dynamically -->
+        </div>
       </div>
     </section>
 
@@ -581,15 +624,42 @@
     const slug = urlParams.get('id') || 'hr-steel-coils';
     const product = getProductBySlug(slug) || PRODUCTS[0];
 
-    // Category Meta
-    const catMeta = CATEGORY_META[product.category] || { label: 'Industrial Products' };
+    // Category & Subcategory Meta
+    const catName = product.categoryName || (CATEGORY_META[product.category]?.label || 'Industrial Products');
 
     // Update document title & metadata
     document.title = `${product.name} — Technical Specifications | TIANJIN DECENT`;
 
     // Populate Breadcrumb
-    document.getElementById('bc-category').textContent = catMeta.label;
+    const bcCat = document.getElementById('bc-category');
+    if (bcCat) {
+      bcCat.innerHTML = `<a href="/products.html?category=${product.category}">${catName}</a>`;
+    }
+
+    const bcSubSep = document.getElementById('bc-sub-sep');
+    const bcSub = document.getElementById('bc-subcategory');
+    if (product.subcategory) {
+      if (bcSubSep) bcSubSep.style.display = 'inline';
+      if (bcSub) {
+        bcSub.style.display = 'inline';
+        bcSub.innerHTML = `<a href="/products.html?category=${product.category}&subcategory=${encodeURIComponent(product.subcategory)}">${product.subcategory}</a>`;
+      }
+    }
     document.getElementById('bc-product').textContent = product.name;
+
+    // Populate Hero Taxonomy Badges
+    const badgeCat = document.getElementById('badge-cat');
+    if (badgeCat) {
+      badgeCat.textContent = catName;
+      badgeCat.href = `/products.html?category=${product.category}`;
+    }
+
+    const badgeSub = document.getElementById('badge-sub');
+    if (badgeSub && product.subcategory) {
+      badgeSub.style.display = 'inline-block';
+      badgeSub.textContent = product.subcategory;
+      badgeSub.href = `/products.html?category=${product.category}&subcategory=${encodeURIComponent(product.subcategory)}`;
+    }
 
     // Populate Hero & Image
     document.getElementById('product-name').textContent = product.name;
@@ -742,6 +812,55 @@
           <span style="font-size: 13px; color: var(--color-muted);">${s.description}</span>
         </div>
       `).join('');
+    }
+
+    // Populate Related Products
+    const relatedSection = document.getElementById('related-section');
+    const relatedGrid = document.getElementById('related-grid');
+    const relatedHeading = document.getElementById('related-heading');
+    const relatedViewAll = document.getElementById('related-view-all');
+
+    if (relatedSection && relatedGrid) {
+      let related = PRODUCTS.filter(p => p.slug !== product.slug && p.category === product.category);
+      if (product.subcategory) {
+        const sameSub = related.filter(p => p.subcategory === product.subcategory);
+        const diffSub = related.filter(p => p.subcategory !== product.subcategory);
+        related = [...sameSub, ...diffSub];
+      }
+      related = related.slice(0, 3);
+
+      if (related.length > 0) {
+        relatedSection.style.display = 'block';
+        relatedHeading.textContent = `Related in ${catName}`;
+        if (relatedViewAll) {
+          relatedViewAll.href = `/products.html?category=${product.category}`;
+          relatedViewAll.textContent = `View All ${catName} →`;
+        }
+
+        relatedGrid.innerHTML = related.map(rel => {
+          const relPrimaryStd = rel.standards && rel.standards[0] ? rel.standards[0].name.split('/')[0].trim() : 'ISO 9001';
+          return `
+            <a href="/product.html?id=${rel.slug}" class="product-card">
+              <div class="product-card__img-wrap">
+                <img src="${rel.heroImage}" alt="${rel.name}" class="product-card__img" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__header">
+                  <div class="product-card__title-group">
+                    <span class="product-card__category">${rel.categoryName || catName}${rel.subcategory ? ' • ' + rel.subcategory : ''}</span>
+                    <h3 class="product-card__name">${rel.name}</h3>
+                  </div>
+                  <span class="product-card__badge">${relPrimaryStd}</span>
+                </div>
+                <p class="product-card__desc">${rel.shortDescription}</p>
+                <span class="product-card__cta">View Specifications</span>
+              </div>
+            </a>
+          `;
+        }).join('');
+      } else {
+        relatedSection.style.display = 'none';
+      }
     }
 
     // Initialize subtle scroll reveal animations on product details, tables, cards and fittings

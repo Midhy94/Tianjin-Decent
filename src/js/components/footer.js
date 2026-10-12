@@ -26,7 +26,7 @@ export function initFooter() {
             </a>
             <h3 class="footer-brand__name">${SITE_CONFIG.companyName}</h3>
             <p class="footer-brand__desc">
-              Professional international industrial trading company specializing in flat-rolled steel coils, structural steel profiles, and modular scaffolding systems engineered for global standards.
+              Professional international industrial trading company specializing in Steel plate&amp; sheet, Steel Section&amp;profile, Steel pipe &amp;tube, steel wire&amp;rod, and modular scaffolding systems engineered for global standards.
             </p>
             <div style="margin-top: 16px;">
               <span class="tech-tag tech-tag--blue">
@@ -35,29 +35,28 @@ export function initFooter() {
             </div>
           </div>
 
-          <!-- Col 2: Steel Products -->
+          <!-- Col 2: Steel Categories (First-Level) -->
           <div class="footer-col">
-            <div class="footer-col__title">Steel Products</div>
+            <div class="footer-col__title">Product Categories</div>
             <ul class="footer-links">
-              <li><a href="/products.html?category=steel-coils" class="footer-link">Hot Rolled Coils (HR)</a></li>
-              <li><a href="/products.html?category=steel-coils" class="footer-link">Pre-Galvanized Coils</a></li>
-              <li><a href="/products.html?category=steel-coils" class="footer-link">Color Coated Coils (PPGI)</a></li>
-              <li><a href="/products.html?category=structural-profiles" class="footer-link">Structural Steel (Beams & Channels)</a></li>
-              <li><a href="/products.html?category=steel-pipes" class="footer-link">Steel Pipes (Round & Rectangular)</a></li>
-              <li><a href="/product.html?id=seamless-steel-pipes" class="footer-link">Seamless & ERW Steel Pipes</a></li>
+              <li><a href="/products.html?category=steel-plate-sheet" class="footer-link">Steel plate/sheet</a></li>
+              <li><a href="/products.html?category=steel-section-profile" class="footer-link">Steel section/profile</a></li>
+              <li><a href="/products.html?category=steel-pipe-tube" class="footer-link">Steel pipe/tube</a></li>
+              <li><a href="/products.html?category=scaffolding-accessories" class="footer-link">Scaffolding &amp; Accessories</a></li>
+              <li><a href="/products.html?category=steel-wire-rod" class="footer-link">Steel wire/rod</a></li>
             </ul>
           </div>
 
-          <!-- Col 3: Scaffolding Systems -->
+          <!-- Col 3: Scaffolding & Accessories (Second-Level) -->
           <div class="footer-col">
-            <div class="footer-col__title">Scaffolding Systems</div>
+            <div class="footer-col__title">Scaffolding &amp; Accessories</div>
             <ul class="footer-links">
-              <li><a href="/products.html?category=scaffolding-systems" class="footer-link">Cup Lock & Ring Lock</a></li>
-              <li><a href="/product.html?id=frame-scaffolding-system" class="footer-link">Frame Scaffolding System</a></li>
-              <li><a href="/product.html?id=scaffold-steel-props" class="footer-link">Steel Props & Shoring</a></li>
-              <li><a href="/product.html?id=scaffold-steel-planks" class="footer-link">Steel Planks & Boards</a></li>
-              <li><a href="/product.html?id=scaffold-staircase" class="footer-link">Scaffolding Staircases</a></li>
-              <li><a href="/product.html?id=scaffold-beam-ladder" class="footer-link">Beam Ladders & Couplers</a></li>
+              <li><a href="/products.html?category=scaffolding-accessories&subcategory=Ringlock+System" class="footer-link">Ringlock System</a></li>
+              <li><a href="/products.html?category=scaffolding-accessories&subcategory=Cuplock" class="footer-link">Cuplock &amp; Kwikstage</a></li>
+              <li><a href="/products.html?category=scaffolding-accessories&subcategory=Steel+prop%2Fshoring" class="footer-link">Steel Prop / Shoring</a></li>
+              <li><a href="/products.html?category=scaffolding-accessories&subcategory=Steel+plank%2Fboard" class="footer-link">Steel Plank / Board</a></li>
+              <li><a href="/products.html?category=scaffolding-accessories&subcategory=Staircase%2Fbeam+ladder%2Fladder" class="footer-link">Staircase / Beam Ladder / Ladders</a></li>
+              <li><a href="/products.html?category=scaffolding-accessories&subcategory=Couplers" class="footer-link">Drop-Forged Couplers</a></li>
             </ul>
           </div>
 

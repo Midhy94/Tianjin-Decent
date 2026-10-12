@@ -27,6 +27,22 @@
       color: var(--color-primary);
     }
 
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 1024px) {
+      .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .detail-grid {
       display: grid;
       grid-template-columns: 1.1fr 1fr;
@@ -361,9 +377,9 @@
       }
     }
   </style>
-  <script type="module" crossorigin src="/assets/product-OwrTgDOx.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/scroll-reveal-C1fBGJyb.js">
-  <link rel="stylesheet" crossorigin href="/assets/scroll-reveal-CoaAbBpM.css">
+  <script type="module" crossorigin src="/assets/product-CoTmtPyf.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/scroll-reveal-BdkMt7qn.js">
+  <link rel="stylesheet" crossorigin href="/assets/scroll-reveal-B6ZKna1L.css">
 </head>
 <body>
 
@@ -380,7 +396,9 @@
           <span>/</span>
           <a href="/products.html">Products</a>
           <span>/</span>
-          <span id="bc-category" style="color: var(--color-body);">Category</span>
+          <span id="bc-category"><a href="/products.html">Category</a></span>
+          <span id="bc-sub-sep" style="display: none;">/</span>
+          <span id="bc-subcategory" style="display: none;"><a href="/products.html">Subcategory</a></span>
           <span>/</span>
           <span id="bc-product" style="color: var(--color-ink); font-weight: 600;">Product</span>
         </div>
@@ -409,6 +427,10 @@
 
           <!-- Right Column: Product Technical Data -->
           <div class="detail-info">
+            <div id="product-tax-badges" style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
+              <a id="badge-cat" href="/products.html" class="tech-tag tech-tag--blue" style="text-decoration: none;">Category</a>
+              <a id="badge-sub" href="/products.html" class="tech-tag" style="display: none; text-decoration: none;">Subcategory</a>
+            </div>
             <h1 class="detail-title" id="product-name">Loading Technical Specifications...</h1>
             <p class="detail-desc" id="product-desc"></p>
 
@@ -490,6 +512,27 @@
 
         </div>
 
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         RELATED PRODUCTS IN CATEGORY
+         ══════════════════════════════════════════════════════════════════ -->
+    <section class="section surface-light" id="related-section" style="border-top: 1px solid var(--color-hairline); display: none;">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--space-2xl); flex-wrap: wrap; gap: 16px;">
+          <div>
+            <span class="tech-tag tech-tag--blue" style="margin-bottom: 8px; display: inline-block;">PRODUCT HIERARCHY</span>
+            <h2 class="heading-display-md" id="related-heading">Related Products</h2>
+          </div>
+          <a id="related-view-all" href="/products.html" class="btn btn--secondary-pill">
+            View All in Category →
+          </a>
+        </div>
+
+        <div class="related-grid" id="related-grid">
+          <!-- Populated dynamically -->
+        </div>
       </div>
     </section>
 
