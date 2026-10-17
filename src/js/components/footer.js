@@ -3,7 +3,7 @@
  * Global Footer Component
  */
 
-import { SITE_CONFIG, getWhatsAppUrl } from '../config.js';
+import { SITE_CONFIG, getWhatsAppUrl, getWhatsAppIconSvg } from '../config.js';
 import logoUrl from '../../assets/images/T-D-Logo.png';
 
 export function initFooter() {
@@ -93,10 +93,8 @@ export function initFooter() {
                  target="_blank" 
                  rel="noopener noreferrer" 
                  class="btn btn--whatsapp" 
-                 style="display: inline-flex; justify-content: center; width: 100%;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.43C8.94 7.43 8.66 7.5 8.42 7.76C8.18 8.02 7.5 8.65 7.5 9.94C7.5 11.23 8.44 12.48 8.57 12.65C8.7 12.82 10.42 15.47 13.06 16.61C13.69 16.88 14.18 17.04 14.56 17.16C15.2 17.36 15.77 17.34 16.23 17.27C16.74 17.19 17.8 16.63 18.02 16C18.24 15.37 18.24 14.83 18.18 14.72C18.11 14.61 17.94 14.55 17.68 14.42C17.43 14.3 16.19 13.69 15.96 13.6C15.73 13.52 15.56 13.48 15.4 13.73C15.23 13.98 14.75 14.55 14.6 14.72C14.46 14.89 14.31 14.91 14.06 14.79C13.81 14.66 12.99 14.39 12.02 13.53C11.27 12.86 10.76 12.03 10.61 11.78C10.47 11.53 10.59 11.4 10.72 11.27C10.83 11.16 10.97 10.98 11.1 10.83C11.23 10.68 11.27 10.57 11.36 10.4C11.44 10.23 11.4 10.09 11.34 9.96C11.27 9.84 10.79 8.65 10.58 8.16C10.39 7.68 10.18 7.75 10.03 7.74H9.52C9.35 7.74 9.11 7.43 9.11 7.43Z"/>
-                </svg>
+                 style="display: inline-flex; align-items: center; justify-content: center; width: 100%; gap: 8px;">
+                ${getWhatsAppIconSvg(18)}
                 <span>WhatsApp Direct</span>
               </a>
             </div>

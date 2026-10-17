@@ -1860,13 +1860,124 @@ export const PRODUCTS = [
   {
     "slug": "ringlock-system",
     "category": "scaffolding-accessories",
-    "name": "Ringlock System",
-    "shortDescription": "Modular steel scaffolding system featuring rosette ring connections and locking pins for multi-directional access and complex structures.",
-    "description": "Ring Lock / Pin Lock scaffolding is a modular steel scaffolding system used for access, working platforms, shoring support, and temporary structures in construction and industrial projects worldwide.\n\nEngineered with vertical standards fitted with rosette/ring connection plates at 500 mm intervals and cast ledger ends with captive wedge locking pins. The rosette features 8 connection points (4 small holes for 90\u00b0 right angles and 4 large holes for variable diagonal bracing angles), offering unlimited flexibility for curved structures, tanks, complex industrial geometry, and high-rise facades.",
-    "heroImage": "/src/assets/images/ringlock-scaffolding.jpg",
+    "name": "Ring Lock Scaffolding",
+    "shortDescription": "Modular steel scaffolding system featuring 8-hole rosette ring connections and captive wedge locking pins for multi-directional access and complex structures.",
+    "description": "Ring Lock / Pin Lock scaffolding is a modular steel scaffolding system used for access, working platforms, shoring support, and temporary structures in construction and industrial projects worldwide.\n\nEngineered with vertical standards fitted with 8-hole rosette/ring connection plates at 500 mm intervals and cast ledger ends with captive wedge locking pins. The rosette features 8 connection points (4 small holes for 90° right angles and 4 large holes for variable diagonal bracing angles), offering unlimited flexibility for curved structures, tanks, complex industrial geometry, and heavy falsework.",
+    "heroImage": "/src/assets/images/ringlock-rosette-node-base-collar.jpg",
     "gallery": [
-      "/src/assets/images/ringlock-scaffolding.jpg",
-      "/src/assets/images/hero-scaffolding.jpg"
+      {
+        "src": "/src/assets/images/ringlock-rosette-node-base-collar.jpg",
+        "title": "Ring Lock Rosette Locking Node & Base Collar Assembly",
+        "note": "Precision-manufactured 8-way rosette connection ring welded to vertical standard base collar (48.3 mm OD). Demonstrates cast ledger heads and diagonal brace swivel blades secured by captive wedge locking pins driven into the rosette plate, seated over an adjustable screw jack base."
+      },
+      {
+        "src": "/src/assets/images/ringlock-base-collar.jpg",
+        "title": "Ring Lock Base Collar (Foundation Rosette Member)",
+        "note": "Heavy-duty hot-dip galvanized base collar component (48.3 mm OD) engineered with a precision welded 8-hole rosette ring and upper spigot connection. Slides directly over the leveling base screw jack stem to establish the lowest ledger and diagonal bracing tier."
+      },
+      {
+        "src": "/src/assets/images/ringlock-standard-post.jpg",
+        "title": "Ring Lock Post / Vertical Standard Modular Heights",
+        "note": "Precision engineered vertical standards (48.3 mm OD) fitted with 8-hole connection rosette rings spaced at exact 500 mm intervals. Standard modular heights include 0.5 m (1 ring), 1.0 m (2 rings), 1.5 m (3 rings), 2.0 m (4 rings), and 3.0 m (6 rings) with integral top spigot pins."
+      },
+      {
+        "src": "/src/assets/images/ringlock-horizontal-ledger.jpg",
+        "title": "Ring Lock Horizontal (Ledger Member)",
+        "note": "Horizontal structural members manufactured from 48.3 mm OD high-strength steel tubing with cast ledger head ends and captive drop-forged wedge locking pins, engineered to lock into 90° rosette holes for rigid bay framing and guardrail protection."
+      },
+      {
+        "src": "/src/assets/images/ringlock-diagonal-brace.jpg",
+        "title": "Ring Lock Diagonal (Triangulation Bracing Member)",
+        "note": "High-tensile tubular diagonal brace with forged pivot rivet and cast swivel wedge clamp head designed to lock into the large rosette ring apertures, ensuring complete lateral stability and sway resistance under severe wind and dynamic loads."
+      },
+      {
+        "src": "/src/assets/images/ringlock-scaffolding.jpg",
+        "title": "Ring Lock Modular Scaffolding System",
+        "note": "Complete heavy-duty modular Ring Lock scaffolding configuration showing multi-directional rosette standards, horizontal ledgers, diagonal braces, and integrated access decks for industrial and commercial structures."
+      },
+      {
+        "src": "/src/assets/images/hero-scaffolding.jpg",
+        "title": "Industrial Facade & Refinery Modular Matrix",
+        "note": "Multi-tier heavy access and shoring scaffold installation demonstrating high load-bearing capacity, rigid node stability, and adaptability to complex industrial architectural geometries."
+      },
+      {
+        "src": "/src/assets/images/scaffold-base-jack.jpg",
+        "title": "Adjustable Leveling Base Screw Jack & Plate",
+        "note": "Heavy-duty solid/hollow threaded jack stem with cast wing nut and pressed steel base plate providing rigid foundation leveling for Ring Lock standard uprights on uneven terrain."
+      },
+      {
+        "src": "/src/assets/images/scaffold-steel-plank.jpg",
+        "title": "Perforated Anti-Slip Steel Working Planks",
+        "note": "Safety-embossed galvanized steel deck planks with integrated security hooks designed to latch securely over standard 48.3 mm Ring Lock horizontal ledgers."
+      }
+    ],
+    "accessories": [
+      {
+        "name": "Ring Lock Base Collar",
+        "image": "/src/assets/images/ringlock-base-collar.jpg",
+        "sizes": "240 mm / 300 mm / 430 mm / 500 mm",
+        "sizeList": [
+          "240 mm",
+          "300 mm",
+          "430 mm",
+          "500 mm"
+        ],
+        "description": "Precision-manufactured base collar component (48.3 mm OD tube × 3.2 mm wall) featuring an integrated welded 8-hole rosette ring and upper spigot sleeve. Slides directly over the adjustable base screw jack stem to initiate the lowest ledger node connection."
+      },
+      {
+        "name": "Ring Lock Post / Vertical Standard",
+        "image": "/src/assets/images/ringlock-standard-post.jpg",
+        "sizes": "0.5 m (1 Ring) / 1.0 m (2 Rings) / 1.5 m (3 Rings) / 2.0 m (4 Rings) / 3.0 m (6 Rings)",
+        "sizeList": [
+          "0.5 m (1 Ring)",
+          "1.0 m (2 Rings)",
+          "1.5 m (3 Rings)",
+          "2.0 m (4 Rings)",
+          "3.0 m (6 Rings)"
+        ],
+        "description": "High-yield tubular steel vertical uprights (48.3 mm OD × 3.2 mm nominal wall) equipped with 8-hole connection rosettes spaced at exact 500 mm intervals and integrated spigot joint connectors."
+      },
+      {
+        "name": "Ring Lock Horizontal",
+        "image": "/src/assets/images/ringlock-horizontal-ledger.jpg",
+        "sizes": "0.73 m / 1.09 m / 1.40 m / 1.57 m / 2.07 m / 2.57 m / 3.07 m",
+        "sizeList": [
+          "0.73 m",
+          "1.09 m",
+          "1.40 m",
+          "1.57 m",
+          "2.07 m",
+          "2.57 m",
+          "3.07 m"
+        ],
+        "description": "Horizontal structural members fitted with cast steel ledger ends and captive wedge pins that lock securely into the small 90° rosette holes to support working platforms and guardrails."
+      },
+      {
+        "name": "Ring Lock Diagonal",
+        "image": "/src/assets/images/ringlock-diagonal-brace.jpg",
+        "sizes": "0.73 × 2.0 m / 1.09 × 2.0 m / 1.40 × 2.0 m / 1.57 × 2.0 m / 2.07 × 2.0 m / 2.57 × 2.0 m / 3.07 × 2.0 m",
+        "sizeList": [
+          "0.73 × 2.0 m",
+          "1.09 × 2.0 m",
+          "1.40 × 2.0 m",
+          "1.57 × 2.0 m",
+          "2.07 × 2.0 m",
+          "2.57 × 2.0 m",
+          "3.07 × 2.0 m"
+        ],
+        "description": "Triangulation diagonal brace members equipped with pivoting swivel wedge heads that insert into the wide rosette holes, transferring dynamic lateral and wind forces to maintain rigid structural squaring."
+      },
+      {
+        "name": "Adjustable Base Screw Jack & Plate",
+        "image": "/src/assets/images/scaffold-base-jack.jpg",
+        "sizes": "Ø 38 × 600 mm (Hollow/Solid) / Ø 38 × 750 mm / 150 × 150 × 6 mm Base Plate",
+        "sizeList": [
+          "Ø 38 × 600 mm Jack",
+          "Ø 38 × 750 mm Jack",
+          "150 × 150 × 6 mm Base Plate"
+        ],
+        "description": "Cold-rolled threaded steel jack stem fitted with cast malleable leveling wing nut and welded 150 × 150 mm base plate for accurate leveling of Ring Lock vertical uprights on uneven foundations."
+      }
     ],
     "specifications": [
       {
@@ -1965,13 +2076,73 @@ export const PRODUCTS = [
     "name": "Cuplock",
     "shortDescription": "Modular steel scaffolding system featuring vertical standards with cup-and-wedge locking mechanism for rapid assembly.",
     "description": "The Cuplock scaffolding system consists of vertical standards with cup-and-ledger blade locking nodes at regular intervals, typically 500 mm apart. Forged ledger and transom blades are secured into the cups using a wedge driven by a single hammer blow.\n\nEach node can connect up to four horizontal members, providing fast erection and dismantling, rigid and stable connections, and high load-bearing capacity without loose bolts, nuts, or threaded fittings.",
-    "heroImage": "/src/assets/images/cuplock-scaffolding-setup.jpg",
+    "heroImage": "/src/assets/images/cuplock-facade-construction.jpg",
     "gallery": [
-      "/src/assets/images/cuplock-scaffolding-setup.jpg",
-      "/src/assets/images/cuplock-components-diagram.jpg",
-      "/src/assets/images/cuplock-standard-post.jpg",
-      "/src/assets/images/cuplock-ledger.jpg",
-      "/src/assets/images/cuplock-intermediate-transom.jpg"
+      {
+        "src": "/src/assets/images/cuplock-facade-construction.jpg",
+        "title": "Infrastructure & External Facade Scaffold Matrix",
+        "note": "Large-scale high-rise and bridge pier facade scaffolding structure providing safe multi-level working platforms, rigid structural triangulation, and high load capacity."
+      },
+      {
+        "src": "/src/assets/images/cuplock-shoring-application.jpg",
+        "title": "Civil Falsework & Heavy Slab Shoring",
+        "note": "Multi-tier Cuplock grid configuration with high-capacity vertical standards and U-head screw jacks supporting primary timber formwork beams for concrete slab construction."
+      },
+      {
+        "src": "/src/assets/images/cuplock-modular-bay-structure.jpg",
+        "title": "Assembled Modular 4-Leg Cuplock Bay Tower",
+        "note": "Free-standing 4-leg Cuplock scaffolding bay assembly showing adjustable base screw jacks, vertical standard posts with welded cup nodes at 500 mm spacing, horizontal perimeter ledgers, and top spigot connections."
+      },
+      {
+        "src": "/src/assets/images/cuplock-standard-post.jpg",
+        "title": "Cuplock Standard / Vertical Post (Modular Sizes)",
+        "note": "Primary vertical load-bearing members (48.3 mm OD) equipped with fixed bottom cups and captive sliding top cups welded at 500 mm intervals, featuring integral spigot ends across 0.5 m, 1.0 m, 1.5 m, 2.0 m, 2.5 m, and 3.0 m lengths."
+      },
+      {
+        "src": "/src/assets/images/cuplock-ledger.jpg",
+        "title": "Cuplock Horizontal Ledger (Forged Blade Member)",
+        "note": "Horizontal structural member manufactured from 48.3 mm high-strength steel tubing with drop-forged solid blade ends welded at both extremities, engineered to seat securely into bottom cups."
+      },
+      {
+        "src": "/src/assets/images/cuplock-intermediate-transom.jpg",
+        "title": "Cuplock Intermediate Transom (Board Span Support)",
+        "note": "Intermediate board-bearing member with downward-facing channel jaws engineered to hook securely across parallel horizontal ledgers, providing intermediate span support for scaffold boards without requiring a cup node."
+      },
+      {
+        "src": "/src/assets/images/cuplock-diagonal-brace.jpg",
+        "title": "Cuplock Diagonal Brace (Face & Lateral Triangulation)",
+        "note": "Structural triangulation bracing member manufactured from 48.3 mm high-strength steel tubing with pivoting swivel blade ends, engineered to lock into bottom cups to resist lateral wind and seismic sway loads."
+      },
+      {
+        "src": "/src/assets/images/cuplock-spigot-pin.jpg",
+        "title": "Cuplock Spigot Pin / Connector (Standard Joint Pin)",
+        "note": "Heavy-duty internal spigot connector (38 mm OD) for vertical standard-to-standard alignment. Engineered with high-strength structural carbon steel and pre-drilled retention bolt/pin holes to secure vertical joints against dynamic crane lifting and tensile uplift forces."
+      },
+      {
+        "src": "/src/assets/images/cuplock-base-plate.jpg",
+        "title": "Cuplock Spigot Base Plate (Foundation Footing)",
+        "note": "Heavy-duty foundation base plate (150 × 150 mm) with welded central spigot stem (38 mm OD) engineered to seat and locate the bottom of 48.3 mm Cuplock vertical standards on firm ground, concrete slabs, or timber soleplates. Features 4 corner nailing/anchoring holes."
+      },
+      {
+        "src": "/src/assets/images/cuplock-locking-node-closeup.jpg",
+        "title": "Cuplock Node Precision Macro Close-Up",
+        "note": "Precision manufactured 4-way Cuplock locking node showing ductile cast iron top cup, drop-forged ledger blade ends seated into bottom cup, and continuous circumferential seam welds."
+      },
+      {
+        "src": "/src/assets/images/cuplock-assembly-guide.jpg",
+        "title": "4-Step Erection & Node Locking Sequence",
+        "note": "Fast 4-step assembly: (1) Slide top cup up; (2) Insert up to 4 forged ledger blades into bottom cup; (3) Lower top cup over blades; (4) Secure captive wedge tight with a hammer blow for rigid, bolt-free locking."
+      },
+      {
+        "src": "/src/assets/images/cuplock-component-breakdown.png",
+        "title": "Component Nomenclature & Hardware Architecture",
+        "note": "Detailed view of ductile cast iron Top Cup, drop-forged Ledger Blades, welded Bottom Cup, 4-way Cuplock node connection, tubular standards, horizontal ledgers, transoms, and heavy-duty screw jack base."
+      },
+      {
+        "src": "/src/assets/images/cuplock-system-components-guide.png",
+        "title": "Cuplock System Components Overview",
+        "note": "Complete modular assembly: Base Jack, Ledgers, Perforated Steel Planks, Top-Cup & Bottom-Cup node, U-Head Jack, Intermediate Transom, and Vertical Standards with 500 mm cup intervals."
+      }
     ],
     "specifications": [
       {
@@ -2070,6 +2241,42 @@ export const PRODUCTS = [
           "2.5 m"
         ],
         "description": "Intermediate board-supporting member with inverted locking hook jaws designed to span across two horizontal ledgers without requiring cup nodes."
+      },
+      {
+        "name": "Diagonal Brace",
+        "image": "/src/assets/images/cuplock-diagonal-brace.jpg",
+        "sizes": "1.0 m × 2.0 m / 1.2 m × 2.0 m / 1.5 m × 2.0 m / 1.8 m × 2.0 m / 2.0 m × 2.0 m / 2.5 m × 2.0 m",
+        "sizeList": [
+          "1.0 m × 2.0 m",
+          "1.2 m × 2.0 m",
+          "1.5 m × 2.0 m",
+          "1.8 m × 2.0 m",
+          "2.0 m × 2.0 m",
+          "2.5 m × 2.0 m"
+        ],
+        "description": "Tubular steel diagonal triangulation member (48.3 mm OD) equipped with forged swivel blade ends designed to lock directly into bottom cups to provide lateral stiffness and wind bracing."
+      },
+      {
+        "name": "Spigot Pin / Connector",
+        "image": "/src/assets/images/cuplock-spigot-pin.jpg",
+        "sizes": "150 mm (Loose Spigot) / 300 mm (Bolted Connector) / 500 mm (Fixed Joint Pin)",
+        "sizeList": [
+          "150 mm (Loose Spigot)",
+          "300 mm (Bolted Connector)",
+          "500 mm (Fixed Joint Pin)"
+        ],
+        "description": "High-tensile internal tube connector (38 mm outside diameter) precision engineered to fit inside 48.3 mm vertical standards. Features factory drilled locking bolt holes to mechanically fasten stacked vertical tiers, resisting uplift and seismic displacement."
+      },
+      {
+        "name": "Base Plate",
+        "image": "/src/assets/images/cuplock-base-plate.jpg",
+        "sizes": "150 × 150 × 5 mm (Standard) / 150 × 150 × 6 mm (Heavy-Duty) / 150 × 150 × 8 mm (High-Load)",
+        "sizeList": [
+          "150 × 150 × 5 mm (Standard)",
+          "150 × 150 × 6 mm (Heavy-Duty)",
+          "150 × 150 × 8 mm (High-Load)"
+        ],
+        "description": "Heavy-duty pressed steel foundation base plate with a welded 38 mm OD central spigot stem (100–150 mm height) designed to locate and support 48.3 mm vertical Cuplock standards on flat ground, concrete slabs, or timber soleboards. Features 4 corner anchor/nailing holes."
       }
     ],
     "features": [

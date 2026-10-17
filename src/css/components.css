@@ -733,11 +733,22 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  background-color: var(--color-whatsapp);
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  transition: background-color var(--transition-instant), transform var(--transition-instant);
+}
+
+.btn--whatsapp-icon:hover {
+  background-color: var(--color-whatsapp-hover);
+  color: #FFFFFF;
+  transform: scale(1.05);
 }
 
 .btn--whatsapp-icon svg {
-  width: 19px;
-  height: 19px;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .btn--whatsapp-outline {
