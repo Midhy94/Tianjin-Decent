@@ -425,20 +425,25 @@
     /* Detail Image Caption Box */
     .detail-image-caption-box {
       margin-top: 14px;
-      padding-top: 12px;
-      border-top: 1px solid var(--color-hairline);
+      padding: 12px 14px;
+      background: #ffffff;
+      border: 1px solid var(--color-hairline);
+      border-left: 3px solid var(--color-primary);
+      border-radius: var(--radius-xs);
       text-align: left;
+      box-shadow: 0 1px 4px rgba(11, 21, 36, 0.04);
     }
     .detail-image-title {
       font-size: 13.5px;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--color-ink);
+      letter-spacing: -0.01em;
     }
     .detail-image-note {
       font-size: 12.5px;
-      color: var(--color-body);
-      line-height: 1.5;
-      margin: 4px 0 0;
+      color: #475569;
+      line-height: 1.55;
+      margin: 5px 0 0;
     }
 
     /* Visual Component Diagrams & Field Applications Gallery */
@@ -905,7 +910,7 @@
     initNav();
     initFooter();
 
-    // Get product ID from query parameter
+    // Get product ID from query parameter (defaults to hr-steel-coils)
     const urlParams = new URLSearchParams(window.location.search);
     const slug = urlParams.get('id') || 'hr-steel-coils';
     const product = getProductBySlug(slug) || PRODUCTS[0];
@@ -982,36 +987,50 @@
     const captionNote = document.getElementById('product-img-note');
     const captionCounter = document.getElementById('product-img-counter');
 
-    if (product.gallery && product.gallery.length > 1) {
-      let currentSlideIndex = 0;
+    // Normalize gallery items (support string or object with title and note)
+    const rawGallery = (product.gallery && product.gallery.length > 0)
+      ? product.gallery
+      : [product.heroImage || '/src/assets/images/hr-steel-coils.jpg'];
 
-      // Normalize gallery items (support string or object with title and note)
-      const galleryItems = product.gallery.map((item, idx) => {
-        if (typeof item === 'string') {
-          return {
-            src: item,
-            title: `${product.name} Photo ${idx + 1}`,
-            note: ''
-          };
-        }
+    const galleryItems = rawGallery.map((item, idx) => {
+      if (typeof item === 'string') {
         return {
-          src: item.src || item.image || item,
-          title: item.title || `${product.name} Photo ${idx + 1}`,
-          note: item.note || item.description || ''
+          src: item,
+          title: rawGallery.length > 1 ? `${product.name} (View ${idx + 1})` : product.name,
+          note: product.shortDescription || product.name
         };
-      });
-
-      const updateCaption = (index) => {
-        const item = galleryItems[index];
-        if (item && item.note) {
-          if (captionBox) captionBox.style.display = 'block';
-          if (captionTitle) captionTitle.textContent = item.title;
-          if (captionNote) captionNote.textContent = item.note;
-          if (captionCounter) captionCounter.textContent = `${index + 1} / ${galleryItems.length}`;
-        } else {
-          if (captionBox) captionBox.style.display = 'none';
-        }
+      }
+      return {
+        src: item.src || item.image || item,
+        title: item.title || (rawGallery.length > 1 ? `${product.name} (View ${idx + 1})` : product.name),
+        note: item.note || item.description || product.shortDescription || product.name
       };
+    });
+
+    const updateCaption = (index) => {
+      const item = galleryItems[index] || galleryItems[0];
+      if (item && (item.note || item.title)) {
+        if (captionBox) captionBox.style.display = 'block';
+        if (captionTitle) captionTitle.textContent = item.title;
+        if (captionNote) captionNote.textContent = item.note || product.shortDescription || '';
+        if (captionCounter) {
+          if (galleryItems.length > 1) {
+            captionCounter.textContent = `${index + 1} / ${galleryItems.length}`;
+            captionCounter.style.display = 'inline';
+          } else {
+            captionCounter.style.display = 'none';
+          }
+        }
+      } else {
+        if (captionBox) captionBox.style.display = 'none';
+      }
+    };
+
+    // Always display the short description caption under the image for all products
+    updateCaption(0);
+
+    if (galleryItems.length > 1) {
+      let currentSlideIndex = 0;
 
       // Show slider navigation arrows
       if (sliderPrevBtn) sliderPrevBtn.style.display = 'flex';
@@ -1063,9 +1082,6 @@
           productImg.classList.remove('is-changing');
         }, 130);
       };
-
-      // Set initial state
-      updateCaption(0);
 
       // Wire Prev / Next Floating Arrows
       if (sliderPrevBtn) {
@@ -1146,8 +1162,10 @@
       // Populate Technical Diagrams & Field Visuals Section
       const visualSection = document.getElementById('visual-gallery-section');
       const visualGrid = document.getElementById('visual-gallery-grid');
-      const itemsWithNotes = galleryItems.filter(item => item.note);
-      if (visualSection && visualGrid && itemsWithNotes.length > 0) {
+      const dedicatedVisualItems = galleryItems.filter(item => 
+        item.note && item.note !== product.shortDescription && item.note !== product.name
+      );
+      if (visualSection && visualGrid && dedicatedVisualItems.length > 1) {
         visualSection.style.display = 'block';
         visualGrid.innerHTML = galleryItems.map((item, idx) => `
           <div class="visual-gallery-card" data-index="${idx}" title="Click to view in main viewer">

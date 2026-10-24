@@ -12,7 +12,7 @@
  *    - Angle Bar
  *    - Square Bar
  *    - Round Bar
- *    - Flut Bar
+ *    - Flat Bar
  * 3. Steel pipe/tube
  *    - Round Pipe
  *    - Rectangular Pipe
@@ -52,15 +52,17 @@ export const PRODUCT_HIERARCHY_LIST = [
       'Angle Bar',
       'Square Bar',
       'Round Bar',
-      'Flut Bar'
+      'Flat Bar'
     ]
   },
   {
     id: 'steel-pipe-tube',
     name: 'Steel pipe/tube',
     subcategories: [
-      'Round Pipe',
-      'Rectangular Pipe',
+      'Hot-dip Galvanized Round Pipe',
+      'Black Carbon Steel Round Pipe (Self Color)',
+      'Hot-dip Galvanized Rectangular Pipe',
+      'Black Carbon Steel Rectangular Pipe (Self Color)',
       'Seamless pipe',
       'ERW Pipe (Electro welded pipe)'
     ]
@@ -138,7 +140,7 @@ export const CATEGORY_META = {
     id: 'steel-section-profile',
     label: 'Steel section/profile',
     shortLabel: 'Steel section/profile',
-    description: 'H/I/U Beams & Channel, IPE / UPN, Angle Bar, Square Bar, Round Bar, and Flut Bar.',
+    description: 'H/I/U Beams & Channel, IPE / UPN, Angle Bar, Square Bar, Round Bar, and Flat Bar.',
     image: '/src/assets/images/structural-steel-profiles.jpg',
     subcategories: [
       'H/I/U Beams & Channel',
@@ -146,18 +148,20 @@ export const CATEGORY_META = {
       'Angle Bar',
       'Square Bar',
       'Round Bar',
-      'Flut Bar'
+      'Flat Bar'
     ]
   },
   'steel-pipe-tube': {
     id: 'steel-pipe-tube',
     label: 'Steel pipe/tube',
     shortLabel: 'Steel pipe/tube',
-    description: 'Round Pipe, Rectangular Pipe, Seamless pipe, and ERW Pipe (Electro welded pipe).',
+    description: 'Hot-dip Galvanized and Black Carbon Steel (Self Color) Round & Rectangular Pipes, Seamless pipe, and ERW Pipe.',
     image: '/src/assets/images/seamless-steel-pipes.jpg',
     subcategories: [
-      'Round Pipe',
-      'Rectangular Pipe',
+      'Hot-dip Galvanized Round Pipe',
+      'Black Carbon Steel Round Pipe (Self Color)',
+      'Hot-dip Galvanized Rectangular Pipe',
+      'Black Carbon Steel Rectangular Pipe (Self Color)',
       'Seamless pipe',
       'ERW Pipe (Electro welded pipe)'
     ]
@@ -254,7 +258,7 @@ export const PRODUCTS = [
     "heroImage": "/src/assets/images/hr-steel-coils.jpg",
     "gallery": [
       "/src/assets/images/hr-steel-coils.jpg",
-      "/src/assets/images/galvanized-steel-coils.jpg"
+      "/src/assets/images/hr-steel-coils-detail.jpg"
     ],
     "specifications": [
       {
@@ -352,10 +356,9 @@ export const PRODUCTS = [
     "name": "Cold rolled coils (CCR)",
     "shortDescription": "Cold Rolled Carbon Steel Coils (CCR) in commercial and deep-drawing grades (SPCC, DC01) across 0.2\u20133.0 mm thicknesses.",
     "description": "Cold Rolled Coils (CCR) supplied by Tianjin Decent International Trade Co., Ltd. are flat-rolled steel products manufactured by cold reduction of hot-rolled pickled strip. Engineered for superior surface finish, uniform thickness tolerance, and exceptional ductility for stamping, bending, and roll forming.\n\nSupplied in annealed, temper-rolled condition with oiled or dry surface, with full Mill Test Certificates (MTC EN 10204 3.1) and seaworthy export packing.",
-    "heroImage": "/src/assets/images/galvanized-steel-coils.jpg",
+    "heroImage": "/src/assets/images/cold-rolled-steel-coils.jpg",
     "gallery": [
-      "/src/assets/images/galvanized-steel-coils.jpg",
-      "/src/assets/images/hr-steel-coils.jpg"
+      "/src/assets/images/cold-rolled-steel-coils.jpg"
     ],
     "specifications": [
       {
@@ -446,8 +449,7 @@ export const PRODUCTS = [
     "description": "Pre-galvanized steel coils supplied by Tianjin Decent International Trade Co., Ltd. are cold-formed/forming-grade steel flat products produced with a continuous hot-dip zinc coating. The material is engineered specifically for roll forming, bending, precision fabrication, and general structural engineering applications.\n\nPre-galvanized steel offers exceptional corrosion resistance because zinc has more reactive chemical properties than iron, preferentially reacting with atmospheric oxygen and water vapor to form a dense, durable zinc oxide passivation film. The service life of galvanized steel plates reaches 10 to 50 years, significantly outperforming ungalvanized plates while remaining highly cost-effective compared to stainless steel or specialized alloy metals.",
     "heroImage": "/src/assets/images/galvanized-steel-coils.jpg",
     "gallery": [
-      "/src/assets/images/galvanized-steel-coils.jpg",
-      "/src/assets/images/color-coated-coils.jpg"
+      "/src/assets/images/galvanized-steel-coils.jpg"
     ],
     "specifications": [
       {
@@ -542,8 +544,7 @@ export const PRODUCTS = [
     "description": "Color Coated Steel Coils (Pre-painted Galvanized & Galvalume Coils \u2014 PPGI / PPGL) from Tianjin Decent International Trade Co., Ltd. provide long-lasting surface protection, vibrant architectural aesthetics, and exceptional weatherability. Supplied with advanced organic paint coating systems on premium galvanized or alloy-coated steel substrates.\n\nAvailable in all international standard RAL colors, with finishes ranging from Matt and High-Gloss to Two-Side Color, Wrinkle texture, Wooden pattern, and Marble effect. Every shipment is supplied with a comprehensive Mill Test Certificate (MTC) confirming chemical composition, mechanical properties, metal thickness, zinc coating mass, paint film thickness, and heat/coil identification.",
     "heroImage": "/src/assets/images/color-coated-coils.jpg",
     "gallery": [
-      "/src/assets/images/color-coated-coils.jpg",
-      "/src/assets/images/galvanized-steel-coils.jpg"
+      "/src/assets/images/color-coated-coils.jpg"
     ],
     "specifications": [
       {
@@ -624,10 +625,23 @@ export const PRODUCTS = [
     "name": "H/I/U Beams & Channel",
     "shortDescription": "Heavy structural H-Beams, I-Beams, and U-Channels conforming to EN 10025 S235JR/S355JR, ASTM A36/A572, and JIS G3101.",
     "description": "Heavy structural H-Beams, I-Beams, and U-Channels supplied by Tianjin Decent International Trade Co., Ltd. are primary load-bearing profiles engineered for modern building frameworks, bridge girders, industrial workshops, and civil infrastructure.\n\nAvailable in standard wide flange, narrow flange, and channel geometries in standard 6 m and 12 m lengths, or precision cut-to-length as required.",
-    "heroImage": "/src/assets/images/structural-steel-profiles.jpg",
+    "heroImage": "/src/assets/images/h-beam.webp",
     "gallery": [
-      "/src/assets/images/structural-steel-profiles.jpg",
-      "/src/assets/images/seamless-steel-pipes.jpg"
+      {
+        "src": "/src/assets/images/h-beam.webp",
+        "title": "Structural Steel H-Beam (Wide Flange)",
+        "note": "Heavy structural H-Beams stacked in mill warehouse, manufactured to EN 10025 S235JR/S355JR and ASTM A36/A572 for load-bearing columns, bridge girders, and industrial frameworks."
+      },
+      {
+        "src": "/src/assets/images/i-beam.webp",
+        "title": "Structural Steel I-Beam (Narrow Flange)",
+        "note": "Hot-rolled standard structural I-Beams stacked in dispatch bay, engineered with tapered flanges conforming to EN 10025 and ASTM A36 for high bending moment resistance, roof purlins, and gantry supports."
+      },
+      {
+        "src": "/src/assets/images/u-channel.webp",
+        "title": "Structural Steel U-Channel (C-Section)",
+        "note": "Hot-rolled structural U-channels and C-sections stacked in mill yard, manufactured to EN 10025, EN 10279, and ASTM A36 for building purlins, wall framing, brackets, and equipment skids."
+      }
     ],
     "specifications": [
       {
@@ -684,7 +698,7 @@ export const PRODUCTS = [
     "relatedProducts": [
       "ipe-upn",
       "angle-bar",
-      "flut-bar"
+      "flat-bar"
     ]
   },
   {
@@ -695,9 +709,13 @@ export const PRODUCTS = [
     "name": "IPE / UPN",
     "shortDescription": "European standard IPE parallel flange I-beams (IPE 80\u2013600) and UPN tapered flange channels (UPN 50\u2013400) conforming to EN 10025.",
     "description": "European standard IPE parallel flange I-beams and UPN European channels supplied by Tianjin Decent International Trade Co., Ltd. Manufactured to precise Euronorm dimensional specifications.\n\nIPE profiles offer parallel inner and outer flange surfaces for simplified bolt connections, while UPN tapered channels provide high lateral stiffness for purlins, lintels, and equipment skids.",
-    "heroImage": "/src/assets/images/structural-steel-profiles.jpg",
+    "heroImage": "/src/assets/images/ipn-upn.webp",
     "gallery": [
-      "/src/assets/images/structural-steel-profiles.jpg"
+      {
+        "src": "/src/assets/images/ipn-upn.webp",
+        "title": "European Standard IPN Beams & UPN Channels",
+        "note": "European standard IPN tapered-flange I-beams and UPN European channels conforming to EN 10025, DIN 1025, and EN 10279 for structural framing, purlins, and industrial skids."
+      }
     ],
     "specifications": [
       {
@@ -754,7 +772,7 @@ export const PRODUCTS = [
     "relatedProducts": [
       "h-i-u-beams-channel",
       "angle-bar",
-      "flut-bar"
+      "flat-bar"
     ]
   },
   {
@@ -765,9 +783,13 @@ export const PRODUCTS = [
     "name": "Angle Bar",
     "shortDescription": "Hot-rolled equal and unequal structural angle bars (20\u00d720 mm to 200\u00d7200 mm) in ASTM A36, EN 10025 S275JR/S355JR, and JIS SS400.",
     "description": "Hot-rolled equal and unequal structural steel angle bars supplied by Tianjin Decent International Trade Co., Ltd. Angle bars are among the most versatile structural elements in engineering, providing essential rotational and diagonal bracing strength.\n\nManufactured with uniform leg thickness and sharp corner transitions, available in mill black, shot-blasted, or hot-dip galvanized condition.",
-    "heroImage": "/src/assets/images/structural-steel-profiles.jpg",
+    "heroImage": "/src/assets/images/angle-bar.webp",
     "gallery": [
-      "/src/assets/images/structural-steel-profiles.jpg"
+      {
+        "src": "/src/assets/images/angle-bar.webp",
+        "title": "Hot-Rolled Structural Steel Angle Bars (L-Profile)",
+        "note": "Equal and unequal structural angle bars stacked in warehouse bundles, manufactured to EN 10056, ASTM A36, and JIS G3101 for transmission towers, trusses, and structural bracing."
+      }
     ],
     "specifications": [
       {
@@ -835,9 +857,13 @@ export const PRODUCTS = [
     "name": "Square Bar",
     "shortDescription": "Hot-rolled and cold-drawn solid square steel bars across 10\u00d710 mm to 150\u00d7150 mm in carbon and alloy structural grades.",
     "description": "Solid square carbon and alloy steel bars supplied by Tianjin Decent International Trade Co., Ltd. Manufactured by hot rolling or precision cold drawing to deliver high rigidity, dimensional stability, and uniform metallurgical grain structure.\n\nEngineered for structural framing, machinery manufacturing, architectural grating, security grills, and precision machined mechanical components.",
-    "heroImage": "/src/assets/images/structural-steel-profiles.jpg",
+    "heroImage": "/src/assets/images/square-bar.webp",
     "gallery": [
-      "/src/assets/images/structural-steel-profiles.jpg"
+      {
+        "src": "/src/assets/images/square-bar.webp",
+        "title": "Solid Carbon & Alloy Steel Square Bars",
+        "note": "Hot-rolled and cold-drawn solid square steel bars stacked in strapping bundles, manufactured to EN 10059, ASTM A36, and ASTM A108 for structural framing, machinery manufacturing, and security grilles."
+      }
     ],
     "specifications": [
       {
@@ -893,7 +919,7 @@ export const PRODUCTS = [
     ],
     "relatedProducts": [
       "round-bar",
-      "flut-bar",
+      "flat-bar",
       "angle-bar"
     ]
   },
@@ -905,9 +931,13 @@ export const PRODUCTS = [
     "name": "Round Bar",
     "shortDescription": "Solid carbon and alloy structural round steel bars (\u00d8 10 mm to \u00d8 300 mm) for machining, construction, and forging.",
     "description": "Solid structural carbon and alloy round steel bars supplied by Tianjin Decent International Trade Co., Ltd. Produced via precision hot rolling, forging, or cold finishing with consistent concentricity and high surface integrity.\n\nWidely specified for machine shafts, foundation anchor bolts, pins, hydraulic cylinder rods, gears, and construction reinforcement.",
-    "heroImage": "/src/assets/images/structural-steel-profiles.jpg",
+    "heroImage": "/src/assets/images/round-bar.webp",
     "gallery": [
-      "/src/assets/images/structural-steel-profiles.jpg"
+      {
+        "src": "/src/assets/images/round-bar.webp",
+        "title": "Solid Carbon & Alloy Steel Round Bars",
+        "note": "Precision hot-rolled and cold-drawn solid round steel bars bundled in mill storage, manufactured to EN 10060, ASTM A29, and JIS G4051 for precision machining, anchor bolts, and forged shafts."
+      }
     ],
     "specifications": [
       {
@@ -963,21 +993,25 @@ export const PRODUCTS = [
     ],
     "relatedProducts": [
       "square-bar",
-      "flut-bar",
+      "flat-bar",
       "angle-bar"
     ]
   },
   {
-    "slug": "flut-bar",
+    "slug": "flat-bar",
     "category": "steel-section-profile",
     "categoryName": "Steel section/profile",
-    "subcategory": "Flut Bar",
-    "name": "Flut Bar",
+    "subcategory": "Flat Bar",
+    "name": "Flat Bar",
     "shortDescription": "Flat structural steel bars and plates across 3\u201360 mm thicknesses and 15\u2013200 mm widths for construction, gussets, and fabrication.",
-    "description": "Flat steel bars and strips (Flut Bar) supplied by Tianjin Decent International Trade Co., Ltd. Manufactured from high-tensile carbon steel featuring clean, square rolled edges and uniform thickness across the entire width.\n\nEssential for structural base plates, column stiffeners, gusset plates, architectural brackets, machine frames, and general metal fabrication.",
-    "heroImage": "/src/assets/images/structural-steel-profiles.jpg",
+    "description": "Flat steel bars and strips (Flat Bar) supplied by Tianjin Decent International Trade Co., Ltd. Manufactured from high-tensile carbon steel featuring clean, square rolled edges and uniform thickness across the entire width.\n\nEssential for structural base plates, column stiffeners, gusset plates, architectural brackets, machine frames, and general metal fabrication.",
+    "heroImage": "/src/assets/images/flat-bar.webp",
     "gallery": [
-      "/src/assets/images/structural-steel-profiles.jpg"
+      {
+        "src": "/src/assets/images/flat-bar.webp",
+        "title": "Hot-Rolled Structural Steel Flat Bars & Strips",
+        "note": "Flat steel bars and plates bundled in dispatch bay, engineered to EN 10058, ASTM A36, and JIS G3101 for structural base plates, gussets, machinery brackets, and fabricated frameworks."
+      }
     ],
     "specifications": [
       {
@@ -1040,14 +1074,31 @@ export const PRODUCTS = [
   {
     "slug": "hot-dip-galvanized-steel-pipe",
     "category": "steel-pipe-tube",
-    "name": "Hot-Dip Galvanized Steel Pipe",
+    "name": "Hot-dip Galvanized Round Pipe",
     "shortDescription": "DN15\u2013DN300 hot-dip galvanized round steel pipes for low-pressure fluid transportation, gas, water, fire protection, and structural framing.",
     "description": "Hot-dip galvanized steel pipe supplied by Tianjin Decent International Trade Co., Ltd. is produced by immersing cleaned carbon steel pipe into a high-temperature molten zinc bath (approx. 450\u00b0C), creating a dense, metallurgically bonded zinc-iron alloy barrier with a pure zinc outer layer.\n\nEngineered for exceptional corrosion resistance, superior impact resistance, and extended service life even in humid, coastal, or mildly corrosive atmospheric conditions. Available in standard lengths of 5.8 m, 6.0 m, 11.8 m, and 12.0 m with threaded & coupled, grooved, or plain ends.",
-    "heroImage": "/src/assets/images/hot-dip-galvanized-steel-pipe.jpg",
+    "heroImage": "/src/assets/images/hot-dip-galvanized-steel-pipe.webp",
     "gallery": [
-      "/src/assets/images/hot-dip-galvanized-steel-pipe.jpg",
-      "/src/assets/images/straight-seam-welded-steel-pipe.jpg",
-      "/src/assets/images/galvanized-seamless-steel-pipe.jpg"
+      {
+        "src": "/src/assets/images/hot-dip-galvanized-steel-pipe.webp",
+        "title": "Hot-dip Galvanized Round Steel Pipe Bundles",
+        "note": "Hexagonal bundled hot-dip galvanized round steel pipes fitted with yellow protective end caps, engineered to ASTM A53, BS 1387, and GB/T 3091 for low-pressure fluid transportation, gas lines, fire protection, and structural framing."
+      },
+      {
+        "src": "/src/assets/images/hot-dip-galvanized-steel-pipe-bundles.webp",
+        "title": "High-Density Warehouse Stacks with Color-Coded Strapping",
+        "note": "Export packaging with heavy-duty color-coded steel straps and protective end caps, stored in modern logistics bay ready for containerized global shipping."
+      },
+      {
+        "src": "/src/assets/images/hot-dip-galvanized-steel-pipe-plant.webp",
+        "title": "Factory Production Line & Precision Hexagonal Stacking",
+        "note": "Precision aligned hexagonal tube packages secured with reinforced tension bands on factory staging lanes for rapid quality inspection and transport dispatch."
+      },
+      {
+        "src": "/src/assets/images/hot-dip-galvanized-steel-pipe-outdoor.webp",
+        "title": "Outdoor Yard Staging & Open-Air Weather Resistance",
+        "note": "Open-air terminal staging showcasing dense hot-dip galvanized metallurgical coating providing superior atmospheric corrosion resistance and clean tube ends."
+      }
     ],
     "specifications": [
       {
@@ -1126,7 +1177,106 @@ export const PRODUCTS = [
       "plastic-coated-composite-steel-pipe"
     ],
     "categoryName": "Steel pipe/tube",
-    "subcategory": "Round Pipe"
+    "subcategory": "Hot-dip Galvanized Round Pipe"
+  },
+  {
+    "slug": "black-carbon-steel-round-pipe",
+    "category": "steel-pipe-tube",
+    "categoryName": "Steel pipe/tube",
+    "subcategory": "Black Carbon Steel Round Pipe (Self Color)",
+    "name": "Black Carbon Steel Round Pipe (Self Color)",
+    "shortDescription": "DN15–DN300 black carbon steel round pipes (Self Color / bare mill finish) for low-pressure fluid transportation, gas, water, fire protection, and structural framing.",
+    "description": "Black carbon steel round pipe (Self Color) supplied by Tianjin Decent International Trade Co., Ltd. is produced from premium hot-rolled carbon steel strip formed into high-integrity cylindrical pipe with bare mill finish (Self Color) or protective light oiling.\n\nEngineered for exceptional mechanical strength, superior weldability, and versatile fabrication for low-pressure fluid conveyance, gas, heating, mechanical structures, and general engineering. Available in standard lengths of 5.8 m, 6.0 m, 11.8 m, and 12.0 m with plain ends, beveled ends, threaded & coupled, or roll grooved.",
+    "heroImage": "/src/assets/images/black-carbon-steel-round-pipe-bundles.webp?v=2",
+    "gallery": [
+      {
+        "src": "/src/assets/images/black-carbon-steel-round-pipe-bundles.webp?v=2",
+        "title": "Warehouse Hexagonal Stacks in Self Color Bare Finish",
+        "note": "Precision bundled bare carbon steel round pipes in multi-tier warehouse storage racks, demonstrating uniform wall thicknesses and clean square-cut ends ready for immediate fabrication."
+      },
+      {
+        "src": "/src/assets/images/black-carbon-steel-round-pipe.webp?v=2",
+        "title": "Black Carbon Steel Round Pipe (Self Color) Bundling Line",
+        "note": "Automated plant packaging line showing bundled black carbon steel round pipes in bare mill finish (Self Color) secured with heavy-duty tension steel straps, ready for warehouse storage and containerized delivery."
+      },
+      {
+        "src": "/src/assets/images/black-carbon-steel-round-pipe-crane.webp?v=2",
+        "title": "Overhead Gantry Crane Handling & Bundle Staging",
+        "note": "Precision overhead crane hoist transferring multiple hexagonal strapped carbon steel tube bundles across automated discharge conveyor tables."
+      }
+    ],
+    "specifications": [
+      {
+        "label": "Specifications",
+        "value": "DN15–DN300 (Outer Diameter: 21.3–323.9 mm)"
+      },
+      {
+        "label": "Uses & Applications",
+        "value": "Widely used in water, gas, air, oil and steam and other low-pressure fluid transportation and mechanical structure"
+      },
+      {
+        "label": "Wall Thickness",
+        "value": "2.0–12.0 mm (Sch 10, Sch 20, Sch 40 / STD)"
+      },
+      {
+        "label": "Applicable Standards",
+        "value": "ASTM A53 (Gr. A/B), BS 1387, EN 10255, GB/T 3091, JIS G3452"
+      },
+      {
+        "label": "Steel Grades",
+        "value": "Q195, Q215, Q235B, Q345B, Grade A, Grade B"
+      },
+      {
+        "label": "End Treatments",
+        "value": "Plain end, Threaded with couplings/sockets (BSPT/NPT), Roll Grooved for fire protection"
+      },
+      {
+        "label": "Length Range",
+        "value": "5.8 m, 6.0 m, 11.8 m, 12.0 m (custom fixed lengths on request)"
+      },
+      {
+        "label": "Quality Verification",
+        "value": "100% Hydrostatic testing (up to 5.0 MPa), Eddy current NDT, Mill Test Certificate (EN 10204 3.1)"
+      },
+      {
+        "label": "Packaging",
+        "value": "Hexagonal bundles strapped with steel bands, plastic end protection caps fitted"
+      }
+    ],
+    "features": [
+      "Comprehensive diameter coverage from DN15 (1/2\") up to DN300 (12\")",
+      "Self Color (bare mill finish) or lightly oiled surface optimal for welding and fabrication",
+      "High internal cleanliness suitable for municipal drinking water, air, and fire sprinkler systems",
+      "Flexible end terminations: plain beveled ends, threaded with matching malleable iron couplings, or roll grooved",
+      "Full mill test certification documenting chemical composition and hydrostatic test verification",
+      "Cost-effective carbon steel alternative for water, air, HVAC, gas distribution, and PEB structural columns"
+    ],
+    "applications": [
+      "Municipal water supply, HVAC chilled water, and heating circuit lines",
+      "Low-pressure natural gas, coal gas, and liquefied petroleum gas piping",
+      "Automatic fire sprinkler networks and fire protection standpipes",
+      "Agricultural greenhouse framing, irrigation tubing, and fence posts",
+      "Mechanical structural columns, handrails, scaffolding, and canopy frames"
+    ],
+    "standards": [
+      {
+        "name": "ASTM A53 / A53M",
+        "description": "Standard Specification for Pipe, Steel, Black and Hot-Dipped, Zinc-Coated, Welded and Seamless"
+      },
+      {
+        "name": "BS 1387 / EN 10255",
+        "description": "Non-alloy steel tubes suitable for welding and threading"
+      },
+      {
+        "name": "GB/T 3091",
+        "description": "Welded steel pipes for low pressure fluid delivery"
+      }
+    ],
+    "relatedProducts": [
+      "hot-dip-galvanized-steel-pipe",
+      "black-carbon-steel-square-rectangular-pipe",
+      "straight-seam-welded-steel-pipe"
+    ]
   },
   {
     "slug": "spiral-submerged-arc-welded-steel-pipe",
@@ -1311,14 +1461,21 @@ export const PRODUCTS = [
   {
     "slug": "hot-dip-galvanized-square-rectangular-pipe",
     "category": "steel-pipe-tube",
-    "name": "Hot-Dip Galvanized Square & Rectangular Pipe (SHS / RHS)",
+    "name": "Hot-dip Galvanized Rectangular Pipe",
     "shortDescription": "25x25mm\u2013200x200mm square and 25x50mm\u2013150x200mm rectangular hot-dip galvanized hollow sections for curtain walls, solar PV brackets, and vehicle chassis.",
     "description": "Hot-dip galvanized square and rectangular steel pipe (SHS / RHS) from Tianjin Decent International Trade Co., Ltd. is manufactured by immersing cold-formed square and rectangular structural hollow sections into a molten zinc bath after rigorous degreasing and pickling pre-treatments.\n\nThe resulting metallurgical zinc-iron alloy layer adheres firmly to the outer and inner surfaces of the tube, providing robust defense against oxygen, acid/alkali moisture, and atmospheric salt spray. Widely utilized in architectural curtain walls, photovoltaic solar ground racking, and commercial steel frameworks.",
-    "heroImage": "/src/assets/images/hot-dip-galvanized-square-rectangular-pipe.jpg",
+    "heroImage": "/src/assets/images/hot-dip-galvanized-square-rectangular-pipe.webp",
     "gallery": [
-      "/src/assets/images/hot-dip-galvanized-square-rectangular-pipe.jpg",
-      "/src/assets/images/square-rectangular-welded-steel-pipe.jpg",
-      "/src/assets/images/structural-steel-profiles.jpg"
+      {
+        "src": "/src/assets/images/hot-dip-galvanized-square-rectangular-pipe.webp",
+        "title": "Hot-dip Galvanized Rectangular & Square Pipe Bundles",
+        "note": "Multi-tier factory bundles of hot-dip galvanized rectangular and square hollow structural tubing secured with heavy-duty color-coded lifting slings for crane loading."
+      },
+      {
+        "src": "/src/assets/images/hot-dip-galvanized-square-rectangular-pipe-racks.webp",
+        "title": "High-Bay Warehouse Cantilever Racks & Precision Sections",
+        "note": "Industrial high-bay warehouse racking system storing precision cold-formed hot-dip galvanized rectangular hollow sections ready for global container dispatch."
+      }
     ],
     "specifications": [
       {
@@ -1396,28 +1553,40 @@ export const PRODUCTS = [
       "structural-steel-profiles"
     ],
     "categoryName": "Steel pipe/tube",
-    "subcategory": "Rectangular Pipe"
+    "subcategory": "Hot-dip Galvanized Rectangular Pipe"
   },
   {
-    "slug": "square-rectangular-welded-steel-pipe",
+    "slug": "black-carbon-steel-square-rectangular-pipe",
     "category": "steel-pipe-tube",
-    "name": "Square & Rectangular Welded Steel Pipe",
-    "shortDescription": "25x25mm\u2013400x400mm square and 25x40mm\u2013300x500mm rectangular welded steel hollow sections for steel structures, cranes, machine frames, and PEB buildings.",
-    "description": "Square rectangular welded steel pipe (SHS / RHS) from Tianjin Decent International Trade Co., Ltd. is produced by cold-forming continuous high-grade carbon steel strip into rectangular or square cross-sections, securely fusing the seam with high-frequency resistance welding.\n\nDelivers high strength-to-weight ratio, crisp 90-degree corner radii, flat mating faces, and high torsional resistance. Readily cut, drilled, punched, and welded for modern architectural structural steelwork, heavy crane jibs, and equipment frameworks.",
-    "heroImage": "/src/assets/images/square-rectangular-welded-steel-pipe.jpg",
+    "name": "Black Carbon Steel Rectangular Pipe (Self Color)",
+    "shortDescription": "25x25mm–400x400mm square and 25x40mm–300x500mm rectangular black carbon steel hollow sections (Self Color / bare mill) for steel structures, cranes, machine frames, and PEB buildings.",
+    "description": "Black carbon steel square and rectangular steel pipe (SHS / RHS, Self Color) from Tianjin Decent International Trade Co., Ltd. is produced by cold-forming continuous high-grade carbon steel strip into rectangular or square cross-sections with bare mill finish (Self Color) or protective light oiling.\n\nDelivers high strength-to-weight ratio, crisp 90-degree corner radii, flat mating faces, and high torsional resistance. Readily cut, drilled, punched, and welded for modern architectural structural steelwork, heavy crane jibs, and equipment frameworks.",
+    "heroImage": "/src/assets/images/black-carbon-steel-square-rectangular-pipe.webp",
     "gallery": [
-      "/src/assets/images/square-rectangular-welded-steel-pipe.jpg",
-      "/src/assets/images/hot-dip-galvanized-square-rectangular-pipe.jpg",
-      "/src/assets/images/structural-steel-profiles.jpg"
+      {
+        "src": "/src/assets/images/black-carbon-steel-square-rectangular-pipe.webp",
+        "title": "Black Carbon Steel Rectangular & Square Pipe Stacks",
+        "note": "Multi-tier strapped packages of black carbon steel rectangular and square hollow sections in bare mill Self Color finish on plant transport skids."
+      },
+      {
+        "src": "/src/assets/images/black-carbon-steel-square-rectangular-pipe-stacks.webp",
+        "title": "Precision Structural Hollow Sections High-Density Storage",
+        "note": "High-density warehouse storage array of square and rectangular hollow structural steel tubing featuring sharp 90-degree corner radii and uniform wall thicknesses."
+      },
+      {
+        "src": "/src/assets/images/black-carbon-steel-square-rectangular-pipe-storage.webp",
+        "title": "Heavy-Duty Cantilever Racking & Tube Logistics Bay",
+        "note": "Reinforced structural storage racking supporting heavy bundles of black carbon steel hollow sections ready for container loading and ocean shipment."
+      }
     ],
     "specifications": [
       {
         "label": "Square Specifications",
-        "value": "25x25 mm \u2013 400x400 mm"
+        "value": "25x25 mm – 400x400 mm"
       },
       {
         "label": "Rectangular Specifications",
-        "value": "25x40 mm \u2013 300x500 mm"
+        "value": "25x40 mm – 300x500 mm"
       },
       {
         "label": "Uses & Applications",
@@ -1425,7 +1594,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Wall Thickness",
-        "value": "1.2\u201316.0 mm"
+        "value": "1.2–16.0 mm"
       },
       {
         "label": "Steel Grades",
@@ -1437,7 +1606,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Surface Finish",
-        "value": "Bare black mill finish, Lightly oiled, Anti-rust red oxide primer, or Pre-galvanized"
+        "value": "Self Color (Bare black mill finish), Lightly oiled, or Anti-rust red oxide primer"
       },
       {
         "label": "Length Range",
@@ -1454,6 +1623,7 @@ export const PRODUCTS = [
     ],
     "features": [
       "Extensive dimensional scope: Square up to 400x400 mm and Rectangular up to 300x500 mm",
+      "Self Color (bare mill finish) or lightly oiled surface ready for custom fabrication and welding",
       "Flat geometric faces allow fast, economical bolted and welded connections",
       "Superior column strength with uniform radius of gyration compared to open I/H profiles",
       "Internal hollow section can be filled with concrete for high-capacity composite fireproof columns",
@@ -1482,11 +1652,11 @@ export const PRODUCTS = [
     ],
     "relatedProducts": [
       "hot-dip-galvanized-square-rectangular-pipe",
-      "straight-seam-welded-steel-pipe",
-      "structural-steel-profiles"
+      "black-carbon-steel-round-pipe",
+      "hot-dip-galvanized-steel-pipe"
     ],
     "categoryName": "Steel pipe/tube",
-    "subcategory": "Rectangular Pipe"
+    "subcategory": "Black Carbon Steel Rectangular Pipe (Self Color)"
   },
   {
     "slug": "seamless-steel-pipes",
@@ -3942,6 +4112,24 @@ export function getProductBySlug(slug) {
   if (slug === 'structural-steel-profiles') {
     return PRODUCTS.find(p => p.slug === 'h-i-u-beams-channel') || PRODUCTS[0];
   }
+  if (slug === 'flut-bar') {
+    return PRODUCTS.find(p => p.slug === 'flat-bar') || PRODUCTS.find(p => p.slug === 'flut-bar');
+  }
+  if (slug === 'ipn-upn' || slug === 'ipn') {
+    return PRODUCTS.find(p => p.slug === 'ipe-upn');
+  }
+  if (slug === 'round-pipe') {
+    return PRODUCTS.find(p => p.slug === 'hot-dip-galvanized-steel-pipe');
+  }
+  if (slug === 'rectangular-pipe') {
+    return PRODUCTS.find(p => p.slug === 'hot-dip-galvanized-square-rectangular-pipe');
+  }
+  if (slug === 'square-rectangular-welded-steel-pipe') {
+    return PRODUCTS.find(p => p.slug === 'black-carbon-steel-square-rectangular-pipe');
+  }
+  if (slug === 'black-round-pipe') {
+    return PRODUCTS.find(p => p.slug === 'black-carbon-steel-round-pipe');
+  }
   return PRODUCTS.find(p => p.slug === slug);
 }
 
@@ -3976,11 +4164,19 @@ export function getAllCategories() {
 
 export const YFGG_PIPE_PRODUCTS = [
   {
-    name: 'Hot dip galvanized steel pipe',
+    name: 'Hot-dip Galvanized Round Pipe',
     slug: 'hot-dip-galvanized-steel-pipe',
     specification: 'DN15-DN300',
     uses: 'Widely used in water, gas, air, oil and steam and other low-pressure fluid transportation and mechanical structure',
     image: '/src/assets/images/hot-dip-galvanized-steel-pipe.jpg',
+    checked: true,
+  },
+  {
+    name: 'Black Carbon Steel Round Pipe (Self Color)',
+    slug: 'black-carbon-steel-round-pipe',
+    specification: 'DN15-DN300',
+    uses: 'Widely used in water, gas, air, oil and steam and other low-pressure fluid transportation and mechanical structure',
+    image: '/src/assets/images/black-carbon-steel-round-pipe-bundles.webp?v=2',
     checked: true,
   },
   {
@@ -4032,19 +4228,19 @@ export const YFGG_PIPE_PRODUCTS = [
     checked: true,
   },
   {
-    name: 'Hot dip galvanized square rectangular pipe',
+    name: 'Hot-dip Galvanized Rectangular Pipe',
     slug: 'hot-dip-galvanized-square-rectangular-pipe',
     specification: '25x25mm-200x200mm, 25x50mm-150x200mm',
     uses: 'Widely used in curtain wall, construction, machinery manufacturing, shipbuilding, photovoltaic support, steel structure engineering, automobile chassis',
-    image: '/src/assets/images/hot-dip-galvanized-square-rectangular-pipe.jpg',
+    image: '/src/assets/images/hot-dip-galvanized-square-rectangular-pipe.webp',
     checked: true,
   },
   {
-    name: 'Square rectangular welded steel pipe',
-    slug: 'square-rectangular-welded-steel-pipe',
+    name: 'Black Carbon Steel Rectangular Pipe (Self Color)',
+    slug: 'black-carbon-steel-square-rectangular-pipe',
     specification: '25x25mm-400x400mm, 25x40mm-300x500mm',
     uses: 'Widely used in steel structure construction, machinery manufacturing, construction engineering, automobile manufacturing, shipbuilding, electric power',
-    image: '/src/assets/images/square-rectangular-welded-steel-pipe.jpg',
+    image: '/src/assets/images/black-carbon-steel-square-rectangular-pipe.webp',
     checked: true,
   },
   {
