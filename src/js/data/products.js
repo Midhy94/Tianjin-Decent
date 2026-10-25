@@ -63,8 +63,8 @@ export const PRODUCT_HIERARCHY_LIST = [
       'Black Carbon Steel Round Pipe (Self Color)',
       'Hot-dip Galvanized Rectangular Pipe',
       'Black Carbon Steel Rectangular Pipe (Self Color)',
-      'Seamless pipe',
-      'ERW Pipe (Electro welded pipe)'
+      'Seamless Pipes'
+      // 'ERW Pipe (Electro welded pipe)' // Temporarily hidden from menu
     ]
   },
   {
@@ -155,15 +155,15 @@ export const CATEGORY_META = {
     id: 'steel-pipe-tube',
     label: 'Steel pipe/tube',
     shortLabel: 'Steel pipe/tube',
-    description: 'Hot-dip Galvanized and Black Carbon Steel (Self Color) Round & Rectangular Pipes, Seamless pipe, and ERW Pipe.',
-    image: '/src/assets/images/seamless-steel-pipes.jpg',
+    description: 'Hot-dip Galvanized and Black Carbon Steel (Self Color) Round & Rectangular Pipes, Seamless Pipes, and ERW Pipe.',
+    image: '/src/assets/images/seamless-steel-pipes.webp',
     subcategories: [
       'Hot-dip Galvanized Round Pipe',
       'Black Carbon Steel Round Pipe (Self Color)',
       'Hot-dip Galvanized Rectangular Pipe',
       'Black Carbon Steel Rectangular Pipe (Self Color)',
-      'Seamless pipe',
-      'ERW Pipe (Electro welded pipe)'
+      'Seamless Pipes'
+      // 'ERW Pipe (Electro welded pipe)' // Temporarily hidden from menu
     ]
   },
   'scaffolding-accessories': {
@@ -1661,13 +1661,26 @@ export const PRODUCTS = [
   {
     "slug": "seamless-steel-pipes",
     "category": "steel-pipe-tube",
-    "name": "Seamless Industrial Steel Pipes",
+    "name": "Seamless Pipes",
     "shortDescription": "Heavy-wall and standard API/GB seamless steel pipes for fluid, gas, oil transmission, boiler tubes, and structural columns.",
-    "description": "Seamless industrial steel pipes supplied by Tianjin Decent International Trade Co., Ltd. are manufactured without welded seams for high pressure containment, uniform circumferential strength, and dependable structural durability. Conforming to rigorous API and GB standards for fluid, gas, and oil transport as well as heavy civil structural columns.\n\nAvailable in standard lengths of 6 m, 6.4 m, and 12 m with wall thickness ratings from Schedule 40 (sch40) up to Schedule 120 (sch120). Surface options include hot-rolled black finish or anti-corrosion black galvanized coating with beveled or plain ends fitted with protective end caps.",
-    "heroImage": "/src/assets/images/seamless-steel-pipes.jpg",
+    "description": "Seamless pipes supplied by Tianjin Decent International Trade Co., Ltd. are manufactured without welded seams for high pressure containment, uniform circumferential strength, and dependable structural durability. Conforming to rigorous API and GB standards for fluid, gas, and oil transport as well as heavy civil structural columns.\n\nAvailable in standard lengths of 6 m, 6.4 m, and 12 m with wall thickness ratings from Schedule 40 (sch40) up to Schedule 120 (sch120). Surface options include hot-rolled black finish or anti-corrosion black galvanized coating with beveled or plain ends fitted with protective end caps.",
+    "heroImage": "/src/assets/images/seamless-steel-pipes.webp",
     "gallery": [
-      "/src/assets/images/seamless-steel-pipes.jpg",
-      "/src/assets/images/structural-steel-profiles.jpg"
+      {
+        "src": "/src/assets/images/seamless-steel-pipes.webp",
+        "title": "Heavy-Wall Seamless Steel Pipes in Warehouse Staging",
+        "note": "Precision heavy-wall seamless carbon steel pipes engineered for high-pressure fluid conveyance, boiler pipelines, and structural applications with clean square-cut ends and heavy strapping."
+      },
+      {
+        "src": "/src/assets/images/seamless-steel-pipes-bundles.webp",
+        "title": "Precision Bundled Seamless Pipes with Blue Protective End Caps",
+        "note": "High-density cantilever warehouse storage of export-grade black seamless steel pipes fitted with durable blue protective end caps and heavy-duty strapping."
+      },
+      {
+        "src": "/src/assets/images/seamless-steel-pipes-plant.webp",
+        "title": "Factory Logistics Bay & Pipe Elbow Fittings",
+        "note": "Large-diameter seamless carbon steel pipelines stacked with protective end closures alongside matching forged pipe bends and elbows ready for global industrial delivery."
+      }
     ],
     "specifications": [
       {
@@ -1746,7 +1759,7 @@ export const PRODUCTS = [
       "scaffold-tube-48"
     ],
     "categoryName": "Steel pipe/tube",
-    "subcategory": "Seamless pipe"
+    "subcategory": "Seamless Pipes"
   },
   {
     "slug": "galvanized-seamless-steel-pipe",
@@ -1836,7 +1849,7 @@ export const PRODUCTS = [
       "spiral-submerged-arc-welded-steel-pipe"
     ],
     "categoryName": "Steel pipe/tube",
-    "subcategory": "Seamless pipe"
+    "subcategory": "Seamless Pipes"
   },
   {
     "slug": "welded-erw-steel-pipes",
@@ -2033,8 +2046,18 @@ export const PRODUCTS = [
     "name": "Ring Lock Scaffolding",
     "shortDescription": "Modular steel scaffolding system featuring 8-hole rosette ring connections and captive wedge locking pins for multi-directional access and complex structures.",
     "description": "Ring Lock / Pin Lock scaffolding is a modular steel scaffolding system used for access, working platforms, shoring support, and temporary structures in construction and industrial projects worldwide.\n\nEngineered with vertical standards fitted with 8-hole rosette/ring connection plates at 500 mm intervals and cast ledger ends with captive wedge locking pins. The rosette features 8 connection points (4 small holes for 90° right angles and 4 large holes for variable diagonal bracing angles), offering unlimited flexibility for curved structures, tanks, complex industrial geometry, and heavy falsework.",
-    "heroImage": "/src/assets/images/ringlock-rosette-node-base-collar.jpg",
+    "heroImage": "/src/assets/images/ringlock-scaffolding.jpg",
     "gallery": [
+      {
+        "src": "/src/assets/images/ringlock-scaffolding.jpg",
+        "title": "Ring Lock Modular Scaffolding System",
+        "note": "Complete heavy-duty modular Ring Lock scaffolding configuration showing multi-directional rosette standards, horizontal ledgers, diagonal braces, and integrated access decks for industrial and commercial structures."
+      },
+      {
+        "src": "/src/assets/images/hero-scaffolding.jpg",
+        "title": "Industrial Facade & Refinery Modular Matrix",
+        "note": "Multi-tier heavy access and shoring scaffold installation demonstrating high load-bearing capacity, rigid node stability, and adaptability to complex industrial architectural geometries."
+      },
       {
         "src": "/src/assets/images/ringlock-rosette-node-base-collar.jpg",
         "title": "Ring Lock Rosette Locking Node & Base Collar Assembly",
@@ -2059,16 +2082,6 @@ export const PRODUCTS = [
         "src": "/src/assets/images/ringlock-diagonal-brace.jpg",
         "title": "Ring Lock Diagonal (Triangulation Bracing Member)",
         "note": "High-tensile tubular diagonal brace with forged pivot rivet and cast swivel wedge clamp head designed to lock into the large rosette ring apertures, ensuring complete lateral stability and sway resistance under severe wind and dynamic loads."
-      },
-      {
-        "src": "/src/assets/images/ringlock-scaffolding.jpg",
-        "title": "Ring Lock Modular Scaffolding System",
-        "note": "Complete heavy-duty modular Ring Lock scaffolding configuration showing multi-directional rosette standards, horizontal ledgers, diagonal braces, and integrated access decks for industrial and commercial structures."
-      },
-      {
-        "src": "/src/assets/images/hero-scaffolding.jpg",
-        "title": "Industrial Facade & Refinery Modular Matrix",
-        "note": "Multi-tier heavy access and shoring scaffold installation demonstrating high load-bearing capacity, rigid node stability, and adaptability to complex industrial architectural geometries."
       },
       {
         "src": "/src/assets/images/scaffold-base-jack.jpg",
@@ -2259,6 +2272,11 @@ export const PRODUCTS = [
         "note": "Multi-tier Cuplock grid configuration with high-capacity vertical standards and U-head screw jacks supporting primary timber formwork beams for concrete slab construction."
       },
       {
+        "src": "/src/assets/images/cuplock-assembly-guide.jpg",
+        "title": "4-Step Erection & Node Locking Sequence",
+        "note": "Fast 4-step assembly: (1) Slide top cup up; (2) Insert up to 4 forged ledger blades into bottom cup; (3) Lower top cup over blades; (4) Secure captive wedge tight with a hammer blow for rigid, bolt-free locking."
+      },
+      {
         "src": "/src/assets/images/cuplock-modular-bay-structure.jpg",
         "title": "Assembled Modular 4-Leg Cuplock Bay Tower",
         "note": "Free-standing 4-leg Cuplock scaffolding bay assembly showing adjustable base screw jacks, vertical standard posts with welded cup nodes at 500 mm spacing, horizontal perimeter ledgers, and top spigot connections."
@@ -2297,11 +2315,6 @@ export const PRODUCTS = [
         "src": "/src/assets/images/cuplock-locking-node-closeup.jpg",
         "title": "Cuplock Node Precision Macro Close-Up",
         "note": "Precision manufactured 4-way Cuplock locking node showing ductile cast iron top cup, drop-forged ledger blade ends seated into bottom cup, and continuous circumferential seam welds."
-      },
-      {
-        "src": "/src/assets/images/cuplock-assembly-guide.jpg",
-        "title": "4-Step Erection & Node Locking Sequence",
-        "note": "Fast 4-step assembly: (1) Slide top cup up; (2) Insert up to 4 forged ledger blades into bottom cup; (3) Lower top cup over blades; (4) Secure captive wedge tight with a hammer blow for rigid, bolt-free locking."
       },
       {
         "src": "/src/assets/images/cuplock-component-breakdown.png",
@@ -2494,10 +2507,53 @@ export const PRODUCTS = [
     "name": "Kwikstage",
     "shortDescription": "Heavy-duty modular system scaffolding featuring captive wedge cluster connections and 48.3 mm high-yield standards.",
     "description": "Kwikstage is an established modular system scaffolding widely utilized in construction, industrial maintenance, and commercial access. Characterized by vertical standards with pressed steel 'V' pressings welded at 495 mm intervals and captive wedge fixing pins on ledgers and transoms.\n\nProviding rigid, self-aligning 90-degree orthogonal connections without loose fittings or threaded couplers. Fully compatible with non-slip steel planks, staircase towers, and heavy shoring applications.",
-    "heroImage": "/src/assets/images/cuplock-scaffolding-setup.jpg",
+    "heroImage": "/src/assets/images/kwikstage-stair-tower-assembly.jpg",
     "gallery": [
-      "/src/assets/images/cuplock-scaffolding-setup.jpg",
-      "/src/assets/images/ringlock-scaffolding.jpg"
+      {
+        "src": "/src/assets/images/kwikstage-stair-tower-assembly.jpg",
+        "title": "Kwikstage Modular Stair Access Tower Configuration",
+        "note": "Complete modular Kwikstage access tower configuration equipped with non-slip aluminum stairways, internal guardrail handrails, steel working platforms, and adjustable screw base jacks."
+      },
+      {
+        "src": "/src/assets/images/kwikstage-galvanized-standards.jpg",
+        "title": "Hot-Dip Galvanized Kwikstage Standards Factory Stillage Bundles",
+        "note": "Precision-manufactured vertical standards with welded 'V' pressings at 495 mm intervals in heavy factory stillage bundles, hot-dip galvanized to AS/NZS 1576."
+      },
+      {
+        "src": "/src/assets/images/kwikstage-4way-node-connection.jpg",
+        "title": "4-Way Modular Node Connection & Spigot Footing",
+        "note": "Precision 4-way 90-degree orthogonal node connection demonstrating galvanized standards with welded 'V' pressings, ledgers, and transoms secured by captive wedge locking pins."
+      },
+      {
+        "src": "/src/assets/images/kwikstage-base-jack-node.jpg",
+        "title": "Adjustable Leveling Base Screw Jack & Standard Foundation Node",
+        "note": "Heavy-duty Acme threaded leveling base screw jack supporting Kwikstage vertical standard post and lowest horizontal ledger tier on concrete ground footing."
+      },
+      {
+        "src": "/src/assets/images/kwikstage-painted-red-matrix.jpg",
+        "title": "Painted Kwikstage Modular Scaffolding Bay Matrix",
+        "note": "Industrial painted red Kwikstage scaffolding installation showing standards with welded 'V' pressings, horizontal ledgers, transoms, and steel decking boards."
+      },
+      {
+        "src": "/src/assets/images/kwikstage-system-components.jpg",
+        "title": "Kwikstage Modular System Architecture & Components",
+        "note": "Complete modular configuration overview: Standard, Jack Base, U-Head, Aluminium Stairway, Ledger, Transom, Toeboard Bracket, Platform Bracket, Diagonal Brace, Tie Bar, and Platform Support Bracket."
+      },
+      {
+        "src": "/src/assets/images/kwikstage-horizontal-ledgers.jpg",
+        "title": "Kwikstage Horizontal Ledgers Modular Range",
+        "note": "High-yield tubular steel ledgers (48.3 mm OD × 3.2 mm) featuring captive drop-forged wedge fixing blade ends across modular lengths from 0.5 m to 3.0 m."
+      },
+      {
+        "src": "/src/assets/images/kwikstage-wedge-lock-detail.jpg",
+        "title": "Captive Drop-Forged Wedge Node Connection Detail",
+        "note": "Heavy-duty drop-forged captive wedge pin welded to ledger ends, engineered to lock securely into vertical standard 'V' pressings with a single hammer blow for rigid orthogonal framing."
+      },
+      {
+        "src": "/src/assets/images/kwikstage-painted-bundles.jpg",
+        "title": "High-Visibility Powder-Coated Kwikstage Factory Bundles",
+        "note": "Durable high-adhesion safety-yellow powder-coated Kwikstage scaffolding standards in export strapped bundles ready for container shipment."
+      }
     ],
     "specifications": [
       {
@@ -2506,23 +2562,23 @@ export const PRODUCTS = [
       },
       {
         "label": "Material & Grade",
-        "value": "High-yield structural carbon steel (Q235 / Q355 / S355JR)"
+        "value": "High-yield structural carbon steel Q235 (AS/NZS 1576 compliant)"
       },
       {
         "label": "Tube Specification",
-        "value": "48.3 mm outside diameter \u00d7 3.2 mm / 4.0 mm nominal wall"
+        "value": "Standards: Ø 48.3 × 4.0 mm / Ledgers: Ø 48.3 × 3.2 mm (Q235)"
       },
       {
         "label": "Node Spacing",
         "value": "'V' pressings welded at 495 mm (nominal 0.5 m) intervals"
       },
       {
-        "label": "Standard Lengths",
-        "value": "0.98 m, 1.48 m, 1.98 m, 2.48 m, 2.98 m with integrated spigot connectors"
+        "label": "Standard Lengths (Posts)",
+        "value": "0.5 m, 1.0 m, 1.5 m, 2.0 m, 2.5 m, 3.0 m with integrated spigot connectors"
       },
       {
         "label": "Horizontal Ledgers",
-        "value": "0.8 m, 1.2 m, 1.8 m, 2.4 m modular bays with captive wedge pins"
+        "value": "0.5 m, 0.7 m, 0.8 m, 1.0 m, 1.2 m, 1.8 m, 2.4 m, 3.0 m with captive wedge pins"
       },
       {
         "label": "Transoms",
@@ -2530,7 +2586,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Surface Finish",
-        "value": "Hot-Dip Galvanized to EN ISO 1461 or durable painted"
+        "value": "Hot-Dip Galvanized to AS/NZS 1576 & EN ISO 1461"
       },
       {
         "label": "Working Platforms",
@@ -2538,7 +2594,100 @@ export const PRODUCTS = [
       },
       {
         "label": "Standards Compliance",
-        "value": "BS 1139 Part 5, AS/NZS 1576, EN 12810 / EN 12811"
+        "value": "AS/NZS 1576, BS 1139 Part 5, EN 12810 / EN 12811"
+      }
+    ],
+    "standardSizesTables": [
+      {
+        "title": "Kwikstage Standard (Vertical Post) Size & Specifications",
+        "subtitle": "Certified vertical standard production sizes and technical specifications conforming to AS/NZS 1576.",
+        "columns": [
+          "Material & Size (材料)",
+          "Length (长度)",
+          "Surface (表面处理)",
+          "Standard (标准)"
+        ],
+        "rows": [
+          ["Q235 Ø 48.3 × 4.0 mm", "3.0 m (3000 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
+          ["Q235 Ø 48.3 × 4.0 mm", "2.5 m (2500 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
+          ["Q235 Ø 48.3 × 4.0 mm", "2.0 m (2000 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
+          ["Q235 Ø 48.3 × 4.0 mm", "1.5 m (1500 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
+          ["Q235 Ø 48.3 × 4.0 mm", "1.0 m (1000 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
+          ["Q235 Ø 48.3 × 4.0 mm", "0.5 m (500 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"]
+        ]
+      },
+      {
+        "title": "Kwikstage Ledger (Horizontal Member) Size & Specifications",
+        "subtitle": "Certified horizontal ledger production sizes and technical specifications conforming to AS/NZS 1576.",
+        "columns": [
+          "Material & Size (Material)",
+          "Length (Length)",
+          "Surface (Surface Finish)",
+          "Standard (Standard)"
+        ],
+        "rows": [
+          ["Q235 Ø 48.3 × 3.2 mm", "3.0 m (3000 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
+          ["Q235 Ø 48.3 × 3.2 mm", "2.4 m (2400 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
+          ["Q235 Ø 48.3 × 3.2 mm", "1.8 m (1800 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
+          ["Q235 Ø 48.3 × 3.2 mm", "1.2 m (1200 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
+          ["Q235 Ø 48.3 × 3.2 mm", "1.0 m (1000 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
+          ["Q235 Ø 48.3 × 3.2 mm", "0.8 m (800 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
+          ["Q235 Ø 48.3 × 3.2 mm", "0.7 m (700 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
+          ["Q235 Ø 48.3 × 3.2 mm", "0.5 m (500 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"]
+        ]
+      }
+    ],
+    "accessories": [
+      {
+        "name": "Kwikstage Standard / Vertical Post",
+        "image": "/src/assets/images/kwikstage-galvanized-standards.jpg",
+        "sizes": "0.5 m / 1.0 m / 1.5 m / 2.0 m / 2.5 m / 3.0 m",
+        "sizeList": [
+          "0.5 m",
+          "1.0 m",
+          "1.5 m",
+          "2.0 m",
+          "2.5 m",
+          "3.0 m"
+        ],
+        "description": "High-strength Q235 structural steel vertical standards (48.3 mm OD × 4.0 mm wall thickness) equipped with welded 'V' pressings at 495 mm intervals and integral spigot ends. Hot-dipped galvanized conforming to AS/NZS 1576."
+      },
+      {
+        "name": "Kwikstage Ledger / Horizontal Member",
+        "image": "/src/assets/images/kwikstage-horizontal-ledgers.jpg",
+        "sizes": "0.5 m / 0.7 m / 0.8 m / 1.0 m / 1.2 m / 1.8 m / 2.4 m / 3.0 m",
+        "sizeList": [
+          "0.5 m",
+          "0.7 m",
+          "0.8 m",
+          "1.0 m",
+          "1.2 m",
+          "1.8 m",
+          "2.4 m",
+          "3.0 m"
+        ],
+        "description": "High-strength Q235 structural steel horizontal ledger members (48.3 mm OD × 3.2 mm wall thickness) equipped with captive drop-forged wedge fixing ends that lock securely into standard 'V' pressings. Hot-dipped galvanized conforming to AS/NZS 1576."
+      },
+      {
+        "name": "Kwikstage Modular Aluminium Stairway Unit",
+        "image": "/src/assets/images/kwikstage-stair-tower-assembly.jpg",
+        "sizes": "1.5 m Lift / 2.0 m Lift Modular Stair Flight",
+        "sizeList": [
+          "1.5 m Lift",
+          "2.0 m Lift"
+        ],
+        "description": "Engineered non-slip perforated aluminium stair units with integral landing platforms and safety handrails designed for rapid erection in Kwikstage modular stair access towers."
+      },
+      {
+        "name": "Kwikstage Leveling Base Jack & Plate",
+        "image": "/src/assets/images/kwikstage-base-jack-node.jpg",
+        "sizes": "Ø 38 × 600 mm / Ø 38 × 750 mm Jack Stem / 150 × 150 mm Base Plate",
+        "sizeList": [
+          "Ø 38 × 600 mm Jack",
+          "Ø 38 × 750 mm Jack",
+          "150 × 150 mm Plate"
+        ],
+        "description": "Continuous cold-rolled Acme threaded screw jack stem fitted with cast malleable leveling wing nut and welded steel foundation base plate, providing rigid foundation leveling for Kwikstage vertical standards."
       }
     ],
     "features": [
@@ -2578,24 +2727,67 @@ export const PRODUCTS = [
     "category": "scaffolding-accessories",
     "name": "Steel prop/shoring",
     "shortDescription": "Telescopic adjustable steel shoring props with rolled Acme threaded collar and forged G-pin across 0.69 m to 4.87 m heights.",
-    "description": "Adjustable Steel Props (Acrow Props) supplied by Tianjin Decent International Trade Co., Ltd. are heavy-duty telescopic shoring devices designed to support vertical loads during concrete formwork pouring, slab falsework, and temporary structural propping.\n\nFabricated with precision high-frequency welded steel inner (48.3 mm OD) and outer (56/60 mm OD) tubes, equipped with a forged ductile iron collar nut with dual handles and high-tensile G-pin for micro-level height adjustments. Conforming to EN 1065 Class A through E and BS 4074.",
-    "heroImage": "/src/assets/images/scaffold-steel-props.jpg",
+    "description": "Adjustable Steel Props (Acrow Props) supplied by Tianjin Decent International Trade Co., Ltd. are heavy-duty telescopic shoring devices designed to support vertical loads during concrete formwork pouring, slab falsework, and temporary structural propping.\n\nFabricated with precision high-frequency welded steel inner (40 / 48.3 / 60 mm OD) and outer (48 / 56 / 60 / 89 mm OD) tubes, equipped with a forged ductile iron collar nut with dual handles and high-tensile G-pin for micro-level height adjustments. Conforming to EN 1065 Class A through E and BS 4074.",
+    "heroImage": "/src/assets/images/scaffold-steel-prop-construction.jpg",
     "gallery": [
-      "/src/assets/images/scaffold-steel-props.jpg",
-      "/src/assets/images/scaffold-tubes-fittings.jpg"
+      {
+        "src": "/src/assets/images/scaffold-steel-prop-construction.jpg",
+        "title": "Cast-in-Place Concrete Slab & Beam Shoring Installation",
+        "note": "Multi-row heavy-duty steel prop grid installation providing high axial vertical load capacity under concrete floor slabs and structural beams on an active commercial building construction jobsite."
+      },
+      {
+        "src": "/src/assets/images/scaffold-steel-prop-finishes.jpg",
+        "title": "Telescopic Steel Prop Model Range & Surface Finishes",
+        "note": "Comprehensive model lineup of light, medium, and heavy-duty telescopic steel props in painted red, powder-coated blue, electro-galvanized, and hot-dip galvanized finishes with folding tripod and U-head fork options."
+      },
+      {
+        "src": "/src/assets/images/scaffold-steel-prop-table-shoring.jpg",
+        "title": "Modular Slab Falsework Table Shoring Assembly",
+        "note": "Engineered concrete slab formwork table framework supported by blue telescopic steel props with folding tripod stabilization bases and horizontal ledger tie bracing."
+      },
+      {
+        "src": "/src/assets/images/scaffold-steel-prop-formwork.jpg",
+        "title": "Slab Falsework & H20 Formwork Shoring System",
+        "note": "Telescopic steel props integrated with folding tripods, fine-tuning collar handles, and 4-way fork heads supporting primary H20 timber formwork beams and formwork table shuttering for concrete slab construction."
+      },
+      {
+        "src": "/src/assets/images/scaffold-steel-prop-components.jpg",
+        "title": "Telescopic Steel Prop Components & Hardware Breakdown",
+        "note": "Complete modular hardware architecture: inner/outer tubes, cold-rolled Acme threaded sleeve, ductile collar nut with dual spin handles, high-tensile G-pin with retention wire, square & flower base plates, 4-way fork head, and folding tripod."
+      },
+      {
+        "src": "/src/assets/images/scaffold-steel-prop-painted-bundles.jpg",
+        "title": "Painted Heavy-Duty Shoring Props Export Bundles",
+        "note": "Industrial export strapped bundles of painted red telescopic shoring props with welded square base plates and cast collar nuts ready for container freight."
+      },
+      {
+        "src": "/src/assets/images/scaffold-steel-prop-galvanized-bundles.jpg",
+        "title": "Hot-Dip Galvanized Steel Props Stillage & Bundle Packs",
+        "note": "Dense export packaging of hot-dip galvanized steel props with flower base plates, securely strapped with heavy steel bands for international maritime shipping."
+      },
+      {
+        "src": "/src/assets/images/scaffold-steel-prop-hardware-components.jpg",
+        "title": "Steel Prop Components & Hardware Breakdown",
+        "note": "Full modular hardware architecture: telescopic inner/outer tubes, square and flower base plates, 4-way U-head fork brackets, wire locking pins, and rapid-spin adjustment collar nuts."
+      },
+      {
+        "src": "/src/assets/images/scaffold-steel-prop-models-components.jpg",
+        "title": "Telescopic Steel Prop Model Lineup & Locking Assemblies",
+        "note": "Heavy-duty and light-duty telescopic steel props in painted, powder-coated, and hot-dip galvanized finishes featuring ductile iron dual-handle collar nuts, quick-spin sleeves, and high-tensile G-pins."
+      }
     ],
     "specifications": [
       {
         "label": "Prop Sizes & Heights",
-        "value": "Prop Size 00: 0.69 m \u2013 1.163 m\nProp Size 0: 1.07 m \u2013 1.82 m\nProp Size 1: 1.75 m \u2013 3.12 m\nProp Size 2: 1.98 m \u2013 3.35 m\nProp Size 3: 2.59 m \u2013 3.95 m\nProp Size 4: 3.20 m \u2013 4.87 m"
+        "value": "Prop Size 00: 0.69 m – 1.163 m\nProp Size 0: 1.07 m – 1.82 m\nProp Size 1: 1.75 m – 3.12 m\nProp Size 2: 1.98 m – 3.35 m\nProp Size 3: 2.59 m – 3.95 m\nProp Size 4: 3.20 m – 4.87 m"
       },
       {
         "label": "Outer Tube Spec",
-        "value": "\u00d8 56 mm / \u00d8 60 mm \u00d7 2.0 mm / 2.5 mm wall thickness"
+        "value": "Ø 48 mm / Ø 56 mm / Ø 60 mm / Ø 89 mm × 2.0 mm – 4.0 mm wall thickness"
       },
       {
         "label": "Inner Tube Spec",
-        "value": "\u00d8 48.3 mm \u00d7 2.5 mm / 3.0 mm wall thickness with punched pin holes at 100 mm pitch"
+        "value": "Ø 40 mm / Ø 48.3 mm / Ø 60 mm × 2.0 mm – 4.0 mm wall thickness with punched pin holes at 100 mm pitch"
       },
       {
         "label": "Adjustment Nut",
@@ -2603,11 +2795,11 @@ export const PRODUCTS = [
       },
       {
         "label": "Locking Pin",
-        "value": "High-tensile forged steel G-pin (\u00d8 12 mm / 14 mm) with retention chain"
+        "value": "High-tensile forged steel G-pin (Ø 12 mm / 14 mm) with retention chain"
       },
       {
         "label": "Base & Head Plates",
-        "value": "120 \u00d7 120 \u00d7 6 mm or 150 \u00d7 150 \u00d7 8 mm flat or flower plates with nail securing holes"
+        "value": "120 × 120 × 6 mm or 150 × 150 × 8 mm flat or flower plates with nail securing holes"
       },
       {
         "label": "Surface Finish",
@@ -2616,6 +2808,74 @@ export const PRODUCTS = [
       {
         "label": "Safe Working Load",
         "value": "10 kN to 35 kN axial load capacity (per EN 1065 certified load tables)"
+      }
+    ],
+    "standardSizesTables": [
+      {
+        "title": "Heavy-Duty Steel Prop Dimensional Specifications",
+        "subtitle": "Certified production dimensions for heavy-duty telescopic steel shoring props with Ø 48 mm internal and Ø 60 mm external tubing.",
+        "columns": [
+          "Type",
+          "Min Height",
+          "Max Height",
+          "Internal Tube (内管)",
+          "External Tube (外管)"
+        ],
+        "rows": [
+          ["Heavy-duty steel prop", "1800 mm", "3200 mm", "Ø 48 × 2.0 mm", "Ø 60 × 2.0 mm"],
+          ["Heavy-duty steel prop", "2100 mm", "3400 mm", "Ø 48 × 2.0 mm", "Ø 60 × 2.1 mm"],
+          ["Heavy-duty steel prop", "2200 mm", "4000 mm", "Ø 48 × 2.0 mm", "Ø 60 × 2.2 mm"],
+          ["Heavy-duty steel prop", "2400 mm", "3900 mm", "Ø 48 × 2.1 mm", "Ø 60 × 2.3 mm"],
+          ["Heavy-duty steel prop", "3500 mm", "4000 mm", "Ø 48 × 2.2 mm", "Ø 60 × 2.4 mm"],
+          ["Heavy-duty steel prop", "3000 mm", "5000 mm", "Ø 48 × 3.5 mm", "Ø 60 × 3.5 mm"]
+        ]
+      },
+      {
+        "title": "Light-Duty Steel Prop Dimensional Specifications",
+        "subtitle": "Certified production dimensions for light-duty telescopic steel shoring props with Ø 40 / Ø 48 mm internal and Ø 48 / Ø 56 / Ø 60 mm external tubing.",
+        "columns": [
+          "Type",
+          "Min Height",
+          "Max Height",
+          "Internal Tube (内管)",
+          "External Tube (外管)"
+        ],
+        "rows": [
+          ["Light-duty steel prop", "1600 mm", "3000 mm", "Ø 40 × 1.6 mm", "Ø 48 × 2.0 mm"],
+          ["Light-duty steel prop", "1600 mm", "3000 mm", "Ø 48 × 1.6 mm", "Ø 56 × 2.0 mm"],
+          ["Light-duty steel prop", "1600 mm", "3000 mm", "Ø 48 × 1.6 mm", "Ø 60 × 2.0 mm"],
+          ["Light-duty steel prop", "1800 mm", "2500 mm", "Ø 40 × 2.0 mm", "Ø 48 × 2.0 mm"],
+          ["Light-duty steel prop", "1800 mm", "2500 mm", "Ø 48 × 2.0 mm", "Ø 60 × 2.0 mm"],
+          ["Light-duty steel prop", "2000 mm", "3500 mm", "Ø 40 × 2.0 mm", "Ø 48 × 2.0 mm"],
+          ["Light-duty steel prop", "2000 mm", "3500 mm", "Ø 48 × 3.5 mm", "Ø 60 × 3.5 mm"]
+        ]
+      }
+    ],
+    "accessoriesSubtitle": "Precision-engineered modular hardware, cast collar nuts, high-tensile locking pins, base plates, and U-head fork brackets conforming to EN 1065.",
+    "accessories": [
+      {
+        "name": "Steel Prop Components & Shoring Hardware Set",
+        "image": "/src/assets/images/scaffold-steel-prop-hardware-components.jpg",
+        "sizes": "120×120 mm / 150×150 mm Base Plates / 4-Way U-Head / Ø12-14 mm G-Pins / Collar Nuts",
+        "sizeList": [
+          "Square & Flower Base Plates",
+          "4-Way Fork Head",
+          "Acme Collar Nut",
+          "High-Tensile G-Pin"
+        ],
+        "description": "Full hardware architecture for telescopic steel shoring props: hot-pressed square and flower base plates with nail holes, 4-way U-head fork brackets for H20 timber beam support, cold-rolled Acme threaded sleeves, ductile cast iron collar nuts with spin handles, and forged high-tensile G-pins."
+      },
+      {
+        "name": "Heavy-Duty & Light-Duty Telescopic Steel Props Range",
+        "image": "/src/assets/images/scaffold-steel-prop-models-components.jpg",
+        "sizes": "Heavy-Duty (Ø48/Ø60 mm) / Light-Duty (Ø40/Ø48/Ø56/Ø60 mm) / 1.6 m – 5.0 m Heights",
+        "sizeList": [
+          "Heavy-Duty Props",
+          "Light-Duty Props",
+          "Dual-Handle Nuts",
+          "Painted / HDG Finishes"
+        ],
+        "description": "Factory-certified telescopic shoring props available in high-adhesion powder-coated (safety yellow, blue, red, brown), electro-galvanized, and hot-dip galvanized finishes. Engineered with dual-handle collar nuts, anti-drop internal stops, and self-cleaning threads conforming to EN 1065."
       }
     ],
     "features": [
@@ -2656,11 +2916,33 @@ export const PRODUCTS = [
     "name": "Steel plank/board",
     "shortDescription": "Anti-slip perforated galvanized steel walk boards with reinforcing stiffeners and heavy-duty end hooks.",
     "description": "Galvanized Steel Scaffold Planks and Boards supplied by Tianjin Decent International Trade Co., Ltd. are engineered for high-durability working platforms across commercial, civil, and industrial scaffolding. Manufactured from high-strength pre-galvanized or hot-dip galvanized sheet steel with longitudinal box-channel ribs for maximum deflection resistance.\n\nFeaturing a non-slip perforated dimpled surface that prevents slip hazards from water, oil, or mud accumulation, complete with heavy-duty welded end hooks that lock firmly onto scaffolding ledgers and transoms.",
-    "heroImage": "/src/assets/images/scaffold-steel-plank.jpg",
+    "heroImage": "/src/assets/images/scaffold-steel-plank-perforated.jpg",
     "gallery": [
-      "/src/assets/images/scaffold-steel-plank.jpg",
-      "/src/assets/images/platform-board.jpg",
-      "/src/assets/images/scaffold-staircase.jpg"
+      {
+        "src": "/src/assets/images/scaffold-steel-plank-perforated.jpg",
+        "title": "Perforated Anti-Slip Galvanized Steel Scaffold Plank",
+        "note": "Precision-formed structural steel walk board with convex perforated traction holes, continuous longitudinal stiffeners, and boxed end channels for safe, slip-free worker staging."
+      },
+      {
+        "src": "/src/assets/images/scaffold-steel-plank-hook-on.jpg",
+        "title": "Hook-On Galvanized Steel Scaffold Planks with End Claws",
+        "note": "Modular hook-on steel planks equipped with drop-forged end hooks and captive locking clips engineered to engage tubular scaffolding ledgers and transoms securely."
+      },
+      {
+        "src": "/src/assets/images/scaffold-steel-plank-bundles.jpg",
+        "title": "Factory Bundled Stillage of Reinforced Steel Planks",
+        "note": "High-density export stillage package of galvanized steel scaffold boards showing bottom reinforcement channel ribs, structural stiffeners, and stamped EN 12811 compliance codes."
+      },
+      {
+        "src": "/src/assets/images/scaffold-steel-plank.jpg",
+        "title": "Pre-Galvanized Modular Scaffolding Walk Board",
+        "note": "Lightweight high-load steel plank manufactured from high-yield pre-galvanized sheet steel with punched drain dimples for outdoor weathering resistance."
+      },
+      {
+        "src": "/src/assets/images/platform-board.jpg",
+        "title": "Heavy-Duty Scaffolding Working Platform Deck",
+        "note": "Complete heavy-duty working platform deck installed with edge toeboards and safety guardrails across multi-tier facade access scaffolding."
+      }
     ],
     "specifications": [
       {
@@ -2782,14 +3064,36 @@ export const PRODUCTS = [
   {
     "slug": "scaffold-staircase",
     "category": "scaffolding-accessories",
-    "name": "Modular Steel Scaffolding Staircase Unit",
-    "shortDescription": "Prefabricated steel access stairs with non-slip perforated treads and ledger hooks for rapid, safe personnel stair towers.",
-    "description": "Modular Steel Scaffolding Staircase Units provide safe, ergonomic vertical transit between scaffold working levels, replacing unsafe vertical ladders with compliant stair towers. Engineered with formed steel stringers and punched non-slip stair treads featuring drainage dimples.\n\nEquipped with heavy-duty end hooks that seat directly over scaffolding horizontal ledgers and transoms, providing quick installation and stable, wobble-free footing conforming to EN 12811 and OSHA standards.",
-    "heroImage": "/src/assets/images/scaffold-staircase.jpg",
+    "name": "Staircase/beam ladder/ladder",
+    "shortDescription": "Modular steel scaffolding staircases, high-strength tubular beam ladders, and heavy-duty vertical access ladders for safe, compliant vertical jobsite transit.",
+    "description": "Staircase, beam ladder, and ladder access solutions supplied by Tianjin Decent International Trade Co., Ltd. provide safe, ergonomic vertical transit and structural bridging between scaffold working levels, replacing unsafe vertical climbing with fully certified access configurations.\n\nOur range encompasses prefabricated modular steel and aluminum staircase units with non-slip perforated treads and matching safety handrails, parallel-chord 48.3 mm tubular steel beam ladders (lattice girders) for wide-span bridging and suspended access, and heavy-duty steel and aluminum personnel access ladders with slip-resistant rungs.",
+    "heroImage": "/src/assets/images/scaffold-staircase-tower-facade.jpg",
     "gallery": [
-      "/src/assets/images/scaffold-staircase.jpg",
-      "/src/assets/images/scaffold-steel-plank.jpg",
-      "/src/assets/images/cuplock-scaffolding-setup.jpg"
+      {
+        "src": "/src/assets/images/scaffold-staircase-tower-facade.jpg",
+        "title": "Multi-Tier External Facade Scaffolding Staircase Tower",
+        "note": "Complete modular personnel access staircase tower integrated into multi-story building facade scaffolding, featuring non-slip perforated treads and continuous safety handrails."
+      },
+      {
+        "src": "/src/assets/images/scaffold-beam-ladder-galvanized-yard.jpg",
+        "title": "Hot-Dip Galvanized Scaffolding Beam Ladders Stillage",
+        "note": "Parallel-chord 48.3 mm tubular steel beam ladders (lattice girders) stacked in factory dispatch yard, hot-dip galvanized to EN ISO 1461 for high-capacity bridging spans."
+      },
+      {
+        "src": "/src/assets/images/scaffold-steel-ladder-blue.jpg",
+        "title": "Painted Tubular Steel Scaffolding Access Ladder",
+        "note": "Heavy-duty vertical steel access ladder with rectangular box-section stiles and welded anti-slip round tubular rungs finished in durable corrosion-resistant blue coating."
+      },
+      {
+        "src": "/src/assets/images/scaffold-access-ladder-bundles-orange-feet.jpg",
+        "title": "Industrial Access Ladders with Safety Footing Shoes",
+        "note": "Export-strapped factory bundles of industrial heavy-duty access ladders fitted with high-grip grooved safety rubber feet and deeply serrated slip-resistant rungs."
+      },
+      {
+        "src": "/src/assets/images/scaffold-staircase.jpg",
+        "title": "Modular Prefabricated Steel Staircase Unit with Hooks",
+        "note": "Prefabricated modular steel access stairs with non-slip perforated treads and welded ledger hooks for rapid drop-in installation on standard scaffolding bays."
+      }
     ],
     "specifications": [
       {
@@ -3191,50 +3495,71 @@ export const PRODUCTS = [
     "subcategory": "Staircase/beam ladder/ladder"
   },
   {
-    "slug": "right-angle-coupler",
+    "slug": "couplers",
     "category": "scaffolding-accessories",
-    "name": "Right-Angle Coupler (Double Coupler)",
-    "shortDescription": "Drop-forged carbon steel right-angle coupler connecting two 48.3 mm tubes at 90 degrees conforming to EN 74-1 Class B.",
-    "description": "Drop-forged high-strength double coupler designed to connect two 48.3 mm scaffold tubes at a fixed 90-degree right angle. Engineered to exceed EN 74-1 Class B slip-resistance ratings with hot-dip galvanized or zinc electroplated finish.",
-    "heroImage": "/src/assets/images/fitting-double-coupler.jpg",
+    "name": "Couplers",
+    "shortDescription": "Drop-forged and pressed steel scaffolding couplers (Fixed 90°, Swivel 360°, Sleeve, Putlog, Girder, and Board Retaining Clamps) certified to EN 74-1 Class B and BS 1139.",
+    "description": "Scaffolding Couplers supplied by Tianjin Decent International Trade Co., Ltd. are engineered for high slip resistance, rigidity, and rapid assembly across tube & coupler scaffolding, structural bracing, and modular falsework grids.\n\nManufactured from drop-forged high-tensile carbon steel and heavy pressed steel, equipped with Grade 8.8 forged T-bolts and flanged hex nuts. Conforming to EN 74-1 Class B and BS 1139, our comprehensive couplers range includes fixed right-angle double couplers, 360° universal swivel couplers, board retaining clamps (BRC), girder beam clamps, external sleeve couplers, and putlog single clamps with hot-dip galvanized or zinc electroplated finish.",
+    "heroImage": "/src/assets/images/scaffold-couplers-comprehensive-range.jpg",
     "gallery": [
-      "/src/assets/images/fitting-double-coupler.jpg",
-      "/src/assets/images/fitting-swivel-coupler.jpg",
-      "/src/assets/images/fitting-putlog-coupler.jpg",
-      "/src/assets/images/fitting-sleeve-coupler.jpg"
+      {
+        "src": "/src/assets/images/scaffold-couplers-comprehensive-range.jpg",
+        "title": "Comprehensive Scaffolding Couplers & Clamps Range",
+        "note": "Full modular fitting lineup: Fixed clamp (90° double), Swivel clamp (360°), Board retaining clamp (BRC), Girder clamp (beam clamp), Sleeve clamp, and Putlog single clamp."
+      },
+      {
+        "src": "/src/assets/images/scaffold-coupler-right-angle-pair.jpg",
+        "title": "Drop-Forged Right-Angle Couplers (90° Double Clamps)",
+        "note": "Precision heavy-duty drop-forged right-angle double couplers (EN 74-1 Class B) engineered for orthogonal 90-degree tube connections with guaranteed slip resistance exceeding 15 kN."
+      },
+      {
+        "src": "/src/assets/images/scaffold-coupler-swivel-detail.jpg",
+        "title": "Drop-Forged 360° Universal Swivel Coupler",
+        "note": "Drop-forged carbon steel universal swivel coupler allowing two 48.3 mm tubes to rotate and clamp at any arbitrary angle for diagonal sway and plan bracing."
+      },
+      {
+        "src": "/src/assets/images/scaffold-coupler-board-retaining-clamp.jpg",
+        "title": "Board Retaining Clamp (BRC / Timber Board Clamp)",
+        "note": "Heavy-duty pressed steel board retaining clamp in yellow zinc passivation, engineered to secure timber boards and steel planks firmly against ledgers to eliminate wind uplift."
+      },
+      {
+        "src": "/src/assets/images/scaffold-couplers-catalog-lineup.jpg",
+        "title": "Drop-Forged & Pressed Steel Scaffolding Fittings Set",
+        "note": "Industrial scaffolding fittings overview: fixed double couplers, universal swivel couplers, board clamps, girder beam clamps, sleeve couplers, and putlog clamps on studio stage."
+      }
     ],
     "specifications": [
       {
-        "label": "Connection Angle",
-        "value": "Fixed 90\u00b0"
+        "label": "Available Types",
+        "value": "Fixed Right-Angle (Double), 360° Swivel, Sleeve, Putlog (Single), Girder (SK Beam), Board Retaining (BRC)"
       },
       {
         "label": "Tube Diameter",
-        "value": "48.3 mm \u00d7 48.3 mm"
+        "value": "48.3 mm × 48.3 mm (BS 1139 / EN 39 standard tubing)"
       },
       {
         "label": "Material",
-        "value": "Drop-Forged Carbon Steel (High-Tensile)"
-      },
-      {
-        "label": "Tightening Torque",
-        "value": "54 Nm"
+        "value": "Drop-Forged Carbon Steel (High-Tensile) & Heavy Pressed Steel"
       },
       {
         "label": "Standard Compliance",
-        "value": "EN 74-1 Class B Certified"
+        "value": "EN 74-1 Class B & BS 1139 Certified"
+      },
+      {
+        "label": "Tightening Torque",
+        "value": "54 Nm (recommended operational torque)"
       },
       {
         "label": "Slip Resistance Load",
-        "value": "\u2265 15.0 kN (Class B tested)"
+        "value": "≥ 15.0 kN (Class B requirement verified by test report)"
       },
       {
         "label": "Failure Load",
-        "value": "\u2265 30.0 kN"
+        "value": "≥ 30.0 kN ultimate tensile resistance"
       },
       {
         "label": "Surface Finish",
-        "value": "Hot-Dip Galvanized / Zinc Electroplated"
+        "value": "Hot-Dip Galvanized (HDG) / Yellow Zinc Electroplated"
       },
       {
         "label": "Fasteners",
@@ -3255,11 +3580,11 @@ export const PRODUCTS = [
     "standards": [
       {
         "name": "EN 74-1 Class B",
-        "description": "Couplers for scaffolding \u2014 Class B heavy duty rating"
+        "description": "Couplers for scaffolding — Class B heavy duty rating"
       },
       {
         "name": "BS 1139",
-        "description": "Metal scaffolding \u2014 specifications for fittings"
+        "description": "Metal scaffolding — specifications for fittings"
       }
     ],
     "relatedProducts": [
@@ -3345,7 +3670,7 @@ export const PRODUCTS = [
       }
     ],
     "relatedProducts": [
-      "right-angle-coupler",
+      "couplers",
       "scaffold-tube-48",
       "base-jack"
     ],
@@ -3453,7 +3778,7 @@ export const PRODUCTS = [
     "relatedProducts": [
       "scaffolding-accessories",
       "scaffold-tube-48",
-      "right-angle-coupler",
+      "couplers",
       "swivel-coupler"
     ],
     "categoryName": "Scaffolding & Accessories",
@@ -3650,7 +3975,7 @@ export const PRODUCTS = [
     ],
     "relatedProducts": [
       "swivel-coupler",
-      "right-angle-coupler",
+      "couplers",
       "tube-fittings-scaffolding",
       "base-jack"
     ],
@@ -4025,7 +4350,7 @@ export const SCAFFOLDING_FITTINGS_CATALOG = [
   {
     name: 'Drop-Forged Swivel Coupler',
     standard: 'EN 74-1 Class B Certified',
-    image: '/src/assets/images/fitting-swivel-coupler.jpg',
+    image: '/src/assets/images/scaffold-coupler-swivel-detail.jpg',
     tubeDiameter: '48.3 mm × 48.3 mm',
     tighteningTorque: '54 Nm',
     slipLoad: '≥ 15.0 kN (Class B requirement)',
@@ -4037,7 +4362,7 @@ export const SCAFFOLDING_FITTINGS_CATALOG = [
   {
     name: 'Drop-Forged Right-Angle (Double) Coupler',
     standard: 'EN 74-1 Class B Certified',
-    image: '/src/assets/images/fitting-double-coupler.jpg',
+    image: '/src/assets/images/scaffold-coupler-right-angle-pair.jpg',
     tubeDiameter: '48.3 mm × 48.3 mm',
     tighteningTorque: '54 Nm',
     slipLoad: '≥ 15.0 kN (Class B requirement)',
@@ -4061,7 +4386,7 @@ export const SCAFFOLDING_FITTINGS_CATALOG = [
   {
     name: 'Board Retaining Clamp (BRC)',
     standard: 'BS 1139 / EN 74 Compliant',
-    image: '/src/assets/images/fitting-board-retaining-clamp-client.png',
+    image: '/src/assets/images/scaffold-coupler-board-retaining-clamp.jpg',
     tubeDiameter: '48.3 mm Tube to 38 mm / 50 mm Timber Board',
     tighteningTorque: '30 Nm',
     slipLoad: 'Uplift resistance ≥ 5.0 kN',
@@ -4130,6 +4455,12 @@ export function getProductBySlug(slug) {
   if (slug === 'black-round-pipe') {
     return PRODUCTS.find(p => p.slug === 'black-carbon-steel-round-pipe');
   }
+  if (slug === 'seamless-pipes' || slug === 'seamless-pipe') {
+    return PRODUCTS.find(p => p.slug === 'seamless-steel-pipes');
+  }
+  if (slug === 'right-angle-coupler') {
+    return PRODUCTS.find(p => p.slug === 'couplers') || PRODUCTS.find(p => p.slug === 'right-angle-coupler');
+  }
   return PRODUCTS.find(p => p.slug === slug);
 }
 
@@ -4143,7 +4474,11 @@ export function getProductsByCategory(category, subcategory) {
   const normCat = normalizeCategory(category);
   let list = normCat === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.category === normCat);
   if (subcategory && subcategory !== 'all') {
-    list = list.filter(p => p.subcategory === subcategory);
+    list = list.filter(p => 
+      p.subcategory === subcategory || 
+      (p.subcategory && p.subcategory.toLowerCase() === subcategory.toLowerCase()) ||
+      (subcategory.toLowerCase() === 'seamless pipe' && p.subcategory === 'Seamless Pipes')
+    );
   }
   return list;
 }

@@ -748,6 +748,15 @@
               <div id="matrix-note-box" style="display: none; margin-top: 12px; padding: 12px 16px; background: rgba(0, 91, 227, 0.05); border-left: 3px solid var(--color-primary); border-radius: var(--radius-xs); font-size: 13px; color: var(--color-ink); line-height: 1.5;"></div>
             </div>
 
+            <!-- Standard Dimensional Sizes Specifications Section -->
+            <div id="standard-sizes-section" style="display: none; margin-bottom: var(--space-2xl);">
+              <h2 class="heading-display-sm" id="standard-sizes-title" style="margin-bottom: 4px;">Standard Sizes &amp; Specifications</h2>
+              <p id="standard-sizes-subtitle" style="font-size: 13px; color: var(--color-muted); margin-bottom: var(--space-md);">
+                Certified manufacturing dimensions, tube specifications, and international standards compliance.
+              </p>
+              <div id="standard-sizes-container"></div>
+            </div>
+
             <!-- Technical Diagrams & Field Visuals Gallery -->
             <div id="visual-gallery-section" style="display: none; margin-bottom: var(--space-2xl);">
               <h2 class="heading-display-sm" style="margin-bottom: 4px;">Technical Diagrams &amp; Field Visuals</h2>
@@ -910,7 +919,7 @@
     initNav();
     initFooter();
 
-    // Get product ID from query parameter (defaults to hr-steel-coils)
+    // Get product ID from query parameter (defaults to hr-steel-coils or specified pipe slug)
     const urlParams = new URLSearchParams(window.location.search);
     const slug = urlParams.get('id') || 'hr-steel-coils';
     const product = getProductBySlug(slug) || PRODUCTS[0];
@@ -1233,6 +1242,42 @@
       }
     }
 
+    // Populate Standard Sizes Specifications Tables (e.g. Kwikstage Standard & Ledger)
+    const rawSizesTables = product.standardSizesTables || (product.standardSizesTable ? [product.standardSizesTable] : null);
+    if (rawSizesTables && rawSizesTables.length > 0) {
+      const sizesSection = document.getElementById('standard-sizes-section');
+      const sizesContainer = document.getElementById('standard-sizes-container');
+
+      if (sizesSection && sizesContainer) {
+        sizesSection.style.display = 'block';
+        sizesContainer.innerHTML = rawSizesTables.map(tbl => `
+          <div style="margin-bottom: var(--space-xl);">
+            ${tbl.title ? `<h3 style="font-size: 15px; font-weight: 700; color: var(--color-ink); margin-bottom: 4px;">${tbl.title}</h3>` : ''}
+            ${tbl.subtitle ? `<p style="font-size: 13px; color: var(--color-muted); margin-bottom: 10px;">${tbl.subtitle}</p>` : ''}
+            <div class="matrix-card">
+              <table class="matrix-table">
+                <thead>
+                  <tr>${(tbl.columns || []).map(col => `<th>${col}</th>`).join('')}</tr>
+                </thead>
+                <tbody>
+                  ${(tbl.rows || []).map(row => `
+                    <tr>
+                      ${row.map((cell, idx) => {
+                        if (idx === 0) return `<td><strong>${cell}</strong></td>`;
+                        if (idx === 1) return `<td><span class="matrix-thickness">${cell}</span></td>`;
+                        if (idx === 3) return `<td><span class="matrix-badge">${cell}</span></td>`;
+                        return `<td>${cell}</td>`;
+                      }).join('')}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
     // Populate Scaffolding Accessories & Components Section (if applicable)
     if (product.accessories && product.accessories.length > 0) {
       const accSection = document.getElementById('accessories-section');
@@ -1244,7 +1289,7 @@
       }
       const subtitle = accSection.querySelector('p');
       if (subtitle) {
-        subtitle.innerHTML = `Precision-engineered modular uprights, ledgers, braces, locking nodes, base collars, and foundation hardware certified to international scaffolding standards.`;
+        subtitle.innerHTML = product.accessoriesSubtitle || `Precision-engineered modular uprights, ledgers, braces, locking nodes, base collars, and foundation hardware certified to international scaffolding standards.`;
       }
       accGrid.innerHTML = product.accessories.map(acc => {
         const sizeTokens = acc.sizeList || acc.sizes.split('/').map(s => s.trim()).filter(Boolean);
@@ -1267,7 +1312,7 @@
     }
 
     // Populate Scaffolding Fittings & Couplers Catalog (if applicable)
-    const isFittingsRelated = ['swivel-coupler', 'right-angle-coupler', 'tube-fittings-scaffolding', 'scaffolding-accessories'].includes(product.slug);
+    const isFittingsRelated = ['couplers', 'swivel-coupler', 'right-angle-coupler', 'tube-fittings-scaffolding', 'scaffolding-accessories'].includes(product.slug);
     if (isFittingsRelated && SCAFFOLDING_FITTINGS_CATALOG && SCAFFOLDING_FITTINGS_CATALOG.length > 0) {
       const fitSection = document.getElementById('fittings-section');
       const fitGrid = document.getElementById('fittings-grid');
