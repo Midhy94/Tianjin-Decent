@@ -63,7 +63,10 @@ export const PRODUCT_HIERARCHY_LIST = [
       'Black Carbon Steel Round Pipe (Self Color)',
       'Hot-dip Galvanized Rectangular Pipe',
       'Black Carbon Steel Rectangular Pipe (Self Color)',
-      'Seamless Pipes'
+      'Seamless Pipes',
+      'Coated Composite Steel Pipe',
+      'Galvanized Seamless Steel Pipe',
+      'Spiral Seam Submerged Arc Welded Pipe (SSAW)'
       // 'ERW Pipe (Electro welded pipe)' // Temporarily hidden from menu
     ]
   },
@@ -128,7 +131,7 @@ export const CATEGORY_META = {
     label: 'Steel plate/sheet',
     shortLabel: 'Steel plate/sheet',
     description: 'Hot rolled coils (HR), Cold rolled coils (CCR), Pre-galvanized coils, and Color coated coils (PPGZI).',
-    image: '/src/assets/images/hr-steel-coils.jpg',
+    image: '/src/assets/images/hr-steel-coils.webp',
     subcategories: [
       'Hot rolled coils (HR)',
       'Cold rolled coils (CCR)',
@@ -155,14 +158,17 @@ export const CATEGORY_META = {
     id: 'steel-pipe-tube',
     label: 'Steel pipe/tube',
     shortLabel: 'Steel pipe/tube',
-    description: 'Hot-dip Galvanized and Black Carbon Steel (Self Color) Round & Rectangular Pipes, Seamless Pipes, and ERW Pipe.',
+    description: 'Hot-dip Galvanized and Black Carbon Steel (Self Color) Round & Rectangular Pipes, Seamless Pipes, Coated Composite Steel Pipe, Galvanized Seamless Steel Pipe, and Spiral Seam Submerged Arc Welded Pipe (SSAW).',
     image: '/src/assets/images/seamless-steel-pipes.webp',
     subcategories: [
       'Hot-dip Galvanized Round Pipe',
       'Black Carbon Steel Round Pipe (Self Color)',
       'Hot-dip Galvanized Rectangular Pipe',
       'Black Carbon Steel Rectangular Pipe (Self Color)',
-      'Seamless Pipes'
+      'Seamless Pipes',
+      'Coated Composite Steel Pipe',
+      'Galvanized Seamless Steel Pipe',
+      'Spiral Seam Submerged Arc Welded Pipe (SSAW)'
       // 'ERW Pipe (Electro welded pipe)' // Temporarily hidden from menu
     ]
   },
@@ -255,10 +261,10 @@ export const PRODUCTS = [
     "name": "Hot rolled coils (HR)",
     "shortDescription": "Hot Rolled Carbon Steel Coils in commercial, structural, and high-strength grades across 1.2\u201325 mm thicknesses.",
     "description": "Hot Rolled Steel Coils (HR Coils) are primary flat-rolled steel products manufactured by Tianjin Decent International Trade Co., Ltd. from verified metallurgical production partners. Sourced in Commercial, Structural, and High-Strength grades tailored to exact buyer specifications, project engineering requirements, and global destination standards.\n\nAvailable in mill finish (black surface) or Pickled & Oiled (P&O) condition with mill edge (ME) or trimmed/slit edge (TE). Supplied with full Mill Test Certificates (MTC) and third-party inspection verification (SGS / BV) upon request. Export-worthy seaworthy packing suitable for container and bulk vessel shipments.",
-    "heroImage": "/src/assets/images/hr-steel-coils.jpg",
+    "heroImage": "/src/assets/images/hr-steel-coils.webp",
     "gallery": [
-      "/src/assets/images/hr-steel-coils.jpg",
-      "/src/assets/images/hr-steel-coils-detail.jpg"
+      "/src/assets/images/hr-steel-coils.webp",
+      "/src/assets/images/hr-steel-coils-detail.webp"
     ],
     "specifications": [
       {
@@ -1281,14 +1287,16 @@ export const PRODUCTS = [
   {
     "slug": "spiral-submerged-arc-welded-steel-pipe",
     "category": "steel-pipe-tube",
-    "name": "Spiral Seam Double-Sided Submerged Arc Welded Steel Pipe (SSAW / HSAW)",
-    "shortDescription": "\u03c6219\u20132020 mm double-sided submerged arc welded spiral steel pipes for long-distance oil/gas pipelines, urban water transmission, and foundation piling.",
+    "name": "Spiral Seam Submerged Arc Welded Pipe (SSAW)",
+    "shortDescription": "φ219–2020 mm double-sided submerged arc welded spiral steel pipes for long-distance oil/gas pipelines, urban water transmission, and foundation piling.",
     "description": "Spiral seam double-sided submerged arc welded steel pipe (SSAW / HSAW) from Tianjin Decent International Trade Co., Ltd. is continuously manufactured by spirally forming hot-rolled carbon steel strip coils into wide-diameter cylinders, simultaneously welding both the interior and exterior seams using automated submerged arc welding (SAW).\n\nAllows efficient production of large diameter pipes (from 219 mm up to 2,020 mm) with exceptional hoop strength, uniform wall thickness, and precise roundness. Widely deployed in national oil and gas cross-country trunklines, urban water grids, and deep-foundation piling.",
     "heroImage": "/src/assets/images/spiral-submerged-arc-welded-steel-pipe.jpg",
     "gallery": [
-      "/src/assets/images/spiral-submerged-arc-welded-steel-pipe.jpg",
-      "/src/assets/images/straight-seam-welded-steel-pipe.jpg",
-      "/src/assets/images/galvanized-seamless-steel-pipe.jpg"
+      {
+        "src": "/src/assets/images/spiral-submerged-arc-welded-steel-pipe.jpg",
+        "title": "Spiral Seam Submerged Arc Welded Pipe Yard Storage",
+        "note": "Large diameter φ219–2020 mm SSAW pipes with external spiral weld seams engineered for cross-country pipelines and heavy structural piling."
+      }
     ],
     "specifications": [
       {
@@ -1366,19 +1374,21 @@ export const PRODUCTS = [
       "galvanized-seamless-steel-pipe"
     ],
     "categoryName": "Steel pipe/tube",
-    "subcategory": "Round Pipe"
+    "subcategory": "Spiral Seam Submerged Arc Welded Pipe (SSAW)"
   },
   {
     "slug": "plastic-coated-composite-steel-pipe",
     "category": "steel-pipe-tube",
-    "name": "Plastic-Coated Composite Steel Pipe (Coated Composite Pipe)",
-    "shortDescription": "DN15\u2013DN2000 internal and external plastic-coated (Epoxy / PE) composite steel pipes for fire protection water, municipal supply, and chemical fluids.",
+    "name": "Coated Composite Steel Pipe",
+    "shortDescription": "DN15–DN2000 internal and external plastic-coated (Epoxy / PE) composite steel pipes for fire protection water, municipal supply, and chemical fluids.",
     "description": "Plastic-coated composite steel pipe supplied by Tianjin Decent International Trade Co., Ltd. marries the mechanical strength, high pressure containment, and rigid structural integrity of steel pipe with the superior anti-corrosion, anti-scaling, and friction-reducing properties of advanced polymers.\n\nProduced by preheating the steel pipe and electrostatically fusing thermosetting Epoxy Resin (EP) or thermoplastic Polyethylene (PE) onto internal and external surfaces. Widely recognized as the premier solution for fire sprinkler systems, aggressive chemical fluid transmission, and potable water networks.",
     "heroImage": "/src/assets/images/plastic-coated-composite-steel-pipe.jpg",
     "gallery": [
-      "/src/assets/images/plastic-coated-composite-steel-pipe.jpg",
-      "/src/assets/images/hot-dip-galvanized-steel-pipe.jpg",
-      "/src/assets/images/straight-seam-welded-steel-pipe.jpg"
+      {
+        "src": "/src/assets/images/plastic-coated-composite-steel-pipe.jpg",
+        "title": "Red Epoxy Coated Firefighting & Water Composite Steel Pipes",
+        "note": "Internal and external epoxy/PE coated steel pipes featuring groove and flange ends for high-reliability fire protection and municipal water supply systems."
+      }
     ],
     "specifications": [
       {
@@ -1456,7 +1466,7 @@ export const PRODUCTS = [
       "galvanized-seamless-steel-pipe"
     ],
     "categoryName": "Steel pipe/tube",
-    "subcategory": "Round Pipe"
+    "subcategory": "Coated Composite Steel Pipe"
   },
   {
     "slug": "hot-dip-galvanized-square-rectangular-pipe",
@@ -1769,9 +1779,26 @@ export const PRODUCTS = [
     "description": "Galvanized seamless steel pipe supplied by Tianjin Decent International Trade Co., Ltd. is manufactured from solid hot-rolled or cold-drawn carbon steel billets without longitudinal or spiral welds, followed by immersion in a precision hot-dip zinc galvanization bath.\n\nCombines the flawless burst strength and high pressure integrity of seamless tubing with the sacrificial atmospheric protection of hot-dip zinc. Extensively specified in high-voltage substations, petrochemical transmission, and heavy load-bearing structural columns.",
     "heroImage": "/src/assets/images/galvanized-seamless-steel-pipe.jpg",
     "gallery": [
-      "/src/assets/images/galvanized-seamless-steel-pipe.jpg",
-      "/src/assets/images/hot-dip-galvanized-steel-pipe.jpg",
-      "/src/assets/images/seamless-steel-pipes.jpg"
+      {
+        "src": "/src/assets/images/galvanized-seamless-steel-pipe.jpg",
+        "title": "Galvanized Seamless Steel Pipe Bundles & Stacks",
+        "note": "DN22–DN325 heavy hot-dip galvanized seamless carbon steel pipe inventory stacked for petrochemical, structural, and infrastructure projects."
+      },
+      {
+        "src": "/src/assets/images/hot-dip-galvanized-steel-pipe.jpg",
+        "title": "Precision Zinc Coating & Clean Surface Execution",
+        "note": "Evenly dipped 55–100 µm sacrificial zinc coating providing comprehensive internal and external protection against corrosion."
+      },
+      {
+        "src": "/src/assets/images/seamless-steel-pipes.jpg",
+        "title": "Solid Billet Pierced Seamless Tubing Core",
+        "note": "100% seam-free cylindrical steel body with uniform wall thickness for high-pressure, high-temperature, and sub-zero service."
+      },
+      {
+        "src": "/src/assets/images/seamless-steel-pipes-bundles.webp",
+        "title": "Finished Pipe Packaging & Export Bundling",
+        "note": "Standard hexagonal steel wire bundling with protective end caps, beveled ends, and MTC 3.1 inspection traceability."
+      }
     ],
     "specifications": [
       {
@@ -1849,7 +1876,7 @@ export const PRODUCTS = [
       "spiral-submerged-arc-welded-steel-pipe"
     ],
     "categoryName": "Steel pipe/tube",
-    "subcategory": "Seamless Pipes"
+    "subcategory": "Galvanized Seamless Steel Pipe"
   },
   {
     "slug": "welded-erw-steel-pipes",
@@ -2766,12 +2793,12 @@ export const PRODUCTS = [
         "note": "Dense export packaging of hot-dip galvanized steel props with flower base plates, securely strapped with heavy steel bands for international maritime shipping."
       },
       {
-        "src": "/src/assets/images/scaffold-steel-prop-hardware-components.jpg",
+        "src": "/src/assets/images/scaffold-steel-prop-hardware-breakdown.png",
         "title": "Steel Prop Components & Hardware Breakdown",
         "note": "Full modular hardware architecture: telescopic inner/outer tubes, square and flower base plates, 4-way U-head fork brackets, wire locking pins, and rapid-spin adjustment collar nuts."
       },
       {
-        "src": "/src/assets/images/scaffold-steel-prop-models-components.jpg",
+        "src": "/src/assets/images/scaffold-steel-prop-model-lineup.jpg",
         "title": "Telescopic Steel Prop Model Lineup & Locking Assemblies",
         "note": "Heavy-duty and light-duty telescopic steel props in painted, powder-coated, and hot-dip galvanized finishes featuring ductile iron dual-handle collar nuts, quick-spin sleeves, and high-tensile G-pins."
       }
@@ -2855,7 +2882,7 @@ export const PRODUCTS = [
     "accessories": [
       {
         "name": "Steel Prop Components & Shoring Hardware Set",
-        "image": "/src/assets/images/scaffold-steel-prop-hardware-components.jpg",
+        "image": "/src/assets/images/scaffold-steel-prop-hardware-breakdown.png",
         "sizes": "120×120 mm / 150×150 mm Base Plates / 4-Way U-Head / Ø12-14 mm G-Pins / Collar Nuts",
         "sizeList": [
           "Square & Flower Base Plates",
@@ -2867,7 +2894,7 @@ export const PRODUCTS = [
       },
       {
         "name": "Heavy-Duty & Light-Duty Telescopic Steel Props Range",
-        "image": "/src/assets/images/scaffold-steel-prop-models-components.jpg",
+        "image": "/src/assets/images/scaffold-steel-prop-model-lineup.jpg",
         "sizes": "Heavy-Duty (Ø48/Ø60 mm) / Light-Duty (Ø40/Ø48/Ø56/Ø60 mm) / 1.6 m – 5.0 m Heights",
         "sizeList": [
           "Heavy-Duty Props",
@@ -3603,12 +3630,36 @@ export const PRODUCTS = [
     "description": "Heavy-duty drop-forged swivel coupler allowing two 48.3 mm scaffold tubes to be clamped at any required angle. Essential for diagonal sway bracing, ledger bracing, and triangular structural ties. Fully certified to EN 74-1 Class B.",
     "heroImage": "/src/assets/images/fitting-swivel-coupler.jpg",
     "gallery": [
-      "/src/assets/images/fitting-swivel-coupler.jpg",
-      "/src/assets/images/fitting-double-coupler.jpg",
-      "/src/assets/images/fitting-putlog-coupler.jpg",
-      "/src/assets/images/fitting-board-retaining-clamp.jpg",
-      "/src/assets/images/fitting-sleeve-coupler.jpg",
-      "/src/assets/images/fitting-beam-clamp.jpg"
+      {
+        "src": "/src/assets/images/fitting-swivel-coupler.jpg",
+        "title": "Drop-Forged 360° Universal Swivel Coupler Set",
+        "note": "Heavy-duty drop-forged and pressed steel universal swivel couplers in hot-dip galvanized and zinc-passivated finishes for EN 74-1 Class B diagonal structural bracing."
+      },
+      {
+        "src": "/src/assets/images/fitting-double-coupler.jpg",
+        "title": "Drop-Forged Right-Angle (Double) Coupler",
+        "note": "Precision drop-forged right-angle coupler connecting two 48.3 mm scaffold tubes at a rigid 90-degree orthogonal junction."
+      },
+      {
+        "src": "/src/assets/images/fitting-putlog-coupler.jpg",
+        "title": "Drop-Forged Putlog Coupler (Single)",
+        "note": "Single wrap putlog coupler connecting transoms across ledgers for board deck load distribution."
+      },
+      {
+        "src": "/src/assets/images/fitting-board-retaining-clamp.jpg",
+        "title": "Board Retaining Clamp (BRC)",
+        "note": "Heavy-duty pressed steel board retaining clamp securing timber boards and steel planks firmly to scaffold tubes."
+      },
+      {
+        "src": "/src/assets/images/fitting-sleeve-coupler.jpg",
+        "title": "External Sleeve Coupler",
+        "note": "External sleeve coupler for end-to-end concentric joining of 48.3 mm scaffold tubes."
+      },
+      {
+        "src": "/src/assets/images/fitting-beam-clamp.jpg",
+        "title": "Drop-Forged Girder Beam Clamp",
+        "note": "Heavy-duty girder flange clamp for anchoring scaffold tubes directly to structural H/I steel beams."
+      }
     ],
     "specifications": [
       {
@@ -4461,6 +4512,15 @@ export function getProductBySlug(slug) {
   if (slug === 'right-angle-coupler') {
     return PRODUCTS.find(p => p.slug === 'couplers') || PRODUCTS.find(p => p.slug === 'right-angle-coupler');
   }
+  if (slug === 'coated-composite-steel-pipe' || slug === 'coated-composite-pipe' || slug === 'plastic-coated-composite-pipe') {
+    return PRODUCTS.find(p => p.slug === 'plastic-coated-composite-steel-pipe');
+  }
+  if (slug === 'ssaw-pipe' || slug === 'spiral-pipe' || slug === 'spiral-seam-pipe' || slug === 'spiral-seam-submerged-arc-welded-steel-pipe' || slug === 'spiral-welded-pipe') {
+    return PRODUCTS.find(p => p.slug === 'spiral-submerged-arc-welded-steel-pipe');
+  }
+  if (slug === 'galvanized-seamless' || slug === 'galvanized-seamless-pipe' || slug === 'hdg-seamless-pipe') {
+    return PRODUCTS.find(p => p.slug === 'galvanized-seamless-steel-pipe');
+  }
   return PRODUCTS.find(p => p.slug === slug);
 }
 
@@ -4474,10 +4534,14 @@ export function getProductsByCategory(category, subcategory) {
   const normCat = normalizeCategory(category);
   let list = normCat === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.category === normCat);
   if (subcategory && subcategory !== 'all') {
+    const subLower = subcategory.toLowerCase();
     list = list.filter(p => 
       p.subcategory === subcategory || 
-      (p.subcategory && p.subcategory.toLowerCase() === subcategory.toLowerCase()) ||
-      (subcategory.toLowerCase() === 'seamless pipe' && p.subcategory === 'Seamless Pipes')
+      (p.subcategory && p.subcategory.toLowerCase() === subLower) ||
+      (subLower === 'seamless pipe' && p.subcategory === 'Seamless Pipes') ||
+      (subLower.includes('composite') && p.slug === 'plastic-coated-composite-steel-pipe') ||
+      (subLower.includes('galvanized seamless') && p.slug === 'galvanized-seamless-steel-pipe') ||
+      ((subLower.includes('spiral') || subLower.includes('ssaw')) && p.slug === 'spiral-submerged-arc-welded-steel-pipe')
     );
   }
   return list;

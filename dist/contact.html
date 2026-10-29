@@ -11,20 +11,28 @@
   <style>
     .contact-layout {
       display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: var(--space-3xl);
+      grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+      gap: clamp(24px, 3vw, 40px);
       align-items: start;
+      min-width: 0;
+      max-width: 100%;
     }
 
     .contact-card {
       background-color: var(--color-canvas-soft);
       border: 1px solid var(--color-hairline);
       border-radius: var(--radius-sm);
-      padding: var(--space-2xl);
+      padding: clamp(24px, 2.5vw, 36px);
+      min-width: 0;
+      box-sizing: border-box;
     }
     
     .contact-point {
       margin-bottom: var(--space-xl);
+    }
+
+    .contact-point:last-child {
+      margin-bottom: 0;
     }
     
     .contact-point__lbl {
@@ -41,18 +49,26 @@
       font-weight: 600;
       color: var(--color-ink);
       line-height: 1.4;
+      word-break: break-word;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
       .contact-layout {
         grid-template-columns: 1fr;
-        gap: var(--space-2xl);
+        gap: var(--space-xl);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .inquiry-form-card,
+      .contact-card {
+        padding: 20px 16px;
       }
     }
   </style>
-  <script type="module" crossorigin src="/assets/contact-pGvWSG-c.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/scroll-reveal-CSHfa4PC.js">
-  <link rel="stylesheet" crossorigin href="/assets/scroll-reveal-cy-CGonc.css">
+  <script type="module" crossorigin src="/assets/contact-AgoO1MhN.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/scroll-reveal-DEwgQt2z.js">
+  <link rel="stylesheet" crossorigin href="/assets/scroll-reveal-BhjwREQl.css">
 </head>
 <body>
 
@@ -180,6 +196,9 @@
                       <option value="hot-dip-galvanized-square-rectangular-pipe">Hot-dip Galvanized Rectangular Pipe</option>
                       <option value="black-carbon-steel-square-rectangular-pipe">Black Carbon Steel Rectangular Pipe (Self Color)</option>
                       <option value="seamless-steel-pipes">Seamless Pipes</option>
+                      <option value="plastic-coated-composite-steel-pipe">Coated Composite Steel Pipe</option>
+                      <option value="galvanized-seamless-steel-pipe">Galvanized Seamless Steel Pipe</option>
+                      <option value="spiral-submerged-arc-welded-steel-pipe">Spiral Seam Submerged Arc Welded Pipe (SSAW)</option>
                       <option value="straight-seam-welded-steel-pipe">ERW Pipe (Electro welded pipe)</option>
                     </optgroup>
                     <optgroup label="Scaffolding &amp; Accessories">

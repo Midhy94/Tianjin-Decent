@@ -20,11 +20,12 @@ export function initNav() {
   const megaMenuItemsHtml = PRODUCT_HIERARCHY.map(cat => {
     const subItemsHtml = cat.subcategories.map((subcat, idx) => {
       const prod = PRODUCTS.find(p => p.category === cat.id && p.subcategory === subcat) ||
+                   PRODUCTS.find(p => p.category === cat.id && p.name === subcat) ||
                    PRODUCTS.find(p => p.category === cat.id) ||
                    PRODUCTS[0];
       const specVal = (prod.specifications && prod.specifications[0]) ? prod.specifications[0].value : 'Certified Standard';
       const usesVal = prod.shortDescription || (prod.applications && prod.applications[0]) || '';
-      const imgVal = prod.heroImage || '/src/assets/images/hr-steel-coils.jpg';
+      const imgVal = prod.heroImage || '/src/assets/images/hr-steel-coils.webp';
       const isInitialActive = cat.id === 'steel-plate-sheet' && idx === 0 ? 'is-active' : '';
 
       return `

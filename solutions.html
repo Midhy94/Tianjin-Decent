@@ -28,207 +28,207 @@
     }
     
     .solution-card {
-      position: relative;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: var(--radius-card-premium, 28px);
-      box-shadow: none; /* No drop shadows */
+      background-color: var(--color-canvas, #FFFFFF);
+      border: 1px solid var(--color-hairline, #E2E8F0);
+      border-radius: var(--radius-card-premium, 20px);
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      min-height: 520px;
-      color: #FFFFFF;
-      background-color: #0b1524;
-      transition: border-color 0.25s ease;
+      height: 100%;
+      color: inherit;
+      transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+      position: relative;
     }
     
     .solution-card:hover {
-      /* Subtle outline highlight, NO pop animation */
-      border-color: rgba(255, 255, 255, 0.38);
+      border-color: rgba(0, 91, 227, 0.45);
+      transform: translateY(-4px);
+      box-shadow: 0 18px 36px -8px rgba(10, 37, 64, 0.1);
     }
     
     .solution-card__img-wrap {
-      position: absolute;
-      inset: 0;
+      position: relative;
       width: 100%;
-      height: 100%;
-      z-index: 1;
+      aspect-ratio: 16 / 10;
       background-color: #0b1524;
       overflow: hidden;
+      display: block;
     }
     
     .solution-card__img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      object-position: center;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
       display: block;
     }
     
     .solution-card:hover .solution-card__img {
-      transform: scale(1.03); /* Subtle micro scale, no pop */
+      transform: scale(1.04);
     }
 
-    .solution-card__bookmark {
+    .solution-card__category-pill {
       position: absolute;
-      top: 16px;
-      right: 16px;
-      z-index: 4;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.22);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.32);
+      top: 12px;
+      left: 12px;
+      z-index: 2;
+      background: rgba(11, 21, 36, 0.82);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 9999px;
+      padding: 4px 10px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      pointer-events: none;
+    }
+
+    .solution-card__body {
+      padding: 20px 22px 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 12px;
+      background: var(--color-canvas, #FFFFFF);
+    }
+
+    .solution-card__meta-row {
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: #FFFFFF;
-      box-shadow: none;
-      cursor: pointer;
-      transition: background 0.2s ease, border-color 0.2s ease;
-      padding: 0;
-    }
-
-    .solution-card__bookmark:hover {
-      background: rgba(255, 255, 255, 0.38);
-      border-color: rgba(255, 255, 255, 0.55);
-    }
-
-    .solution-card__bookmark.is-saved {
-      background: #FFFFFF;
-      color: #0b1524;
-    }
-
-    .solution-card__bookmark svg {
-      width: 17px;
-      height: 17px;
-      fill: currentColor;
-    }
-    
-    /* 
-      Frosted Glass Text Overlay sitting over the bottom of the photo.
-      The blur captures and reflects the photo's colors naturally!
-    */
-    .solution-card__body {
-      position: relative;
-      z-index: 2;
-      margin-top: auto;
-      padding: 22px 22px 22px 22px;
-      display: flex;
-      flex-direction: column;
-      background: linear-gradient(
-        180deg,
-        rgba(10, 20, 32, 0.38) 0%,
-        rgba(10, 20, 32, 0.74) 42%,
-        rgba(10, 20, 32, 0.94) 100%
-      );
-      backdrop-filter: blur(28px) saturate(140%);
-      -webkit-backdrop-filter: blur(28px) saturate(140%);
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .solution-card__header {
-      display: flex;
-      align-items: flex-start;
       justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 8px;
+      gap: 8px;
     }
 
-    .solution-card__title-group {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .solution-card__category {
+    .solution-card__subcat {
       font-family: var(--font-mono);
-      font-size: 10.5px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #38bdf8;
-      margin-bottom: 3px;
-    }
-    
-    .solution-card__title {
-      font-family: var(--font-heading);
-      font-size: 19px;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: -0.015em;
-      color: #FFFFFF;
-      line-height: 1.25;
-      margin: 0;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--color-primary, #005be3);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .solution-card__badge {
-      background: rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 9999px;
-      padding: 4px 12px;
+      background: #F1F5F9;
+      border: 1px solid #E2E8F0;
+      border-radius: 6px;
+      padding: 3px 8px;
       font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 600;
-      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      color: #334155;
       white-space: nowrap;
       flex-shrink: 0;
     }
-    
-    .solution-card__desc {
-      font-size: 13.5px;
-      color: rgba(255, 255, 255, 0.78);
-      line-height: 1.5;
-      margin: 0 0 18px 0;
-      flex-grow: 1;
-    }
-    
-    .solution-card__tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 22px;
-      margin-top: auto;
+
+    .solution-card__title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-ink, #0f172a);
+      line-height: 1.35;
+      margin: 0;
+      min-height: 48px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
-    .solution-card__tag {
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 9999px;
-      padding: 4px 11px;
-      font-size: 11px;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.92);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
+    .solution-card__spec-box {
+      background-color: var(--color-canvas-soft, #F8FAFC);
+      border: 1px solid var(--color-hairline, #E2E8F0);
+      border-radius: 12px;
+      padding: 11px 13px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .solution-card__spec-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .solution-card__spec-lbl {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--color-muted, #64748B);
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+      min-width: 86px;
+    }
+
+    .solution-card__spec-val {
+      color: var(--color-ink, #1E293B);
+      font-weight: 600;
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
       white-space: nowrap;
     }
-    
-    .solution-card__cta {
-      display: block;
-      width: 100%;
-      text-align: center;
-      background: #FFFFFF;
-      color: #0b1524;
-      font-family: var(--font-primary);
-      font-size: 14.5px;
-      font-weight: 700;
-      padding: 13px 20px;
-      border-radius: 9999px;
-      text-decoration: none;
-      box-shadow: none;
-      border: none;
-      transition: background-color 0.2s ease, color 0.2s ease;
+
+    .solution-card__desc {
+      font-size: 12.5px;
+      color: var(--color-body, #475569);
+      line-height: 1.45;
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 36px;
     }
 
-    .solution-card__cta:hover {
-      background: #F1F5F9;
-      color: #020617;
+    .solution-card__footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid var(--color-hairline, #E2E8F0);
+    }
+
+    .solution-card__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-primary, #005be3);
+      text-decoration: none;
+      transition: color 0.18s ease;
+    }
+
+    .solution-card__cta-arrow {
+      transition: transform 0.2s ease;
+      display: inline-block;
+    }
+
+    .solution-card:hover .solution-card__cta-arrow {
+      transform: translateX(4px);
+    }
+
+    .solution-card__quote-btn {
+      border-radius: var(--radius-pill);
+      font-size: 12.5px;
+      padding: 6px 16px;
+      font-weight: 700;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -258,91 +258,115 @@
           
           <!-- Card 1: Civil Infrastructure -->
           <div class="solution-card">
-            <div class="solution-card__img-wrap">
-              <img src="/src/assets/images/hero-scaffolding.jpg" alt="Civil infrastructure shoring" class="solution-card__img" />
-              <button class="solution-card__bookmark" type="button" aria-label="Save Solution" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
-                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-              </button>
-            </div>
+            <a href="/product.html?id=cuplock-scaffolding-system" class="solution-card__img-wrap" aria-label="View Civil Infrastructure Shoring">
+              <img src="/src/assets/images/hero-scaffolding.jpg" alt="Civil infrastructure shoring" class="solution-card__img" loading="lazy" />
+              <span class="solution-card__category-pill">Infrastructure</span>
+            </a>
             <div class="solution-card__body">
-              <div class="solution-card__header">
-                <div class="solution-card__title-group">
-                  <span class="solution-card__category">INFRASTRUCTURE &amp; HEAVY CIVIL</span>
-                  <h3 class="solution-card__title">Bridges, Viaducts &amp; Falsework</h3>
-                </div>
+              <div class="solution-card__meta-row">
+                <span class="solution-card__subcat">Civil Engineering</span>
                 <span class="solution-card__badge">60 kN / Leg</span>
               </div>
-              <p class="solution-card__desc">
-                High-capacity Cup Lock and Ring Lock heavy-duty falsework towers designed to support freshly poured concrete bridge decks, retaining walls, and heavy beam spans.
-              </p>
-              <div class="solution-card__tags">
-                <span class="solution-card__tag">⭐ Heavy Falsework</span>
-                <span class="solution-card__tag">EN 12810 / 12811</span>
-                <span class="solution-card__tag">Civil Shoring</span>
+              <h3 class="solution-card__title">
+                <a href="/product.html?id=cuplock-scaffolding-system" style="color: inherit; text-decoration: none;">Bridges, Viaducts &amp; Falsework</a>
+              </h3>
+              <div class="solution-card__spec-box">
+                <div class="solution-card__spec-row">
+                  <span class="solution-card__spec-lbl">Capacity:</span>
+                  <span class="solution-card__spec-val">Up to 60 kN per standard leg</span>
+                </div>
+                <div class="solution-card__spec-row">
+                  <span class="solution-card__spec-lbl">Standards:</span>
+                  <span class="solution-card__spec-val">EN 12810, EN 12811, BS 1139, OSHA</span>
+                </div>
               </div>
-              <a href="/product.html?id=cuplock-scaffolding-system" class="solution-card__cta">
-                View Shoring Systems
-              </a>
+              <p class="solution-card__desc">
+                <strong>Scope:</strong> High-capacity Cup Lock and Ring Lock heavy falsework towers engineered for bridge decks, pier tables, and retaining walls.
+              </p>
+              <div class="solution-card__footer">
+                <a href="/product.html?id=cuplock-scaffolding-system" class="solution-card__cta">
+                  Explore Solution Specs <span class="solution-card__cta-arrow">→</span>
+                </a>
+                <a href="/contact.html?product=cuplock-scaffolding-system" class="btn btn--primary btn--sm solution-card__quote-btn">
+                  Consult
+                </a>
+              </div>
             </div>
           </div>
 
           <!-- Card 2: Industrial Petrochemical -->
           <div class="solution-card">
-            <div class="solution-card__img-wrap">
-              <img src="/src/assets/images/seamless-steel-pipes.jpg" alt="Seamless pipes and refinery access" class="solution-card__img" />
-              <button class="solution-card__bookmark" type="button" aria-label="Save Solution" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
-                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-              </button>
-            </div>
+            <a href="/product.html?id=seamless-steel-pipes" class="solution-card__img-wrap" aria-label="View Refinery Piping & Access">
+              <img src="/src/assets/images/seamless-steel-pipes.jpg" alt="Seamless pipes and refinery access" class="solution-card__img" loading="lazy" />
+              <span class="solution-card__category-pill">Petrochemical</span>
+            </a>
             <div class="solution-card__body">
-              <div class="solution-card__header">
-                <div class="solution-card__title-group">
-                  <span class="solution-card__category">OIL &amp; GAS / PETROCHEMICAL</span>
-                  <h3 class="solution-card__title">Refinery Piping &amp; Access</h3>
-                </div>
+              <div class="solution-card__meta-row">
+                <span class="solution-card__subcat">Energy &amp; Offshore</span>
                 <span class="solution-card__badge">API Spec 5L</span>
               </div>
-              <p class="solution-card__desc">
-                API Spec 5L line pipes and ASTM A106 high-temperature seamless tubing paired with EN 74-1 Class B drop-forged couplers and EN 39 scaffold tubes for offshore platforms.
-              </p>
-              <div class="solution-card__tags">
-                <span class="solution-card__tag">⭐ High Temperature</span>
-                <span class="solution-card__tag">EN 74-1 Class B</span>
-                <span class="solution-card__tag">Refinery Spec</span>
+              <h3 class="solution-card__title">
+                <a href="/product.html?id=seamless-steel-pipes" style="color: inherit; text-decoration: none;">Refinery Piping &amp; Offshore Access</a>
+              </h3>
+              <div class="solution-card__spec-box">
+                <div class="solution-card__spec-row">
+                  <span class="solution-card__spec-lbl">Mediums:</span>
+                  <span class="solution-card__spec-val">Hydrocarbons, Steam, Flare Lines</span>
+                </div>
+                <div class="solution-card__spec-row">
+                  <span class="solution-card__spec-lbl">Standards:</span>
+                  <span class="solution-card__spec-val">API Spec 5L, ASTM A106, EN 74-1 Class B</span>
+                </div>
               </div>
-              <a href="/product.html?id=seamless-steel-pipes" class="solution-card__cta">
-                View Pipe Catalog
-              </a>
+              <p class="solution-card__desc">
+                <strong>Scope:</strong> High-temperature seamless carbon pipe packages paired with drop-forged couplers and galvanised scaffold access for offshore plants.
+              </p>
+              <div class="solution-card__footer">
+                <a href="/product.html?id=seamless-steel-pipes" class="solution-card__cta">
+                  Explore Solution Specs <span class="solution-card__cta-arrow">→</span>
+                </a>
+                <a href="/contact.html?product=seamless-steel-pipes" class="btn btn--primary btn--sm solution-card__quote-btn">
+                  Consult
+                </a>
+              </div>
             </div>
           </div>
 
           <!-- Card 3: PEB & Roll-Forming -->
           <div class="solution-card">
-            <div class="solution-card__img-wrap">
-              <img src="/src/assets/images/color-coated-coils.jpg" alt="Color coated coils for roll forming" class="solution-card__img" />
-              <button class="solution-card__bookmark" type="button" aria-label="Save Solution" onclick="event.preventDefault(); this.classList.toggle('is-saved');">
-                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-              </button>
-            </div>
+            <a href="/product.html?id=color-coated-steel-coils" class="solution-card__img-wrap" aria-label="View Roofing, Cladding & Purlins">
+              <img src="/src/assets/images/color-coated-coils.jpg" alt="Color coated coils for roll forming" class="solution-card__img" loading="lazy" />
+              <span class="solution-card__category-pill">Roll Forming</span>
+            </a>
             <div class="solution-card__body">
-              <div class="solution-card__header">
-                <div class="solution-card__title-group">
-                  <span class="solution-card__category">ROLL FORMING &amp; PEB</span>
-                  <h3 class="solution-card__title">Roofing, Cladding &amp; Purlins</h3>
-                </div>
+              <div class="solution-card__meta-row">
+                <span class="solution-card__subcat">Industrial Roofing</span>
                 <span class="solution-card__badge">Z120–Z275</span>
               </div>
-              <p class="solution-card__desc">
-                Hot-dip pre-galvanized coils (Z120–Z275) and PPGI color-coated coils optimized for automated high-speed corrugation, sandwich panel manufacturing, and purlins.
-              </p>
-              <div class="solution-card__tags">
-                <span class="solution-card__tag">⭐ High-Speed Forming</span>
-                <span class="solution-card__tag">PPGI Coating</span>
-                <span class="solution-card__tag">PEB Profiles</span>
+              <h3 class="solution-card__title">
+                <a href="/product.html?id=color-coated-steel-coils" style="color: inherit; text-decoration: none;">Roofing, Cladding &amp; PEB Purlins</a>
+              </h3>
+              <div class="solution-card__spec-box">
+                <div class="solution-card__spec-row">
+                  <span class="solution-card__spec-lbl">Substrate:</span>
+                  <span class="solution-card__spec-val">PPGI / Hot-Dip Galvanized Coils</span>
+                </div>
+                <div class="solution-card__spec-row">
+                  <span class="solution-card__spec-lbl">Standards:</span>
+                  <span class="solution-card__spec-val">JIS G3312, EN 10346, ASTM A653</span>
+                </div>
               </div>
-              <a href="/product.html?id=color-coated-steel-coils" class="solution-card__cta">
-                View Coil Options
-              </a>
+              <p class="solution-card__desc">
+                <strong>Scope:</strong> High-speed automated roll-forming coils with micro-crack-resistant paint systems and strict camber tolerances.
+              </p>
+              <div class="solution-card__footer">
+                <a href="/product.html?id=color-coated-steel-coils" class="solution-card__cta">
+                  Explore Solution Specs <span class="solution-card__cta-arrow">→</span>
+                </a>
+                <a href="/contact.html?product=color-coated-steel-coils" class="btn btn--primary btn--sm solution-card__quote-btn">
+                  Consult
+                </a>
+              </div>
             </div>
           </div>
 

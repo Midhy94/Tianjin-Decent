@@ -1,6 +1,6 @@
 /**
  * TIANJIN DECENT INTERNATIONAL TRADE CO., LTD.
- * Global Footer Component
+ * Global Footer Component (Minimal, Refined European Industrial)
  */
 
 import { SITE_CONFIG, getWhatsAppUrl, getWhatsAppIconSvg } from '../config.js';
@@ -19,96 +19,77 @@ export function initFooter() {
         
         <div class="footer-top">
           
-          <!-- Col 1: Corporate Entity & Port Terminal -->
+          <!-- Col 1: Brand & Logistics Lockup -->
           <div class="footer-brand">
-            <a href="/index.html" style="display: inline-block; margin-bottom: 14px;">
-              <img src="${logoUrl}" alt="TIANJIN DECENT Logo" style="height: 42px; width: auto;" />
+            <a href="/index.html" class="footer-brand__lockup" aria-label="TIANJIN DECENT Homepage">
+              <img src="${logoUrl}" alt="TIANJIN DECENT Logo" class="footer-brand__logo" />
+              <div class="footer-brand__text">
+                <span class="footer-brand__name">TIANJIN DECENT</span>
+                <span class="footer-brand__sub">INTERNATIONAL TRADE CO., LTD.</span>
+              </div>
             </a>
-            <h3 class="footer-brand__name">${SITE_CONFIG.companyName}</h3>
             <p class="footer-brand__desc">
-              Professional international industrial trading company specializing in Steel plate&amp; sheet, Steel Section&amp;profile, Steel pipe &amp;tube, steel wire&amp;rod, and modular scaffolding systems engineered for global standards.
+              Global export supplier of certified steel products and modular scaffolding systems engineered for international construction standards.
             </p>
-            <div style="margin-top: 16px;">
-              <span class="tech-tag tech-tag--blue">
-                LOGISTICS: ${SITE_CONFIG.portTerminal}
-              </span>
+            <div class="footer-port-badge">
+              Xingang Terminal, Port of Tianjin (CNTSN)
             </div>
           </div>
 
-          <!-- Col 2: Steel Categories (First-Level) -->
+          <!-- Col 2: Products -->
           <div class="footer-col">
-            <div class="footer-col__title">Product Categories</div>
+            <div class="footer-col__title">Products</div>
             <ul class="footer-links">
-              <li><a href="/products.html?category=steel-plate-sheet" class="footer-link">Steel plate/sheet</a></li>
-              <li><a href="/products.html?category=steel-section-profile" class="footer-link">Steel section/profile</a></li>
-              <li><a href="/products.html?category=steel-pipe-tube" class="footer-link">Steel pipe/tube</a></li>
-              <li><a href="/products.html?category=scaffolding-accessories" class="footer-link">Scaffolding &amp; Accessories</a></li>
-              <li><a href="/products.html?category=steel-wire-rod" class="footer-link">Steel wire/rod</a></li>
+              <li><a href="/products.html?category=steel-plate-sheet" class="footer-link">Steel Plate &amp; Sheet</a></li>
+              <li><a href="/products.html?category=steel-section-profile" class="footer-link">Steel Section &amp; Profile</a></li>
+              <li><a href="/products.html?category=steel-pipe-tube" class="footer-link">Steel Pipe &amp; Tube</a></li>
+              <li><a href="/products.html?category=scaffolding-accessories" class="footer-link">Scaffolding &amp; Systems</a></li>
+              <li><a href="/products.html?category=steel-wire-rod" class="footer-link">Steel Wire &amp; Rod</a></li>
             </ul>
           </div>
 
-          <!-- Col 3: Scaffolding & Accessories (Second-Level) -->
+          <!-- Col 3: Company & Quality -->
           <div class="footer-col">
-            <div class="footer-col__title">Scaffolding &amp; Accessories</div>
+            <div class="footer-col__title">Company</div>
             <ul class="footer-links">
-              <li><a href="/products.html?category=scaffolding-accessories&subcategory=Ringlock+System" class="footer-link">Ringlock System</a></li>
-              <li><a href="/products.html?category=scaffolding-accessories&subcategory=Cuplock" class="footer-link">Cuplock &amp; Kwikstage</a></li>
-              <li><a href="/products.html?category=scaffolding-accessories&subcategory=Steel+prop%2Fshoring" class="footer-link">Steel Prop / Shoring</a></li>
-              <li><a href="/products.html?category=scaffolding-accessories&subcategory=Steel+plank%2Fboard" class="footer-link">Steel Plank / Board</a></li>
-              <li><a href="/products.html?category=scaffolding-accessories&subcategory=Staircase%2Fbeam+ladder%2Fladder" class="footer-link">Staircase / Beam Ladder / Ladders</a></li>
-              <li><a href="/products.html?category=scaffolding-accessories&subcategory=Couplers" class="footer-link">Drop-Forged Couplers</a></li>
-            </ul>
-          </div>
-
-          <!-- Col 4: Compliance & Navigation -->
-          <div class="footer-col">
-            <div class="footer-col__title">Quality & Compliance</div>
-            <ul class="footer-links">
-              <li><a href="/quality.html" class="footer-link">Mill Test Certificates (EN 10204)</a></li>
-              <li><a href="/quality.html" class="footer-link">Third-Party Inspection (SGS/BV)</a></li>
+              <li><a href="/about.html" class="footer-link">About Tianjin Decent</a></li>
+              <li><a href="/quality.html" class="footer-link">Quality &amp; Testing (EN 10204)</a></li>
               <li><a href="/solutions.html" class="footer-link">Engineering Solutions</a></li>
-              <li><a href="/about.html" class="footer-link">Corporate Credentials</a></li>
-              <li><a href="/contact.html" class="footer-link">B2B Quotation Desk</a></li>
+              <li><a href="/contact.html" class="footer-link">Contact &amp; RFQ Desk</a></li>
             </ul>
           </div>
 
-          <!-- Col 5: Direct Inquiries & WhatsApp -->
-          <div class="footer-col">
-            <div class="footer-col__title">Direct Inquiry Desk</div>
-            <p style="font-size: 13px; color: var(--color-muted); line-height: 1.5; margin-bottom: 12px;">
-              Direct coordination with our Tianjin dispatch and export engineering team.
-            </p>
-            <div style="display: flex; flex-direction: column; gap: 10px;">
-              <a href="mailto:${SITE_CONFIG.email}" class="footer-link" style="font-weight: 500;">
-                ✉ ${SITE_CONFIG.email}
+          <!-- Col 4: Direct Inquiries -->
+          <div class="footer-col footer-col--inquiry">
+            <div class="footer-col__title">Direct Inquiries</div>
+            <p class="footer-inquiry-note">Tianjin export coordination &amp; technical pricing:</p>
+            <div class="footer-contact-stack">
+              <a href="mailto:${SITE_CONFIG.email}" class="footer-contact-link">
+                <svg class="footer-contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span>${SITE_CONFIG.email}</span>
               </a>
               <a href="${whatsappUrl}" 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="footer-link" 
-                 style="font-weight: 500;">
-                WhatsApp: ${SITE_CONFIG.whatsappNumber}
-              </a>
-              <a href="${whatsappUrl}" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 class="btn btn--whatsapp" 
-                 style="display: inline-flex; align-items: center; justify-content: center; width: 100%; gap: 8px;">
-                ${getWhatsAppIconSvg(18)}
-                <span>WhatsApp Direct</span>
+                 class="footer-whatsapp-pill"
+                 aria-label="Direct WhatsApp inquiry with Tianjin Decent: ${SITE_CONFIG.whatsappNumber}">
+                ${getWhatsAppIconSvg(19)}
+                <span>${SITE_CONFIG.whatsappNumber}</span>
               </a>
             </div>
           </div>
 
         </div>
 
+        <!-- Minimal Bottom Bar -->
         <div class="footer-bottom">
-          <div>
-            © ${currentYear} <strong>${SITE_CONFIG.companyName}</strong>. All rights reserved. Registered in Tianjin, China.
+          <div class="footer-bottom__copy">
+            © ${currentYear} <strong>${SITE_CONFIG.companyName}</strong>. All rights reserved.
           </div>
-          <div style="display: flex; gap: 20px;">
-            <span>Standards: ASTM | EN | JIS | BS | ISO</span>
-            <span>Port: CNTSN Xingang</span>
+          <div class="footer-bottom__meta">
+            <span>ASTM · EN · JIS · ISO · BS</span>
+            <span class="footer-bottom__sep">•</span>
+            <span>Tianjin, China</span>
           </div>
         </div>
 

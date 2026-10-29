@@ -82,7 +82,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #0b1524;
+      background-color: #ffffff;
+      border: 1px solid var(--color-hairline);
       border-radius: var(--radius-xs);
       overflow: hidden;
       min-height: 260px;
@@ -649,7 +650,7 @@
           <div class="detail-media">
             <div class="detail-image-card">
               <div class="detail-slider-stage" id="slider-stage">
-                <img id="product-img" src="/src/assets/images/hr-steel-coils.jpg" alt="Product Specification" class="detail-image" />
+                <img id="product-img" src="/src/assets/images/hr-steel-coils.webp" alt="Product Specification" class="detail-image" />
                 <button type="button" class="slider-arrow slider-arrow--prev" id="slider-prev-btn" aria-label="Previous image" style="display: none;">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="15 18 9 12 15 6"></polyline>
@@ -921,7 +922,7 @@
 
     // Get product ID from query parameter (defaults to hr-steel-coils or specified pipe slug)
     const urlParams = new URLSearchParams(window.location.search);
-    const slug = urlParams.get('id') || 'hr-steel-coils';
+    const slug = urlParams.get('id') || urlParams.get('slug') || 'hr-steel-coils';
     const product = getProductBySlug(slug) || PRODUCTS[0];
 
     // Category & Subcategory Meta
@@ -999,7 +1000,7 @@
     // Normalize gallery items (support string or object with title and note)
     const rawGallery = (product.gallery && product.gallery.length > 0)
       ? product.gallery
-      : [product.heroImage || '/src/assets/images/hr-steel-coils.jpg'];
+      : [product.heroImage || '/src/assets/images/hr-steel-coils.webp'];
 
     const galleryItems = rawGallery.map((item, idx) => {
       if (typeof item === 'string') {
