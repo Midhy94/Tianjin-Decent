@@ -144,7 +144,7 @@ export const CATEGORY_META = {
     label: 'Steel section/profile',
     shortLabel: 'Steel section/profile',
     description: 'H/I/U Beams & Channel, IPE / UPN, Angle Bar, Square Bar, Round Bar, and Flat Bar.',
-    image: '/src/assets/images/structural-steel-profiles.jpg',
+    image: '/src/assets/images/h-beam.webp',
     subcategories: [
       'H/I/U Beams & Channel',
       'IPE / UPN',
@@ -1887,7 +1887,7 @@ export const PRODUCTS = [
     "heroImage": "/src/assets/images/seamless-steel-pipes.jpg",
     "gallery": [
       "/src/assets/images/seamless-steel-pipes.jpg",
-      "/src/assets/images/structural-steel-profiles.jpg",
+      "/src/assets/images/black-carbon-steel-square-rectangular-pipe.webp",
       "/src/assets/images/scaffold-tubes-48mm.jpg"
     ],
     "specifications": [
@@ -4169,9 +4169,9 @@ export const PRODUCTS = [
     "tagline": "Hot Rolled / Cold drawn / Galvanized Steel Wire Rod / Wire",
     "shortDescription": "Hot Rolled / Cold drawn / Galvanized Steel Wire Rod & Wire (SAE1006 / SAE1008, 5.5\u201314 mm).",
     "description": "Carbon steel wire rod in the low carbon steel wire commonly known as soft wire, medium and high carbon steel wire commonly known as hard wire. Wire rod is mainly used as drawing blank, but also directly used as building materials and machine parts.\n\nOur company sells hot-rolled carbon steel wire rod, ASTM A510/A510M standard, material SAE1006, SAE1008, diameter 5.5mm, 6mm, 6.5mm, 8mm, 10mm, 12mm, 14mm. Manufactured under strict quality controls with uniform dimensions, consistent coil weight, and full Mill Test Certificates.",
-    "heroImage": "/src/assets/images/steel-wire-rod.jpg",
+    "heroImage": "/src/assets/images/hot-rolled-cold-drawn-galvanized-wire-rod.jpg",
     "gallery": [
-      "/src/assets/images/steel-wire-rod.jpg"
+      "/src/assets/images/hot-rolled-cold-drawn-galvanized-wire-rod.jpg"
     ],
     "specifications": [
       {
@@ -4250,9 +4250,11 @@ export const PRODUCTS = [
     "tagline": "Continuous High-Speed Mill Rolled Carbon Steel Wire Rod",
     "shortDescription": "High-speed rolling mill carbon steel wire rod with tight dimensional tolerances (\u00b10.1 mm) and uniform metallurgical microstructure (SAE 1006 / 1008).",
     "description": "High speed wire rod manufactured on continuous high-speed block finishing mills with controlled Stelmor cooling. Sourced in low, medium, and high carbon grades engineered for subsequent high-speed drawing, cold heading, and precision spring fabrication.\n\nUniform mechanical properties along the entire coil length, minimal scale formation, and strict diameter tolerance guarantees optimal productivity on automated drawing blocks.",
-    "heroImage": "/src/assets/images/steel-wire-rod.jpg",
+    "heroImage": "/src/assets/images/high-speed-wire-rod-spool.jpg",
     "gallery": [
-      "/src/assets/images/steel-wire-rod.jpg"
+      "/src/assets/images/high-speed-wire-rod-spool.jpg",
+      "/src/assets/images/high-speed-wire-rod-factory.jpg",
+      "/src/assets/images/high-speed-wire-rod-coil.jpg"
     ],
     "specifications": [
       {
@@ -4329,8 +4331,9 @@ export const PRODUCTS = [
     "tagline": "Hot-Rolled General Purpose Carbon Steel Wire Rod",
     "shortDescription": "Hot-rolled general purpose carbon steel wire rod for construction ties, nail production, and welded wire mesh (Q195 / Q235 / SAE 1008).",
     "description": "Ordinary wire rod produced by standard hot rolling processes for general construction, fabrication, and basic wire conversion applications. Tianjin Decent supplies ordinary wire rods with consistent carbon content and reliable weldability.\n\nCommonly utilized for construction tie wires, masonry reinforcement, nail and screw manufacturing, and wire mesh fabrication across international export markets.",
-    "heroImage": "/src/assets/images/steel-wire-rod.jpg",
+    "heroImage": "/src/assets/images/ordinary-wire-rod-production.jpg",
     "gallery": [
+      "/src/assets/images/ordinary-wire-rod-production.jpg",
       "/src/assets/images/steel-wire-rod.jpg"
     ],
     "specifications": [
