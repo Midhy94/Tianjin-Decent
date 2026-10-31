@@ -3565,6 +3565,11 @@ export const PRODUCTS = [
         "note": "Heavy-duty pressed steel board retaining clamp (BRC), engineered to secure timber boards and steel planks firmly against ledgers to eliminate wind uplift."
       },
       {
+        "src": "/src/assets/images/fitting-beam-clamp.jpg",
+        "title": "Drop-Forged Girder Coupler / Beam Clamp (SK Clamp)",
+        "note": "Drop-forged girder coupler designed to anchor 48.3 mm scaffold tubes in pairs directly to structural H/I-beam flanges, delivering slip resistance exceeding 30 kN per pair."
+      },
+      {
         "src": "/src/assets/images/scaffold-couplers-catalog-lineup.jpg",
         "title": "Drop-Forged & Pressed Steel Scaffolding Fittings Set",
         "note": "Industrial scaffolding fittings overview: fixed double couplers, universal swivel couplers, board clamps, girder beam clamps, sleeve couplers, and putlog clamps on studio stage."
@@ -3672,8 +3677,8 @@ export const PRODUCTS = [
       },
       {
         "src": "/src/assets/images/fitting-beam-clamp.jpg",
-        "title": "Drop-Forged Girder Beam Clamp",
-        "note": "Heavy-duty girder flange clamp for anchoring scaffold tubes directly to structural H/I steel beams."
+        "title": "Drop-Forged Girder Coupler / Beam Clamp (SK Clamp)",
+        "note": "Drop-forged girder coupler (SK clamp) for anchoring 48.3 mm scaffold tubes in pairs directly to structural H/I-beam flanges with 30 kN slip resistance."
       }
     ],
     "specifications": [
