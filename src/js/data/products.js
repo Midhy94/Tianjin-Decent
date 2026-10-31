@@ -177,7 +177,7 @@ export const CATEGORY_META = {
     label: 'Scaffolding & Accessories',
     shortLabel: 'Scaffolding & Accessories',
     description: 'Ringlock System, Cuplock, Kwikstage, Steel prop/shoring, Steel plank/board, Staircase/beam ladder/ladder, and Couplers.',
-    image: '/src/assets/images/cuplock-scaffolding-setup.jpg',
+    image: '/src/assets/images/cuplock-facade-construction.jpg',
     subcategories: [
       'Ringlock System',
       'Cuplock',
@@ -193,7 +193,7 @@ export const CATEGORY_META = {
     label: 'Steel wire/rod',
     shortLabel: 'Steel wire/rod',
     description: 'Wire rod, High speed wire rod, and ordinary wire rod.',
-    image: '/src/assets/images/steel-wire-rod.jpg',
+    image: '/src/assets/images/hot-rolled-cold-drawn-galvanized-wire-rod.jpg',
     subcategories: [
       'Wire rod',
       'High speed wire rod',
@@ -2091,6 +2091,11 @@ export const PRODUCTS = [
         "note": "Precision-manufactured 8-way rosette connection ring welded to vertical standard base collar (48.3 mm OD). Demonstrates cast ledger heads and diagonal brace swivel blades secured by captive wedge locking pins driven into the rosette plate, seated over an adjustable screw jack base."
       },
       {
+        "src": "/src/assets/images/ringlock-rosette-wedge-connection.jpg",
+        "title": "Ring Lock Rosette Node & Captive Wedge Connection Detail",
+        "note": "Precision close-up of the 8-hole rosette connector ring with forged captive wedge pins locking horizontal ledger ends and diagonal brace clamps into place for bolt-free structural rigidity."
+      },
+      {
         "src": "/src/assets/images/ringlock-base-collar.jpg",
         "title": "Ring Lock Base Collar (Foundation Rosette Member)",
         "note": "Heavy-duty hot-dip galvanized base collar component (48.3 mm OD) engineered with a precision welded 8-hole rosette ring and upper spigot connection. Slides directly over the leveling base screw jack stem to establish the lowest ledger and diagonal bracing tier."
@@ -2534,12 +2539,17 @@ export const PRODUCTS = [
     "name": "Kwikstage",
     "shortDescription": "Heavy-duty modular system scaffolding featuring captive wedge cluster connections and 48.3 mm high-yield standards.",
     "description": "Kwikstage is an established modular system scaffolding widely utilized in construction, industrial maintenance, and commercial access. Characterized by vertical standards with pressed steel 'V' pressings welded at 495 mm intervals and captive wedge fixing pins on ledgers and transoms.\n\nProviding rigid, self-aligning 90-degree orthogonal connections without loose fittings or threaded couplers. Fully compatible with non-slip steel planks, staircase towers, and heavy shoring applications.",
-    "heroImage": "/src/assets/images/kwikstage-stair-tower-assembly.jpg",
+    "heroImage": "/src/assets/images/kwikstage-facade-scaffold-system.jpg",
     "gallery": [
       {
-        "src": "/src/assets/images/kwikstage-stair-tower-assembly.jpg",
-        "title": "Kwikstage Modular Stair Access Tower Configuration",
-        "note": "Complete modular Kwikstage access tower configuration equipped with non-slip aluminum stairways, internal guardrail handrails, steel working platforms, and adjustable screw base jacks."
+        "src": "/src/assets/images/kwikstage-facade-scaffold-system.jpg",
+        "title": "Kwikstage Modular Facade & High-Rise Access Structure",
+        "note": "Multi-tier galvanized Kwikstage scaffolding installation on commercial building facade showing captive 'V' wedge connections, horizontal ledgers, guardrails, and non-slip steel platforms."
+      },
+      {
+        "src": "/src/assets/images/kwikstage-v-pressing-wedge-node.jpg",
+        "title": "Kwikstage 'V' Pressing Captive Wedge Node Detail",
+        "note": "Close-up of hot-dip galvanized standard post featuring welded 'V' pressing socket with captive drop-forged wedge pin securely locking horizontal ledger tube."
       },
       {
         "src": "/src/assets/images/kwikstage-galvanized-standards.jpg",
@@ -2563,8 +2573,8 @@ export const PRODUCTS = [
       },
       {
         "src": "/src/assets/images/kwikstage-system-components.jpg",
-        "title": "Kwikstage Modular System Architecture & Components",
-        "note": "Complete modular configuration overview: Standard, Jack Base, U-Head, Aluminium Stairway, Ledger, Transom, Toeboard Bracket, Platform Bracket, Diagonal Brace, Tie Bar, and Platform Support Bracket."
+        "title": "Kwikstage Exploded System Architecture & Component Diagram",
+        "note": "Complete modular assembly breakdown: Standard upright with welded 'V' pressings, Base Jack, Spigot Connector, Ledgers with captive wedge pins, Diagonal brace, Toe Board, Toe Board Clip, and Steel hook-on plank."
       },
       {
         "src": "/src/assets/images/kwikstage-horizontal-ledgers.jpg",
@@ -3094,8 +3104,13 @@ export const PRODUCTS = [
     "name": "Staircase/beam ladder/ladder",
     "shortDescription": "Modular steel scaffolding staircases, high-strength tubular beam ladders, and heavy-duty vertical access ladders for safe, compliant vertical jobsite transit.",
     "description": "Staircase, beam ladder, and ladder access solutions supplied by Tianjin Decent International Trade Co., Ltd. provide safe, ergonomic vertical transit and structural bridging between scaffold working levels, replacing unsafe vertical climbing with fully certified access configurations.\n\nOur range encompasses prefabricated modular steel and aluminum staircase units with non-slip perforated treads and matching safety handrails, parallel-chord 48.3 mm tubular steel beam ladders (lattice girders) for wide-span bridging and suspended access, and heavy-duty steel and aluminum personnel access ladders with slip-resistant rungs.",
-    "heroImage": "/src/assets/images/scaffold-staircase-tower-facade.jpg",
+    "heroImage": "/src/assets/images/scaffold-staircase.jpg",
     "gallery": [
+      {
+        "src": "/src/assets/images/scaffold-staircase.jpg",
+        "title": "Modular Prefabricated Steel Staircase Unit with Hooks",
+        "note": "Prefabricated modular steel access stairs with non-slip perforated treads and welded ledger hooks for rapid drop-in installation on standard scaffolding bays."
+      },
       {
         "src": "/src/assets/images/scaffold-staircase-tower-facade.jpg",
         "title": "Multi-Tier External Facade Scaffolding Staircase Tower",
@@ -3115,11 +3130,6 @@ export const PRODUCTS = [
         "src": "/src/assets/images/scaffold-access-ladder-bundles-orange-feet.jpg",
         "title": "Industrial Access Ladders with Safety Footing Shoes",
         "note": "Export-strapped factory bundles of industrial heavy-duty access ladders fitted with high-grip grooved safety rubber feet and deeply serrated slip-resistant rungs."
-      },
-      {
-        "src": "/src/assets/images/scaffold-staircase.jpg",
-        "title": "Modular Prefabricated Steel Staircase Unit with Hooks",
-        "note": "Prefabricated modular steel access stairs with non-slip perforated treads and welded ledger hooks for rapid drop-in installation on standard scaffolding bays."
       }
     ],
     "specifications": [
@@ -3545,9 +3555,14 @@ export const PRODUCTS = [
         "note": "Drop-forged carbon steel universal swivel coupler allowing two 48.3 mm tubes to rotate and clamp at any arbitrary angle for diagonal sway and plan bracing."
       },
       {
+        "src": "/src/assets/images/scaffold-coupler-sleeve-detail.jpg",
+        "title": "Sleeve Coupler (Pressed) EN 74 - 1 B",
+        "note": "Pressed steel external sleeve coupler with dual Grade 8.8 bolts, engineered for concentric end-to-end joining of 48.3 mm scaffolding tubes conforming to EN 74-1 Class B."
+      },
+      {
         "src": "/src/assets/images/scaffold-coupler-board-retaining-clamp.jpg",
         "title": "Board Retaining Clamp (BRC / Timber Board Clamp)",
-        "note": "Heavy-duty pressed steel board retaining clamp in yellow zinc passivation, engineered to secure timber boards and steel planks firmly against ledgers to eliminate wind uplift."
+        "note": "Heavy-duty pressed steel board retaining clamp (BRC), engineered to secure timber boards and steel planks firmly against ledgers to eliminate wind uplift."
       },
       {
         "src": "/src/assets/images/scaffold-couplers-catalog-lineup.jpg",
@@ -3652,8 +3667,8 @@ export const PRODUCTS = [
       },
       {
         "src": "/src/assets/images/fitting-sleeve-coupler.jpg",
-        "title": "External Sleeve Coupler",
-        "note": "External sleeve coupler for end-to-end concentric joining of 48.3 mm scaffold tubes."
+        "title": "Sleeve Coupler (Pressed) EN 74 - 1 B",
+        "note": "Pressed steel sleeve coupler for end-to-end concentric joining of 48.3 mm scaffold tubes conforming to EN 74-1 Class B."
       },
       {
         "src": "/src/assets/images/fitting-beam-clamp.jpg",
@@ -4450,7 +4465,7 @@ export const SCAFFOLDING_FITTINGS_CATALOG = [
     description: 'Drop-forged clamp with serrated locking jaws designed to firmly secure timber scaffold boards or metal decks to 48.3 mm transom tubes, eliminating wind uplift risk.'
   },
   {
-    name: 'External Sleeve Coupler',
+    name: 'Sleeve Coupler (Pressed) EN 74 - 1 B',
     standard: 'EN 74-1 Class B Certified',
     image: '/src/assets/images/fitting-sleeve-coupler.jpg',
     tubeDiameter: '48.3 mm OD External',

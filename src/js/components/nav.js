@@ -6,8 +6,12 @@
 import { SITE_CONFIG, getWhatsAppUrl, getWhatsAppIconSvg } from '../config.js';
 import { PRODUCT_HIERARCHY, PRODUCTS, getAllCategories } from '../data/products.js';
 import logoUrl from '../../assets/images/T-D-Logo.png';
+import { initPageLoader } from './loader.js';
 
 export function initNav() {
+  // Initialize Executive Page Loader Animation
+  initPageLoader();
+
   const navPlaceholder = document.getElementById('nav-placeholder');
   if (!navPlaceholder) return;
 
@@ -249,24 +253,67 @@ export function initNav() {
     </header>
   `;
 
-  // Sticky header scroll behavior
+  // Sticky header & smart auto-hide on scroll down / show on scroll up
   const header = document.getElementById('site-header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
+  const toggleBtn = document.getElementById('mobile-toggle');
+  const drawer = document.getElementById('mobile-drawer');
+
+  let lastScrollY = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+  let ticking = false;
+  const SCROLL_THRESHOLD = 8; // Min delta to filter out trackpad bounce/jitter
+  const HIDE_OFFSET = 100;     // Scroll distance from top before auto-hide triggers
+
+  const handleScroll = () => {
+    const rawScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    const maxScrollY = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    // Clamp to avoid Mac trackpad overscroll rubber-banding
+    const currentScrollY = Math.min(Math.max(0, rawScrollY), maxScrollY);
+    const scrollDelta = currentScrollY - lastScrollY;
+
+    // Background blur & shadow activation
+    if (currentScrollY > 20) {
       header.classList.add('site-header--scrolled');
     } else {
       header.classList.remove('site-header--scrolled');
     }
+
+    // Check interaction states (don't hide if mobile menu or desktop dropdown is open)
+    const isDrawerOpen = drawer && drawer.classList.contains('is-open');
+    const hasOpenDropdown = navPlaceholder.querySelector('.nav-dropdown-wrapper.is-open');
+
+    if (isDrawerOpen || hasOpenDropdown) {
+      header.classList.remove('site-header--hidden');
+    } else if (currentScrollY <= 20) {
+      // Near top of document: always visible
+      header.classList.remove('site-header--hidden');
+    } else if (scrollDelta > SCROLL_THRESHOLD && currentScrollY > HIDE_OFFSET) {
+      // Scrolling DOWN -> Slide out smoothly
+      header.classList.add('site-header--hidden');
+    } else if (scrollDelta < -SCROLL_THRESHOLD) {
+      // Scrolling UP -> Slide in immediately
+      header.classList.remove('site-header--hidden');
+    }
+
+    lastScrollY = currentScrollY;
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(handleScroll);
+      ticking = true;
+    }
   }, { passive: true });
 
   // Mobile menu toggle
-  const toggleBtn = document.getElementById('mobile-toggle');
-  const drawer = document.getElementById('mobile-drawer');
   if (toggleBtn && drawer) {
     toggleBtn.addEventListener('click', () => {
       drawer.classList.toggle('is-open');
       const isOpen = drawer.classList.contains('is-open');
       toggleBtn.setAttribute('aria-expanded', isOpen);
+      if (isOpen) {
+        header.classList.remove('site-header--hidden');
+      }
     });
   }
 

@@ -31,8 +31,9 @@ export function initFooter() {
             <p class="footer-brand__desc">
               Global export supplier of certified steel products and modular scaffolding systems engineered for international construction standards.
             </p>
-            <div class="footer-port-badge">
-              Xingang Terminal, Port of Tianjin (CNTSN)
+            <div class="footer-port-meta">
+              <span class="footer-port-meta__label">Primary Loading Port</span>
+              <span class="footer-port-meta__val">Xingang Terminal, Port of Tianjin (CNTSN)</span>
             </div>
           </div>
 
