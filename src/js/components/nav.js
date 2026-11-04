@@ -7,6 +7,7 @@ import { SITE_CONFIG, getWhatsAppUrl, getWhatsAppIconSvg } from '../config.js';
 import { PRODUCT_HIERARCHY, PRODUCTS, getAllCategories } from '../data/products.js';
 import logoUrl from '../../assets/images/T-D-Logo.png';
 import { initPageLoader } from './loader.js';
+import { initI18n, getStoredLanguage, getFlagSvg } from '../i18n/i18n.js';
 
 export function initNav() {
   // Initialize Executive Page Loader Animation
@@ -158,6 +159,7 @@ export function initNav() {
   // Detect if on homepage
   const isHomePage = currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html') || currentPath.endsWith('/');
   const headerClass = isHomePage ? 'site-header site-header--home' : 'site-header';
+  const activeLang = getStoredLanguage();
 
   navPlaceholder.innerHTML = `
     <header class="${headerClass}" id="site-header">
@@ -177,9 +179,47 @@ export function initNav() {
           ${navLinksHtml}
         </nav>
 
-        <!-- Right Action Cluster: WhatsApp + Quote -->
+        <!-- Right Action Cluster: Language Switcher + WhatsApp + Quote -->
         <div class="site-header__actions">
           
+          <!-- Multilingual Language Selector -->
+          <div class="lang-selector" id="lang-selector">
+            <button type="button" 
+                    class="lang-selector__trigger" 
+                    id="lang-selector-trigger" 
+                    aria-expanded="false" 
+                    aria-haspopup="true" 
+                    aria-label="Select Language">
+              <span class="lang-selector__flag" id="lang-current-flag">${getFlagSvg(activeLang, 17, 17)}</span>
+              <span class="lang-selector__current" id="lang-current-code">${activeLang.toUpperCase()}</span>
+              <svg class="lang-selector__arrow" width="8" height="5" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M1 1l4 4 4-4"/>
+              </svg>
+            </button>
+            <div class="lang-selector__dropdown" id="lang-dropdown" role="menu">
+              <button type="button" class="lang-selector__item ${activeLang === 'en' ? 'is-active' : ''}" data-lang="en" role="menuitem">
+                <span class="lang-selector__flag-wrap">${getFlagSvg('en', 17, 17)}</span>
+                <span class="lang-selector__name">English</span>
+                <span class="lang-selector__code">EN</span>
+              </button>
+              <button type="button" class="lang-selector__item ${activeLang === 'fr' ? 'is-active' : ''}" data-lang="fr" role="menuitem">
+                <span class="lang-selector__flag-wrap">${getFlagSvg('fr', 17, 17)}</span>
+                <span class="lang-selector__name">Français</span>
+                <span class="lang-selector__code">FR</span>
+              </button>
+              <button type="button" class="lang-selector__item ${activeLang === 'ru' ? 'is-active' : ''}" data-lang="ru" role="menuitem">
+                <span class="lang-selector__flag-wrap">${getFlagSvg('ru', 17, 17)}</span>
+                <span class="lang-selector__name">Русский</span>
+                <span class="lang-selector__code">RU</span>
+              </button>
+              <button type="button" class="lang-selector__item ${activeLang === 'es' ? 'is-active' : ''}" data-lang="es" role="menuitem">
+                <span class="lang-selector__flag-wrap">${getFlagSvg('es', 17, 17)}</span>
+                <span class="lang-selector__name">Español</span>
+                <span class="lang-selector__code">ES</span>
+              </button>
+            </div>
+          </div>
+
           <a href="${whatsappUrl}" 
              target="_blank" 
              rel="noopener noreferrer" 
@@ -239,7 +279,38 @@ export function initNav() {
           <a href="/about.html" class="mobile-nav-link">About Tianjin Decent</a>
           <a href="/contact.html" class="mobile-nav-link">B2B Quotation Desk</a>
         </nav>
-        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: auto; padding-top: 24px;">
+
+        <!-- Mobile Language Selector -->
+        <div class="mobile-lang-bar">
+          <div class="mobile-lang-bar__title">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>Language</span>
+          </div>
+          <div class="mobile-lang-bar__grid">
+            <button type="button" class="mobile-lang-pill ${activeLang === 'en' ? 'is-active' : ''}" data-lang="en">
+              ${getFlagSvg('en', 16, 16)}
+              <span>English (EN)</span>
+            </button>
+            <button type="button" class="mobile-lang-pill ${activeLang === 'fr' ? 'is-active' : ''}" data-lang="fr">
+              ${getFlagSvg('fr', 16, 16)}
+              <span>Français (FR)</span>
+            </button>
+            <button type="button" class="mobile-lang-pill ${activeLang === 'ru' ? 'is-active' : ''}" data-lang="ru">
+              ${getFlagSvg('ru', 16, 16)}
+              <span>Русский (RU)</span>
+            </button>
+            <button type="button" class="mobile-lang-pill ${activeLang === 'es' ? 'is-active' : ''}" data-lang="es">
+              ${getFlagSvg('es', 16, 16)}
+              <span>Español (ES)</span>
+            </button>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: auto; padding-top: 16px;">
           <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--lg" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;">
             ${getWhatsAppIconSvg(20)}
             <span>Direct WhatsApp Chat (${SITE_CONFIG.whatsappNumber})</span>
@@ -407,5 +478,8 @@ export function initNav() {
     item.addEventListener('mouseenter', activateItem);
     item.addEventListener('focus', activateItem);
   });
+
+  // Initialize Multilingual Language Switcher & Document Translation
+  initI18n();
 }
 

@@ -2974,11 +2974,6 @@ export const PRODUCTS = [
         "src": "/src/assets/images/scaffold-steel-plank.jpg",
         "title": "Pre-Galvanized Modular Scaffolding Walk Board",
         "note": "Lightweight high-load steel plank manufactured from high-yield pre-galvanized sheet steel with punched drain dimples for outdoor weathering resistance."
-      },
-      {
-        "src": "/src/assets/images/platform-board.jpg",
-        "title": "Heavy-Duty Scaffolding Working Platform Deck",
-        "note": "Complete heavy-duty working platform deck installed with edge toeboards and safety guardrails across multi-tier facade access scaffolding."
       }
     ],
     "specifications": [
