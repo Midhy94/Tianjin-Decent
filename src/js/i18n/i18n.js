@@ -69,15 +69,18 @@ export function getCurrentLanguage() {
 export function t(key, fallback) {
   if (!key) return '';
   const trimmed = typeof key === 'string' ? key.trim() : String(key);
+  const normalized = trimmed.replace(/\s+/g, ' ');
   
   const langDict = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
-  if (langDict && langDict[trimmed] !== undefined) {
-    return langDict[trimmed];
+  if (langDict) {
+    if (langDict[trimmed] !== undefined) return langDict[trimmed];
+    if (langDict[normalized] !== undefined) return langDict[normalized];
   }
   
   const enDict = TRANSLATIONS.en;
-  if (enDict && enDict[trimmed] !== undefined) {
-    return enDict[trimmed];
+  if (enDict) {
+    if (enDict[trimmed] !== undefined) return enDict[trimmed];
+    if (enDict[normalized] !== undefined) return enDict[normalized];
   }
 
   return fallback !== undefined ? fallback : key;
@@ -100,10 +103,14 @@ export function translateDocument(lang) {
     document._tdOrigTitle = document.title;
   }
   const titleTrimmed = document._tdOrigTitle.trim();
+  const titleNorm = titleTrimmed.replace(/\s+/g, ' ');
   if (lang === 'en') {
     document.title = document._tdOrigTitle;
-  } else if (targetDict && targetDict[titleTrimmed]) {
-    document.title = targetDict[titleTrimmed];
+  } else if (targetDict) {
+    const titleTrans = targetDict[titleTrimmed] !== undefined ? targetDict[titleTrimmed] : targetDict[titleNorm];
+    if (titleTrans !== undefined) {
+      document.title = titleTrans;
+    }
   }
 
   const metaDesc = document.querySelector('meta[name="description"]');
@@ -112,10 +119,14 @@ export function translateDocument(lang) {
       metaDesc._tdOrigContent = metaDesc.getAttribute('content') || '';
     }
     const descTrimmed = metaDesc._tdOrigContent.trim();
+    const descNorm = descTrimmed.replace(/\s+/g, ' ');
     if (lang === 'en') {
       metaDesc.setAttribute('content', metaDesc._tdOrigContent);
-    } else if (targetDict && targetDict[descTrimmed]) {
-      metaDesc.setAttribute('content', targetDict[descTrimmed]);
+    } else if (targetDict) {
+      const descTrans = targetDict[descTrimmed] !== undefined ? targetDict[descTrimmed] : targetDict[descNorm];
+      if (descTrans !== undefined) {
+        metaDesc.setAttribute('content', descTrans);
+      }
     }
   }
 
@@ -150,20 +161,25 @@ export function translateDocument(lang) {
   let textNode;
   while ((textNode = walker.nextNode())) {
     if (textNode._tdOrigText === undefined) {
-      textNode._tdOrigText = textNode.nodeValue;
+      const parentOrig = textNode.parentElement?.getAttribute('data-orig-text');
+      textNode._tdOrigText = parentOrig || textNode.nodeValue;
     }
 
     const raw = textNode._tdOrigText;
     const trimmed = raw.trim();
     if (!trimmed) continue;
+    const normalized = trimmed.replace(/\s+/g, ' ');
 
     if (lang === 'en') {
       textNode.nodeValue = textNode._tdOrigText;
-    } else if (targetDict && targetDict[trimmed]) {
-      const match = raw.match(/^(\s*)(.*?)(\s*)$/s);
-      const leading = match ? match[1] : '';
-      const trailing = match ? match[3] : '';
-      textNode.nodeValue = leading + targetDict[trimmed] + trailing;
+    } else if (targetDict) {
+      const trans = targetDict[trimmed] !== undefined ? targetDict[trimmed] : targetDict[normalized];
+      if (trans !== undefined) {
+        const match = raw.match(/^(\s*)(.*?)(\s*)$/s);
+        const leading = match ? match[1] : '';
+        const trailing = match ? match[3] : '';
+        textNode.nodeValue = leading + trans + trailing;
+      }
     }
   }
 
@@ -171,15 +187,19 @@ export function translateDocument(lang) {
   const inputs = document.querySelectorAll('input[placeholder], textarea[placeholder]');
   inputs.forEach((input) => {
     if (input._tdOrigPlaceholder === undefined) {
-      input._tdOrigPlaceholder = input.placeholder;
+      input._tdOrigPlaceholder = input.getAttribute('data-orig-placeholder') || input.placeholder;
     }
     const trimmed = input._tdOrigPlaceholder.trim();
     if (!trimmed) return;
+    const normalized = trimmed.replace(/\s+/g, ' ');
 
     if (lang === 'en') {
       input.placeholder = input._tdOrigPlaceholder;
-    } else if (targetDict && targetDict[trimmed]) {
-      input.placeholder = targetDict[trimmed];
+    } else if (targetDict) {
+      const trans = targetDict[trimmed] !== undefined ? targetDict[trimmed] : targetDict[normalized];
+      if (trans !== undefined) {
+        input.placeholder = trans;
+      }
     }
   });
 
@@ -187,22 +207,68 @@ export function translateDocument(lang) {
   const selectOptions = document.querySelectorAll('select option');
   selectOptions.forEach((opt) => {
     if (opt._tdOrigText === undefined) {
-      opt._tdOrigText = opt.textContent;
+      opt._tdOrigText = opt.getAttribute('data-orig-text') || opt.textContent;
     }
     const trimmed = opt._tdOrigText.trim();
     if (!trimmed) return;
+    const normalized = trimmed.replace(/\s+/g, ' ');
 
     if (lang === 'en') {
       opt.textContent = opt._tdOrigText;
-    } else if (targetDict && targetDict[trimmed]) {
-      opt.textContent = targetDict[trimmed];
+    } else if (targetDict) {
+      const trans = targetDict[trimmed] !== undefined ? targetDict[trimmed] : targetDict[normalized];
+      if (trans !== undefined) {
+        opt.textContent = trans;
+      }
     }
   });
 
-  // 6. Translate elements with explicit data-i18n attribute
+  // 6. Translate <optgroup label="...">
+  const optgroups = document.querySelectorAll('optgroup[label]');
+  optgroups.forEach((og) => {
+    if (og._tdOrigLabel === undefined) {
+      og._tdOrigLabel = og.getAttribute('data-orig-label') || og.getAttribute('label') || '';
+    }
+    const trimmed = og._tdOrigLabel.trim();
+    if (!trimmed) return;
+    const normalized = trimmed.replace(/\s+/g, ' ');
+
+    if (lang === 'en') {
+      og.setAttribute('label', og._tdOrigLabel);
+    } else if (targetDict) {
+      const trans = targetDict[trimmed] !== undefined ? targetDict[trimmed] : targetDict[normalized];
+      if (trans !== undefined) {
+        og.setAttribute('label', trans);
+      }
+    }
+  });
+
+  // 7. Translate interactive elements with aria-label
+  const ariaEls = document.querySelectorAll('[aria-label]');
+  ariaEls.forEach((el) => {
+    if (el._tdOrigAriaLabel === undefined) {
+      el._tdOrigAriaLabel = el.getAttribute('data-orig-aria') || el.getAttribute('aria-label') || '';
+    }
+    const trimmed = el._tdOrigAriaLabel.trim();
+    if (!trimmed) return;
+    const normalized = trimmed.replace(/\s+/g, ' ');
+
+    if (lang === 'en') {
+      el.setAttribute('aria-label', el._tdOrigAriaLabel);
+    } else if (targetDict) {
+      const trans = targetDict[trimmed] !== undefined ? targetDict[trimmed] : targetDict[normalized];
+      if (trans !== undefined) {
+        el.setAttribute('aria-label', trans);
+      }
+    }
+  });
+
+  // 8. Translate elements with explicit data-i18n attribute
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
     if (!key) return;
+    const trimmed = key.trim();
+    const normalized = trimmed.replace(/\s+/g, ' ');
 
     if (el._tdOrigText === undefined) {
       el._tdOrigText = el.textContent;
@@ -210,12 +276,15 @@ export function translateDocument(lang) {
 
     if (lang === 'en') {
       el.textContent = el._tdOrigText;
-    } else if (targetDict && targetDict[key]) {
-      el.textContent = targetDict[key];
+    } else if (targetDict) {
+      const trans = targetDict[trimmed] !== undefined ? targetDict[trimmed] : targetDict[normalized];
+      if (trans !== undefined) {
+        el.textContent = trans;
+      }
     }
   });
 
-  // 7. Update Language Switcher UI components
+  // 9. Update Language Switcher UI components
   updateLanguageSwitcherUI(lang);
 
   isTranslating = false;
@@ -382,6 +451,7 @@ export function initI18n() {
   // If saved language is not English, translate page immediately
   if (currentLang !== 'en') {
     translateDocument(currentLang);
+    window.dispatchEvent(new CustomEvent('td:languageChanged', { detail: { lang: currentLang } }));
   } else {
     updateLanguageSwitcherUI('en');
   }

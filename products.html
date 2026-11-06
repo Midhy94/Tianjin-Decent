@@ -388,6 +388,7 @@
     import { initFooter } from '/src/js/components/footer.js';
     import { PRODUCTS, CATEGORY_META, PRODUCT_HIERARCHY, normalizeCategory } from '/src/js/data/products.js';
     import { initScrollReveal, attachRevealTargets } from '/src/js/components/scroll-reveal.js';
+    import { t } from '/src/js/i18n/i18n.js';
 
     initNav();
     initFooter();
@@ -426,12 +427,12 @@
       const hier = PRODUCT_HIERARCHY[currentCategory];
       subcategoryFilterContainer.style.display = 'flex';
 
-      let html = `<span class="subcategory-filter-label">${hier.name}:</span>`;
-      html += `<button class="subfilter-chip ${currentSubcategory === 'all' ? 'is-active' : ''}" data-sub="all">All ${hier.name}</button>`;
+      let html = `<span class="subcategory-filter-label">${t(hier.name)}:</span>`;
+      html += `<button class="subfilter-chip ${currentSubcategory === 'all' ? 'is-active' : ''}" data-sub="all">${t('All')} ${t(hier.name)}</button>`;
 
       hier.subcategories.forEach(sub => {
         const isActive = currentSubcategory === sub ? 'is-active' : '';
-        html += `<button class="subfilter-chip ${isActive}" data-sub="${sub}">${sub}</button>`;
+        html += `<button class="subfilter-chip ${isActive}" data-sub="${sub}">${t(sub)}</button>`;
       });
 
       subcategoryFilterContainer.innerHTML = html;
@@ -462,17 +463,17 @@
       }
 
       const categoryLabel = currentCategory !== 'all' && PRODUCT_HIERARCHY[currentCategory] 
-        ? PRODUCT_HIERARCHY[currentCategory].name 
-        : 'All Products';
-      const subLabel = currentSubcategory !== 'all' ? ` — ${currentSubcategory}` : '';
+        ? t(PRODUCT_HIERARCHY[currentCategory].name) 
+        : t('All Products');
+      const subLabel = currentSubcategory !== 'all' ? ` — ${t(currentSubcategory)}` : '';
 
-      countEl.textContent = `Displaying ${filtered.length} technical product lines (${categoryLabel}${subLabel})`;
+      countEl.textContent = `${t('Displaying')} ${filtered.length} ${t('technical product lines')} (${categoryLabel}${subLabel})`;
 
       if (filtered.length === 0) {
         grid.innerHTML = `
           <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--color-muted);">
-            <p style="font-size: 16px; margin-bottom: 12px;">No products found in this category / subcategory.</p>
-            <button class="btn btn--primary" id="reset-filter-btn">Reset Filters</button>
+            <p style="font-size: 16px; margin-bottom: 12px;">${t('No products found in this category / subcategory.')}</p>
+            <button class="btn btn--primary" id="reset-filter-btn">${t('Reset Filters')}</button>
           </div>
         `;
         document.getElementById('reset-filter-btn')?.addEventListener('click', () => {
@@ -487,8 +488,8 @@
       }
 
       grid.innerHTML = filtered.map(product => {
-        const catName = product.categoryName || (CATEGORY_META[product.category]?.label || 'Industrial');
-        const subName = product.subcategory || '';
+        const catName = t(product.categoryName || (CATEGORY_META[product.category]?.label || 'Industrial'));
+        const subName = product.subcategory ? t(product.subcategory) : '';
         
         // Primary standard for badge
         let primaryStandard = 'ISO 9001';
@@ -539,8 +540,8 @@
         
         return `
           <div class="product-card">
-            <a href="/product.html?id=${product.slug}" class="product-card__img-wrap" aria-label="View specifications for ${product.name}">
-              <img src="${product.heroImage}" alt="${product.name}" class="product-card__img" loading="lazy" />
+            <a href="/product.html?id=${product.slug}" class="product-card__img-wrap" aria-label="${t('View specifications for')} ${t(product.name)}">
+              <img src="${product.heroImage}" alt="${t(product.name)}" class="product-card__img" loading="lazy" />
               <span class="product-card__category-pill">${catName}</span>
             </a>
             <div class="product-card__body">
@@ -549,27 +550,27 @@
                 <span class="product-card__badge">${primaryStandard}</span>
               </div>
               <h3 class="product-card__title">
-                <a href="/product.html?id=${product.slug}" class="product-card__title-link">${product.name}</a>
+                <a href="/product.html?id=${product.slug}" class="product-card__title-link">${t(product.name)}</a>
               </h3>
               <div class="product-card__spec-box">
                 <div class="product-card__spec-row">
-                  <span class="product-card__spec-lbl">Specification:</span>
-                  <span class="product-card__spec-val" title="${specText}">${specText}</span>
+                  <span class="product-card__spec-lbl">${t('Specification:')}</span>
+                  <span class="product-card__spec-val" title="${t(specText)}">${t(specText)}</span>
                 </div>
                 <div class="product-card__spec-row">
-                  <span class="product-card__spec-lbl">Standards:</span>
-                  <span class="product-card__spec-val" title="${standardsText}">${standardsText}</span>
+                  <span class="product-card__spec-lbl">${t('Standards:')}</span>
+                  <span class="product-card__spec-val" title="${t(standardsText)}">${t(standardsText)}</span>
                 </div>
               </div>
               <p class="product-card__uses">
-                <strong>Uses:</strong> ${usesText}
+                <strong>${t('Uses:')}</strong> ${t(usesText)}
               </p>
               <div class="product-card__footer">
                 <a href="/product.html?id=${product.slug}" class="product-card__cta">
-                  Explore Specs &amp; MTC <span class="product-card__cta-arrow">→</span>
+                  ${t('Explore Specs & MTC')} <span class="product-card__cta-arrow">→</span>
                 </a>
                 <a href="/contact.html?product=${product.slug}" class="btn btn--primary btn--sm product-card__quote-btn">
-                  Quote
+                  ${t('Quote')}
                 </a>
               </div>
             </div>
@@ -615,6 +616,12 @@
       currentCategory = normalizeCategory(params.get('category')) || 'all';
       currentSubcategory = params.get('subcategory') || 'all';
       syncCategoryChips();
+      renderSubcategoryFilters();
+      renderProducts();
+    });
+
+    // Re-render when language changes
+    window.addEventListener('td:languageChanged', () => {
       renderSubcategoryFilters();
       renderProducts();
     });

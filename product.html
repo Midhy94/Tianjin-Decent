@@ -916,6 +916,7 @@
     import { getWhatsAppUrl } from '/src/js/config.js';
     import { PRODUCTS, CATEGORY_META, getProductBySlug, SCAFFOLDING_FITTINGS_CATALOG } from '/src/js/data/products.js';
     import { initScrollReveal } from '/src/js/components/scroll-reveal.js';
+    import { t } from '/src/js/i18n/i18n.js';
 
     initNav();
     initFooter();
@@ -925,64 +926,35 @@
     const slug = urlParams.get('id') || urlParams.get('slug') || 'hr-steel-coils';
     const product = getProductBySlug(slug) || PRODUCTS[0];
 
-    // Category & Subcategory Meta
-    const catName = product.categoryName || (CATEGORY_META[product.category]?.label || 'Industrial Products');
+    // Normalize gallery items (support string or object with title and note)
+    const rawGallery = (product.gallery && product.gallery.length > 0)
+      ? product.gallery
+      : [product.heroImage || '/src/assets/images/hr-steel-coils.webp'];
 
-    // Update document title & metadata
-    document.title = `${product.name} — Technical Specifications | TIANJIN DECENT`;
-
-    // Populate Breadcrumb
-    const bcCat = document.getElementById('bc-category');
-    if (bcCat) {
-      bcCat.innerHTML = `<a href="/products.html?category=${product.category}">${catName}</a>`;
-    }
-
-    const bcSubSep = document.getElementById('bc-sub-sep');
-    const bcSub = document.getElementById('bc-subcategory');
-    const hasDistinctSubcategory = product.subcategory && product.subcategory.trim().toLowerCase() !== product.name.trim().toLowerCase();
-    if (hasDistinctSubcategory) {
-      if (bcSubSep) bcSubSep.style.display = 'inline';
-      if (bcSub) {
-        bcSub.style.display = 'inline';
-        bcSub.innerHTML = `<a href="/products.html?category=${product.category}&subcategory=${encodeURIComponent(product.subcategory)}">${product.subcategory}</a>`;
+    const galleryItems = rawGallery.map((item, idx) => {
+      if (typeof item === 'string') {
+        return {
+          src: item,
+          title: null,
+          note: product.shortDescription || product.name
+        };
       }
-    } else {
-      if (bcSubSep) bcSubSep.style.display = 'none';
-      if (bcSub) bcSub.style.display = 'none';
-    }
-    document.getElementById('bc-product').textContent = product.name;
+      return {
+        src: item.src || item.image || item,
+        title: item.title || null,
+        note: item.note || item.description || product.shortDescription || product.name
+      };
+    });
 
-    // Populate Hero Taxonomy Badges
-    const badgeCat = document.getElementById('badge-cat');
-    if (badgeCat) {
-      badgeCat.textContent = catName;
-      badgeCat.href = `/products.html?category=${product.category}`;
-    }
+    const getGalleryTitle = (item, idx) => {
+      if (item && item.title) return t(item.title);
+      return rawGallery.length > 1 ? `${t(product.name)} (${t('View')} ${idx + 1})` : t(product.name);
+    };
 
-    const badgeSub = document.getElementById('badge-sub');
-    if (badgeSub && product.subcategory) {
-      badgeSub.style.display = 'inline-block';
-      badgeSub.textContent = product.subcategory;
-      badgeSub.href = `/products.html?category=${product.category}&subcategory=${encodeURIComponent(product.subcategory)}`;
-    }
-
-    // Populate Product Title & Focused Description Overview
-    document.getElementById('product-name').textContent = product.name;
-    
-    const shortDescEl = document.getElementById('product-short-desc');
-    if (shortDescEl) {
-      if (product.shortDescription && product.shortDescription.trim() && product.shortDescription.trim() !== product.description?.trim()) {
-        shortDescEl.textContent = product.shortDescription.trim();
-        shortDescEl.style.display = 'block';
-      } else {
-        shortDescEl.style.display = 'none';
-      }
-    }
-    document.getElementById('product-desc').textContent = product.description;
-    
-    const productImg = document.getElementById('product-img');
-    productImg.src = product.heroImage;
-    productImg.alt = product.name;
+    const getGalleryNote = (item) => {
+      const note = item?.note || item?.description || product.shortDescription || product.name || '';
+      return t(note);
+    };
 
     // Populate Gallery Slider, Navigation Arrows & Explanatory Notes
     const sliderStage = document.getElementById('slider-stage');
@@ -996,33 +968,16 @@
     const captionTitle = document.getElementById('product-img-title');
     const captionNote = document.getElementById('product-img-note');
     const captionCounter = document.getElementById('product-img-counter');
+    const productImg = document.getElementById('product-img');
 
-    // Normalize gallery items (support string or object with title and note)
-    const rawGallery = (product.gallery && product.gallery.length > 0)
-      ? product.gallery
-      : [product.heroImage || '/src/assets/images/hr-steel-coils.webp'];
-
-    const galleryItems = rawGallery.map((item, idx) => {
-      if (typeof item === 'string') {
-        return {
-          src: item,
-          title: rawGallery.length > 1 ? `${product.name} (View ${idx + 1})` : product.name,
-          note: product.shortDescription || product.name
-        };
-      }
-      return {
-        src: item.src || item.image || item,
-        title: item.title || (rawGallery.length > 1 ? `${product.name} (View ${idx + 1})` : product.name),
-        note: item.note || item.description || product.shortDescription || product.name
-      };
-    });
+    let currentSlideIndex = 0;
 
     const updateCaption = (index) => {
       const item = galleryItems[index] || galleryItems[0];
-      if (item && (item.note || item.title)) {
+      if (item && (item.note || item.title || product.shortDescription)) {
         if (captionBox) captionBox.style.display = 'block';
-        if (captionTitle) captionTitle.textContent = item.title;
-        if (captionNote) captionNote.textContent = item.note || product.shortDescription || '';
+        if (captionTitle) captionTitle.textContent = getGalleryTitle(item, index);
+        if (captionNote) captionNote.textContent = getGalleryNote(item);
         if (captionCounter) {
           if (galleryItems.length > 1) {
             captionCounter.textContent = `${index + 1} / ${galleryItems.length}`;
@@ -1036,62 +991,87 @@
       }
     };
 
-    // Always display the short description caption under the image for all products
-    updateCaption(0);
+    let thumbButtons = [];
+
+    const renderThumbnails = () => {
+      if (!thumbsContainer || galleryItems.length <= 1) return;
+      thumbsContainer.innerHTML = galleryItems.map((item, idx) => {
+        const itemTitle = getGalleryTitle(item, idx);
+        return `
+          <button class="gallery-thumb-btn ${idx === currentSlideIndex ? 'is-active' : ''}" 
+                  type="button" 
+                  aria-label="${t('View photo')} ${idx + 1}: ${itemTitle}" 
+                  data-src="${item.src}" 
+                  data-index="${idx}">
+            <img src="${item.src}" alt="${itemTitle}" loading="lazy" />
+          </button>
+        `;
+      }).join('');
+
+      thumbButtons = thumbsContainer.querySelectorAll('.gallery-thumb-btn');
+      thumbButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.dataset.index, 10) || 0;
+          goToSlide(idx);
+        });
+      });
+    };
+
+    // Core Slider Transition Function
+    const goToSlide = (targetIndex) => {
+      if (targetIndex < 0) targetIndex = galleryItems.length - 1;
+      if (targetIndex >= galleryItems.length) targetIndex = 0;
+      currentSlideIndex = targetIndex;
+
+      // Update active thumbnail & auto-scroll into view
+      thumbButtons.forEach((btn, idx) => {
+        if (idx === currentSlideIndex) {
+          btn.classList.add('is-active');
+          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          btn.classList.remove('is-active');
+        }
+      });
+
+      // Update caption
+      updateCaption(currentSlideIndex);
+
+      // Smooth image crossfade
+      if (productImg) {
+        productImg.classList.add('is-changing');
+        setTimeout(() => {
+          productImg.src = galleryItems[currentSlideIndex].src;
+          productImg.alt = getGalleryTitle(galleryItems[currentSlideIndex], currentSlideIndex);
+          productImg.classList.remove('is-changing');
+        }, 130);
+      }
+    };
 
     if (galleryItems.length > 1) {
-      let currentSlideIndex = 0;
-
       // Show slider navigation arrows
-      if (sliderPrevBtn) sliderPrevBtn.style.display = 'flex';
-      if (sliderNextBtn) sliderNextBtn.style.display = 'flex';
+      if (sliderPrevBtn) {
+        sliderPrevBtn.style.display = 'flex';
+        sliderPrevBtn.setAttribute('aria-label', t('Previous image'));
+      }
+      if (sliderNextBtn) {
+        sliderNextBtn.style.display = 'flex';
+        sliderNextBtn.setAttribute('aria-label', t('Next image'));
+      }
 
       // Show thumbnail wrapper & populate thumbnails
       if (thumbsWrapper) thumbsWrapper.style.display = 'flex';
       if (galleryItems.length > 4) {
-        if (thumbsPrevBtn) thumbsPrevBtn.style.display = 'flex';
-        if (thumbsNextBtn) thumbsNextBtn.style.display = 'flex';
+        if (thumbsPrevBtn) {
+          thumbsPrevBtn.style.display = 'flex';
+          thumbsPrevBtn.setAttribute('aria-label', t('Scroll thumbnails left'));
+        }
+        if (thumbsNextBtn) {
+          thumbsNextBtn.style.display = 'flex';
+          thumbsNextBtn.setAttribute('aria-label', t('Scroll thumbnails right'));
+        }
       }
 
-      thumbsContainer.innerHTML = galleryItems.map((item, idx) => `
-        <button class="gallery-thumb-btn ${idx === 0 ? 'is-active' : ''}" 
-                type="button" 
-                aria-label="View photo ${idx + 1}: ${item.title}" 
-                data-src="${item.src}" 
-                data-index="${idx}">
-          <img src="${item.src}" alt="${item.title}" loading="lazy" />
-        </button>
-      `).join('');
-
-      const thumbButtons = thumbsContainer.querySelectorAll('.gallery-thumb-btn');
-
-      // Core Slider Transition Function
-      const goToSlide = (targetIndex) => {
-        if (targetIndex < 0) targetIndex = galleryItems.length - 1;
-        if (targetIndex >= galleryItems.length) targetIndex = 0;
-        currentSlideIndex = targetIndex;
-
-        // Update active thumbnail & auto-scroll into view
-        thumbButtons.forEach((btn, idx) => {
-          if (idx === currentSlideIndex) {
-            btn.classList.add('is-active');
-            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-          } else {
-            btn.classList.remove('is-active');
-          }
-        });
-
-        // Update caption
-        updateCaption(currentSlideIndex);
-
-        // Smooth image crossfade
-        productImg.classList.add('is-changing');
-        setTimeout(() => {
-          productImg.src = galleryItems[currentSlideIndex].src;
-          productImg.alt = galleryItems[currentSlideIndex].title || product.name;
-          productImg.classList.remove('is-changing');
-        }, 130);
-      };
+      renderThumbnails();
 
       // Wire Prev / Next Floating Arrows
       if (sliderPrevBtn) {
@@ -1109,27 +1089,19 @@
       }
 
       // Wire Thumbnail Scroll Buttons
-      if (thumbsPrevBtn) {
+      if (thumbsPrevBtn && thumbsContainer) {
         thumbsPrevBtn.addEventListener('click', (e) => {
           e.preventDefault();
           thumbsContainer.scrollBy({ left: -160, behavior: 'smooth' });
         });
       }
 
-      if (thumbsNextBtn) {
+      if (thumbsNextBtn && thumbsContainer) {
         thumbsNextBtn.addEventListener('click', (e) => {
           e.preventDefault();
           thumbsContainer.scrollBy({ left: 160, behavior: 'smooth' });
         });
       }
-
-      // Wire Thumbnail Buttons
-      thumbButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const idx = parseInt(btn.dataset.index, 10) || 0;
-          goToSlide(idx);
-        });
-      });
 
       // Wire Keyboard Arrow Navigation
       document.addEventListener('keydown', (e) => {
@@ -1168,6 +1140,78 @@
           }
         }, { passive: true });
       }
+    }
+
+    // Master Render Function for Dynamic Product Data
+    function renderProductDetails() {
+      // Category & Subcategory Meta
+      const rawCatName = product.categoryName || (CATEGORY_META[product.category]?.label || 'Industrial Products');
+      const catName = t(rawCatName);
+
+      // Update document title & metadata
+      document.title = `${t(product.name)} — ${t('Technical Specifications')} | TIANJIN DECENT`;
+
+      // Populate Breadcrumb
+      const bcCat = document.getElementById('bc-category');
+      if (bcCat) {
+        bcCat.innerHTML = `<a href="/products.html?category=${product.category}">${catName}</a>`;
+      }
+
+      const bcSubSep = document.getElementById('bc-sub-sep');
+      const bcSub = document.getElementById('bc-subcategory');
+      const hasDistinctSubcategory = product.subcategory && product.subcategory.trim().toLowerCase() !== product.name.trim().toLowerCase();
+      if (hasDistinctSubcategory) {
+        if (bcSubSep) bcSubSep.style.display = 'inline';
+        if (bcSub) {
+          bcSub.style.display = 'inline';
+          bcSub.innerHTML = `<a href="/products.html?category=${product.category}&subcategory=${encodeURIComponent(product.subcategory)}">${t(product.subcategory)}</a>`;
+        }
+      } else {
+        if (bcSubSep) bcSubSep.style.display = 'none';
+        if (bcSub) bcSub.style.display = 'none';
+      }
+      const bcProd = document.getElementById('bc-product');
+      if (bcProd) bcProd.textContent = t(product.name);
+
+      // Populate Hero Taxonomy Badges
+      const badgeCat = document.getElementById('badge-cat');
+      if (badgeCat) {
+        badgeCat.textContent = catName;
+        badgeCat.href = `/products.html?category=${product.category}`;
+      }
+
+      const badgeSub = document.getElementById('badge-sub');
+      if (badgeSub && product.subcategory) {
+        badgeSub.style.display = 'inline-block';
+        badgeSub.textContent = t(product.subcategory);
+        badgeSub.href = `/products.html?category=${product.category}&subcategory=${encodeURIComponent(product.subcategory)}`;
+      }
+
+      // Populate Product Title & Focused Description Overview
+      const pNameEl = document.getElementById('product-name');
+      if (pNameEl) pNameEl.textContent = t(product.name);
+      
+      const shortDescEl = document.getElementById('product-short-desc');
+      if (shortDescEl) {
+        if (product.shortDescription && product.shortDescription.trim() && product.shortDescription.trim() !== product.description?.trim()) {
+          shortDescEl.textContent = t(product.shortDescription.trim());
+          shortDescEl.style.display = 'block';
+        } else {
+          shortDescEl.style.display = 'none';
+        }
+      }
+
+      const pDescEl = document.getElementById('product-desc');
+      if (pDescEl) pDescEl.textContent = t(product.description);
+      
+      if (productImg) {
+        productImg.src = galleryItems[currentSlideIndex]?.src || product.heroImage;
+        productImg.alt = t(product.name);
+      }
+
+      // Update Slider Caption & Thumbnails
+      updateCaption(currentSlideIndex);
+      renderThumbnails();
 
       // Populate Technical Diagrams & Field Visuals Section
       const visualSection = document.getElementById('visual-gallery-section');
@@ -1178,13 +1222,13 @@
       if (visualSection && visualGrid && dedicatedVisualItems.length > 1) {
         visualSection.style.display = 'block';
         visualGrid.innerHTML = galleryItems.map((item, idx) => `
-          <div class="visual-gallery-card" data-index="${idx}" title="Click to view in main viewer">
+          <div class="visual-gallery-card" data-index="${idx}" title="${t('Click to view in main viewer')}">
             <div class="visual-gallery-media">
-              <img src="${item.src}" alt="${item.title}" class="visual-gallery-img" loading="lazy" />
+              <img src="${item.src}" alt="${getGalleryTitle(item, idx)}" class="visual-gallery-img" loading="lazy" />
             </div>
             <div class="visual-gallery-body">
-              <h3 class="visual-gallery-title">${item.title}</h3>
-              <p class="visual-gallery-note">${item.note}</p>
+              <h3 class="visual-gallery-title">${getGalleryTitle(item, idx)}</h3>
+              <p class="visual-gallery-note">${getGalleryNote(item)}</p>
             </div>
           </div>
         `).join('');
@@ -1202,221 +1246,241 @@
           });
         });
       }
-    }
 
-    // WhatsApp Direct Link for this specific product
-    const waMessage = `Hello TIANJIN DECENT, I would like to request technical specifications and pricing for: ${product.name}.`;
-    document.getElementById('product-wa-btn').href = getWhatsAppUrl(waMessage);
+      // WhatsApp Direct Link for this specific product
+      const waMsgBase = t('Hello TIANJIN DECENT, I would like to request technical specifications and pricing for:');
+      const waMessage = `${waMsgBase} ${t(product.name)}.`;
+      const waBtn = document.getElementById('product-wa-btn');
+      if (waBtn) waBtn.href = getWhatsAppUrl(waMessage);
 
-    // Pre-fill RFQ Form
-    document.getElementById('rfq-product').value = product.name;
+      // Pre-fill RFQ Form
+      const rfqProd = document.getElementById('rfq-product');
+      if (rfqProd) rfqProd.value = t(product.name);
 
-    // Populate Specifications Table
-    const specsBody = document.getElementById('specs-table-body');
-    if (product.specifications && product.specifications.length > 0) {
-      specsBody.innerHTML = product.specifications.map(s => `
-        <tr>
-          <th>${s.label}</th>
-          <td>${s.value.replace(/\n/g, '<br/>')}</td>
-        </tr>
-      `).join('');
-    }
-
-    // Populate Wall Thickness Specifications Matrix (if applicable, e.g. Scaffold Tubes)
-    if (product.wallThicknessSpecs && product.wallThicknessSpecs.length > 0) {
-      const wallSection = document.getElementById('wall-thickness-section');
-      const matrixBody = document.getElementById('matrix-table-body');
-      const noteBox = document.getElementById('matrix-note-box');
-      wallSection.style.display = 'block';
-      matrixBody.innerHTML = product.wallThicknessSpecs.map(item => `
-        <tr>
-          <td><span class="matrix-badge">${item.standard}</span></td>
-          <td><strong>${item.yieldStress}</strong></td>
-          <td><span class="matrix-thickness">${item.nominalWallThickness}</span></td>
-          <td>${item.description}</td>
-        </tr>
-      `).join('');
-
-      if (product.wallThicknessNote && noteBox) {
-        noteBox.style.display = 'block';
-        noteBox.innerHTML = `<strong>Note:</strong> BS 1139 tubing is equivalent and is acceptable.`;
+      // Populate Specifications Table
+      const specsBody = document.getElementById('specs-table-body');
+      if (specsBody && product.specifications && product.specifications.length > 0) {
+        specsBody.innerHTML = product.specifications.map(s => `
+          <tr>
+            <th>${t(s.label)}</th>
+            <td>${t(s.value).replace(/\n/g, '<br/>')}</td>
+          </tr>
+        `).join('');
       }
-    }
 
-    // Populate Standard Sizes Specifications Tables (e.g. Kwikstage Standard & Ledger)
-    const rawSizesTables = product.standardSizesTables || (product.standardSizesTable ? [product.standardSizesTable] : null);
-    if (rawSizesTables && rawSizesTables.length > 0) {
-      const sizesSection = document.getElementById('standard-sizes-section');
-      const sizesContainer = document.getElementById('standard-sizes-container');
+      // Populate Wall Thickness Specifications Matrix (if applicable, e.g. Scaffold Tubes)
+      if (product.wallThicknessSpecs && product.wallThicknessSpecs.length > 0) {
+        const wallSection = document.getElementById('wall-thickness-section');
+        const matrixBody = document.getElementById('matrix-table-body');
+        const noteBox = document.getElementById('matrix-note-box');
+        if (wallSection) wallSection.style.display = 'block';
+        if (matrixBody) {
+          matrixBody.innerHTML = product.wallThicknessSpecs.map(item => `
+            <tr>
+              <td><span class="matrix-badge">${item.standard}</span></td>
+              <td><strong>${item.yieldStress}</strong></td>
+              <td><span class="matrix-thickness">${item.nominalWallThickness}</span></td>
+              <td>${t(item.description)}</td>
+            </tr>
+          `).join('');
+        }
 
-      if (sizesSection && sizesContainer) {
-        sizesSection.style.display = 'block';
-        sizesContainer.innerHTML = rawSizesTables.map(tbl => `
-          <div style="margin-bottom: var(--space-xl);">
-            ${tbl.title ? `<h3 style="font-size: 15px; font-weight: 700; color: var(--color-ink); margin-bottom: 4px;">${tbl.title}</h3>` : ''}
-            ${tbl.subtitle ? `<p style="font-size: 13px; color: var(--color-muted); margin-bottom: 10px;">${tbl.subtitle}</p>` : ''}
-            <div class="matrix-card">
-              <table class="matrix-table">
-                <thead>
-                  <tr>${(tbl.columns || []).map(col => `<th>${col}</th>`).join('')}</tr>
-                </thead>
-                <tbody>
-                  ${(tbl.rows || []).map(row => `
-                    <tr>
-                      ${row.map((cell, idx) => {
-                        if (idx === 0) return `<td><strong>${cell}</strong></td>`;
-                        if (idx === 1) return `<td><span class="matrix-thickness">${cell}</span></td>`;
-                        if (idx === 3) return `<td><span class="matrix-badge">${cell}</span></td>`;
-                        return `<td>${cell}</td>`;
-                      }).join('')}
-                    </tr>
-                  `).join('')}
-                </tbody>
-              </table>
+        if (product.wallThicknessNote && noteBox) {
+          noteBox.style.display = 'block';
+          noteBox.innerHTML = `<strong>${t('Note:')}</strong> ${t('BS 1139 tubing is equivalent and is acceptable.')}`;
+        }
+      }
+
+      // Populate Standard Sizes Specifications Tables (e.g. Kwikstage Standard & Ledger)
+      const rawSizesTables = product.standardSizesTables || (product.standardSizesTable ? [product.standardSizesTable] : null);
+      if (rawSizesTables && rawSizesTables.length > 0) {
+        const sizesSection = document.getElementById('standard-sizes-section');
+        const sizesContainer = document.getElementById('standard-sizes-container');
+
+        if (sizesSection && sizesContainer) {
+          sizesSection.style.display = 'block';
+          sizesContainer.innerHTML = rawSizesTables.map(tbl => `
+            <div style="margin-bottom: var(--space-xl);">
+              ${tbl.title ? `<h3 style="font-size: 15px; font-weight: 700; color: var(--color-ink); margin-bottom: 4px;">${t(tbl.title)}</h3>` : ''}
+              ${tbl.subtitle ? `<p style="font-size: 13px; color: var(--color-muted); margin-bottom: 10px;">${t(tbl.subtitle)}</p>` : ''}
+              <div class="matrix-card">
+                <table class="matrix-table">
+                  <thead>
+                    <tr>${(tbl.columns || []).map(col => `<th>${t(col)}</th>`).join('')}</tr>
+                  </thead>
+                  <tbody>
+                    ${(tbl.rows || []).map(row => `
+                      <tr>
+                        ${row.map((cell, idx) => {
+                          const translatedCell = t(cell);
+                          if (idx === 0) return `<td><strong>${translatedCell}</strong></td>`;
+                          if (idx === 1) return `<td><span class="matrix-thickness">${translatedCell}</span></td>`;
+                          if (idx === 3 && tbl.columns?.length === 4) return `<td><span class="matrix-badge">${translatedCell}</span></td>`;
+                          return `<td>${translatedCell}</td>`;
+                        }).join('')}
+                      </tr>
+                    `).join('')}
+                  </tbody>
+                </table>
+              </div>
             </div>
+          `).join('');
+        }
+      }
+
+      // Populate Scaffolding Accessories & Components Section (if applicable)
+      if (product.accessories && product.accessories.length > 0) {
+        const accSection = document.getElementById('accessories-section');
+        const accGrid = document.getElementById('accessory-grid');
+        if (accSection) {
+          accSection.style.display = 'block';
+          const heading = accSection.querySelector('h2');
+          if (heading) {
+            heading.innerHTML = `${t(product.name)} ${t('Components & Standard Hardware')}`;
+          }
+          const subtitle = accSection.querySelector('p');
+          if (subtitle) {
+            subtitle.innerHTML = t(product.accessoriesSubtitle || `Precision-engineered modular uprights, ledgers, braces, locking nodes, base collars, and foundation hardware certified to international scaffolding standards.`);
+          }
+        }
+        if (accGrid) {
+          accGrid.innerHTML = product.accessories.map(acc => {
+            const sizeTokens = acc.sizeList || acc.sizes.split('/').map(s => s.trim()).filter(Boolean);
+            return `
+              <div class="accessory-card">
+                <div class="accessory-media">
+                  <img src="${acc.image}" alt="${t(acc.name)}" class="accessory-img" loading="lazy" />
+                </div>
+                <div>
+                  <h3 class="accessory-title">${t(acc.name)}</h3>
+                  <div class="accessory-sizes-label">${t('Available Standard Sizes:')}</div>
+                  <div class="accessory-sizes">
+                    ${sizeTokens.map(size => `<span class="size-chip">${size}</span>`).join('')}
+                  </div>
+                  <p class="accessory-desc">${t(acc.description)}</p>
+                </div>
+              </div>
+            `;
+          }).join('');
+        }
+      }
+
+      // Populate Scaffolding Fittings & Couplers Catalog (if applicable)
+      const isFittingsRelated = ['couplers', 'swivel-coupler', 'right-angle-coupler', 'tube-fittings-scaffolding', 'scaffolding-accessories'].includes(product.slug);
+      if (isFittingsRelated && SCAFFOLDING_FITTINGS_CATALOG && SCAFFOLDING_FITTINGS_CATALOG.length > 0) {
+        const fitSection = document.getElementById('fittings-section');
+        const fitGrid = document.getElementById('fittings-grid');
+        if (fitSection) fitSection.style.display = 'block';
+        if (fitGrid) {
+          fitGrid.innerHTML = SCAFFOLDING_FITTINGS_CATALOG.map(item => `
+            <div class="fitting-item-card">
+              <div class="fitting-media">
+                <img src="${item.image}" alt="${t(item.name)}" class="fitting-img" loading="lazy" />
+              </div>
+              <div>
+                <div class="fitting-header">
+                  <h3 class="fitting-name">${t(item.name)}</h3>
+                  <span class="fitting-badge">${item.standard}</span>
+                </div>
+                <div class="fitting-specs-mini">
+                  <div><span>${t('Tube Diameter:')}</span> <strong>${item.tubeDiameter}</strong></div>
+                  <div><span>${t('Tightening Torque:')}</span> <strong>${item.tighteningTorque}</strong></div>
+                  <div><span>${t('Slip Resistance:')}</span> <strong>${item.slipLoad}</strong></div>
+                  <div><span>${t('Failure Load:')}</span> <strong>${item.failureLoad}</strong></div>
+                  <div><span>${t('Finish:')}</span> <strong>${t(item.finish)}</strong></div>
+                  <div><span>${t('Fasteners:')}</span> <strong>${t(item.fastener)}</strong></div>
+                </div>
+                <p class="accessory-desc">${t(item.description)}</p>
+              </div>
+            </div>
+          `).join('');
+        }
+      }
+
+      // Populate Features
+      const featuresList = document.getElementById('features-list');
+      if (featuresList && product.features && product.features.length > 0) {
+        featuresList.innerHTML = product.features.map(f => `
+          <div class="feature-item"><span>${t(f)}</span></div>
+        `).join('');
+      }
+
+      // Populate Applications
+      const applicationsList = document.getElementById('applications-list');
+      if (applicationsList && product.applications && product.applications.length > 0) {
+        applicationsList.innerHTML = product.applications.map(a => `
+          <div class="feature-item"><span>${t(a)}</span></div>
+        `).join('');
+      }
+
+      // Populate Standards
+      const standardsList = document.getElementById('standards-list');
+      if (standardsList && product.standards && product.standards.length > 0) {
+        standardsList.innerHTML = product.standards.map(s => `
+          <div style="background-color: var(--color-canvas-soft); padding: 10px 14px; border-radius: var(--radius-xs); border: 1px solid var(--color-hairline); display: flex; justify-content: space-between; align-items: center;">
+            <strong style="font-family: var(--font-mono); font-size: 13px; color: var(--color-ink);">${s.name}</strong>
+            <span style="font-size: 13px; color: var(--color-muted);">${t(s.description)}</span>
           </div>
         `).join('');
       }
-    }
 
-    // Populate Scaffolding Accessories & Components Section (if applicable)
-    if (product.accessories && product.accessories.length > 0) {
-      const accSection = document.getElementById('accessories-section');
-      const accGrid = document.getElementById('accessory-grid');
-      accSection.style.display = 'block';
-      const heading = accSection.querySelector('h2');
-      if (heading) {
-        heading.innerHTML = `${product.name} Components &amp; Standard Hardware`;
-      }
-      const subtitle = accSection.querySelector('p');
-      if (subtitle) {
-        subtitle.innerHTML = product.accessoriesSubtitle || `Precision-engineered modular uprights, ledgers, braces, locking nodes, base collars, and foundation hardware certified to international scaffolding standards.`;
-      }
-      accGrid.innerHTML = product.accessories.map(acc => {
-        const sizeTokens = acc.sizeList || acc.sizes.split('/').map(s => s.trim()).filter(Boolean);
-        return `
-          <div class="accessory-card">
-            <div class="accessory-media">
-              <img src="${acc.image}" alt="${acc.name}" class="accessory-img" loading="lazy" />
-            </div>
-            <div>
-              <h3 class="accessory-title">${acc.name}</h3>
-              <div class="accessory-sizes-label">Available Standard Sizes:</div>
-              <div class="accessory-sizes">
-                ${sizeTokens.map(size => `<span class="size-chip">${size}</span>`).join('')}
-              </div>
-              <p class="accessory-desc">${acc.description}</p>
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
+      // Populate Related Products
+      const relatedSection = document.getElementById('related-section');
+      const relatedGrid = document.getElementById('related-grid');
+      const relatedHeading = document.getElementById('related-heading');
+      const relatedViewAll = document.getElementById('related-view-all');
 
-    // Populate Scaffolding Fittings & Couplers Catalog (if applicable)
-    const isFittingsRelated = ['couplers', 'swivel-coupler', 'right-angle-coupler', 'tube-fittings-scaffolding', 'scaffolding-accessories'].includes(product.slug);
-    if (isFittingsRelated && SCAFFOLDING_FITTINGS_CATALOG && SCAFFOLDING_FITTINGS_CATALOG.length > 0) {
-      const fitSection = document.getElementById('fittings-section');
-      const fitGrid = document.getElementById('fittings-grid');
-      fitSection.style.display = 'block';
-      fitGrid.innerHTML = SCAFFOLDING_FITTINGS_CATALOG.map(item => `
-        <div class="fitting-item-card">
-          <div class="fitting-media">
-            <img src="${item.image}" alt="${item.name}" class="fitting-img" loading="lazy" />
-          </div>
-          <div>
-            <div class="fitting-header">
-              <h3 class="fitting-name">${item.name}</h3>
-              <span class="fitting-badge">${item.standard}</span>
-            </div>
-            <div class="fitting-specs-mini">
-              <div><span>Tube Diameter:</span> <strong>${item.tubeDiameter}</strong></div>
-              <div><span>Tightening Torque:</span> <strong>${item.tighteningTorque}</strong></div>
-              <div><span>Slip Resistance:</span> <strong>${item.slipLoad}</strong></div>
-              <div><span>Failure Load:</span> <strong>${item.failureLoad}</strong></div>
-              <div><span>Finish:</span> <strong>${item.finish}</strong></div>
-              <div><span>Fasteners:</span> <strong>${item.fastener}</strong></div>
-            </div>
-            <p class="accessory-desc">${item.description}</p>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    // Populate Features
-    const featuresList = document.getElementById('features-list');
-    if (product.features && product.features.length > 0) {
-      featuresList.innerHTML = product.features.map(f => `
-        <div class="feature-item"><span>${f}</span></div>
-      `).join('');
-    }
-
-    // Populate Applications
-    const applicationsList = document.getElementById('applications-list');
-    if (product.applications && product.applications.length > 0) {
-      applicationsList.innerHTML = product.applications.map(a => `
-        <div class="feature-item"><span>${a}</span></div>
-      `).join('');
-    }
-
-    // Populate Standards
-    const standardsList = document.getElementById('standards-list');
-    if (product.standards && product.standards.length > 0) {
-      standardsList.innerHTML = product.standards.map(s => `
-        <div style="background-color: var(--color-canvas-soft); padding: 10px 14px; border-radius: var(--radius-xs); border: 1px solid var(--color-hairline); display: flex; justify-content: space-between; align-items: center;">
-          <strong style="font-family: var(--font-mono); font-size: 13px; color: var(--color-ink);">${s.name}</strong>
-          <span style="font-size: 13px; color: var(--color-muted);">${s.description}</span>
-        </div>
-      `).join('');
-    }
-
-    // Populate Related Products
-    const relatedSection = document.getElementById('related-section');
-    const relatedGrid = document.getElementById('related-grid');
-    const relatedHeading = document.getElementById('related-heading');
-    const relatedViewAll = document.getElementById('related-view-all');
-
-    if (relatedSection && relatedGrid) {
-      let related = PRODUCTS.filter(p => p.slug !== product.slug && p.category === product.category);
-      if (product.subcategory) {
-        const sameSub = related.filter(p => p.subcategory === product.subcategory);
-        const diffSub = related.filter(p => p.subcategory !== product.subcategory);
-        related = [...sameSub, ...diffSub];
-      }
-      related = related.slice(0, 3);
-
-      if (related.length > 0) {
-        relatedSection.style.display = 'block';
-        relatedHeading.textContent = `Related in ${catName}`;
-        if (relatedViewAll) {
-          relatedViewAll.href = `/products.html?category=${product.category}`;
-          relatedViewAll.textContent = `View All ${catName} →`;
+      if (relatedSection && relatedGrid) {
+        let related = PRODUCTS.filter(p => p.slug !== product.slug && p.category === product.category);
+        if (product.subcategory) {
+          const sameSub = related.filter(p => p.subcategory === product.subcategory);
+          const diffSub = related.filter(p => p.subcategory !== product.subcategory);
+          related = [...sameSub, ...diffSub];
         }
+        related = related.slice(0, 3);
 
-        relatedGrid.innerHTML = related.map(rel => {
-          const relPrimaryStd = rel.standards && rel.standards[0] ? rel.standards[0].name.split('/')[0].trim() : 'ISO 9001';
-          return `
-            <a href="/product.html?id=${rel.slug}" class="product-card">
-              <div class="product-card__img-wrap">
-                <img src="${rel.heroImage}" alt="${rel.name}" class="product-card__img" loading="lazy" />
-              </div>
-              <div class="product-card__body">
-                <div class="product-card__header">
-                  <div class="product-card__title-group">
-                    <span class="product-card__category">${rel.categoryName || catName}${rel.subcategory ? ' • ' + rel.subcategory : ''}</span>
-                    <h3 class="product-card__name">${rel.name}</h3>
-                  </div>
-                  <span class="product-card__badge">${relPrimaryStd}</span>
+        if (related.length > 0) {
+          relatedSection.style.display = 'block';
+          if (relatedHeading) relatedHeading.textContent = `${t('Related in')} ${catName}`;
+          if (relatedViewAll) {
+            relatedViewAll.href = `/products.html?category=${product.category}`;
+            relatedViewAll.textContent = `${t('View All')} ${catName} →`;
+          }
+
+          relatedGrid.innerHTML = related.map(rel => {
+            const relPrimaryStd = rel.standards && rel.standards[0] ? rel.standards[0].name.split('/')[0].trim() : 'ISO 9001';
+            return `
+              <a href="/product.html?id=${rel.slug}" class="product-card">
+                <div class="product-card__img-wrap">
+                  <img src="${rel.heroImage}" alt="${t(rel.name)}" class="product-card__img" loading="lazy" />
                 </div>
-                <p class="product-card__desc">${rel.shortDescription}</p>
-                <span class="product-card__cta">View Specifications</span>
-              </div>
-            </a>
-          `;
-        }).join('');
-      } else {
-        relatedSection.style.display = 'none';
+                <div class="product-card__body">
+                  <div class="product-card__header">
+                    <div class="product-card__title-group">
+                      <span class="product-card__category">${t(rel.categoryName || rawCatName)}${rel.subcategory ? ' • ' + t(rel.subcategory) : ''}</span>
+                      <h3 class="product-card__name">${t(rel.name)}</h3>
+                    </div>
+                    <span class="product-card__badge">${relPrimaryStd}</span>
+                  </div>
+                  <p class="product-card__desc">${t(rel.shortDescription)}</p>
+                  <span class="product-card__cta">${t('View Specifications')}</span>
+                </div>
+              </a>
+            `;
+          }).join('');
+        } else {
+          relatedSection.style.display = 'none';
+        }
       }
     }
+
+    // Initial render
+    renderProductDetails();
+
+    // Re-render when language changes
+    window.addEventListener('td:languageChanged', () => {
+      renderProductDetails();
+    });
 
     // Initialize subtle scroll reveal animations on product details, tables, cards and fittings
     initScrollReveal();

@@ -254,6 +254,7 @@
     import { SITE_CONFIG, getWhatsAppUrl } from '/src/js/config.js';
     import { initScrollReveal } from '/src/js/components/scroll-reveal.js';
     import { PRODUCTS, CATEGORY_META, PRODUCT_HIERARCHY } from '/src/js/data/products.js';
+    import { t } from '/src/js/i18n/i18n.js';
 
     initNav();
     initFooter();
@@ -271,32 +272,45 @@
 
     // Dynamically populate target product select from product catalog
     const dropdown = document.getElementById('c-product');
-    if (dropdown && PRODUCTS && PRODUCTS.length > 0) {
+    const urlParams = new URLSearchParams(window.location.search);
+    let selectProduct = urlParams.get('product') || '';
+
+    function populateProductDropdown() {
+      if (!dropdown || !PRODUCTS || PRODUCTS.length === 0) return;
+      const currentSelected = dropdown.value || selectProduct;
       const categories = {};
       PRODUCTS.forEach(p => {
         if (!categories[p.category]) categories[p.category] = [];
         categories[p.category].push(p);
       });
 
-      let optionsHtml = '<option value="" disabled selected>Select product...</option>';
+      let optionsHtml = `<option value="" disabled ${!currentSelected ? 'selected' : ''}>${t('Select product...')}</option>`;
       const orderedKeys = Object.keys(PRODUCT_HIERARCHY).filter(k => categories[k]);
       orderedKeys.forEach(catKey => {
         const catLabel = PRODUCT_HIERARCHY[catKey]?.name || CATEGORY_META[catKey]?.label || catKey;
-        optionsHtml += `<optgroup label="${catLabel}">`;
+        optionsHtml += `<optgroup label="${t(catLabel)}" data-orig-label="${catLabel}">`;
         categories[catKey].forEach(p => {
-          optionsHtml += `<option value="${p.slug}">${p.name}</option>`;
+          const isSelected = p.slug === currentSelected ? 'selected' : '';
+          optionsHtml += `<option value="${p.slug}" data-orig-text="${p.name}" ${isSelected}>${t(p.name)}</option>`;
         });
         optionsHtml += `</optgroup>`;
       });
       dropdown.innerHTML = optionsHtml;
+      if (currentSelected) {
+        dropdown.value = currentSelected;
+      }
     }
 
-    // Pre-select product if passed in URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const selectProduct = urlParams.get('product');
-    if (selectProduct && dropdown) {
-      dropdown.value = selectProduct;
-    }
+    dropdown?.addEventListener('change', () => {
+      selectProduct = dropdown.value;
+    });
+
+    populateProductDropdown();
+
+    // Re-populate and re-translate dropdown when language changes
+    window.addEventListener('td:languageChanged', () => {
+      populateProductDropdown();
+    });
   </script>
 
 </body>

@@ -7,7 +7,7 @@ import { SITE_CONFIG, getWhatsAppUrl, getWhatsAppIconSvg } from '../config.js';
 import { PRODUCT_HIERARCHY, PRODUCTS, getAllCategories } from '../data/products.js';
 import logoUrl from '../../assets/images/T-D-Logo.png';
 import { initPageLoader } from './loader.js';
-import { initI18n, getStoredLanguage, getFlagSvg } from '../i18n/i18n.js';
+import { initI18n, getStoredLanguage, getFlagSvg, t } from '../i18n/i18n.js';
 
 export function initNav() {
   // Initialize Executive Page Loader Animation
@@ -105,27 +105,27 @@ export function initNav() {
                   <div class="mega-preview-card__img-wrap">
                     <img id="mega-preview-img" 
                          src="${defaultProduct.heroImage}" 
-                         alt="${defaultProduct.name}" 
+                         alt="${t(defaultProduct.name)}" 
                          class="mega-preview-card__img" />
-                    <span class="mega-preview-card__badge" id="mega-preview-badge">${defaultProduct.categoryName}</span>
+                    <span class="mega-preview-card__badge" id="mega-preview-badge">${t(defaultProduct.categoryName)}</span>
                   </div>
                   <div class="mega-preview-card__content">
                     <h4 class="mega-preview-card__title" id="mega-preview-title">
-                      ${defaultProduct.subcategory || defaultProduct.name}
+                      ${t(defaultProduct.subcategory || defaultProduct.name)}
                     </h4>
                     
                     <div class="mega-preview-card__info-group">
                       <div class="mega-preview-card__row">
                         <span class="mega-preview-card__label">Specification:</span>
                         <span class="mega-preview-card__value mega-preview-card__value--mono" id="mega-preview-spec">
-                          ${defaultProduct.specifications[0]?.value || 'Certified Standard'}
+                          ${t(defaultProduct.specifications[0]?.value || 'Certified Standard')}
                         </span>
                       </div>
                       
                       <div class="mega-preview-card__row">
                         <span class="mega-preview-card__label">Uses & Applications:</span>
                         <p class="mega-preview-card__desc" id="mega-preview-uses">
-                          ${defaultProduct.shortDescription}
+                          ${t(defaultProduct.shortDescription)}
                         </p>
                       </div>
                     </div>
@@ -459,16 +459,16 @@ export function initNav() {
       const img = item.dataset.img;
       const slug = item.dataset.slug;
 
-      if (previewTitle) previewTitle.textContent = name;
-      if (previewBadge && cat) previewBadge.textContent = cat;
-      if (previewSpec) previewSpec.textContent = spec;
-      if (previewUses) previewUses.textContent = uses;
+      if (previewTitle) previewTitle.textContent = t(name);
+      if (previewBadge && cat) previewBadge.textContent = t(cat);
+      if (previewSpec) previewSpec.textContent = t(spec);
+      if (previewUses) previewUses.textContent = t(uses);
       if (previewCta) previewCta.href = `/product.html?id=${slug}`;
 
       if (previewImg && img && previewImg.getAttribute('src') !== img) {
         previewImg.style.opacity = '0.3';
         previewImg.src = img;
-        previewImg.alt = name;
+        previewImg.alt = t(name);
         previewImg.onload = () => {
           previewImg.style.opacity = '1';
         };
@@ -477,6 +477,17 @@ export function initNav() {
 
     item.addEventListener('mouseenter', activateItem);
     item.addEventListener('focus', activateItem);
+  });
+
+  // Re-translate current active preview when language changes
+  window.addEventListener('td:languageChanged', () => {
+    const activeItem = navPlaceholder.querySelector('.mega-menu-item.is-active') || megaItems[0];
+    if (activeItem) {
+      if (previewTitle) previewTitle.textContent = t(activeItem.dataset.name);
+      if (previewBadge && activeItem.dataset.cat) previewBadge.textContent = t(activeItem.dataset.cat);
+      if (previewSpec) previewSpec.textContent = t(activeItem.dataset.spec);
+      if (previewUses) previewUses.textContent = t(activeItem.dataset.uses);
+    }
   });
 
   // Initialize Multilingual Language Switcher & Document Translation
