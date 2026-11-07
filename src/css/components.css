@@ -230,8 +230,9 @@
 
 .site-header .container {
   max-width: 100%;
-  padding-left: clamp(16px, 3vw, 48px);
-  padding-right: clamp(16px, 3vw, 48px);
+  padding-left: clamp(14px, 2.4vw, 44px);
+  padding-right: clamp(14px, 2.4vw, 44px);
+  box-sizing: border-box;
 }
 
 .site-header__inner {
@@ -239,8 +240,10 @@
   align-items: center;
   justify-content: space-between;
   height: 68px;
-  gap: clamp(14px, 2vw, 32px);
+  gap: clamp(12px, 1.8vw, 28px);
   position: static;
+  min-width: 0;
+  width: 100%;
 }
 
 /* Brand Identity */
@@ -250,6 +253,7 @@
   gap: 12px;
   text-decoration: none;
   flex-shrink: 0;
+  min-width: 0;
 }
 
 .site-brand__logo {
@@ -262,6 +266,7 @@
 .site-brand__text {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .site-brand__name {
@@ -271,6 +276,7 @@
   letter-spacing: -0.02em;
   color: #FFFFFF;
   line-height: 1.15;
+  white-space: nowrap;
 }
 
 .site-brand__sub {
@@ -281,6 +287,7 @@
   text-transform: uppercase;
   color: #94A3B8;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 /* Nav Link on Floating Aurora Bar */
@@ -291,6 +298,7 @@
   letter-spacing: 0.01em;
   padding: 6px 4px;
   transition: color 0.18s ease, text-shadow 0.18s ease;
+  white-space: nowrap;
 }
 
 .site-header .nav-link:hover {
@@ -315,10 +323,11 @@
 .site-nav {
   display: flex;
   align-items: center;
-  gap: clamp(12px, 1.8vw, 26px);
-  flex-shrink: 0;
+  gap: clamp(10px, 1.6vw, 24px);
+  flex-shrink: 1;
   height: 100%;
   position: static;
+  min-width: 0;
 }
 
 .nav-link {
@@ -348,7 +357,17 @@
 .site-header__actions {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: clamp(8px, 1vw, 12px);
+  flex-shrink: 0;
+  min-width: max-content;
+}
+
+.site-header__actions .btn--primary {
+  padding: 8px clamp(14px, 1.4vw, 20px);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
   flex-shrink: 0;
 }
 
@@ -1823,6 +1842,46 @@
 
 /* ── 07. RESPONSIVE BREAKPOINTS ── */
 
+@media (max-width: 1360px) {
+  .site-header .container {
+    padding-left: clamp(12px, 1.8vw, 28px);
+    padding-right: clamp(12px, 1.8vw, 28px);
+  }
+  .site-header__inner {
+    gap: clamp(8px, 1.2vw, 18px);
+  }
+  .site-nav {
+    gap: clamp(6px, 1vw, 16px);
+  }
+  .site-header .nav-link {
+    font-size: 12.5px;
+    padding: 6px 2px;
+  }
+  .site-brand__sub {
+    max-width: 165px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 8.5px;
+  }
+  .site-header__actions {
+    gap: 8px;
+  }
+  .site-header__actions .btn--primary {
+    padding: 7px 13px;
+    font-size: 12.5px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .site-nav {
+    display: none;
+  }
+  .mobile-nav-toggle {
+    display: flex;
+  }
+}
+
 @media (max-width: 1024px) {
   .footer-top {
     grid-template-columns: repeat(2, 1fr);
@@ -1838,12 +1897,6 @@
 }
 
 @media (max-width: 834px) {
-  .site-nav {
-    display: none;
-  }
-  .mobile-nav-toggle {
-    display: flex;
-  }
   .editorial-split {
     grid-template-columns: 1fr;
   }
@@ -1966,9 +2019,9 @@
 .hero-aurora-badge {
   display: inline-block;
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: clamp(11px, 1.05vw, 13px);
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: clamp(0.08em, 0.14vw, 0.16em);
   text-transform: uppercase;
   color: #FFFFFF;
   background: none;
@@ -1980,19 +2033,27 @@
   -webkit-backdrop-filter: none;
   margin-bottom: 20px;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.95);
+  max-width: 92vw;
+  line-height: 1.4;
+  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 /* Headline using Design System's Heading Font (Noto Sans) */
 .hero-aurora-title {
   font-family: var(--font-heading);
-  font-size: clamp(36px, 5.2vw, 66px);
+  font-size: clamp(34px, 5vw, 64px);
   font-weight: 700;
-  line-height: 1.12;
+  line-height: 1.14;
   letter-spacing: -0.02em;
   color: #FFFFFF;
   max-width: 1040px;
   margin-bottom: 18px;
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
+  text-wrap: balance;
+  text-wrap: pretty;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 /* Centered Description */
@@ -2483,7 +2544,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px 12px;
+  flex-wrap: wrap;
   padding-top: 14px;
   border-top: 1px solid var(--color-hairline, #E2E8F0);
 }
@@ -2496,11 +2558,12 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 700;
   color: var(--color-primary, #005be3);
   text-decoration: none;
   transition: color 0.18s ease;
+  white-space: nowrap;
 }
 
 .premium-card__cta-arrow,
@@ -2523,10 +2586,12 @@
 .product-card__quote-btn,
 .solution-card__quote-btn {
   border-radius: var(--radius-pill);
-  font-size: 12.5px;
-  padding: 6px 16px;
+  font-size: 12px;
+  padding: 5px 14px;
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
+  margin-left: auto;
 }
 
 /* ── 13B. CLEAN WHITE CARDS (FOR CARDS WITHOUT IMAGES) ── */

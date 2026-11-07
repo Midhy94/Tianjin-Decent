@@ -230,7 +230,7 @@ export function initNav() {
           </a>
 
           <a href="/contact.html" class="btn btn--primary">
-            Request Quote
+            ${t('Request Quote')}
           </a>
 
           <!-- Mobile Toggle -->
