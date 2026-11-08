@@ -719,8 +719,8 @@ export const PRODUCTS = [
     "gallery": [
       {
         "src": "/src/assets/images/ipn-upn.webp",
-        "title": "European Standard IPN Beams & UPN Channels",
-        "note": "European standard IPN tapered-flange I-beams and UPN European channels conforming to EN 10025, DIN 1025, and EN 10279 for structural framing, purlins, and industrial skids."
+        "title": "European Standard IPE Beams & UPN Channels",
+        "note": "European standard IPE parallel-flange I-beams and UPN European channels conforming to EN 10025, DIN 1025, and EN 10279 for structural framing, purlins, and industrial skids."
       }
     ],
     "specifications": [
