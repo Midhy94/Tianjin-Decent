@@ -2567,9 +2567,9 @@ export const PRODUCTS = [
         "note": "Heavy-duty Acme threaded leveling base screw jack supporting Kwikstage vertical standard post and lowest horizontal ledger tier on concrete ground footing."
       },
       {
-        "src": "/src/assets/images/kwikstage-painted-red-matrix.jpg",
-        "title": "Painted Kwikstage Modular Scaffolding Bay Matrix",
-        "note": "Industrial painted red Kwikstage scaffolding installation showing standards with welded 'V' pressings, horizontal ledgers, transoms, and steel decking boards."
+        "src": "/src/assets/images/kwikstage-galvanized-standards-v-pressings.jpg",
+        "title": "Galvanized Kwikstage Standards with Welded 'V' Pressings",
+        "note": "Close-up of hot-dip galvanized Kwikstage vertical standards showing precision-welded 'V' pressing clusters and integral spigot connections conforming to AS/NZS 1576."
       },
       {
         "src": "/src/assets/images/kwikstage-system-components.jpg",
@@ -2587,9 +2587,9 @@ export const PRODUCTS = [
         "note": "Heavy-duty drop-forged captive wedge pin welded to ledger ends, engineered to lock securely into vertical standard 'V' pressings with a single hammer blow for rigid orthogonal framing."
       },
       {
-        "src": "/src/assets/images/kwikstage-painted-bundles.jpg",
-        "title": "High-Visibility Powder-Coated Kwikstage Factory Bundles",
-        "note": "Durable high-adhesion safety-yellow powder-coated Kwikstage scaffolding standards in export strapped bundles ready for container shipment."
+        "src": "/src/assets/images/kwikstage-warehouse-stillage-stacks.jpg",
+        "title": "Hot-Dip Galvanized Kwikstage Factory Stillage Stacks",
+        "note": "Factory warehouse stillage storage of hot-dip galvanized Kwikstage vertical standards and modular components bundled for international export shipping."
       }
     ],
     "specifications": [
@@ -3068,12 +3068,12 @@ export const PRODUCTS = [
         "note": "Parallel-chord 48.3 mm tubular steel beam ladders (lattice girders) stacked in factory dispatch yard, hot-dip galvanized to EN ISO 1461 for high-capacity bridging spans."
       },
       {
-        "src": "/src/assets/images/scaffold-steel-ladder-blue.jpg",
+        "src": "/src/assets/images/scaffold-steel-ladder-yellow.jpg",
         "title": "Painted Tubular Steel Scaffolding Access Ladder",
-        "note": "Heavy-duty vertical steel access ladder with rectangular box-section stiles and welded anti-slip round tubular rungs finished in durable corrosion-resistant blue coating."
+        "note": "Heavy-duty vertical steel access ladder with rectangular box-section stiles and welded anti-slip round tubular rungs finished in durable corrosion-resistant high-visibility yellow coating."
       },
       {
-        "src": "/src/assets/images/scaffold-access-ladder-bundles-orange-feet.jpg",
+        "src": "/src/assets/images/scaffold-access-ladder-bundles-galvanized.jpg",
         "title": "Industrial Access Ladders with Safety Footing Shoes",
         "note": "Export-strapped factory bundles of industrial heavy-duty access ladders fitted with high-grip grooved safety rubber feet and deeply serrated slip-resistant rungs."
       }
@@ -4007,8 +4007,7 @@ export const PRODUCTS = [
       "/src/assets/images/fitting-double-coupler.jpg",
       "/src/assets/images/fitting-swivel-coupler.jpg",
       "/src/assets/images/fitting-sleeve-coupler.jpg",
-      "/src/assets/images/fitting-beam-clamp.jpg",
-      "/src/assets/images/cuplock-scaffolding-setup.jpg"
+      "/src/assets/images/fitting-beam-clamp.jpg"
     ],
     "specifications": [
       {
