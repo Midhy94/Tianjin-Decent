@@ -3037,58 +3037,9 @@ export const PRODUCTS = [
       }
     ],
     "relatedProducts": [
-      "aluminum-platform",
       "scaffold-staircase",
-      "frame-scaffolding-system"
-    ],
-    "categoryName": "Scaffolding & Accessories",
-    "subcategory": "Steel plank/board"
-  },
-  {
-    "slug": "aluminum-platform",
-    "category": "scaffolding-accessories",
-    "name": "Aluminum Scaffold Platform Board",
-    "shortDescription": "Lightweight aluminum working deck with perforated anti-slip surface and safety locking hooks.",
-    "description": "High-strength aluminum alloy scaffold platform board designed for ease of handling, corrosion resistance, and safe worker footing. Features non-slip textured surfaces, water-drainage perforations, and wind-lock clips.",
-    "heroImage": "/src/assets/images/platform-board.jpg",
-    "gallery": [
-      "/src/assets/images/platform-board.jpg"
-    ],
-    "specifications": [
-      {
-        "label": "Material",
-        "value": "Aluminum Alloy 6061-T6 / 6082-T6"
-      },
-      {
-        "label": "Platform Width",
-        "value": "320 mm / 480 mm / 600 mm"
-      },
-      {
-        "label": "Lengths Available",
-        "value": "1.5 m, 2.0 m, 2.5 m, 3.0 m"
-      },
-      {
-        "label": "Load Rating",
-        "value": "EN 12811 Class 3 (2.0 kN/m\u00b2) to Class 5"
-      }
-    ],
-    "features": [
-      "Lightweight aluminum design reduces worker handling fatigue",
-      "Perforated anti-slip profile for wet and oily environments",
-      "Integrated wind-lock safety hooks"
-    ],
-    "applications": [
-      "Working platforms on facade scaffolding and mobile towers"
-    ],
-    "standards": [
-      {
-        "name": "EN 12811",
-        "description": "Temporary works equipment \u2014 Working platforms"
-      }
-    ],
-    "relatedProducts": [
-      "steel-scaffold-planks",
-      "aluminum-tower"
+      "frame-scaffolding-system",
+      "scaffolding-accessories"
     ],
     "categoryName": "Scaffolding & Accessories",
     "subcategory": "Steel plank/board"
@@ -3351,7 +3302,7 @@ export const PRODUCTS = [
     "relatedProducts": [
       "aluminum-tower",
       "scaffolding-accessories",
-      "aluminum-platform"
+      "steel-scaffold-planks"
     ],
     "categoryName": "Scaffolding & Accessories",
     "subcategory": "Staircase/beam ladder/ladder"
@@ -3433,7 +3384,7 @@ export const PRODUCTS = [
       }
     ],
     "relatedProducts": [
-      "aluminum-platform",
+      "steel-scaffold-planks",
       "aluminum-extension-ladder",
       "scaffolding-accessories"
     ],
