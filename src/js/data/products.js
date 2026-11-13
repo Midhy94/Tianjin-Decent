@@ -3563,11 +3563,6 @@ export const PRODUCTS = [
         "src": "/src/assets/images/fitting-beam-clamp.jpg",
         "title": "Drop-Forged Girder Coupler / Beam Clamp (SK Clamp)",
         "note": "Drop-forged girder coupler designed to anchor 48.3 mm scaffold tubes in pairs directly to structural H/I-beam flanges, delivering slip resistance exceeding 30 kN per pair."
-      },
-      {
-        "src": "/src/assets/images/scaffold-couplers-catalog-lineup.jpg",
-        "title": "Drop-Forged & Pressed Steel Scaffolding Fittings Set",
-        "note": "Industrial scaffolding fittings overview: fixed double couplers, universal swivel couplers, board clamps, girder beam clamps, sleeve couplers, and putlog clamps on studio stage."
       }
     ],
     "specifications": [
