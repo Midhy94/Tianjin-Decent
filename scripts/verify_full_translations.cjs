@@ -121,7 +121,7 @@ const sampleSlugs = [
   'kwikstage-scaffolding-system',
   'ringlock-system',
   'steel-scaffold-planks',
-  'scaffold-tube-48',
+  'couplers',
   'hr-steel-coils',
   'h-i-u-beams-channel'
 ];

@@ -259,7 +259,7 @@ export const PRODUCTS = [
     "slug": "hr-steel-coils",
     "category": "steel-plate-sheet",
     "name": "Hot rolled coils (HR)",
-    "shortDescription": "Hot Rolled Carbon Steel Coils in commercial, structural, and high-strength grades across 1.2\u201325 mm thicknesses.",
+    "shortDescription": "Hot Rolled Carbon Steel Coils in commercial, structural, and high-strength grades across 1.2–25 mm thicknesses.",
     "description": "Hot Rolled Steel Coils (HR Coils) are primary flat-rolled steel products manufactured by Tianjin Decent International Trade Co., Ltd. from verified metallurgical production partners. Sourced in Commercial, Structural, and High-Strength grades tailored to exact buyer specifications, project engineering requirements, and global destination standards.\n\nAvailable in mill finish (black surface) or Pickled & Oiled (P&O) condition with mill edge (ME) or trimmed/slit edge (TE). Supplied with full Mill Test Certificates (MTC) and third-party inspection verification (SGS / BV) upon request. Export-worthy seaworthy packing suitable for container and bulk vessel shipments.",
     "heroImage": "/src/assets/images/hr-steel-coils.webp",
     "gallery": [
@@ -281,15 +281,15 @@ export const PRODUCTS = [
       },
       {
         "label": "Thickness Range",
-        "value": "Typically 1.2\u201325 mm (other thicknesses available on request)"
+        "value": "Typically 1.2–25 mm (other thicknesses available on request)"
       },
       {
         "label": "Width Range",
-        "value": "Typically 800\u20132,000 mm (custom widths subject to mill capability)"
+        "value": "Typically 800–2,000 mm (custom widths subject to mill capability)"
       },
       {
         "label": "Coil Weight",
-        "value": "As per mill standard and buyer requirements (approx. 15\u201328 tons)"
+        "value": "As per mill standard and buyer requirements (approx. 15–28 tons)"
       },
       {
         "label": "Surface Condition",
@@ -360,7 +360,7 @@ export const PRODUCTS = [
     "categoryName": "Steel plate/sheet",
     "subcategory": "Cold rolled coils (CCR)",
     "name": "Cold rolled coils (CCR)",
-    "shortDescription": "Cold Rolled Carbon Steel Coils (CCR) in commercial and deep-drawing grades (SPCC, DC01) across 0.2\u20133.0 mm thicknesses.",
+    "shortDescription": "Cold Rolled Carbon Steel Coils (CCR) in commercial and deep-drawing grades (SPCC, DC01) across 0.2–3.0 mm thicknesses.",
     "description": "Cold Rolled Coils (CCR) supplied by Tianjin Decent International Trade Co., Ltd. are flat-rolled steel products manufactured by cold reduction of hot-rolled pickled strip. Engineered for superior surface finish, uniform thickness tolerance, and exceptional ductility for stamping, bending, and roll forming.\n\nSupplied in annealed, temper-rolled condition with oiled or dry surface, with full Mill Test Certificates (MTC EN 10204 3.1) and seaworthy export packing.",
     "heroImage": "/src/assets/images/cold-rolled-steel-coils.jpg",
     "gallery": [
@@ -381,15 +381,15 @@ export const PRODUCTS = [
       },
       {
         "label": "Thickness Range",
-        "value": "Typically 0.2\u20133.0 mm (precision gauge control)"
+        "value": "Typically 0.2–3.0 mm (precision gauge control)"
       },
       {
         "label": "Width Range",
-        "value": "Typically 600\u20131,500 mm (custom slitting available)"
+        "value": "Typically 600–1,500 mm (custom slitting available)"
       },
       {
         "label": "Coil Weight",
-        "value": "Approx. 3\u201315 tons as per mill standard and buyer requirements"
+        "value": "Approx. 3–15 tons as per mill standard and buyer requirements"
       },
       {
         "label": "Surface Finish",
@@ -451,7 +451,7 @@ export const PRODUCTS = [
     "slug": "pre-galvanized-steel-coils",
     "category": "steel-plate-sheet",
     "name": "Pre-galvanized coils",
-    "shortDescription": "Cold-formed forming-grade steel coils with continuous hot-dip zinc coating (20\u2013275 g/m\u00b2) for bending, roll forming, and structural fabrication.",
+    "shortDescription": "Cold-formed forming-grade steel coils with continuous hot-dip zinc coating (20–275 g/m²) for bending, roll forming, and structural fabrication.",
     "description": "Pre-galvanized steel coils supplied by Tianjin Decent International Trade Co., Ltd. are cold-formed/forming-grade steel flat products produced with a continuous hot-dip zinc coating. The material is engineered specifically for roll forming, bending, precision fabrication, and general structural engineering applications.\n\nPre-galvanized steel offers exceptional corrosion resistance because zinc has more reactive chemical properties than iron, preferentially reacting with atmospheric oxygen and water vapor to form a dense, durable zinc oxide passivation film. The service life of galvanized steel plates reaches 10 to 50 years, significantly outperforming ungalvanized plates while remaining highly cost-effective compared to stainless steel or specialized alloy metals.",
     "heroImage": "/src/assets/images/galvanized-steel-coils.jpg",
     "gallery": [
@@ -464,11 +464,11 @@ export const PRODUCTS = [
       },
       {
         "label": "Thickness Range",
-        "value": "Normally 0.12\u20134.0 mm (various thicknesses as required by BOQ/drawings)"
+        "value": "Normally 0.12–4.0 mm (various thicknesses as required by BOQ/drawings)"
       },
       {
         "label": "Zinc Coating Mass",
-        "value": "20\u2013275 g/m\u00b2 total both sides (Z20 to Z275), or as specified"
+        "value": "20–275 g/m² total both sides (Z20 to Z275), or as specified"
       },
       {
         "label": "Steel Grades",
@@ -484,7 +484,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Coil Width",
-        "value": "700\u20131250 mm; Strip: 20\u2013600 mm OR as required by project/shop drawings"
+        "value": "700–1250 mm; Strip: 20–600 mm OR as required by project/shop drawings"
       },
       {
         "label": "Mechanical Properties",
@@ -500,7 +500,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Service Life",
-        "value": "10\u201350 years under standard environmental exposure"
+        "value": "10–50 years under standard environmental exposure"
       }
     ],
     "features": [
@@ -546,8 +546,8 @@ export const PRODUCTS = [
     "slug": "color-coated-steel-coils",
     "category": "steel-plate-sheet",
     "name": "Color coated coils (PPGZI)",
-    "shortDescription": "Pre-painted galvanized steel coils (PPGI/PPGL) available in all RAL colors, multiple surface finishes (matt, wrinkle, high-gloss), and zinc coating Z40\u2013600 g/m\u00b2.",
-    "description": "Color Coated Steel Coils (Pre-painted Galvanized & Galvalume Coils \u2014 PPGI / PPGL) from Tianjin Decent International Trade Co., Ltd. provide long-lasting surface protection, vibrant architectural aesthetics, and exceptional weatherability. Supplied with advanced organic paint coating systems on premium galvanized or alloy-coated steel substrates.\n\nAvailable in all international standard RAL colors, with finishes ranging from Matt and High-Gloss to Two-Side Color, Wrinkle texture, Wooden pattern, and Marble effect. Every shipment is supplied with a comprehensive Mill Test Certificate (MTC) confirming chemical composition, mechanical properties, metal thickness, zinc coating mass, paint film thickness, and heat/coil identification.",
+    "shortDescription": "Pre-painted galvanized steel coils (PPGI/PPGL) available in all RAL colors, multiple surface finishes (matt, wrinkle, high-gloss), and zinc coating Z40–600 g/m².",
+    "description": "Color Coated Steel Coils (Pre-painted Galvanized & Galvalume Coils — PPGI / PPGL) from Tianjin Decent International Trade Co., Ltd. provide long-lasting surface protection, vibrant architectural aesthetics, and exceptional weatherability. Supplied with advanced organic paint coating systems on premium galvanized or alloy-coated steel substrates.\n\nAvailable in all international standard RAL colors, with finishes ranging from Matt and High-Gloss to Two-Side Color, Wrinkle texture, Wooden pattern, and Marble effect. Every shipment is supplied with a comprehensive Mill Test Certificate (MTC) confirming chemical composition, mechanical properties, metal thickness, zinc coating mass, paint film thickness, and heat/coil identification.",
     "heroImage": "/src/assets/images/color-coated-coils.jpg",
     "gallery": [
       "/src/assets/images/color-coated-coils.jpg"
@@ -559,19 +559,19 @@ export const PRODUCTS = [
       },
       {
         "label": "Thickness Range",
-        "value": "0.12\u20134.0 mm"
+        "value": "0.12–4.0 mm"
       },
       {
         "label": "Coil Width Range",
-        "value": "600\u20131500 mm"
+        "value": "600–1500 mm"
       },
       {
         "label": "Zinc Coating Substrate",
-        "value": "Z40\u2013600 g/m\u00b2"
+        "value": "Z40–600 g/m²"
       },
       {
         "label": "Paint Coating Thickness",
-        "value": "Top: 15\u201335 \u00b5m, Back: 5\u201315 \u00b5m"
+        "value": "Top: 15–35 µm, Back: 5–15 µm"
       },
       {
         "label": "Color Options",
@@ -583,7 +583,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Coil Weight",
-        "value": "2\u20135 Metric Tons per coil"
+        "value": "2–5 Metric Tons per coil"
       },
       {
         "label": "Coil Inner Diameter",
@@ -652,15 +652,15 @@ export const PRODUCTS = [
     "specifications": [
       {
         "label": "H-Beam (Wide Flange)",
-        "value": "Flange width 50\u2013400 mm, height 100\u2013900 mm, thickness 3\u201370 mm, length 6\u201312 m"
+        "value": "Flange width 50–400 mm, height 100–900 mm, thickness 3–70 mm, length 6–12 m"
       },
       {
         "label": "I-Beam (Narrow Flange)",
-        "value": "Resists strong bending moments. Height 80\u2013600 mm, flange 42\u2013215 mm"
+        "value": "Resists strong bending moments. Height 80–600 mm, flange 42–215 mm"
       },
       {
         "label": "U-Channel (C-Section)",
-        "value": "50\u00d725 mm up to 400\u00d7100 mm. Purlins, girts, and wall framing"
+        "value": "50×25 mm up to 400×100 mm. Purlins, girts, and wall framing"
       },
       {
         "label": "Material Grades",
@@ -713,7 +713,7 @@ export const PRODUCTS = [
     "categoryName": "Steel section/profile",
     "subcategory": "IPE / UPN",
     "name": "IPE / UPN",
-    "shortDescription": "European standard IPE parallel flange I-beams (IPE 80\u2013600) and UPN tapered flange channels (UPN 50\u2013400) conforming to EN 10025.",
+    "shortDescription": "European standard IPE parallel flange I-beams (IPE 80–600) and UPN tapered flange channels (UPN 50–400) conforming to EN 10025.",
     "description": "European standard IPE parallel flange I-beams and UPN European channels supplied by Tianjin Decent International Trade Co., Ltd. Manufactured to precise Euronorm dimensional specifications.\n\nIPE profiles offer parallel inner and outer flange surfaces for simplified bolt connections, while UPN tapered channels provide high lateral stiffness for purlins, lintels, and equipment skids.",
     "heroImage": "/src/assets/images/ipn-upn.webp",
     "gallery": [
@@ -764,15 +764,15 @@ export const PRODUCTS = [
     "standards": [
       {
         "name": "EN 10025-2",
-        "description": "Non-alloy structural steels \u2014 Technical delivery conditions"
+        "description": "Non-alloy structural steels — Technical delivery conditions"
       },
       {
         "name": "EN 10034",
-        "description": "Structural steel I and H sections \u2014 Tolerances on shape and dimensions"
+        "description": "Structural steel I and H sections — Tolerances on shape and dimensions"
       },
       {
         "name": "EN 10279",
-        "description": "Hot rolled steel channels \u2014 Tolerances on shape, dimensions and mass"
+        "description": "Hot rolled steel channels — Tolerances on shape, dimensions and mass"
       }
     ],
     "relatedProducts": [
@@ -787,7 +787,7 @@ export const PRODUCTS = [
     "categoryName": "Steel section/profile",
     "subcategory": "Angle Bar",
     "name": "Angle Bar",
-    "shortDescription": "Hot-rolled equal and unequal structural angle bars (20\u00d720 mm to 200\u00d7200 mm) in ASTM A36, EN 10025 S275JR/S355JR, and JIS SS400.",
+    "shortDescription": "Hot-rolled equal and unequal structural angle bars (20×20 mm to 200×200 mm) in ASTM A36, EN 10025 S275JR/S355JR, and JIS SS400.",
     "description": "Hot-rolled equal and unequal structural steel angle bars supplied by Tianjin Decent International Trade Co., Ltd. Angle bars are among the most versatile structural elements in engineering, providing essential rotational and diagonal bracing strength.\n\nManufactured with uniform leg thickness and sharp corner transitions, available in mill black, shot-blasted, or hot-dip galvanized condition.",
     "heroImage": "/src/assets/images/angle-bar.webp",
     "gallery": [
@@ -800,11 +800,11 @@ export const PRODUCTS = [
     "specifications": [
       {
         "label": "Equal Angles (L)",
-        "value": "20\u00d720\u00d73 mm up to 200\u00d7200\u00d720 mm"
+        "value": "20×20×3 mm up to 200×200×20 mm"
       },
       {
         "label": "Unequal Angles (L)",
-        "value": "25\u00d716\u00d73 mm up to 200\u00d7125\u00d718 mm"
+        "value": "25×16×3 mm up to 200×125×18 mm"
       },
       {
         "label": "Material Grades",
@@ -861,7 +861,7 @@ export const PRODUCTS = [
     "categoryName": "Steel section/profile",
     "subcategory": "Square Bar",
     "name": "Square Bar",
-    "shortDescription": "Hot-rolled and cold-drawn solid square steel bars across 10\u00d710 mm to 150\u00d7150 mm in carbon and alloy structural grades.",
+    "shortDescription": "Hot-rolled and cold-drawn solid square steel bars across 10×10 mm to 150×150 mm in carbon and alloy structural grades.",
     "description": "Solid square carbon and alloy steel bars supplied by Tianjin Decent International Trade Co., Ltd. Manufactured by hot rolling or precision cold drawing to deliver high rigidity, dimensional stability, and uniform metallurgical grain structure.\n\nEngineered for structural framing, machinery manufacturing, architectural grating, security grills, and precision machined mechanical components.",
     "heroImage": "/src/assets/images/square-bar.webp",
     "gallery": [
@@ -874,7 +874,7 @@ export const PRODUCTS = [
     "specifications": [
       {
         "label": "Size Range",
-        "value": "10\u00d710 mm, 12\u00d712 mm, 14\u00d714 mm, 16\u00d716 mm, 20\u00d720 mm up to 150\u00d7150 mm"
+        "value": "10×10 mm, 12×12 mm, 14×14 mm, 16×16 mm, 20×20 mm up to 150×150 mm"
       },
       {
         "label": "Material Grades",
@@ -886,7 +886,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Straightness",
-        "value": "\u2264 1.5 mm/m straightness control"
+        "value": "≤ 1.5 mm/m straightness control"
       },
       {
         "label": "Standard Lengths",
@@ -899,7 +899,7 @@ export const PRODUCTS = [
     ],
     "features": [
       "Solid cross-section ensures high torsional resistance and compressive strength",
-      "Cold drawn bars provide tight \u00b10.05 mm dimensional tolerances",
+      "Cold drawn bars provide tight ±0.05 mm dimensional tolerances",
       "Excellent machinability, forgeability, and weldability",
       "Full chemical heat verification and mechanical yield test reports"
     ],
@@ -920,7 +920,7 @@ export const PRODUCTS = [
       },
       {
         "name": "GB/T 702",
-        "description": "Hot-rolled steel bars \u2014 Dimensions, shape, weight and tolerances"
+        "description": "Hot-rolled steel bars — Dimensions, shape, weight and tolerances"
       }
     ],
     "relatedProducts": [
@@ -935,7 +935,7 @@ export const PRODUCTS = [
     "categoryName": "Steel section/profile",
     "subcategory": "Round Bar",
     "name": "Round Bar",
-    "shortDescription": "Solid carbon and alloy structural round steel bars (\u00d8 10 mm to \u00d8 300 mm) for machining, construction, and forging.",
+    "shortDescription": "Solid carbon and alloy structural round steel bars (Ø 10 mm to Ø 300 mm) for machining, construction, and forging.",
     "description": "Solid structural carbon and alloy round steel bars supplied by Tianjin Decent International Trade Co., Ltd. Produced via precision hot rolling, forging, or cold finishing with consistent concentricity and high surface integrity.\n\nWidely specified for machine shafts, foundation anchor bolts, pins, hydraulic cylinder rods, gears, and construction reinforcement.",
     "heroImage": "/src/assets/images/round-bar.webp",
     "gallery": [
@@ -948,7 +948,7 @@ export const PRODUCTS = [
     "specifications": [
       {
         "label": "Diameter Range",
-        "value": "\u00d8 10 mm to \u00d8 300 mm (other diameters available on inquiry)"
+        "value": "Ø 10 mm to Ø 300 mm (other diameters available on inquiry)"
       },
       {
         "label": "Material Grades",
@@ -986,7 +986,7 @@ export const PRODUCTS = [
     "standards": [
       {
         "name": "EN 10060",
-        "description": "Hot rolled round steel bars for general purposes \u2014 Dimensions and tolerances"
+        "description": "Hot rolled round steel bars for general purposes — Dimensions and tolerances"
       },
       {
         "name": "ASTM A29 / A36",
@@ -1009,7 +1009,7 @@ export const PRODUCTS = [
     "categoryName": "Steel section/profile",
     "subcategory": "Flat Bar",
     "name": "Flat Bar",
-    "shortDescription": "Flat structural steel bars and plates across 3\u201360 mm thicknesses and 15\u2013200 mm widths for construction, gussets, and fabrication.",
+    "shortDescription": "Flat structural steel bars and plates across 3–60 mm thicknesses and 15–200 mm widths for construction, gussets, and fabrication.",
     "description": "Flat steel bars and strips (Flat Bar) supplied by Tianjin Decent International Trade Co., Ltd. Manufactured from high-tensile carbon steel featuring clean, square rolled edges and uniform thickness across the entire width.\n\nEssential for structural base plates, column stiffeners, gusset plates, architectural brackets, machine frames, and general metal fabrication.",
     "heroImage": "/src/assets/images/flat-bar.webp",
     "gallery": [
@@ -1060,7 +1060,7 @@ export const PRODUCTS = [
     "standards": [
       {
         "name": "EN 10058",
-        "description": "Hot rolled flat steel bars for general purposes \u2014 Dimensions and tolerances"
+        "description": "Hot rolled flat steel bars for general purposes — Dimensions and tolerances"
       },
       {
         "name": "ASTM A36 / A6",
@@ -1081,8 +1081,8 @@ export const PRODUCTS = [
     "slug": "hot-dip-galvanized-steel-pipe",
     "category": "steel-pipe-tube",
     "name": "Hot-dip Galvanized Round Pipe",
-    "shortDescription": "DN15\u2013DN300 hot-dip galvanized round steel pipes for low-pressure fluid transportation, gas, water, fire protection, and structural framing.",
-    "description": "Hot-dip galvanized steel pipe supplied by Tianjin Decent International Trade Co., Ltd. is produced by immersing cleaned carbon steel pipe into a high-temperature molten zinc bath (approx. 450\u00b0C), creating a dense, metallurgically bonded zinc-iron alloy barrier with a pure zinc outer layer.\n\nEngineered for exceptional corrosion resistance, superior impact resistance, and extended service life even in humid, coastal, or mildly corrosive atmospheric conditions. Available in standard lengths of 5.8 m, 6.0 m, 11.8 m, and 12.0 m with threaded & coupled, grooved, or plain ends.",
+    "shortDescription": "DN15–DN300 hot-dip galvanized round steel pipes for low-pressure fluid transportation, gas, water, fire protection, and structural framing.",
+    "description": "Hot-dip galvanized steel pipe supplied by Tianjin Decent International Trade Co., Ltd. is produced by immersing cleaned carbon steel pipe into a high-temperature molten zinc bath (approx. 450°C), creating a dense, metallurgically bonded zinc-iron alloy barrier with a pure zinc outer layer.\n\nEngineered for exceptional corrosion resistance, superior impact resistance, and extended service life even in humid, coastal, or mildly corrosive atmospheric conditions. Available in standard lengths of 5.8 m, 6.0 m, 11.8 m, and 12.0 m with threaded & coupled, grooved, or plain ends.",
     "heroImage": "/src/assets/images/hot-dip-galvanized-steel-pipe.webp",
     "gallery": [
       {
@@ -1109,7 +1109,7 @@ export const PRODUCTS = [
     "specifications": [
       {
         "label": "Specifications",
-        "value": "DN15\u2013DN300 (Outer Diameter: 21.3\u2013323.9 mm)"
+        "value": "DN15–DN300 (Outer Diameter: 21.3–323.9 mm)"
       },
       {
         "label": "Uses & Applications",
@@ -1117,7 +1117,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Wall Thickness",
-        "value": "2.0\u201312.0 mm (Sch 10, Sch 20, Sch 40 / STD)"
+        "value": "2.0–12.0 mm (Sch 10, Sch 20, Sch 40 / STD)"
       },
       {
         "label": "Applicable Standards",
@@ -1125,7 +1125,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Zinc Coating Mass",
-        "value": "200\u2013500 g/m\u00b2 (uniform hot dip molten bath galvanization)"
+        "value": "200–500 g/m² (uniform hot dip molten bath galvanization)"
       },
       {
         "label": "Steel Grades",
@@ -1178,7 +1178,7 @@ export const PRODUCTS = [
       }
     ],
     "relatedProducts": [
-      "straight-seam-welded-steel-pipe",
+      "black-carbon-steel-round-pipe",
       "galvanized-seamless-steel-pipe",
       "plastic-coated-composite-steel-pipe"
     ],
@@ -1280,199 +1280,14 @@ export const PRODUCTS = [
     ],
     "relatedProducts": [
       "hot-dip-galvanized-steel-pipe",
-      "black-carbon-steel-square-rectangular-pipe",
-      "straight-seam-welded-steel-pipe"
+      "black-carbon-steel-square-rectangular-pipe"
     ]
-  },
-  {
-    "slug": "spiral-submerged-arc-welded-steel-pipe",
-    "category": "steel-pipe-tube",
-    "name": "Spiral Seam Submerged Arc Welded Pipe (SSAW)",
-    "shortDescription": "φ219–2020 mm double-sided submerged arc welded spiral steel pipes for long-distance oil/gas pipelines, urban water transmission, and foundation piling.",
-    "description": "Spiral seam double-sided submerged arc welded steel pipe (SSAW / HSAW) from Tianjin Decent International Trade Co., Ltd. is continuously manufactured by spirally forming hot-rolled carbon steel strip coils into wide-diameter cylinders, simultaneously welding both the interior and exterior seams using automated submerged arc welding (SAW).\n\nAllows efficient production of large diameter pipes (from 219 mm up to 2,020 mm) with exceptional hoop strength, uniform wall thickness, and precise roundness. Widely deployed in national oil and gas cross-country trunklines, urban water grids, and deep-foundation piling.",
-    "heroImage": "/src/assets/images/spiral-submerged-arc-welded-steel-pipe.jpg",
-    "gallery": [
-      {
-        "src": "/src/assets/images/spiral-submerged-arc-welded-steel-pipe.jpg",
-        "title": "Spiral Seam Submerged Arc Welded Pipe Yard Storage",
-        "note": "Large diameter φ219–2020 mm SSAW pipes with external spiral weld seams engineered for cross-country pipelines and heavy structural piling."
-      }
-    ],
-    "specifications": [
-      {
-        "label": "Specifications",
-        "value": "\u03c6219\u20132020 mm, wall thickness up to 20 mm"
-      },
-      {
-        "label": "Uses & Applications",
-        "value": "Mainly used for oil, natural gas and other pressure-bearing long-distance pipelines, can also be used for water, gas, air, heating steam and other ordinary fluid transportation, and can be used in piling, structure and other construction fields"
-      },
-      {
-        "label": "Wall Thickness Range",
-        "value": "5.0 mm up to 20.0 mm"
-      },
-      {
-        "label": "Steel Grades",
-        "value": "Q235B, Q345B, Q355B, API 5L Gr. B through X70 (PSL1 & PSL2)"
-      },
-      {
-        "label": "Applicable Standards",
-        "value": "API Spec 5L, ASTM A252 (Piling), SY/T 5037, GB/T 9711, EN 10217-1"
-      },
-      {
-        "label": "Production Process",
-        "value": "Continuous spiral roll forming with double-sided submerged arc welding (internal & external beads)"
-      },
-      {
-        "label": "Welding Quality Control",
-        "value": "Weld gap controlled at 1\u20133 mm; 100% online X-ray fluoroscopy and ultrasonic NDT"
-      },
-      {
-        "label": "Hydrostatic Test",
-        "value": "100% pipe-by-pipe hydrostatic pressure testing up to standard calculation pressure"
-      },
-      {
-        "label": "Length Range",
-        "value": "Standard 12 m, random lengths 6 m to 18 m (custom pile lengths available)"
-      },
-      {
-        "label": "External Coating Options",
-        "value": "3LPE (Three-layer Polyethylene), FBE (Fusion Bonded Epoxy), Bitumen, Bare mill"
-      }
-    ],
-    "features": [
-      "Massive diameter range up to 2,020 mm manufactured from standard-width steel strip coils",
-      "Spiral weld geometry distributes circumferential internal pressures across diagonal seams",
-      "Outstanding pressure-bearing capability verified by ultrasonic, radiographic, and hydrostatic tests",
-      "High structural bending rigidity making it optimal for civil bridge foundation friction piles",
-      "Highly economical per meter cost for large-volume municipal water transmission and PEB piling"
-    ],
-    "applications": [
-      "Long-distance cross-country oil, gas, petroleum, and hydrocarbon trunk transmission pipelines",
-      "Urban municipal water supply, raw water diversion aqueducts, and wastewater discharge mains",
-      "District heating steam circuits and thermal power plant circulating cooling water conduits",
-      "Bridge pier foundations, deep harbor dock pilings, highway embankment piles, and offshore structures",
-      "Industrial ductwork, ventilation air mains, and metallurgical chimney flues"
-    ],
-    "standards": [
-      {
-        "name": "API Spec 5L (PSL1/PSL2)",
-        "description": "Specification for Line Pipe (Gr. B, X42 to X70)"
-      },
-      {
-        "name": "ASTM A252",
-        "description": "Standard Specification for Welded and Seamless Steel Pipe Piles"
-      },
-      {
-        "name": "GB/T 9711",
-        "description": "Petroleum and natural gas industries \u2014 Steel pipe for pipeline transportation systems"
-      }
-    ],
-    "relatedProducts": [
-      "straight-seam-welded-steel-pipe",
-      "plastic-coated-composite-steel-pipe",
-      "galvanized-seamless-steel-pipe"
-    ],
-    "categoryName": "Steel pipe/tube",
-    "subcategory": "Spiral Seam Submerged Arc Welded Pipe (SSAW)"
-  },
-  {
-    "slug": "plastic-coated-composite-steel-pipe",
-    "category": "steel-pipe-tube",
-    "name": "Coated Composite Steel Pipe",
-    "shortDescription": "DN15–DN2000 internal and external plastic-coated (Epoxy / PE) composite steel pipes for fire protection water, municipal supply, and chemical fluids.",
-    "description": "Plastic-coated composite steel pipe supplied by Tianjin Decent International Trade Co., Ltd. marries the mechanical strength, high pressure containment, and rigid structural integrity of steel pipe with the superior anti-corrosion, anti-scaling, and friction-reducing properties of advanced polymers.\n\nProduced by preheating the steel pipe and electrostatically fusing thermosetting Epoxy Resin (EP) or thermoplastic Polyethylene (PE) onto internal and external surfaces. Widely recognized as the premier solution for fire sprinkler systems, aggressive chemical fluid transmission, and potable water networks.",
-    "heroImage": "/src/assets/images/plastic-coated-composite-steel-pipe.jpg",
-    "gallery": [
-      {
-        "src": "/src/assets/images/plastic-coated-composite-steel-pipe.jpg",
-        "title": "Red Epoxy Coated Firefighting & Water Composite Steel Pipes",
-        "note": "Internal and external epoxy/PE coated steel pipes featuring groove and flange ends for high-reliability fire protection and municipal water supply systems."
-      }
-    ],
-    "specifications": [
-      {
-        "label": "Specifications",
-        "value": "Plastic composite pipe: DN15\u2013DN2000 | Socket-coated tubes: DN100\u2013DN1600"
-      },
-      {
-        "label": "Uses & Applications",
-        "value": "Widely used in fire water supply systems, building water supply transportation, chemical fluid transportation, threading protection and other fields"
-      },
-      {
-        "label": "Coating Materials",
-        "value": "High-adhesion Epoxy Resin (EP) powder / Polyethylene (PE) coating"
-      },
-      {
-        "label": "Coating Thickness",
-        "value": "Internal: 300\u2013800 \u00b5m | External: 350\u20131,000 \u00b5m"
-      },
-      {
-        "label": "Working Pressure",
-        "value": "PN 1.6 MPa, 2.5 MPa, up to 6.4 MPa"
-      },
-      {
-        "label": "Temperature Range",
-        "value": "-30\u00b0C to +110\u00b0C (Epoxy) | -40\u00b0C to +80\u00b0C (Polyethylene)"
-      },
-      {
-        "label": "Connection Methods",
-        "value": "Grooved mechanical couplings, Flanged connections, Bimetal weld fittings, Socket connections"
-      },
-      {
-        "label": "Applicable Standards",
-        "value": "CJ/T 120, GB/T 5135.20, NFPA 13 (Fire Sprinkler), AWWA C213"
-      },
-      {
-        "label": "Corrosion Resistance",
-        "value": "Resistant to acids, alkalis, saline water, soil microorganisms, and chemical oxidizers"
-      },
-      {
-        "label": "Flow Efficiency",
-        "value": "Roughness coefficient n=0.008\u20130.009 (20% higher hydraulic flow than bare steel)"
-      }
-    ],
-    "features": [
-      "Dual material synergy: carbon steel core delivers high pressure; polymer skin eliminates rust",
-      "Smooth internal wall prevents scaling, bio-fouling, and friction head loss",
-      "Zero pipe corrosion or red water contamination in municipal and potable water networks",
-      "High temperature and flame retardant properties formulated for UL/NFPA fire sprinkler lines",
-      "Exceptional electrical insulation protecting cables in underground electrical ducting"
-    ],
-    "applications": [
-      "Commercial and industrial automatic fire sprinkler systems (red epoxy coated)",
-      "Municipal potable water mains, secondary water distribution, and sewage piping",
-      "Chemical fluid transportation, acid/alkali discharge lines, and mining slurry pipelines",
-      "Subway tunnels, power cables, and communication optical fiber threading protection pipes",
-      "Desalination plants, marine seawater cooling lines, and industrial effluent conduits"
-    ],
-    "standards": [
-      {
-        "name": "CJ/T 120",
-        "description": "Plastic coated composite steel pipe for water supply"
-      },
-      {
-        "name": "GB/T 5135.20",
-        "description": "Automatic sprinkler system \u2014 Part 20: Pre-coated steel pipe"
-      },
-      {
-        "name": "AWWA C213",
-        "description": "Fusion-Bonded Epoxy Coating for the Interior and Exterior of Steel Water Pipelines"
-      }
-    ],
-    "relatedProducts": [
-      "hot-dip-galvanized-steel-pipe",
-      "straight-seam-welded-steel-pipe",
-      "galvanized-seamless-steel-pipe"
-    ],
-    "categoryName": "Steel pipe/tube",
-    "subcategory": "Coated Composite Steel Pipe"
   },
   {
     "slug": "hot-dip-galvanized-square-rectangular-pipe",
     "category": "steel-pipe-tube",
     "name": "Hot-dip Galvanized Rectangular Pipe",
-    "shortDescription": "25x25mm\u2013200x200mm square and 25x50mm\u2013150x200mm rectangular hot-dip galvanized hollow sections for curtain walls, solar PV brackets, and vehicle chassis.",
+    "shortDescription": "25x25mm–200x200mm square and 25x50mm–150x200mm rectangular hot-dip galvanized hollow sections for curtain walls, solar PV brackets, and vehicle chassis.",
     "description": "Hot-dip galvanized square and rectangular steel pipe (SHS / RHS) from Tianjin Decent International Trade Co., Ltd. is manufactured by immersing cold-formed square and rectangular structural hollow sections into a molten zinc bath after rigorous degreasing and pickling pre-treatments.\n\nThe resulting metallurgical zinc-iron alloy layer adheres firmly to the outer and inner surfaces of the tube, providing robust defense against oxygen, acid/alkali moisture, and atmospheric salt spray. Widely utilized in architectural curtain walls, photovoltaic solar ground racking, and commercial steel frameworks.",
     "heroImage": "/src/assets/images/hot-dip-galvanized-square-rectangular-pipe.webp",
     "gallery": [
@@ -1490,11 +1305,11 @@ export const PRODUCTS = [
     "specifications": [
       {
         "label": "Square Specifications",
-        "value": "25x25 mm \u2013 200x200 mm"
+        "value": "25x25 mm – 200x200 mm"
       },
       {
         "label": "Rectangular Specifications",
-        "value": "25x50 mm \u2013 150x200 mm"
+        "value": "25x50 mm – 150x200 mm"
       },
       {
         "label": "Uses & Applications",
@@ -1502,11 +1317,11 @@ export const PRODUCTS = [
       },
       {
         "label": "Wall Thickness",
-        "value": "1.5\u201312.0 mm"
+        "value": "1.5–12.0 mm"
       },
       {
         "label": "Zinc Coating Mass",
-        "value": "220\u2013500 g/m\u00b2 (uniform hot-dip galvanized coating on all faces)"
+        "value": "220–500 g/m² (uniform hot-dip galvanized coating on all faces)"
       },
       {
         "label": "Steel Grades",
@@ -1518,7 +1333,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Mechanical Properties",
-        "value": "Tensile strength 360\u2013510 MPa, Yield point \u2265 235\u2013355 MPa"
+        "value": "Tensile strength 360–510 MPa, Yield point ≥ 235–355 MPa"
       },
       {
         "label": "Length Range",
@@ -1558,9 +1373,8 @@ export const PRODUCTS = [
       }
     ],
     "relatedProducts": [
-      "square-rectangular-welded-steel-pipe",
       "hot-dip-galvanized-steel-pipe",
-      "structural-steel-profiles"
+      "h-i-u-beams-channel"
     ],
     "categoryName": "Steel pipe/tube",
     "subcategory": "Hot-dip Galvanized Rectangular Pipe"
@@ -1703,7 +1517,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Grade",
-        "value": "Grade B, A53-A369, A106 (B, C), Q195\u2013Q345"
+        "value": "Grade B, A53-A369, A106 (B, C), Q195–Q345"
       },
       {
         "label": "Certificate",
@@ -1731,7 +1545,7 @@ export const PRODUCTS = [
       },
       {
         "label": "End Protection",
-        "value": "Plain end, beveled end (30\u00b0\u201335\u00b0), plastic end caps fitted"
+        "value": "Plain end, beveled end (30°–35°), plastic end caps fitted"
       }
     ],
     "features": [
@@ -1752,7 +1566,7 @@ export const PRODUCTS = [
     "standards": [
       {
         "name": "API Spec 5L",
-        "description": "Specification for Line Pipe (Gr. B, X42\u2013X70)"
+        "description": "Specification for Line Pipe (Gr. B, X42–X70)"
       },
       {
         "name": "ASTM A106 / A53",
@@ -1764,18 +1578,110 @@ export const PRODUCTS = [
       }
     ],
     "relatedProducts": [
-      "welded-erw-steel-pipes",
-      "structural-steel-profiles",
-      "scaffold-tube-48"
+      "black-carbon-steel-round-pipe",
+      "h-i-u-beams-channel",
+      "hot-dip-galvanized-steel-pipe"
     ],
     "categoryName": "Steel pipe/tube",
     "subcategory": "Seamless Pipes"
   },
   {
+    "slug": "plastic-coated-composite-steel-pipe",
+    "category": "steel-pipe-tube",
+    "name": "Coated Composite Steel Pipe",
+    "shortDescription": "DN15–DN2000 internal and external plastic-coated (Epoxy / PE) composite steel pipes for fire protection water, municipal supply, and chemical fluids.",
+    "description": "Plastic-coated composite steel pipe supplied by Tianjin Decent International Trade Co., Ltd. marries the mechanical strength, high pressure containment, and rigid structural integrity of steel pipe with the superior anti-corrosion, anti-scaling, and friction-reducing properties of advanced polymers.\n\nProduced by preheating the steel pipe and electrostatically fusing thermosetting Epoxy Resin (EP) or thermoplastic Polyethylene (PE) onto internal and external surfaces. Widely recognized as the premier solution for fire sprinkler systems, aggressive chemical fluid transmission, and potable water networks.",
+    "heroImage": "/src/assets/images/plastic-coated-composite-steel-pipe.jpg",
+    "gallery": [
+      {
+        "src": "/src/assets/images/plastic-coated-composite-steel-pipe.jpg",
+        "title": "Red Epoxy Coated Firefighting & Water Composite Steel Pipes",
+        "note": "Internal and external epoxy/PE coated steel pipes featuring groove and flange ends for high-reliability fire protection and municipal water supply systems."
+      }
+    ],
+    "specifications": [
+      {
+        "label": "Specifications",
+        "value": "Plastic composite pipe: DN15–DN2000 | Socket-coated tubes: DN100–DN1600"
+      },
+      {
+        "label": "Uses & Applications",
+        "value": "Widely used in fire water supply systems, building water supply transportation, chemical fluid transportation, threading protection and other fields"
+      },
+      {
+        "label": "Coating Materials",
+        "value": "High-adhesion Epoxy Resin (EP) powder / Polyethylene (PE) coating"
+      },
+      {
+        "label": "Coating Thickness",
+        "value": "Internal: 300–800 µm | External: 350–1,000 µm"
+      },
+      {
+        "label": "Working Pressure",
+        "value": "PN 1.6 MPa, 2.5 MPa, up to 6.4 MPa"
+      },
+      {
+        "label": "Temperature Range",
+        "value": "-30°C to +110°C (Epoxy) | -40°C to +80°C (Polyethylene)"
+      },
+      {
+        "label": "Connection Methods",
+        "value": "Grooved mechanical couplings, Flanged connections, Bimetal weld fittings, Socket connections"
+      },
+      {
+        "label": "Applicable Standards",
+        "value": "CJ/T 120, GB/T 5135.20, NFPA 13 (Fire Sprinkler), AWWA C213"
+      },
+      {
+        "label": "Corrosion Resistance",
+        "value": "Resistant to acids, alkalis, saline water, soil microorganisms, and chemical oxidizers"
+      },
+      {
+        "label": "Flow Efficiency",
+        "value": "Roughness coefficient n=0.008–0.009 (20% higher hydraulic flow than bare steel)"
+      }
+    ],
+    "features": [
+      "Dual material synergy: carbon steel core delivers high pressure; polymer skin eliminates rust",
+      "Smooth internal wall prevents scaling, bio-fouling, and friction head loss",
+      "Zero pipe corrosion or red water contamination in municipal and potable water networks",
+      "High temperature and flame retardant properties formulated for UL/NFPA fire sprinkler lines",
+      "Exceptional electrical insulation protecting cables in underground electrical ducting"
+    ],
+    "applications": [
+      "Commercial and industrial automatic fire sprinkler systems (red epoxy coated)",
+      "Municipal potable water mains, secondary water distribution, and sewage piping",
+      "Chemical fluid transportation, acid/alkali discharge lines, and mining slurry pipelines",
+      "Subway tunnels, power cables, and communication optical fiber threading protection pipes",
+      "Desalination plants, marine seawater cooling lines, and industrial effluent conduits"
+    ],
+    "standards": [
+      {
+        "name": "CJ/T 120",
+        "description": "Plastic coated composite steel pipe for water supply"
+      },
+      {
+        "name": "GB/T 5135.20",
+        "description": "Automatic sprinkler system — Part 20: Pre-coated steel pipe"
+      },
+      {
+        "name": "AWWA C213",
+        "description": "Fusion-Bonded Epoxy Coating for the Interior and Exterior of Steel Water Pipelines"
+      }
+    ],
+    "relatedProducts": [
+      "hot-dip-galvanized-steel-pipe",
+      "black-carbon-steel-round-pipe",
+      "galvanized-seamless-steel-pipe"
+    ],
+    "categoryName": "Steel pipe/tube",
+    "subcategory": "Coated Composite Steel Pipe"
+  },
+  {
     "slug": "galvanized-seamless-steel-pipe",
     "category": "steel-pipe-tube",
     "name": "Galvanized Seamless Steel Pipe",
-    "shortDescription": "DN22\u2013DN325 hot-dip galvanized seamless carbon steel pipe for petrochemical pipelines, high-voltage power stations, bridges, and building structures.",
+    "shortDescription": "DN22–DN325 hot-dip galvanized seamless carbon steel pipe for petrochemical pipelines, high-voltage power stations, bridges, and building structures.",
     "description": "Galvanized seamless steel pipe supplied by Tianjin Decent International Trade Co., Ltd. is manufactured from solid hot-rolled or cold-drawn carbon steel billets without longitudinal or spiral welds, followed by immersion in a precision hot-dip zinc galvanization bath.\n\nCombines the flawless burst strength and high pressure integrity of seamless tubing with the sacrificial atmospheric protection of hot-dip zinc. Extensively specified in high-voltage substations, petrochemical transmission, and heavy load-bearing structural columns.",
     "heroImage": "/src/assets/images/galvanized-seamless-steel-pipe.jpg",
     "gallery": [
@@ -1803,7 +1709,7 @@ export const PRODUCTS = [
     "specifications": [
       {
         "label": "Specifications",
-        "value": "DN22\u2013DN325 (Wall Thickness: SCH20 to SCH160 / XXS)"
+        "value": "DN22–DN325 (Wall Thickness: SCH20 to SCH160 / XXS)"
       },
       {
         "label": "Uses & Applications",
@@ -1835,11 +1741,11 @@ export const PRODUCTS = [
       },
       {
         "label": "Zinc Coating Thickness",
-        "value": "55\u2013100 \u00b5m (approx. 400\u2013700 g/m\u00b2 hot-dip zinc layer)"
+        "value": "55–100 µm (approx. 400–700 g/m² hot-dip zinc layer)"
       },
       {
         "label": "End Finish",
-        "value": "Plain end, beveled ends (30\u00b0\u201335\u00b0), threaded and coupled, roll grooved"
+        "value": "Plain end, beveled ends (30°–35°), threaded and coupled, roll grooved"
       }
     ],
     "features": [
@@ -1863,7 +1769,7 @@ export const PRODUCTS = [
       },
       {
         "name": "API Spec 5L",
-        "description": "Specification for Line Pipe (Gr. B, X42\u2013X65 Seamless)"
+        "description": "Specification for Line Pipe (Gr. B, X42–X65 Seamless)"
       },
       {
         "name": "GB/T 8163",
@@ -1879,193 +1785,96 @@ export const PRODUCTS = [
     "subcategory": "Galvanized Seamless Steel Pipe"
   },
   {
-    "slug": "welded-erw-steel-pipes",
+    "slug": "spiral-submerged-arc-welded-steel-pipe",
     "category": "steel-pipe-tube",
-    "name": "ERW Pipe (Electro welded pipe)",
-    "shortDescription": "Round Pipe (CHS), Square & Rectangular Pipe (RHS/SHS) in ERW welded fabrication with Galvanized and Painted finishes.",
-    "description": "Tianjin Decent International Trade Co., Ltd. supplies high-precision ERW (Electric Resistance Welded) and cold-formed welded steel pipes tailored to global engineering standards. Our comprehensive steel pipe range encompasses Round Pipe (Circular Hollow Sections - CHS) as well as Square & Rectangular Pipe (Square and Rectangular Hollow Sections - SHS & RHS).\n\nAvailable in various high-durability surface executions including Hot-Dip Galvanized, Pre-Galvanized, Black Painted, and Anti-Rust Primer Coated to ensure exceptional longevity across demanding outdoor and industrial environments.",
-    "heroImage": "/src/assets/images/seamless-steel-pipes.jpg",
+    "name": "Spiral Seam Submerged Arc Welded Pipe (SSAW)",
+    "shortDescription": "φ219–2020 mm double-sided submerged arc welded spiral steel pipes for long-distance oil/gas pipelines, urban water transmission, and foundation piling.",
+    "description": "Spiral seam double-sided submerged arc welded steel pipe (SSAW / HSAW) from Tianjin Decent International Trade Co., Ltd. is continuously manufactured by spirally forming hot-rolled carbon steel strip coils into wide-diameter cylinders, simultaneously welding both the interior and exterior seams using automated submerged arc welding (SAW).\n\nAllows efficient production of large diameter pipes (from 219 mm up to 2,020 mm) with exceptional hoop strength, uniform wall thickness, and precise roundness. Widely deployed in national oil and gas cross-country trunklines, urban water grids, and deep-foundation piling.",
+    "heroImage": "/src/assets/images/spiral-submerged-arc-welded-steel-pipe.jpg",
     "gallery": [
-      "/src/assets/images/seamless-steel-pipes.jpg",
-      "/src/assets/images/black-carbon-steel-square-rectangular-pipe.webp",
-      "/src/assets/images/scaffold-tubes-48mm.jpg"
-    ],
-    "specifications": [
       {
-        "label": "Product Scope",
-        "value": "Round Pipe, Square & Rectangular Pipe"
-      },
-      {
-        "label": "Profile Types",
-        "value": "RHS & SHS (Rectangular & Square Hollow Sections), CHS (Circular Hollow Section)"
-      },
-      {
-        "label": "Manufacturing Details",
-        "value": "ERW Pipe (Electric Resistance Welded), Seamless Pipe, Galvanized Pipe, Painted Pipe"
-      },
-      {
-        "label": "RHS & SHS Characteristics",
-        "value": "Popular for columns, beams, trusses, canopies, warehouses, and modern architectural steel structures due to their strength and clean appearance."
-      },
-      {
-        "label": "CHS Characteristics",
-        "value": "Offers an excellent strength-to-weight ratio and is widely used for columns, trusses, handrails, and bracing systems."
-      },
-      {
-        "label": "Surface Finishes",
-        "value": "Galvanized Pipe (Hot-Dip Galvanized / Pre-Galvanized), Painted Pipe (Black / Red Oxide / Anti-Corrosion Primer), Bare Mill Finish"
-      },
-      {
-        "label": "Applicable Standards",
-        "value": "ASTM A500 (Grades A, B, C), EN 10219, EN 10210, BS 1387, JIS G3444, JIS G3466, GB/T 6728, GB/T 3091"
-      },
-      {
-        "label": "Steel Grades",
-        "value": "Q195, Q215, Q235B, Q345B, Q355B, S235JR, S275JR, S355JR, ASTM A500 Grade B"
-      },
-      {
-        "label": "Wall Thickness",
-        "value": "0.8 mm up to 16.0 mm (sch10 to sch80 equivalent)"
-      },
-      {
-        "label": "Length Range",
-        "value": "5.8 m, 6.0 m, 11.8 m, 12.0 m, or customized precision cut lengths"
-      },
-      {
-        "label": "End Treatments",
-        "value": "Plain square cut ends, beveled ends, threaded and coupled, roll grooved"
+        "src": "/src/assets/images/spiral-submerged-arc-welded-steel-pipe.jpg",
+        "title": "Spiral Seam Submerged Arc Welded Pipe Yard Storage",
+        "note": "Large diameter φ219–2020 mm SSAW pipes with external spiral weld seams engineered for cross-country pipelines and heavy structural piling."
       }
-    ],
-    "features": [
-      "Comprehensive geometry: Round (CHS), Square (SHS), and Rectangular (RHS) hollow sections",
-      "Advanced high-frequency ERW welding with internal and external weld bead removal",
-      "Superior strength-to-weight ratio providing structural economy and clean architectural lines",
-      "Extensive finish options: Hot-dip galvanized, pre-galvanized, and multi-layer painted finishes",
-      "Strict hydrostatic, ultrasonic, and eddy current non-destructive testing for all fluid/gas lines",
-      "Bundled with heavy-duty steel strapping and moisture-resistant seaworthy packaging"
-    ],
-    "applications": [
-      "Architectural steel columns, roof trusses, canopy framing, and space frames",
-      "Industrial warehouse framing, pre-engineered buildings (PEB), and greenhouse structures",
-      "Civil infrastructure handrails, bridge guardrails, and highway signage gantries",
-      "Low to medium pressure fluid, water, gas, fire protection sprinkler systems",
-      "Mechanical manufacturing, equipment frames, agricultural machinery, and automotive chassis"
-    ],
-    "standards": [
-      {
-        "name": "ASTM A500",
-        "description": "Cold-Formed Welded and Seamless Carbon Steel Structural Tubing"
-      },
-      {
-        "name": "EN 10219",
-        "description": "Cold formed welded structural hollow sections of non-alloy and fine grain steels"
-      },
-      {
-        "name": "GB/T 6728",
-        "description": "Cold formed hollow sections for general structure"
-      },
-      {
-        "name": "BS 1387",
-        "description": "Screwed and socketed steel tubes and tubulars for water, gas, air and steam"
-      }
-    ],
-    "relatedProducts": [
-      "seamless-steel-pipes",
-      "structural-steel-profiles",
-      "scaffold-tube-48"
-    ],
-    "categoryName": "Steel pipe/tube",
-    "subcategory": "ERW Pipe (Electro welded pipe)"
-  },
-  {
-    "slug": "straight-seam-welded-steel-pipe",
-    "category": "steel-pipe-tube",
-    "name": "Straight Seam High-Frequency Welded Steel Pipe (ERW)",
-    "shortDescription": "DN15\u2013DN300 high-frequency longitudinal ERW welded steel pipe for water, gas, oil transmission, structural columns, and drilling tubes.",
-    "description": "Straight seam high-frequency welded steel pipe (HFW / ERW) from Tianjin Decent International Trade Co., Ltd. is manufactured from premium hot-rolled carbon steel strip formed continuously into cylindrical profiles and longitudinally joined using high-frequency induction electrical resistance welding.\n\nBoth the outer and inner weld beads are cleanly trimmed to ensure smooth fluid flow, and the entire heat-affected zone undergoes in-line heat treatment. Widely utilized for municipal fluids, oil and gas gathering lines, rotary pressure drill tubes, and heavy structural engineering.",
-    "heroImage": "/src/assets/images/straight-seam-welded-steel-pipe.jpg",
-    "gallery": [
-      "/src/assets/images/straight-seam-welded-steel-pipe.jpg",
-      "/src/assets/images/hot-dip-galvanized-steel-pipe.jpg",
-      "/src/assets/images/seamless-steel-pipes.jpg"
     ],
     "specifications": [
       {
         "label": "Specifications",
-        "value": "DN15\u2013DN300 (Outer Diameter: 21.3\u2013325 mm)"
+        "value": "φ219–2020 mm, wall thickness up to 20 mm"
       },
       {
         "label": "Uses & Applications",
-        "value": "Widely used in water, gas, air, oil and steam and other low-pressure fluid transportation and mechanical structure"
+        "value": "Mainly used for oil, natural gas and other pressure-bearing long-distance pipelines, can also be used for water, gas, air, heating steam and other ordinary fluid transportation, and can be used in piling, structure and other construction fields"
       },
       {
-        "label": "Extended Applications",
-        "value": "Oil and gas line pipe, oil pipe, rotary pressure drill pipe, marine large diameter high frequency straight seam welded pipe, mechanical pipe and other special pipes"
-      },
-      {
-        "label": "Wall Thickness",
-        "value": "1.5\u201314.0 mm"
+        "label": "Wall Thickness Range",
+        "value": "5.0 mm up to 20.0 mm"
       },
       {
         "label": "Steel Grades",
-        "value": "Q195, Q215, Q235B, Q345B, Q355B, API 5L Gr. B, X42, X52, X60"
+        "value": "Q235B, Q345B, Q355B, API 5L Gr. B through X70 (PSL1 & PSL2)"
       },
       {
         "label": "Applicable Standards",
-        "value": "API Spec 5L, ASTM A53, ASTM A500, EN 10219, GB/T 3091, GB/T 13793"
+        "value": "API Spec 5L, ASTM A252 (Piling), SY/T 5037, GB/T 9711, EN 10217-1"
       },
       {
-        "label": "Surface Finish",
-        "value": "Bare mill finish, Lightly oiled, Black anti-rust paint, or Pre-galvanized"
+        "label": "Production Process",
+        "value": "Continuous spiral roll forming with double-sided submerged arc welding (internal & external beads)"
+      },
+      {
+        "label": "Welding Quality Control",
+        "value": "Weld gap controlled at 1–3 mm; 100% online X-ray fluoroscopy and ultrasonic NDT"
+      },
+      {
+        "label": "Hydrostatic Test",
+        "value": "100% pipe-by-pipe hydrostatic pressure testing up to standard calculation pressure"
       },
       {
         "label": "Length Range",
-        "value": "5.8 m, 6.0 m, 11.8 m, 12.0 m, or customized precision cut lengths"
+        "value": "Standard 12 m, random lengths 6 m to 18 m (custom pile lengths available)"
       },
       {
-        "label": "End Treatments",
-        "value": "Square cut plain ends or beveled ends (30\u00b0\u201335\u00b0) with end protection caps"
-      },
-      {
-        "label": "Non-Destructive Testing",
-        "value": "On-line ultrasonic weld testing, eddy current inspection, and hydrostatic verification"
+        "label": "External Coating Options",
+        "value": "3LPE (Three-layer Polyethylene), FBE (Fusion Bonded Epoxy), Bitumen, Bare mill"
       }
     ],
     "features": [
-      "Advanced high-frequency induction welding producing 100% joint penetration",
-      "Internal and external weld bead removal for seamless fluid dynamic performance",
-      "High dimensional accuracy with minimal wall thickness variation and uniform roundness",
-      "Comprehensive grade selection from commercial mild carbon steel up to high-yield API X60",
-      "Suitable for threading, grooving, flange welding, and cold bending fabrication"
+      "Massive diameter range up to 2,020 mm manufactured from standard-width steel strip coils",
+      "Spiral weld geometry distributes circumferential internal pressures across diagonal seams",
+      "Outstanding pressure-bearing capability verified by ultrasonic, radiographic, and hydrostatic tests",
+      "High structural bending rigidity making it optimal for civil bridge foundation friction piles",
+      "Highly economical per meter cost for large-volume municipal water transmission and PEB piling"
     ],
     "applications": [
-      "Civil and municipal water, coal gas, air, and low-pressure steam pipelines",
-      "Oilfield gathering pipelines, petroleum transport, and rotary drilling casing pipes",
-      "Offshore marine structures, harbor piling, and industrial machinery shafts",
-      "Prefabricated building columns, stadium space frames, and highway signage bridges",
-      "Automotive drive shafts, shock absorber tubes, and structural cross members"
+      "Long-distance cross-country oil, gas, petroleum, and hydrocarbon trunk transmission pipelines",
+      "Urban municipal water supply, raw water diversion aqueducts, and wastewater discharge mains",
+      "District heating steam circuits and thermal power plant circulating cooling water conduits",
+      "Bridge pier foundations, deep harbor dock pilings, highway embankment piles, and offshore structures",
+      "Industrial ductwork, ventilation air mains, and metallurgical chimney flues"
     ],
     "standards": [
       {
         "name": "API Spec 5L (PSL1/PSL2)",
-        "description": "Specification for Line Pipe (Gr. B, X42 through X65)"
+        "description": "Specification for Line Pipe (Gr. B, X42 to X70)"
       },
       {
-        "name": "ASTM A53 / A500",
-        "description": "Specification for Pipe, Steel, Black and Hot-Dipped, Welded and Seamless"
+        "name": "ASTM A252",
+        "description": "Standard Specification for Welded and Seamless Steel Pipe Piles"
       },
       {
-        "name": "EN 10219",
-        "description": "Cold formed welded structural hollow sections of non-alloy and fine grain steels"
+        "name": "GB/T 9711",
+        "description": "Petroleum and natural gas industries — Steel pipe for pipeline transportation systems"
       }
     ],
     "relatedProducts": [
-      "hot-dip-galvanized-steel-pipe",
-      "galvanized-seamless-steel-pipe",
-      "spiral-submerged-arc-welded-steel-pipe"
+      "black-carbon-steel-round-pipe",
+      "plastic-coated-composite-steel-pipe",
+      "galvanized-seamless-steel-pipe"
     ],
     "categoryName": "Steel pipe/tube",
-    "subcategory": "ERW Pipe (Electro welded pipe)"
+    "subcategory": "Spiral Seam Submerged Arc Welded Pipe (SSAW)"
   },
   {
     "slug": "ringlock-system",
@@ -2209,11 +2018,11 @@ export const PRODUCTS = [
       },
       {
         "label": "Standard Spacing",
-        "value": "Typically 1.0\u20132.5 m, depending on required bay size and structural design"
+        "value": "Typically 1.0–2.5 m, depending on required bay size and structural design"
       },
       {
         "label": "Lift Height",
-        "value": "Typically 0.5\u20132.5 m; commonly 3.0 m standard height"
+        "value": "Typically 0.5–2.5 m; commonly 3.0 m standard height"
       },
       {
         "label": "Horizontal Members",
@@ -2245,7 +2054,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Applications",
-        "value": "Building construction, fa\u00e7ade works, industrial plants, warehouses, maintenance, and access"
+        "value": "Building construction, façade works, industrial plants, warehouses, maintenance, and access"
       }
     ],
     "features": [
@@ -2270,7 +2079,7 @@ export const PRODUCTS = [
       },
       {
         "name": "EN 12811",
-        "description": "Scaffolds \u2014 performance requirements and general design"
+        "description": "Scaffolds — performance requirements and general design"
       },
       {
         "name": "ANSI/SSFI SC100-5/05",
@@ -2279,8 +2088,7 @@ export const PRODUCTS = [
     ],
     "relatedProducts": [
       "cuplock-scaffolding-system",
-      "tube-fittings-scaffolding",
-      "scaffolding-accessories"
+      "couplers"
     ],
     "categoryName": "Scaffolding & Accessories",
     "subcategory": "Ringlock System"
@@ -2374,7 +2182,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Tube Dimensions",
-        "value": "48.3 mm outside diameter \u00d7 3.2 mm / 4.0 mm nominal wall thickness"
+        "value": "48.3 mm outside diameter × 3.2 mm / 4.0 mm nominal wall thickness"
       },
       {
         "label": "Locking Node Spacing",
@@ -2394,7 +2202,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Surface Finish",
-        "value": "Hot-Dip Galvanized to EN ISO 1461 (minimum 55\u201385 \u00b5m zinc thickness) or painted"
+        "value": "Hot-Dip Galvanized to EN ISO 1461 (minimum 55–85 µm zinc thickness) or painted"
       },
       {
         "label": "Base Support",
@@ -2406,7 +2214,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Primary Use",
-        "value": "Heavy civil falsework shoring, building fa\u00e7ades, petrochemical plant access, and marine maintenance"
+        "value": "Heavy civil falsework shoring, building façades, petrochemical plant access, and marine maintenance"
       }
     ],
     "accessories": [
@@ -2495,7 +2303,7 @@ export const PRODUCTS = [
       }
     ],
     "features": [
-      "Single-node connection \u2014 up to four ledgers locked in one operation with a single hammer blow",
+      "Single-node connection — up to four ledgers locked in one operation with a single hammer blow",
       "Significantly faster assembly compared to conventional tube & coupler systems",
       "Suited for exterior access scaffolding, heavy falsework, and shoring",
       "Inherent lateral stability resulting from rigid cup-wedge node geometry",
@@ -2503,7 +2311,7 @@ export const PRODUCTS = [
       "Full compatibility with modular ladders, toe boards, and jack supports"
     ],
     "applications": [
-      "Commercial building construction and fa\u00e7ade maintenance",
+      "Commercial building construction and façade maintenance",
       "Heavy shoring, falsework, and concrete slab support",
       "Refinery, chemical plant, and industrial facility shutdowns",
       "Bridge construction, viaduct piers, and tunnel linings",
@@ -2516,17 +2324,16 @@ export const PRODUCTS = [
       },
       {
         "name": "EN 12811",
-        "description": "Temporary works equipment \u2014 scaffolds performance requirements"
+        "description": "Temporary works equipment — scaffolds performance requirements"
       },
       {
         "name": "BS 1139",
-        "description": "Metal scaffolding \u2014 specifications for system scaffolding"
+        "description": "Metal scaffolding — specifications for system scaffolding"
       }
     ],
     "relatedProducts": [
       "ringlock-system",
-      "tube-fittings-scaffolding",
-      "scaffolding-accessories"
+      "couplers"
     ],
     "categoryName": "Scaffolding & Accessories",
     "subcategory": "Cuplock"
@@ -2645,12 +2452,42 @@ export const PRODUCTS = [
           "Standard (标准)"
         ],
         "rows": [
-          ["Q235 Ø 48.3 × 4.0 mm", "3.0 m (3000 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
-          ["Q235 Ø 48.3 × 4.0 mm", "2.5 m (2500 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
-          ["Q235 Ø 48.3 × 4.0 mm", "2.0 m (2000 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
-          ["Q235 Ø 48.3 × 4.0 mm", "1.5 m (1500 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
-          ["Q235 Ø 48.3 × 4.0 mm", "1.0 m (1000 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
-          ["Q235 Ø 48.3 × 4.0 mm", "0.5 m (500 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"]
+          [
+            "Q235 Ø 48.3 × 4.0 mm",
+            "3.0 m (3000 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ],
+          [
+            "Q235 Ø 48.3 × 4.0 mm",
+            "2.5 m (2500 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ],
+          [
+            "Q235 Ø 48.3 × 4.0 mm",
+            "2.0 m (2000 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ],
+          [
+            "Q235 Ø 48.3 × 4.0 mm",
+            "1.5 m (1500 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ],
+          [
+            "Q235 Ø 48.3 × 4.0 mm",
+            "1.0 m (1000 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ],
+          [
+            "Q235 Ø 48.3 × 4.0 mm",
+            "0.5 m (500 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ]
         ]
       },
       {
@@ -2663,14 +2500,54 @@ export const PRODUCTS = [
           "Standard (Standard)"
         ],
         "rows": [
-          ["Q235 Ø 48.3 × 3.2 mm", "3.0 m (3000 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
-          ["Q235 Ø 48.3 × 3.2 mm", "2.4 m (2400 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
-          ["Q235 Ø 48.3 × 3.2 mm", "1.8 m (1800 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
-          ["Q235 Ø 48.3 × 3.2 mm", "1.2 m (1200 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
-          ["Q235 Ø 48.3 × 3.2 mm", "1.0 m (1000 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
-          ["Q235 Ø 48.3 × 3.2 mm", "0.8 m (800 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
-          ["Q235 Ø 48.3 × 3.2 mm", "0.7 m (700 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"],
-          ["Q235 Ø 48.3 × 3.2 mm", "0.5 m (500 mm)", "Hot Dipped Galvanized", "AS/NZS 1576"]
+          [
+            "Q235 Ø 48.3 × 3.2 mm",
+            "3.0 m (3000 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ],
+          [
+            "Q235 Ø 48.3 × 3.2 mm",
+            "2.4 m (2400 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ],
+          [
+            "Q235 Ø 48.3 × 3.2 mm",
+            "1.8 m (1800 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ],
+          [
+            "Q235 Ø 48.3 × 3.2 mm",
+            "1.2 m (1200 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ],
+          [
+            "Q235 Ø 48.3 × 3.2 mm",
+            "1.0 m (1000 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ],
+          [
+            "Q235 Ø 48.3 × 3.2 mm",
+            "0.8 m (800 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ],
+          [
+            "Q235 Ø 48.3 × 3.2 mm",
+            "0.7 m (700 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ],
+          [
+            "Q235 Ø 48.3 × 3.2 mm",
+            "0.5 m (500 mm)",
+            "Hot Dipped Galvanized",
+            "AS/NZS 1576"
+          ]
         ]
       }
     ],
@@ -2742,7 +2619,7 @@ export const PRODUCTS = [
     "standards": [
       {
         "name": "BS 1139",
-        "description": "Metal scaffolding \u2014 system scaffolding specifications"
+        "description": "Metal scaffolding — system scaffolding specifications"
       },
       {
         "name": "AS/NZS 1576",
@@ -2859,12 +2736,48 @@ export const PRODUCTS = [
           "External Tube (外管)"
         ],
         "rows": [
-          ["Heavy-duty steel prop", "1800 mm", "3200 mm", "Ø 48 × 2.0 mm", "Ø 60 × 2.0 mm"],
-          ["Heavy-duty steel prop", "2100 mm", "3400 mm", "Ø 48 × 2.0 mm", "Ø 60 × 2.1 mm"],
-          ["Heavy-duty steel prop", "2200 mm", "4000 mm", "Ø 48 × 2.0 mm", "Ø 60 × 2.2 mm"],
-          ["Heavy-duty steel prop", "2400 mm", "3900 mm", "Ø 48 × 2.1 mm", "Ø 60 × 2.3 mm"],
-          ["Heavy-duty steel prop", "3500 mm", "4000 mm", "Ø 48 × 2.2 mm", "Ø 60 × 2.4 mm"],
-          ["Heavy-duty steel prop", "3000 mm", "5000 mm", "Ø 48 × 3.5 mm", "Ø 60 × 3.5 mm"]
+          [
+            "Heavy-duty steel prop",
+            "1800 mm",
+            "3200 mm",
+            "Ø 48 × 2.0 mm",
+            "Ø 60 × 2.0 mm"
+          ],
+          [
+            "Heavy-duty steel prop",
+            "2100 mm",
+            "3400 mm",
+            "Ø 48 × 2.0 mm",
+            "Ø 60 × 2.1 mm"
+          ],
+          [
+            "Heavy-duty steel prop",
+            "2200 mm",
+            "4000 mm",
+            "Ø 48 × 2.0 mm",
+            "Ø 60 × 2.2 mm"
+          ],
+          [
+            "Heavy-duty steel prop",
+            "2400 mm",
+            "3900 mm",
+            "Ø 48 × 2.1 mm",
+            "Ø 60 × 2.3 mm"
+          ],
+          [
+            "Heavy-duty steel prop",
+            "3500 mm",
+            "4000 mm",
+            "Ø 48 × 2.2 mm",
+            "Ø 60 × 2.4 mm"
+          ],
+          [
+            "Heavy-duty steel prop",
+            "3000 mm",
+            "5000 mm",
+            "Ø 48 × 3.5 mm",
+            "Ø 60 × 3.5 mm"
+          ]
         ]
       },
       {
@@ -2878,13 +2791,55 @@ export const PRODUCTS = [
           "External Tube (外管)"
         ],
         "rows": [
-          ["Light-duty steel prop", "1600 mm", "3000 mm", "Ø 40 × 1.6 mm", "Ø 48 × 2.0 mm"],
-          ["Light-duty steel prop", "1600 mm", "3000 mm", "Ø 48 × 1.6 mm", "Ø 56 × 2.0 mm"],
-          ["Light-duty steel prop", "1600 mm", "3000 mm", "Ø 48 × 1.6 mm", "Ø 60 × 2.0 mm"],
-          ["Light-duty steel prop", "1800 mm", "2500 mm", "Ø 40 × 2.0 mm", "Ø 48 × 2.0 mm"],
-          ["Light-duty steel prop", "1800 mm", "2500 mm", "Ø 48 × 2.0 mm", "Ø 60 × 2.0 mm"],
-          ["Light-duty steel prop", "2000 mm", "3500 mm", "Ø 40 × 2.0 mm", "Ø 48 × 2.0 mm"],
-          ["Light-duty steel prop", "2000 mm", "3500 mm", "Ø 48 × 3.5 mm", "Ø 60 × 3.5 mm"]
+          [
+            "Light-duty steel prop",
+            "1600 mm",
+            "3000 mm",
+            "Ø 40 × 1.6 mm",
+            "Ø 48 × 2.0 mm"
+          ],
+          [
+            "Light-duty steel prop",
+            "1600 mm",
+            "3000 mm",
+            "Ø 48 × 1.6 mm",
+            "Ø 56 × 2.0 mm"
+          ],
+          [
+            "Light-duty steel prop",
+            "1600 mm",
+            "3000 mm",
+            "Ø 48 × 1.6 mm",
+            "Ø 60 × 2.0 mm"
+          ],
+          [
+            "Light-duty steel prop",
+            "1800 mm",
+            "2500 mm",
+            "Ø 40 × 2.0 mm",
+            "Ø 48 × 2.0 mm"
+          ],
+          [
+            "Light-duty steel prop",
+            "1800 mm",
+            "2500 mm",
+            "Ø 48 × 2.0 mm",
+            "Ø 60 × 2.0 mm"
+          ],
+          [
+            "Light-duty steel prop",
+            "2000 mm",
+            "3500 mm",
+            "Ø 40 × 2.0 mm",
+            "Ø 48 × 2.0 mm"
+          ],
+          [
+            "Light-duty steel prop",
+            "2000 mm",
+            "3500 mm",
+            "Ø 48 × 3.5 mm",
+            "Ø 60 × 3.5 mm"
+          ]
         ]
       }
     ],
@@ -2919,7 +2874,7 @@ export const PRODUCTS = [
       "Six standard length ranges from 0.69 m up to 4.87 m to meet any ceiling or trench height",
       "Heavy-duty rolled Acme threads ensure smooth adjustment without clogging or stripping",
       "Self-cleaning thread design expels concrete debris and slurry during turning",
-      "High axial vertical load capacity with T\u00dcV and EN 1065 certification test data",
+      "High axial vertical load capacity with TÜV and EN 1065 certification test data",
       "Punched base plate holes allow secure fastening to timber sole plates or concrete slabs",
       "Available with U-head, fork head, or flat plate tops for timber beam / steel beam support"
     ],
@@ -2932,7 +2887,7 @@ export const PRODUCTS = [
     "standards": [
       {
         "name": "EN 1065",
-        "description": "Adjustable telescopic steel props \u2014 Product specifications, design and assessment"
+        "description": "Adjustable telescopic steel props — Product specifications, design and assessment"
       },
       {
         "name": "BS 4074",
@@ -2940,9 +2895,8 @@ export const PRODUCTS = [
       }
     ],
     "relatedProducts": [
-      "scaffold-beam-ladder",
-      "steel-scaffold-planks",
-      "frame-scaffolding-system"
+      "scaffold-staircase",
+      "steel-scaffold-planks"
     ],
     "categoryName": "Scaffolding & Accessories",
     "subcategory": "Steel prop/shoring"
@@ -2951,8 +2905,8 @@ export const PRODUCTS = [
     "slug": "steel-scaffold-planks",
     "category": "scaffolding-accessories",
     "name": "Steel plank/board",
-    "shortDescription": "Anti-slip perforated galvanized steel walk boards with reinforcing stiffeners and heavy-duty end hooks.",
-    "description": "Galvanized Steel Scaffold Planks and Boards supplied by Tianjin Decent International Trade Co., Ltd. are engineered for high-durability working platforms across commercial, civil, and industrial scaffolding. Manufactured from high-strength pre-galvanized or hot-dip galvanized sheet steel with longitudinal box-channel ribs for maximum deflection resistance.\n\nFeaturing a non-slip perforated dimpled surface that prevents slip hazards from water, oil, or mud accumulation, complete with heavy-duty welded end hooks that lock firmly onto scaffolding ledgers and transoms.",
+    "shortDescription": "Anti-slip perforated galvanized steel and structural aluminum walk boards with reinforcing stiffeners and heavy-duty end hooks.",
+    "description": "Scaffold Planks and Platform Boards supplied by Tianjin Decent International Trade Co., Ltd. are engineered for high-durability working platforms across commercial, civil, and industrial scaffolding. Manufactured from high-strength pre-galvanized or hot-dip galvanized sheet steel with longitudinal box-channel ribs, as well as lightweight high-tensile extruded architectural aluminum alloy (6061-T6 / 6082-T6).\n\nFeaturing a non-slip perforated or ribbed traction surface that prevents slip hazards from water, oil, or mud accumulation, complete with heavy-duty cast and welded end hooks that lock firmly onto scaffolding ledgers and transoms.",
     "heroImage": "/src/assets/images/scaffold-steel-plank-perforated.jpg",
     "gallery": [
       {
@@ -2974,12 +2928,27 @@ export const PRODUCTS = [
         "src": "/src/assets/images/scaffold-steel-plank.jpg",
         "title": "Pre-Galvanized Modular Scaffolding Walk Board",
         "note": "Lightweight high-load steel plank manufactured from high-yield pre-galvanized sheet steel with punched drain dimples for outdoor weathering resistance."
+      },
+      {
+        "src": "/src/assets/images/aluminum-platform-board-stack.jpg",
+        "title": "Structural Extruded Aluminum Scaffold Platform Planks",
+        "note": "Precision-extruded structural aluminum scaffold platform planks with continuous anti-slip longitudinal traction ribs and cast safety end hooks."
+      },
+      {
+        "src": "/src/assets/images/aluminum-platform-board-hook-detail.jpg",
+        "title": "Close-Up of Extruded Aluminum Profile & Triple Cast Hooks",
+        "note": "Close-up engineering view of the extruded hollow-box aluminum profile with integrated traction grooves and reinforced triple end hook connections."
+      },
+      {
+        "src": "/src/assets/images/aluminum-platform-board-warehouse-stillage.jpg",
+        "title": "Export Stillage Bundles of Wrapped Aluminum Boards",
+        "note": "High-density factory stillage stacks of protective film-wrapped aluminum scaffold boards with reinforced perimeter banding ready for export shipping."
       }
     ],
     "specifications": [
       {
         "label": "Plank Widths",
-        "value": "210 mm, 225 mm, 240 mm, 250 mm, 480 mm"
+        "value": "210 mm, 225 mm, 240 mm, 250 mm, 480 mm (Steel); 320 mm, 480 mm, 600 mm (Aluminum)"
       },
       {
         "label": "Standard Lengths",
@@ -2990,24 +2959,24 @@ export const PRODUCTS = [
         "value": "38 mm, 45 mm, 50 mm box-channel with welded bottom stiffeners"
       },
       {
-        "label": "Sheet Thickness",
-        "value": "1.1 mm, 1.2 mm, 1.5 mm, 1.8 mm, 2.0 mm structural galvanized steel"
+        "label": "Sheet Thickness / Alloy",
+        "value": "1.1–2.0 mm structural galvanized steel / Aluminum Alloy 6061-T6 / 6082-T6"
       },
       {
         "label": "Surface Pattern",
-        "value": "Anti-slip raised perforated dimples with rapid drainage perforations"
+        "value": "Anti-slip raised perforated dimples or extruded longitudinal grip ribs"
       },
       {
         "label": "End Connections",
-        "value": "Dual or triple welded hooks with safety lock pins or plain box ends"
+        "value": "Dual or triple cast/welded hooks with safety lock pins or plain box ends"
       },
       {
         "label": "Surface Finish",
-        "value": "Pre-galvanized (Z120\u2013Z275) or Hot-Dip Galvanized (HDG)"
+        "value": "Pre-galvanized (Z120–Z275), Hot-Dip Galvanized (HDG), or Mill Finish Aluminum"
       },
       {
         "label": "Load Rating",
-        "value": "Conforms to EN 12811-1 Class 3 (2.0 kN/m\u00b2) through Class 6 (6.0 kN/m\u00b2)"
+        "value": "Conforms to EN 12811-1 Class 3 (2.0 kN/m²) through Class 6 (6.0 kN/m²)"
       }
     ],
     "features": [
@@ -3025,11 +2994,11 @@ export const PRODUCTS = [
     "standards": [
       {
         "name": "EN 12811-1",
-        "description": "Temporary works equipment \u2014 Working platforms and decking"
+        "description": "Temporary works equipment — Working platforms and decking"
       },
       {
         "name": "BS 1139",
-        "description": "Metal scaffolding \u2014 specifications for steel scaffold boards"
+        "description": "Metal scaffolding — specifications for steel scaffold boards"
       },
       {
         "name": "OSHA 1926.451",
@@ -3037,77 +3006,13 @@ export const PRODUCTS = [
       }
     ],
     "relatedProducts": [
-      "aluminum-platform",
+      "ringlock-system",
+      "cuplock-scaffolding-system",
       "scaffold-staircase",
-      "frame-scaffolding-system",
-      "scaffolding-accessories"
+      "couplers"
     ],
     "categoryName": "Scaffolding & Accessories",
     "subcategory": "Steel plank/board"
-  },
-  {
-    "slug": "aluminum-platform",
-    "category": "scaffolding-accessories",
-    "categoryName": "Scaffolding & Accessories",
-    "subcategory": "Steel plank/board",
-    "name": "Aluminum Scaffold Platform Board",
-    "shortDescription": "Lightweight aluminum working deck with perforated anti-slip surface and safety locking hooks.",
-    "description": "High-strength aluminum alloy scaffold platform board designed for ease of handling, corrosion resistance, and safe worker footing. Features non-slip textured surfaces, water-drainage perforations, and wind-lock clips.",
-    "heroImage": "/src/assets/images/aluminum-platform-board-stack.jpg",
-    "gallery": [
-      {
-        "src": "/src/assets/images/aluminum-platform-board-stack.jpg",
-        "title": "Extruded Aluminum Scaffold Platform Boards Stack",
-        "note": "Precision-extruded structural aluminum scaffold platform planks with continuous anti-slip longitudinal traction ribs and cast safety end hooks."
-      },
-      {
-        "src": "/src/assets/images/aluminum-platform-board-hook-detail.jpg",
-        "title": "Anti-Slip Ribbed Profile & Heavy-Duty End Hooks Detail",
-        "note": "Close-up engineering view of the extruded hollow-box aluminum profile with integrated traction grooves and reinforced triple end hook connections."
-      },
-      {
-        "src": "/src/assets/images/aluminum-platform-board-warehouse-stillage.jpg",
-        "title": "Factory Warehouse Export Stillage of Aluminum Planks",
-        "note": "High-density factory stillage stacks of protective film-wrapped aluminum scaffold boards with reinforced perimeter banding ready for export shipping."
-      }
-    ],
-    "specifications": [
-      {
-        "label": "Material",
-        "value": "Aluminum Alloy 6061-T6 / 6082-T6"
-      },
-      {
-        "label": "Platform Width",
-        "value": "320 mm / 480 mm / 600 mm"
-      },
-      {
-        "label": "Lengths Available",
-        "value": "1.5 m, 2.0 m, 2.5 m, 3.0 m"
-      },
-      {
-        "label": "Load Rating",
-        "value": "EN 12811 Class 3 (2.0 kN/m²) to Class 5"
-      }
-    ],
-    "features": [
-      "Lightweight aluminum design reduces worker handling fatigue",
-      "Perforated anti-slip profile for wet and oily environments",
-      "Integrated wind-lock safety hooks"
-    ],
-    "applications": [
-      "Working platforms on facade scaffolding and mobile towers"
-    ],
-    "standards": [
-      {
-        "name": "EN 12811",
-        "description": "Temporary works equipment — Working platforms"
-      }
-    ],
-    "relatedProducts": [
-      "steel-scaffold-planks",
-      "aluminum-tower",
-      "scaffold-staircase"
-    ]
   },
   {
     "slug": "scaffold-staircase",
@@ -3115,17 +3020,17 @@ export const PRODUCTS = [
     "name": "Staircase/beam ladder/ladder",
     "shortDescription": "Modular steel scaffolding staircases, high-strength tubular beam ladders, and heavy-duty vertical access ladders for safe, compliant vertical jobsite transit.",
     "description": "Staircase, beam ladder, and ladder access solutions supplied by Tianjin Decent International Trade Co., Ltd. provide safe, ergonomic vertical transit and structural bridging between scaffold working levels, replacing unsafe vertical climbing with fully certified access configurations.\n\nOur range encompasses prefabricated modular steel and aluminum staircase units with non-slip perforated treads and matching safety handrails, parallel-chord 48.3 mm tubular steel beam ladders (lattice girders) for wide-span bridging and suspended access, and heavy-duty steel and aluminum personnel access ladders with slip-resistant rungs.",
-    "heroImage": "/src/assets/images/scaffold-staircase.jpg",
+    "heroImage": "/src/assets/images/scaffold-staircase-tower-facade.jpg",
     "gallery": [
-      {
-        "src": "/src/assets/images/scaffold-staircase.jpg",
-        "title": "Modular Prefabricated Steel Staircase Unit with Hooks",
-        "note": "Prefabricated modular steel access stairs with non-slip perforated treads and welded ledger hooks for rapid drop-in installation on standard scaffolding bays."
-      },
       {
         "src": "/src/assets/images/scaffold-staircase-tower-facade.jpg",
         "title": "Multi-Tier External Facade Scaffolding Staircase Tower",
         "note": "Complete modular personnel access staircase tower integrated into multi-story building facade scaffolding, featuring non-slip perforated treads and continuous safety handrails."
+      },
+      {
+        "src": "/src/assets/images/scaffold-staircase.jpg",
+        "title": "Modular Prefabricated Steel Staircase Unit with Hooks",
+        "note": "Prefabricated modular steel access stairs with non-slip perforated treads and welded ledger hooks for rapid drop-in installation on standard scaffolding bays."
       },
       {
         "src": "/src/assets/images/scaffold-beam-ladder-galvanized-yard.jpg",
@@ -3165,6 +3070,10 @@ export const PRODUCTS = [
         "value": "Reinforced welded steel end hooks with integrated lift-off safety retainers"
       },
       {
+        "label": "Beam Ladder Bridging",
+        "value": "Parallel-chord 48.3 mm OD tubing (depths 300 mm, 450 mm, 500 mm; lengths up to 8.0 m)"
+      },
+      {
         "label": "Material & Finish",
         "value": "High-strength structural steel, Pre-galvanized or Hot-Dip Galvanized"
       },
@@ -3174,7 +3083,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Permissible Load",
-        "value": "1.5 kN/m\u00b2 to 2.0 kN/m\u00b2 live load rating (EN 12811 Class 3)"
+        "value": "1.5 kN/m² to 2.0 kN/m² live load rating (EN 12811 Class 3)"
       }
     ],
     "features": [
@@ -3192,263 +3101,18 @@ export const PRODUCTS = [
     "standards": [
       {
         "name": "EN 12811-1",
-        "description": "Temporary works equipment \u2014 Scaffolds access and stairways"
+        "description": "Temporary works equipment — Scaffolds access and stairways"
       },
       {
         "name": "OSHA 1926.451",
-        "description": "Safety and Health Regulations for Construction \u2014 Scaffolds access requirements"
+        "description": "Safety and Health Regulations for Construction — Scaffolds access requirements"
       }
     ],
     "relatedProducts": [
       "steel-scaffold-planks",
-      "frame-scaffolding-system",
-      "ringlock-system"
-    ],
-    "categoryName": "Scaffolding & Accessories",
-    "subcategory": "Staircase/beam ladder/ladder"
-  },
-  {
-    "slug": "scaffold-beam-ladder",
-    "category": "scaffolding-accessories",
-    "name": "Scaffolding Beam Ladders & Lattice Girders",
-    "shortDescription": "High-tensile parallel-chord 48.3 mm tubular lattice beams engineered for bridging large spans, openings, and suspended scaffolds.",
-    "description": "Scaffolding Beam Ladders and Lattice Girders are structural spanning components manufactured from 48.3 mm high-yield steel tubing. Designed to bridge over wide openings, vehicular roadways, pedestrian thoroughfares, and roof voids where continuous ground-supported scaffolding is impractical.\n\nEngineered with full-penetration welding between chords and diagonal lattice bracing, conforming to BS 1139 and EN 12811 for high bending moment capacity and point load resistance.",
-    "heroImage": "/src/assets/images/scaffold-beam-ladder.jpg",
-    "gallery": [
-      "/src/assets/images/scaffold-beam-ladder.jpg",
-      "/src/assets/images/scaffold-beam-ladder-bundle.jpg",
-      "/src/assets/images/scaffold-tubes-fittings.jpg"
-    ],
-    "specifications": [
-      {
-        "label": "Lattice Depth",
-        "value": "300 mm, 450 mm, 500 mm, 750 mm (standard 450 mm / 18\" deep lattice)"
-      },
-      {
-        "label": "Standard Lengths",
-        "value": "2.0 m, 3.0 m, 4.0 m, 5.0 m, 6.0 m, 8.0 m (custom lengths available)"
-      },
-      {
-        "label": "Chord Tubes",
-        "value": "\u00d8 48.3 mm \u00d7 3.2 mm / 4.0 mm high-yield structural steel tubing"
-      },
-      {
-        "label": "Lacing Tubes",
-        "value": "\u00d8 48.3 mm or \u00d8 38 mm diagonal and vertical welded lattice trussing"
-      },
-      {
-        "label": "Connection Details",
-        "value": "Direct connection using standard EN 74-1 right-angle / swivel couplers or spigot connectors"
-      },
-      {
-        "label": "Surface Finish",
-        "value": "Hot-Dip Galvanized to EN ISO 1461 for severe marine and industrial atmospheric protection"
-      },
-      {
-        "label": "Bending Capacity",
-        "value": "High permissible bending moment engineered for heavy suspended staging and equipment decks"
-      },
-      {
-        "label": "Primary Use",
-        "value": "Bridging openings, entrance portals, pedestrian canopies, and suspended scaffolding"
-      }
-    ],
-    "features": [
-      "Fabricated entirely from standardized 48.3 mm tubes for complete coupler compatibility",
-      "Continuous automated robotic MIG welding guarantees full weld penetration and joint strength",
-      "Provides clear wide-span access over building entrances, roadways, and sensitive equipment",
-      "End-to-end spigoting permits multi-section continuous beam spans exceeding 20 meters",
-      "Hot-dip galvanized coating ensures zero corrosion maintenance over extended project lifespans"
-    ],
-    "applications": [
-      "Bridging over vehicular entrance gates and active construction site roadways",
-      "Pedestrian protection gantries and overhead debris catchment decks",
-      "Suspended access platforms on offshore platforms, bridges, and ship hulls",
-      "Heavy shoring transfer beams and cantilevered working bays"
-    ],
-    "standards": [
-      {
-        "name": "BS 1139",
-        "description": "Metal scaffolding \u2014 specifications for system scaffolding and components"
-      },
-      {
-        "name": "EN 12811-1",
-        "description": "Temporary works equipment \u2014 Scaffolds performance requirements"
-      }
-    ],
-    "relatedProducts": [
-      "scaffold-steel-props",
-      "steel-scaffold-planks",
-      "frame-scaffolding-system"
-    ],
-    "categoryName": "Scaffolding & Accessories",
-    "subcategory": "Staircase/beam ladder/ladder"
-  },
-  {
-    "slug": "aluminum-tower",
-    "category": "scaffolding-accessories",
-    "name": "Mobile Aluminum Scaffolding Tower",
-    "shortDescription": "Free-standing modular mobile access tower (SWL 700 kg) in high-grade aluminum with 200 mm lockable castors.",
-    "description": "Lightweight modular mobile access tower engineered for rapid tool-free assembly and safe high-elevation working platforms. Constructed from high-tensile structural aluminum alloy tubes (6061-T6 / 6082-T6) featuring castellated anti-slip rung frames, 200 mm dual-locking polyurethane castors, heavy-duty outriggers, internal ladder bays, and trapdoor working decks.",
-    "heroImage": "/src/assets/images/aluminum-tower.jpg",
-    "gallery": [
-      "/src/assets/images/aluminum-tower.jpg",
-      "/src/assets/images/platform-board.jpg"
-    ],
-    "specifications": [
-      {
-        "label": "Tower Material",
-        "value": "High-strength structural aluminum alloy (6061-T6 / 6082-T6)"
-      },
-      {
-        "label": "Working Heights",
-        "value": "Modular configurations up to 16.0 meters working height"
-      },
-      {
-        "label": "Safe Working Load (SWL)",
-        "value": "250 kg per platform deck; 700 kg maximum total tower load"
-      },
-      {
-        "label": "Castor Wheels",
-        "value": "200 mm (8-inch) dual-locking polyurethane wheels (500 kg rating per wheel) with grooved height adjusters"
-      },
-      {
-        "label": "Frame Dimensions",
-        "value": "Single Width (0.85 m / 1.2 m) & Double Width (1.45 m / 2.0 m); lengths 1.8 m, 2.5 m, 3.0 m"
-      },
-      {
-        "label": "Rung Construction",
-        "value": "Deeply ribbed castellated anti-slip aluminum tubing welded directly to upright stiles"
-      },
-      {
-        "label": "Decking & Access",
-        "value": "Perforated anti-slip platform with slip-resistant marine plywood trapdoor access"
-      },
-      {
-        "label": "Stabilizing Outriggers",
-        "value": "Telescopic clamp-on outriggers ensuring 3:1 base-to-height stability ratio"
-      },
-      {
-        "label": "Compliance Standard",
-        "value": "Certified to EN 1004 Class 3 and BS 1139 Part 3"
-      }
-    ],
-    "features": [
-      "Castellated ribbed tube design provides safe climbing grip and enhanced structural rigidity",
-      "Dual-action 200 mm polyurethane castors provide independent rolling and swiveling locks",
-      "Color-coded snap-lock brace claws enable fast tool-free assembly and dismantling",
-      "Trapdoor platform design ensures workers always remain protected inside the guardrail perimeter",
-      "Lightweight aluminum frames can be maneuvered through narrow corridors and standard double doors"
-    ],
-    "applications": [
-      "Interior building fit-out, ceiling installation, lighting, and HVAC duct maintenance",
-      "Commercial facade cleaning, window glazing, and architectural cladding inspection",
-      "Industrial plant turnaround access inside refineries, power generation halls, and cleanrooms"
-    ],
-    "standards": [
-      {
-        "name": "EN 1004",
-        "description": "Mobile access and working towers made of prefabricated elements"
-      },
-      {
-        "name": "BS 1139 Part 3",
-        "description": "Specification for prefabricated mobile access and working towers"
-      },
-      {
-        "name": "OSHA 1926.452",
-        "description": "Safety standards for mobile scaffolds"
-      }
-    ],
-    "relatedProducts": [
-      "steel-scaffold-planks",
-      "scaffold-staircase",
-      "scaffolding-accessories"
-    ],
-    "categoryName": "Scaffolding & Accessories",
-    "subcategory": "Staircase/beam ladder/ladder"
-  },
-  {
-    "slug": "frame-scaffolding-system",
-    "category": "scaffolding-accessories",
-    "name": "Modular Frame Scaffolding System (H-Frame & Walk-Through)",
-    "shortDescription": "Prefabricated portal frame scaffolding system with walk-through frames, mason frames, cross braces, and lock pins.",
-    "description": "The Modular Frame Scaffolding System is engineered for rapid, tool-free erection on masonry construction, exterior building finishing, stucco work, and commercial maintenance projects. Built from high-tensile structural steel tubular uprights welded into rigid box geometries, each section locks securely with scissor cross braces and gravity flip-locks.\n\nAvailable in Walk-Through Frame and Mason H-Frame configurations, accommodating integrated steel walk boards, staircases, and heavy loading conditions conforming to ANSI and EN specifications.",
-    "heroImage": "/src/assets/images/frame-scaffolding.jpg",
-    "gallery": [
-      "/src/assets/images/frame-scaffolding.jpg",
-      "/src/assets/images/scaffold-steel-plank.jpg",
-      "/src/assets/images/scaffold-staircase.jpg"
-    ],
-    "specifications": [
-      {
-        "label": "System Type",
-        "value": "Walk-Through Frame & Mason H-Frame modular scaffolding"
-      },
-      {
-        "label": "Standard Dimensions",
-        "value": "1930 mm \u00d7 1219 mm (6'4\" \u00d7 4'), 1700 mm \u00d7 1219 mm, 1524 mm \u00d7 1219 mm (5' \u00d7 4'), 1930 mm \u00d7 914 mm"
-      },
-      {
-        "label": "Main Leg Tube",
-        "value": "\u00d8 42.7 mm / \u00d8 48.3 mm \u00d7 2.0 mm / 2.5 mm high-yield carbon steel"
-      },
-      {
-        "label": "Lock Types",
-        "value": "Drop lock / Gravity flip lock / Fast lock pins"
-      },
-      {
-        "label": "Cross Braces",
-        "value": "Galvanized tube scissor cross braces to suit 1.8 m, 2.0 m, 2.13 m, 2.5 m bays"
-      },
-      {
-        "label": "Surface Finish",
-        "value": "High-durability powder-coated (Red / Yellow / Blue) or Hot-Dip Galvanized"
-      },
-      {
-        "label": "Platform Decking",
-        "value": "Compatible with steel planks, aluminum platform boards, and access hatch decks"
-      },
-      {
-        "label": "Load Capacity",
-        "value": "Heavy Duty rating up to 50 psf (2.4 kN/m\u00b2) uniform distributed load"
-      },
-      {
-        "label": "Applications",
-        "value": "Brick masonry, exterior wall plastering, cladding installation, and interior maintenance"
-      }
-    ],
-    "features": [
-      "Rapid, tool-free assembly with drop-lock pins and captive gravity pins",
-      "Walk-through portal geometry allows unobstructed worker passage along scaffold bays",
-      "High-grade structural steel tubing ensures maximum buckling resistance",
-      "Available in durable powder-coated painted finish or hot-dip galvanized finish",
-      "Complete accessory compatibility: screw jacks, casters, guardrail posts, and stairs",
-      "Full compliance with international access safety and load standards"
-    ],
-    "applications": [
-      "Exterior masonry, bricklaying, and stone facade construction",
-      "Stucco, plastering, exterior insulation and finish systems (EIFS)",
-      "Building painting, window glazing, and architectural panel installation",
-      "Industrial warehouse wall maintenance and internal ceiling access"
-    ],
-    "standards": [
-      {
-        "name": "ANSI/SSFI SC100-5/05",
-        "description": "Standards for testing and rating scaffold assemblies and components"
-      },
-      {
-        "name": "EN 12810",
-        "description": "Fa\u00e7ade scaffolds made of prefabricated components"
-      },
-      {
-        "name": "OSHA 1926.451",
-        "description": "Safety and Health Regulations for Construction \u2014 Scaffolds"
-      }
-    ],
-    "relatedProducts": [
-      "steel-scaffold-planks",
-      "scaffold-staircase",
-      "scaffold-steel-props"
+      "ringlock-system",
+      "cuplock-scaffolding-system",
+      "couplers"
     ],
     "categoryName": "Scaffolding & Accessories",
     "subcategory": "Staircase/beam ladder/ladder"
@@ -3459,7 +3123,7 @@ export const PRODUCTS = [
     "name": "Couplers",
     "shortDescription": "Drop-forged and pressed steel scaffolding couplers (Fixed 90°, Swivel 360°, Sleeve, Putlog, Girder, and Board Retaining Clamps) certified to EN 74-1 Class B and BS 1139.",
     "description": "Scaffolding Couplers supplied by Tianjin Decent International Trade Co., Ltd. are engineered for high slip resistance, rigidity, and rapid assembly across tube & coupler scaffolding, structural bracing, and modular falsework grids.\n\nManufactured from drop-forged high-tensile carbon steel and heavy pressed steel, equipped with Grade 8.8 forged T-bolts and flanged hex nuts. Conforming to EN 74-1 Class B and BS 1139, our comprehensive couplers range includes fixed right-angle double couplers, 360° universal swivel couplers, board retaining clamps (BRC), girder beam clamps, external sleeve couplers, and putlog single clamps with hot-dip galvanized or zinc electroplated finish.",
-    "heroImage": "/src/assets/images/scaffold-couplers-comprehensive-range.jpg",
+    "heroImage": "/src/assets/images/scaffold-couplers-catalog-lineup.webp",
     "gallery": [
       {
         "src": "/src/assets/images/scaffold-couplers-comprehensive-range.jpg",
@@ -3552,546 +3216,10 @@ export const PRODUCTS = [
       }
     ],
     "relatedProducts": [
-      "swivel-coupler",
-      "scaffold-tube-48",
-      "base-jack"
-    ],
-    "categoryName": "Scaffolding & Accessories",
-    "subcategory": "Couplers"
-  },
-  {
-    "slug": "swivel-coupler",
-    "category": "scaffolding-accessories",
-    "name": "Swivel Coupler",
-    "shortDescription": "Drop-forged steel universal swivel coupler for connecting two 48.3 mm tubes at any arbitrary angle conforming to EN 74-1 Class B.",
-    "description": "Heavy-duty drop-forged swivel coupler allowing two 48.3 mm scaffold tubes to be clamped at any required angle. Essential for diagonal sway bracing, ledger bracing, and triangular structural ties. Fully certified to EN 74-1 Class B.",
-    "heroImage": "/src/assets/images/fitting-swivel-coupler.jpg",
-    "gallery": [
-      {
-        "src": "/src/assets/images/fitting-swivel-coupler.jpg",
-        "title": "Drop-Forged 360° Universal Swivel Coupler Set",
-        "note": "Heavy-duty drop-forged and pressed steel universal swivel couplers in hot-dip galvanized and zinc-passivated finishes for EN 74-1 Class B diagonal structural bracing."
-      },
-      {
-        "src": "/src/assets/images/fitting-double-coupler.jpg",
-        "title": "Drop-Forged Right-Angle (Double) Coupler",
-        "note": "Precision drop-forged right-angle coupler connecting two 48.3 mm scaffold tubes at a rigid 90-degree orthogonal junction."
-      },
-      {
-        "src": "/src/assets/images/fitting-putlog-coupler.jpg",
-        "title": "Drop-Forged Putlog Coupler (Single)",
-        "note": "Single wrap putlog coupler connecting transoms across ledgers for board deck load distribution."
-      },
-      {
-        "src": "/src/assets/images/fitting-board-retaining-clamp.jpg",
-        "title": "Board Retaining Clamp (BRC)",
-        "note": "Heavy-duty pressed steel board retaining clamp securing timber boards and steel planks firmly to scaffold tubes."
-      },
-      {
-        "src": "/src/assets/images/fitting-sleeve-coupler.jpg",
-        "title": "Sleeve Coupler (Pressed) EN 74 - 1 B",
-        "note": "Pressed steel sleeve coupler for end-to-end concentric joining of 48.3 mm scaffold tubes conforming to EN 74-1 Class B."
-      },
-      {
-        "src": "/src/assets/images/fitting-beam-clamp.jpg",
-        "title": "Drop-Forged Girder Coupler / Beam Clamp (SK Clamp)",
-        "note": "Drop-forged girder coupler (SK clamp) for anchoring 48.3 mm scaffold tubes in pairs directly to structural H/I-beam flanges with 30 kN slip resistance."
-      }
-    ],
-    "specifications": [
-      {
-        "label": "Standard Compliance",
-        "value": "EN 74-1 Class B Certified"
-      },
-      {
-        "label": "Connection Angle",
-        "value": "360\u00b0 Swivel rotation"
-      },
-      {
-        "label": "Tube Diameter",
-        "value": "48.3 mm \u00d7 48.3 mm"
-      },
-      {
-        "label": "Material",
-        "value": "Drop-Forged Carbon Steel"
-      },
-      {
-        "label": "Tightening Torque",
-        "value": "54 Nm"
-      },
-      {
-        "label": "Slip Resistance Load",
-        "value": "\u2265 15.0 kN (Class B requirement)"
-      },
-      {
-        "label": "Failure Load",
-        "value": "\u2265 20.0 kN"
-      },
-      {
-        "label": "Surface Finish",
-        "value": "Hot-Dip Galvanized / Zinc Electroplated"
-      },
-      {
-        "label": "Fasteners",
-        "value": "Grade 8.8 T-bolts with 21 mm / 22 mm flanged hex nuts"
-      }
-    ],
-    "features": [
-      "360-degree rotation for diagonal sway bracing and angular propping",
-      "Drop-forged heavy-gauge body ensures maximum tensile resistance",
-      "Certified to EN 74-1 Class B with physical test verification",
-      "Heavy-duty zinc passivation coating protects against marine and coastal atmospheres"
-    ],
-    "applications": [
-      "Diagonal sway bracing and plan bracing",
-      "Triangulated structural ties and facade stabilizers",
-      "Tubular framework junctions on irregular structures"
-    ],
-    "standards": [
-      {
-        "name": "EN 74-1 Class B",
-        "description": "Scaffolding couplers \u2014 Class B Certified"
-      },
-      {
-        "name": "BS 1139",
-        "description": "Metal scaffolding \u2014 specifications for fittings"
-      }
-    ],
-    "relatedProducts": [
-      "couplers",
-      "scaffold-tube-48",
-      "base-jack"
-    ],
-    "categoryName": "Scaffolding & Accessories",
-    "subcategory": "Couplers"
-  },
-  {
-    "slug": "tube-fittings-scaffolding",
-    "category": "scaffolding-accessories",
-    "name": "Tube & Fitting Scaffolding System",
-    "shortDescription": "Traditional modular scaffolding system consisting of 48.3 mm high-strength steel tubes connected using drop-forged mechanical couplers.",
-    "description": "Tube & Fitting scaffolding is a versatile traditional modular scaffolding system consisting of high-strength steel tubes connected using mechanical couplers and clamps. It is suitable for construction, maintenance, access, and temporary support works where site conditions demand complete dimensional freedom.\n\nBecause couplers can be fastened at any position along the 48.3 mm diameter tubes, this system can wrap around irregular building profiles, accommodate uneven terrain, bridge complex obstacles, and adapt where prefabricated modular systems are constrained. Supplied with hot-dip galvanized or painted finish with drop-forged EN 74 compliant couplers.",
-    "heroImage": "/src/assets/images/scaffold-tubes-fittings.jpg",
-    "gallery": [
-      "/src/assets/images/scaffold-tubes-fittings.jpg",
-      "/src/assets/images/fitting-swivel-coupler.jpg",
-      "/src/assets/images/fitting-double-coupler.jpg",
-      "/src/assets/images/fitting-beam-clamp.jpg"
-    ],
-    "specifications": [
-      {
-        "label": "Scaffolding System",
-        "value": "Tube & Fitting scaffolding"
-      },
-      {
-        "label": "Material",
-        "value": "High-strength steel tubes (S235GT / S355 / Q235 / Q355 structural steel)"
-      },
-      {
-        "label": "Tube Diameter",
-        "value": "48.3 mm nominal outside diameter (OD)"
-      },
-      {
-        "label": "Tube Thickness",
-        "value": "2.9 mm, 3.2 mm, 3.4/3.76 mm, 4.0 mm nominal wall thickness"
-      },
-      {
-        "label": "Tube Lengths",
-        "value": "Any length as per client requirement (Suitable for Ocean freight by BB / Container)"
-      },
-      {
-        "label": "Coupler Types",
-        "value": "Right-angle (double), swivel, sleeve, putlog, and girder approved couplers"
-      },
-      {
-        "label": "Coupler Compliance",
-        "value": "EN 74-1 Class B Certified"
-      },
-      {
-        "label": "Base Support",
-        "value": "Adjustable screw base jacks and steel base plates"
-      },
-      {
-        "label": "Working Platform",
-        "value": "Steel or aluminum scaffold boards/planks"
-      },
-      {
-        "label": "Access Solutions",
-        "value": "Scaffold ladders or external stair towers as required"
-      },
-      {
-        "label": "Safety Components",
-        "value": "Guardrails, midrails, toe boards, and self-closing access gates"
-      },
-      {
-        "label": "Finish",
-        "value": "Hot-dip galvanized or painted steel (Coating coverage as per client requirements)"
-      },
-      {
-        "label": "Load Capacity",
-        "value": "As per approved scaffolding design and certified load tables"
-      },
-      {
-        "label": "Applications",
-        "value": "Building construction, fa\u00e7ade works, industrial plants, maintenance, temporary access, and support structures"
-      }
-    ],
-    "features": [
-      "Complete geometric freedom for irregular structures, cantilevers, and tight spaces",
-      "Standardized 48.3 mm OD tube compatible with universal couplers and accessories",
-      "Drop-forged carbon steel couplers meeting EN 74-1 Class B certified ratings",
-      "Hot-dip galvanized to EN ISO 1461 for long-term corrosion resistance",
-      "Cost-effective and durable solution for industrial plant maintenance"
-    ],
-    "applications": [
-      "Heritage restoration with complex masonry contours",
-      "Industrial refineries, boiler houses, and chemical plant piping racks",
-      "Cantilevered platforms, bridging beams, and suspended scaffolds",
-      "Heavy shoring, raking shores, and structural propping"
-    ],
-    "standards": [
-      {
-        "name": "EN 39",
-        "description": "Loose steel tubes for tube and coupler scaffolds \u2014 Technical delivery conditions"
-      },
-      {
-        "name": "EN 74-1",
-        "description": "Couplers, spigot pins and baseplates for use in falsework and scaffolds"
-      },
-      {
-        "name": "BS 1139",
-        "description": "Metal scaffolding \u2014 Specification for steel tube"
-      }
-    ],
-    "relatedProducts": [
-      "scaffolding-accessories",
-      "scaffold-tube-48",
-      "couplers",
-      "swivel-coupler"
-    ],
-    "categoryName": "Scaffolding & Accessories",
-    "subcategory": "Couplers"
-  },
-  {
-    "slug": "base-jack",
-    "category": "scaffolding-accessories",
-    "name": "Adjustable Base Jack & Fork Head",
-    "shortDescription": "Heavy-duty cold-rolled Acme threaded screw base jack (SWL 40 kN) with 150\u00d7150\u00d76mm base plate for scaffold leveling.",
-    "description": "Adjustable base jacks provide precision leveling and heavy vertical load transfer from scaffolding standards directly to ground timber sole boards or concrete foundations. Manufactured from high-strength carbon steel featuring a continuous cold-rolled Acme thread that prevents jam-ups from construction debris, paired with a malleable cast iron wing-nut collar for effortless height calibration under load.\n\nAvailable in Solid Stem and Hollow Tube designs, with complementary Universal Jacks, Fixed or Adjustable U-Head Fork Heads for timber and aluminum bearer support, and Swivel / Rocking Base Plates for inclined or stepped grade surfaces.",
-    "heroImage": "/src/assets/images/scaffold-base-jack.jpg",
-    "gallery": [
-      "/src/assets/images/scaffold-base-jack.jpg",
-      "/src/assets/images/scaffolding-accessories-collection.jpg",
-      "/src/assets/images/scaffold-tubes-fittings.jpg"
-    ],
-    "specifications": [
-      {
-        "label": "Safe Working Load (SWL)",
-        "value": "40 kN (4,000 kg / 4.0 metric tons) safe axial vertical capacity"
-      },
-      {
-        "label": "Base Plate Dimensions",
-        "value": "150 mm \u00d7 150 mm \u00d7 6.0 mm (with 4 pre-punched holes for timber anchor nail fixing)"
-      },
-      {
-        "label": "Stem Dimensions",
-        "value": "660 mm total length \u00d7 38 mm OD (standard fit) / 48.3 mm OD (heavy-duty), 4.0 mm wall"
-      },
-      {
-        "label": "Effective Adjustment",
-        "value": "Up to 500 mm continuous height leveling range"
-      },
-      {
-        "label": "Thread Profile",
-        "value": "Precision cold-rolled self-cleaning Acme trapezoidal thread"
-      },
-      {
-        "label": "Adjustment Collar",
-        "value": "Heavy-duty ductile malleable cast iron double-wing nut with rolled thread engagement"
-      },
-      {
-        "label": "Stem Types Available",
-        "value": "Solid bar stem or hollow structural seamless tube stem"
-      },
-      {
-        "label": "Alternative Head Options",
-        "value": "Universal Jack, Fixed/Adjustable U-Head Fork Head (for H20/aluminum beams), Swivel Base Plate"
-      },
-      {
-        "label": "Surface Protection",
-        "value": "Hot-Dip Galvanized to EN ISO 1461 (minimum 55 \u00b5m) or Zinc Electroplated"
-      },
-      {
-        "label": "Standard Compliance",
-        "value": "Conforms to BS 1139, EN 12811-1, and OSHA 1926.451"
-      }
-    ],
-    "features": [
-      "Self-cleaning cold-rolled Acme threads resist mortar, slurry, and debris build-up on job sites",
-      "Robust 150\u00d7150\u00d76mm plate distributes intense standard reactions evenly over timber sole plates",
-      "Four corner anchor holes facilitate positive nail or screw anchoring to prevent foot displacement",
-      "Ergonomic cast wing-nut allows fast manual rotation and fine leveling under full working loads",
-      "Full compatibility with Cuplock, Ringlock, Kwikstage, and Tube & Fitting scaffolding standards"
-    ],
-    "applications": [
-      "Bottom foundation leveling for Cuplock, Ringlock, and Tube scaffolds on uneven or sloped ground",
-      "Top head jack propping for primary falsework beams, slab formwork, and bridging lintels",
-      "Industrial maintenance shoring, tank farms, and bridge substructure scaffolding access"
-    ],
-    "standards": [
-      {
-        "name": "BS 1139 Part 2",
-        "description": "Metal scaffolding \u2014 specifications for base plates and jacks"
-      },
-      {
-        "name": "EN 12811-1",
-        "description": "Temporary works equipment \u2014 Performance requirements and general design"
-      },
-      {
-        "name": "OSHA 1926.451",
-        "description": "Safety and Health Regulations for Construction \u2014 Scaffolds"
-      }
-    ],
-    "relatedProducts": [
-      "scaffold-tube-48",
-      "cuplock-scaffolding-system",
-      "scaffolding-accessories"
-    ],
-    "categoryName": "Scaffolding & Accessories",
-    "subcategory": "Couplers"
-  },
-  {
-    "slug": "scaffold-tube-48",
-    "category": "scaffolding-accessories",
-    "name": "Scaffold Tubes Dia 48.3 MM",
-    "shortDescription": "Standard 48.3 mm outside diameter scaffolding tubes manufactured from high-yield carbon steel. Available in standard 3.2 mm and 4.0 mm wall thicknesses with standard lengths up to 6.0 meters.",
-    "description": "Standard 48.3 mm outside diameter scaffolding tubes manufactured from high-yield carbon steel. Available in standard 3.2 mm and 4.0 mm wall thicknesses with standard lengths up to 6.0 meters. Fully hot-dip galvanized for extreme weather resistance.",
-    "heroImage": "/src/assets/images/scaffold-tubes-48mm.jpg",
-    "gallery": [
-      "/src/assets/images/scaffold-tubes-48mm.jpg",
-      "/src/assets/images/scaffold-tubes-fittings.jpg",
-      "/src/assets/images/fitting-double-coupler.jpg",
-      "/src/assets/images/fitting-swivel-coupler.jpg"
-    ],
-    "specifications": [
-      {
-        "label": "Outside Diameter",
-        "value": "48.3 mm (1.90 in)"
-      },
-      {
-        "label": "Wall Thickness Options",
-        "value": "2.9 mm, 3.2 mm, 3.4 mm / 3.76 mm, 4.0 mm nominal wall thickness"
-      },
-      {
-        "label": "Standard Lengths",
-        "value": "Any length as per client requirement\n(Should be suitable to Ocean freight by BB / Container)"
-      },
-      {
-        "label": "Material Grades",
-        "value": "High-yield Carbon Steel (EN 10219, ASTM A500 Gr B, EN 39, BS 1139)"
-      },
-      {
-        "label": "Surface Finish",
-        "value": "Fully Hot-Dip Galvanized for extreme weather resistance\n(Coating coverage as per client requirements)"
-      },
-      {
-        "label": "End Finish",
-        "value": "Square cut, deburred, plain ends (fitted with protective end caps upon request)"
-      },
-      {
-        "label": "Standard Certification",
-        "value": "EN 10219, ASTM A500 Grade B, EN 39 Type 4, BS 1139 certified with full MTC 3.1"
-      }
-    ],
-    "wallThicknessSpecs": [
-      {
-        "standard": "EN 10219",
-        "yieldStress": "460 N/mm\u00b2 (67 ksi) minimum yield stress",
-        "nominalWallThickness": "2.9 mm (0.114 in) nominal wall thickness",
-        "description": "High-tensile cold-formed welded structural tube with 460 MPa minimum yield stress and 2.9 mm nominal wall."
-      },
-      {
-        "standard": "EN 10219",
-        "yieldStress": "320 N/mm\u00b2 (46 ksi) minimum yield stress",
-        "nominalWallThickness": "3.2 mm (0.125 in) nominal wall thickness",
-        "description": "Standard modular high-yield scaffolding tube with 320 MPa minimum yield stress and 3.2 mm nominal wall."
-      },
-      {
-        "standard": "ASTM A500, Grade B",
-        "yieldStress": "290 N/mm\u00b2 (42 ksi) minimum yield stress",
-        "nominalWallThickness": "3.4 mm (0.13 in) or 3.76 mm (0.15 in) nominal wall thickness",
-        "description": "North American structural specification for cold-formed welded carbon steel hollow sections."
-      },
-      {
-        "standard": "EN 39 thickness type 4",
-        "yieldStress": "235 N/mm\u00b2 (34 ksi) minimum yield stress",
-        "nominalWallThickness": "4.0 mm (0.16 in) nominal wall thickness",
-        "description": "Heavy duty scaffolding tube specification (Note: BS 1139 tubing is equivalent and is acceptable)."
-      }
-    ],
-    "wallThicknessNote": "Note: BS 1139 tubing is equivalent and is acceptable.",
-    "features": [
-      "Manufactured from certified high-yield carbon steel with strict concentricity control",
-      "Four international wall thickness grades tailored to global building codes",
-      "Custom cut lengths optimized for container loading (20GP / 40HQ) or break-bulk (BB)",
-      "Hot-dip galvanized inside and outside for maximum marine atmospheric corrosion defense",
-      "Full chemical composition, tensile yield, and flattening test verification provided via MTC 3.1"
-    ],
-    "applications": [
-      "Tube & fitting scaffolding and shoring arrangements",
-      "Structural ties, facade bracing, plan bracing, and perimeter guardrails",
-      "Industrial refinery, power station, and offshore platform maintenance",
-      "Civil falsework, bridge propping, and heavy load staging"
-    ],
-    "standards": [
-      {
-        "name": "EN 10219",
-        "description": "Cold formed welded structural hollow sections of non-alloy steels"
-      },
-      {
-        "name": "ASTM A500 Grade B",
-        "description": "Cold-Formed Welded and Seamless Carbon Steel Structural Tubing"
-      },
-      {
-        "name": "EN 39 Type 4",
-        "description": "Loose steel tubes for tube and coupler scaffolds"
-      },
-      {
-        "name": "BS 1139",
-        "description": "Metal scaffolding \u2014 loose steel tube specification (equivalent & acceptable)"
-      }
-    ],
-    "relatedProducts": [
-      "swivel-coupler",
-      "couplers",
-      "tube-fittings-scaffolding",
-      "base-jack"
-    ],
-    "categoryName": "Scaffolding & Accessories",
-    "subcategory": "Couplers"
-  },
-  {
-    "slug": "scaffolding-accessories",
-    "category": "scaffolding-accessories",
-    "name": "Scaffolding Components & Accessories",
-    "shortDescription": "Complete 17-part component catalog: Standards, Ledgers, Transoms, Base Jacks, Couplers, Bracing, Boards, Guardrails, and Safety Gates.",
-    "description": "Scaffolding components and accessories are used to assemble, support, access, protect, and stabilize scaffolding systems for safe construction and maintenance works. Every single component in a scaffold assembly has an indispensable engineering purpose\u2014removing or incorrectly installing a single component affects the structural load transfer, worker safety, and stability of the entire scaffold structure.\n\nTianjin Decent International Trade Co., Ltd. supplies the complete inventory of 17 essential components and accessories manufactured from suitable high-strength steel or aluminum, with hot-dip galvanized or approved protective finishes as applicable.",
-    "heroImage": "/src/assets/images/scaffolding-accessories-collection.jpg",
-    "gallery": [
-      "/src/assets/images/scaffolding-accessories-collection.jpg",
-      "/src/assets/images/scaffold-base-jack.jpg",
-      "/src/assets/images/fitting-double-coupler.jpg",
-      "/src/assets/images/fitting-swivel-coupler.jpg",
-      "/src/assets/images/fitting-sleeve-coupler.jpg",
-      "/src/assets/images/fitting-beam-clamp.jpg"
-    ],
-    "specifications": [
-      {
-        "label": "1. Standards / Uprights",
-        "value": "Vertical load-bearing members (48.3 mm OD) that transfer combined self-weight and live load to the foundation."
-      },
-      {
-        "label": "2. Ledgers",
-        "value": "Horizontal members connecting standards longitudinally and supporting intermediate structure."
-      },
-      {
-        "label": "3. Transoms / Bearers",
-        "value": "Transverse members spanning between ledgers, directly supporting scaffold boards and platform loads."
-      },
-      {
-        "label": "4. Base Plates & Spigots",
-        "value": "Rigid 150\u00d7150\u00d76mm steel base footings to distribute vertical loads over sole timber boards."
-      },
-      {
-        "label": "5. Adjustable Base Jacks",
-        "value": "Heavy-duty cold-rolled Acme threaded screw jacks (SWL 40 kN) with ductile collar nut for leveling."
-      },
-      {
-        "label": "6. Couplers / Clamps",
-        "value": "High-tensile drop-forged mechanical fittings certified to EN 74-1 Class B (Right Angle, Swivel, Sleeve, Putlog, Beam)."
-      },
-      {
-        "label": "7. Bracing",
-        "value": "Diagonal sway members providing lateral triangulation, shear stability, and preventing scaffold racking."
-      },
-      {
-        "label": "8. Scaffold Boards / Planks",
-        "value": "Perforated galvanized steel or laminated timber boards providing safe slip-resistant working platforms."
-      },
-      {
-        "label": "9. Guardrails & Midrails",
-        "value": "Perimeter horizontal barriers providing fall edge protection conforming to EN 12811-1."
-      },
-      {
-        "label": "10. Toe Boards",
-        "value": "Perimeter kick-plates preventing dropped tools, fasteners, and loose materials from falling off working decks."
-      },
-      {
-        "label": "11. Ladders / Stairways",
-        "value": "Engineered non-slip aluminum extension and rung ladders providing safe vertical tier access."
-      },
-      {
-        "label": "12. Access Safety Gates",
-        "value": "Self-closing spring-hinged security barriers controlling safe entry and exit from ladder bays."
-      },
-      {
-        "label": "13. Heavy-Duty Gin Wheels",
-        "value": "254 mm (10\") gin wheel certified to BS 1692:1998, SWL 250 kg (tested to 1,000 kg) with forged swivel eyebolt."
-      },
-      {
-        "label": "14. Multi-Tier Scafftag System",
-        "value": "Contractor safety inspection tag system (Green Passed / Yellow Safety Harness Required / Red Danger Do Not Use) with UV-stabilized holders conforming to Saudi Aramco & SABIC contractor site specs."
-      },
-      {
-        "label": "15. Podger Ratchet Spanners",
-        "value": "Swing-over ratchet podger spanners (19/21 mm & 21/23 mm bi-hex sockets) with forged tapered aligning handle and tool lanyard hole."
-      },
-      {
-        "label": "16. Magnetic Torpedo Levels",
-        "value": "250 mm die-cast aluminum spirit level with high-power rare earth magnets and 45\u00b0/90\u00b0/180\u00b0 shock-proof vials."
-      },
-      {
-        "label": "17. Lifting Bags & Safety Caps",
-        "value": "Woven polypropylene certified lifting bags (40\u201350 kg SWL), hi-vis yellow scaffold tube end protection caps, and M12 coupler nut covers."
-      },
-      {
-        "label": "Material & Finish",
-        "value": "High-strength structural steel Q235/Q355 or aluminum alloy, with Hot-Dip Galvanizing to EN ISO 1461 or electroplating."
-      }
-    ],
-    "features": [
-      "Complete 17-point component catalog supplied from a single verified manufacturer",
-      "Hot-dip galvanized finish across all structural steel items for maximum rust prevention",
-      "Drop-forged coupler hardware tested to EN 74-1 Class B slip resistance standards",
-      "Precision machined Acme threads on adjustable base jacks for smooth height leveling",
-      "Non-slip perforated steel decking planks with integrated end hooks and safety lock pins",
-      "Full compliance documentation and load tables available for civil engineering submittals"
-    ],
-    "applications": [
-      "Assembly of complete Cuplock, Ring-Lock, and Tube & Fitting scaffolding configurations",
-      "Upgrading safety protocols with guardrails, toe boards, and self-closing access gates",
-      "Fa\u00e7ade anchorage and structural propping for high-rise commercial structures",
-      "Industrial turnaround and shutdown access framing in power and processing plants"
-    ],
-    "standards": [
-      {
-        "name": "EN 12811-1",
-        "description": "Temporary works equipment \u2014 Scaffolds"
-      },
-      {
-        "name": "EN 74-1",
-        "description": "Couplers, spigot pins and baseplates for scaffolding (Class B)"
-      },
-      {
-        "name": "BS 1139-2.2",
-        "description": "Access and working scaffolds \u2014 Aluminium couplers and fittings"
-      }
-    ],
-    "relatedProducts": [
-      "cuplock-scaffolding-system",
       "ringlock-system",
-      "tube-fittings-scaffolding",
-      "swivel-coupler"
+      "cuplock-scaffolding-system",
+      "kwikstage-scaffolding-system",
+      "scaffold-steel-props"
     ],
     "categoryName": "Scaffolding & Accessories",
     "subcategory": "Couplers"
@@ -4103,7 +3231,7 @@ export const PRODUCTS = [
     "subcategory": "Wire rod",
     "name": "Wire rod",
     "tagline": "Hot Rolled / Cold drawn / Galvanized Steel Wire Rod / Wire",
-    "shortDescription": "Hot Rolled / Cold drawn / Galvanized Steel Wire Rod & Wire (SAE1006 / SAE1008, 5.5\u201314 mm).",
+    "shortDescription": "Hot Rolled / Cold drawn / Galvanized Steel Wire Rod & Wire (SAE1006 / SAE1008, 5.5–14 mm).",
     "description": "Carbon steel wire rod in the low carbon steel wire commonly known as soft wire, medium and high carbon steel wire commonly known as hard wire. Wire rod is mainly used as drawing blank, but also directly used as building materials and machine parts.\n\nOur company sells hot-rolled carbon steel wire rod, ASTM A510/A510M standard, material SAE1006, SAE1008, diameter 5.5mm, 6mm, 6.5mm, 8mm, 10mm, 12mm, 14mm. Manufactured under strict quality controls with uniform dimensions, consistent coil weight, and full Mill Test Certificates.",
     "heroImage": "/src/assets/images/hot-rolled-cold-drawn-galvanized-wire-rod.jpg",
     "gallery": [
@@ -4132,7 +3260,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Dimensional Tolerance",
-        "value": "\u00b11% diameter tolerance guarantees consistent quality across orders"
+        "value": "±1% diameter tolerance guarantees consistent quality across orders"
       },
       {
         "label": "Coil Weight & Packaging",
@@ -4145,7 +3273,7 @@ export const PRODUCTS = [
     ],
     "features": [
       "High Carbon & Low Carbon Steel: Ensures durability and precision for construction and drawing projects",
-      "Uniform Dimensions: \u00b11% tolerance guarantees consistent quality and smooth wire-drawing performance",
+      "Uniform Dimensions: ±1% tolerance guarantees consistent quality and smooth wire-drawing performance",
       "Wide Range of Sizes: Available in 5.5 mm to 14.0 mm diameters for diverse industrial applications",
       "Cold Drawn Technique: Produces uniform wire for precise fabrication and weaving",
       "Versatile Applications: wire-drawing, weaving of wire mesh, soft pipe, bean of cabinet, steel wire, etc"
@@ -4184,7 +3312,7 @@ export const PRODUCTS = [
     "subcategory": "High speed wire rod",
     "name": "High speed wire rod",
     "tagline": "Continuous High-Speed Mill Rolled Carbon Steel Wire Rod",
-    "shortDescription": "High-speed rolling mill carbon steel wire rod with tight dimensional tolerances (\u00b10.1 mm) and uniform metallurgical microstructure (SAE 1006 / 1008).",
+    "shortDescription": "High-speed rolling mill carbon steel wire rod with tight dimensional tolerances (±0.1 mm) and uniform metallurgical microstructure (SAE 1006 / 1008).",
     "description": "High speed wire rod manufactured on continuous high-speed block finishing mills with controlled Stelmor cooling. Sourced in low, medium, and high carbon grades engineered for subsequent high-speed drawing, cold heading, and precision spring fabrication.\n\nUniform mechanical properties along the entire coil length, minimal scale formation, and strict diameter tolerance guarantees optimal productivity on automated drawing blocks.",
     "heroImage": "/src/assets/images/high-speed-wire-rod-spool.jpg",
     "gallery": [
@@ -4211,7 +3339,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Diameter Tolerance",
-        "value": "\u00b10.15 mm to \u00b10.20 mm (high-precision tolerance)"
+        "value": "±0.15 mm to ±0.20 mm (high-precision tolerance)"
       },
       {
         "label": "Coil Weight",
@@ -4291,7 +3419,7 @@ export const PRODUCTS = [
       },
       {
         "label": "Coil Weight",
-        "value": "Approx. 1.8\u20132.2 MT per coil strapped"
+        "value": "Approx. 1.8–2.2 MT per coil strapped"
       },
       {
         "label": "Standards Compliance",
@@ -4338,84 +3466,78 @@ export const PRODUCTS = [
 
 export const SCAFFOLDING_FITTINGS_CATALOG = [
   {
-    name: 'Drop-Forged Swivel Coupler',
-    standard: 'EN 74-1 Class B Certified',
-    image: '/src/assets/images/scaffold-coupler-swivel-detail.jpg',
-    tubeDiameter: '48.3 mm × 48.3 mm',
-    tighteningTorque: '54 Nm',
-    slipLoad: '≥ 15.0 kN (Class B requirement)',
-    failureLoad: '≥ 20.0 kN',
-    finish: 'Hot-Dip Galvanized / Zinc Electroplated',
-    fastener: 'Grade 8.8 T-bolts with 21 mm / 22 mm flanged hex nuts',
-    description: 'Universal swivel coupler enabling 360-degree rotation for diagonal sway bracing, ledger bracing, and triangular structural ties on 48.3 mm scaffold tubes.'
+    "name": "Drop-Forged Swivel Coupler",
+    "standard": "EN 74-1 Class B Certified",
+    "image": "/src/assets/images/scaffold-coupler-swivel-detail.jpg",
+    "tubeDiameter": "48.3 mm × 48.3 mm",
+    "tighteningTorque": "54 Nm",
+    "slipLoad": "≥ 15.0 kN (Class B requirement)",
+    "failureLoad": "≥ 20.0 kN",
+    "finish": "Hot-Dip Galvanized / Zinc Electroplated",
+    "fastener": "Grade 8.8 T-bolts with 21 mm / 22 mm flanged hex nuts",
+    "description": "Universal swivel coupler enabling 360-degree rotation for diagonal sway bracing, ledger bracing, and triangular structural ties on 48.3 mm scaffold tubes."
   },
   {
-    name: 'Drop-Forged Right-Angle (Double) Coupler',
-    standard: 'EN 74-1 Class B Certified',
-    image: '/src/assets/images/scaffold-coupler-right-angle-pair.jpg',
-    tubeDiameter: '48.3 mm × 48.3 mm',
-    tighteningTorque: '54 Nm',
-    slipLoad: '≥ 15.0 kN (Class B requirement)',
-    failureLoad: '≥ 30.0 kN',
-    finish: 'Hot-Dip Galvanized / Zinc Electroplated',
-    fastener: 'Grade 8.8 T-bolts with 21 mm / 22 mm flanged hex nuts',
-    description: 'Heavy ribbed drop-forged construction connecting two scaffold tubes at a rigid 90-degree angle with maximum load transmission.'
+    "name": "Drop-Forged Right-Angle (Double) Coupler",
+    "standard": "EN 74-1 Class B Certified",
+    "image": "/src/assets/images/scaffold-coupler-right-angle-pair.jpg",
+    "tubeDiameter": "48.3 mm × 48.3 mm",
+    "tighteningTorque": "54 Nm",
+    "slipLoad": "≥ 15.0 kN (Class B requirement)",
+    "failureLoad": "≥ 30.0 kN",
+    "finish": "Hot-Dip Galvanized / Zinc Electroplated",
+    "fastener": "Grade 8.8 T-bolts with 21 mm / 22 mm flanged hex nuts",
+    "description": "Heavy ribbed drop-forged construction connecting two scaffold tubes at a rigid 90-degree angle with maximum load transmission."
   },
   {
-    name: 'Drop-Forged Putlog Coupler (Single Coupler)',
-    standard: 'EN 74-1 / BS 1139 Certified',
-    image: '/src/assets/images/fitting-putlog-coupler-client.png',
-    tubeDiameter: '48.3 mm × 48.3 mm',
-    tighteningTorque: '54 Nm',
-    slipLoad: 'Working Load Limit (WLL) 6.25 kN',
-    failureLoad: '≥ 12.0 kN',
-    finish: 'Hot-Dip Galvanized / Zinc Electroplated',
-    fastener: 'Grade 8.8 T-bolt with 21 mm flanged hex nut',
-    description: 'Drop-forged single putlog wrap coupler designed to securely connect transoms and putlogs across ledgers for board deck load distribution.'
+    "name": "Drop-Forged Putlog Coupler (Single Coupler)",
+    "standard": "EN 74-1 / BS 1139 Certified",
+    "image": "/src/assets/images/fitting-putlog-coupler-client.png",
+    "tubeDiameter": "48.3 mm × 48.3 mm",
+    "tighteningTorque": "54 Nm",
+    "slipLoad": "Working Load Limit (WLL) 6.25 kN",
+    "failureLoad": "≥ 12.0 kN",
+    "finish": "Hot-Dip Galvanized / Zinc Electroplated",
+    "fastener": "Grade 8.8 T-bolt with 21 mm flanged hex nut",
+    "description": "Drop-forged single putlog wrap coupler designed to securely connect transoms and putlogs across ledgers for board deck load distribution."
   },
   {
-    name: 'Board Retaining Clamp (BRC)',
-    standard: 'BS 1139 / EN 74 Compliant',
-    image: '/src/assets/images/scaffold-coupler-board-retaining-clamp.jpg',
-    tubeDiameter: '48.3 mm Tube to 38 mm / 50 mm Timber Board',
-    tighteningTorque: '30 Nm',
-    slipLoad: 'Uplift resistance ≥ 5.0 kN',
-    failureLoad: 'Heavy-Duty Forged Jaw',
-    finish: 'Hot-Dip Galvanized',
-    fastener: 'Grade 8.8 hex bolt & flanged lock nut',
-    description: 'Drop-forged clamp with serrated locking jaws designed to firmly secure timber scaffold boards or metal decks to 48.3 mm transom tubes, eliminating wind uplift risk.'
+    "name": "Board Retaining Clamp (BRC)",
+    "standard": "BS 1139 / EN 74 Compliant",
+    "image": "/src/assets/images/scaffold-coupler-board-retaining-clamp.jpg",
+    "tubeDiameter": "48.3 mm Tube to 38 mm / 50 mm Timber Board",
+    "tighteningTorque": "30 Nm",
+    "slipLoad": "Uplift resistance ≥ 5.0 kN",
+    "failureLoad": "Heavy-Duty Forged Jaw",
+    "finish": "Hot-Dip Galvanized",
+    "fastener": "Grade 8.8 hex bolt & flanged lock nut",
+    "description": "Drop-forged clamp with serrated locking jaws designed to firmly secure timber scaffold boards or metal decks to 48.3 mm transom tubes, eliminating wind uplift risk."
   },
   {
-    name: 'Sleeve Coupler (Pressed) EN 74 - 1 B',
-    standard: 'EN 74-1 Class B Certified',
-    image: '/src/assets/images/fitting-sleeve-coupler.jpg',
-    tubeDiameter: '48.3 mm OD External',
-    tighteningTorque: '54 Nm',
-    slipLoad: 'Tensile ≥ 3.0 kN | Bending ≥ 1.4 kN·m',
-    failureLoad: 'Heavy duty external sleeve envelope',
-    finish: 'Hot-Dip Galvanized (HDG) to EN ISO 1461',
-    fastener: 'Twin Grade 8.8 clamping bolts & lock nuts',
-    description: 'External full-wrap clamp with central dividing register rib for joining two 48.3 mm scaffold tubes securely end-to-end.'
+    "name": "Sleeve Coupler (Pressed) EN 74 - 1 B",
+    "standard": "EN 74-1 Class B Certified",
+    "image": "/src/assets/images/fitting-sleeve-coupler.jpg",
+    "tubeDiameter": "48.3 mm OD External",
+    "tighteningTorque": "54 Nm",
+    "slipLoad": "Tensile ≥ 3.0 kN | Bending ≥ 1.4 kN·m",
+    "failureLoad": "Heavy duty external sleeve envelope",
+    "finish": "Hot-Dip Galvanized (HDG) to EN ISO 1461",
+    "fastener": "Twin Grade 8.8 clamping bolts & lock nuts",
+    "description": "External full-wrap clamp with central dividing register rib for joining two 48.3 mm scaffold tubes securely end-to-end."
   },
   {
-    name: 'Drop-Forged Girder Coupler / Beam Clamp (SK Clamp)',
-    standard: 'BS 1139 / EN 74 Certified',
-    image: '/src/assets/images/fitting-beam-clamp.jpg',
-    tubeDiameter: '48.3 mm Scaffolding Tube to Steel Flange',
-    tighteningTorque: '54 Nm',
-    slipLoad: 'Working Load 30 kN per pair',
-    failureLoad: '≥ 45 kN',
-    finish: 'Hot-Dip Galvanized / Zinc Electroplated',
-    fastener: 'Dual Grade 8.8 clamping bolts',
-    description: 'Forged beam clamp designed to lock scaffold tubes securely directly onto universal beams, columns, and structural steel flanges up to 45 mm.'
+    "name": "Drop-Forged Girder Coupler / Beam Clamp (SK Clamp)",
+    "standard": "BS 1139 / EN 74 Certified",
+    "image": "/src/assets/images/fitting-beam-clamp.jpg",
+    "tubeDiameter": "48.3 mm Scaffolding Tube to Steel Flange",
+    "tighteningTorque": "54 Nm",
+    "slipLoad": "Working Load 30 kN per pair",
+    "failureLoad": "≥ 45 kN",
+    "finish": "Hot-Dip Galvanized / Zinc Electroplated",
+    "fastener": "Dual Grade 8.8 clamping bolts",
+    "description": "Forged beam clamp designed to lock scaffold tubes securely directly onto universal beams, columns, and structural steel flanges up to 45 mm."
   }
 ];
-
-/**
- * Find a product by its slug
- * @param {string} slug 
- * @returns {object|undefined}
- */
 
 /**
  * Find a product by its slug (supports backwards compatibility aliases)
@@ -4448,8 +3570,23 @@ export function getProductBySlug(slug) {
   if (slug === 'seamless-pipes' || slug === 'seamless-pipe') {
     return PRODUCTS.find(p => p.slug === 'seamless-steel-pipes');
   }
-  if (slug === 'right-angle-coupler') {
-    return PRODUCTS.find(p => p.slug === 'couplers') || PRODUCTS.find(p => p.slug === 'right-angle-coupler');
+  if (slug === 'right-angle-coupler' || slug === 'swivel-coupler' || slug === 'tube-fittings-scaffolding' || slug === 'base-jack' || slug === 'scaffolding-accessories') {
+    return PRODUCTS.find(p => p.slug === 'couplers');
+  }
+  if (slug === 'aluminum-platform') {
+    return PRODUCTS.find(p => p.slug === 'steel-scaffold-planks');
+  }
+  if (slug === 'scaffold-beam-ladder' || slug === 'aluminum-tower' || slug === 'frame-scaffolding-system' || slug === 'aluminum-extension-ladder' || slug === 'scaffolding-ladder') {
+    return PRODUCTS.find(p => p.slug === 'scaffold-staircase');
+  }
+  if (slug === 'steel-prop-shoring') {
+    return PRODUCTS.find(p => p.slug === 'scaffold-steel-props');
+  }
+  if (slug === 'scaffold-tube-48') {
+    return PRODUCTS.find(p => p.slug === 'couplers') || PRODUCTS.find(p => p.slug === 'hot-dip-galvanized-steel-pipe');
+  }
+  if (slug === 'straight-seam-welded-steel-pipe' || slug === 'welded-erw-steel-pipes') {
+    return PRODUCTS.find(p => p.slug === 'black-carbon-steel-round-pipe');
   }
   if (slug === 'coated-composite-steel-pipe' || slug === 'coated-composite-pipe' || slug === 'plastic-coated-composite-pipe') {
     return PRODUCTS.find(p => p.slug === 'plastic-coated-composite-steel-pipe');
@@ -4502,99 +3639,99 @@ export function getAllCategories() {
 
 export const YFGG_PIPE_PRODUCTS = [
   {
-    name: 'Hot-dip Galvanized Round Pipe',
-    slug: 'hot-dip-galvanized-steel-pipe',
-    specification: 'DN15-DN300',
-    uses: 'Widely used in water, gas, air, oil and steam and other low-pressure fluid transportation and mechanical structure',
-    image: '/src/assets/images/hot-dip-galvanized-steel-pipe.jpg',
-    checked: true,
+    "name": "Hot-dip Galvanized Round Pipe",
+    "slug": "hot-dip-galvanized-steel-pipe",
+    "specification": "DN15-DN300",
+    "uses": "Widely used in water, gas, air, oil and steam and other low-pressure fluid transportation and mechanical structure",
+    "image": "/src/assets/images/hot-dip-galvanized-steel-pipe.jpg",
+    "checked": true
   },
   {
-    name: 'Black Carbon Steel Round Pipe (Self Color)',
-    slug: 'black-carbon-steel-round-pipe',
-    specification: 'DN15-DN300',
-    uses: 'Widely used in water, gas, air, oil and steam and other low-pressure fluid transportation and mechanical structure',
-    image: '/src/assets/images/black-carbon-steel-round-pipe-bundles.webp?v=2',
-    checked: true,
+    "name": "Black Carbon Steel Round Pipe (Self Color)",
+    "slug": "black-carbon-steel-round-pipe",
+    "specification": "DN15-DN300",
+    "uses": "Widely used in water, gas, air, oil and steam and other low-pressure fluid transportation and mechanical structure",
+    "image": "/src/assets/images/black-carbon-steel-round-pipe-bundles.webp?v=2",
+    "checked": true
   },
   {
-    name: 'Straight seam high-frequency welded steel pipe',
-    slug: 'straight-seam-welded-steel-pipe',
-    specification: 'DN15-DN300',
-    uses: 'Widely used in water, gas, air, oil and steam and other low-pressure fluid transportation and mechanical structure; oil & gas line pipe, rotary pressure drill pipe',
-    image: '/src/assets/images/straight-seam-welded-steel-pipe.jpg',
-    checked: true,
+    "name": "Straight seam high-frequency welded steel pipe",
+    "slug": "straight-seam-welded-steel-pipe",
+    "specification": "DN15-DN300",
+    "uses": "Widely used in water, gas, air, oil and steam and other low-pressure fluid transportation and mechanical structure; oil & gas line pipe, rotary pressure drill pipe",
+    "image": "/src/assets/images/straight-seam-welded-steel-pipe.jpg",
+    "checked": true
   },
   {
-    name: 'Lined plastic composite steel pipe',
-    slug: 'plastic-coated-composite-steel-pipe',
-    specification: 'DN15-DN300',
-    uses: 'Widely used in drinking water supply, industrial clean water, and corrosion-resistant pipeline networks',
-    image: '/src/assets/images/plastic-coated-composite-steel-pipe.jpg',
-    checked: false,
+    "name": "Lined plastic composite steel pipe",
+    "slug": "plastic-coated-composite-steel-pipe",
+    "specification": "DN15-DN300",
+    "uses": "Widely used in drinking water supply, industrial clean water, and corrosion-resistant pipeline networks",
+    "image": "/src/assets/images/plastic-coated-composite-steel-pipe.jpg",
+    "checked": false
   },
   {
-    name: 'Coated composite steel pipe',
-    slug: 'plastic-coated-composite-steel-pipe',
-    specification: 'Plastic composite pipe: DN15-DN2000 | Socket-coated tubes: DN100-DN1600',
-    uses: 'Widely used in fire water supply systems, building water supply transportation, chemical fluid transportation, threading protection and other fields',
-    image: '/src/assets/images/plastic-coated-composite-steel-pipe.jpg',
-    checked: true,
+    "name": "Coated composite steel pipe",
+    "slug": "plastic-coated-composite-steel-pipe",
+    "specification": "Plastic composite pipe: DN15-DN2000 | Socket-coated tubes: DN100-DN1600",
+    "uses": "Widely used in fire water supply systems, building water supply transportation, chemical fluid transportation, threading protection and other fields",
+    "image": "/src/assets/images/plastic-coated-composite-steel-pipe.jpg",
+    "checked": true
   },
   {
-    name: 'Galvanized seamless steel pipe',
-    slug: 'galvanized-seamless-steel-pipe',
-    specification: 'DN22-DN325',
-    uses: 'Widely used in construction, electric power, petrochemical and other fields; building load-bearing structures, bridges, steel structures and power transmission',
-    image: '/src/assets/images/galvanized-seamless-steel-pipe.jpg',
-    checked: true,
+    "name": "Galvanized seamless steel pipe",
+    "slug": "galvanized-seamless-steel-pipe",
+    "specification": "DN22-DN325",
+    "uses": "Widely used in construction, electric power, petrochemical and other fields; building load-bearing structures, bridges, steel structures and power transmission",
+    "image": "/src/assets/images/galvanized-seamless-steel-pipe.jpg",
+    "checked": true
   },
   {
-    name: 'Stainless steel pipes and fittings',
-    slug: 'seamless-steel-pipes',
-    specification: 'DN15-DN300 / Custom Wall',
-    uses: 'Food & beverage processing, medical sanitation, marine offshore engineering, and high-corrosion chemical fluid transportation',
-    image: '/src/assets/images/seamless-steel-pipes.jpg',
-    checked: false,
+    "name": "Stainless steel pipes and fittings",
+    "slug": "seamless-steel-pipes",
+    "specification": "DN15-DN300 / Custom Wall",
+    "uses": "Food & beverage processing, medical sanitation, marine offshore engineering, and high-corrosion chemical fluid transportation",
+    "image": "/src/assets/images/seamless-steel-pipes.jpg",
+    "checked": false
   },
   {
-    name: 'Spiral seam double-sided submerged arc welded steel pipe',
-    slug: 'spiral-submerged-arc-welded-steel-pipe',
-    specification: 'φ219-2020mm, thickness up to 20mm',
-    uses: 'Mainly used for oil, natural gas and other pressure-bearing long-distance pipelines, water, gas, air, heating steam, and piling structures',
-    image: '/src/assets/images/spiral-submerged-arc-welded-steel-pipe.jpg',
-    checked: true,
+    "name": "Spiral seam double-sided submerged arc welded steel pipe",
+    "slug": "spiral-submerged-arc-welded-steel-pipe",
+    "specification": "φ219-2020mm, thickness up to 20mm",
+    "uses": "Mainly used for oil, natural gas and other pressure-bearing long-distance pipelines, water, gas, air, heating steam, and piling structures",
+    "image": "/src/assets/images/spiral-submerged-arc-welded-steel-pipe.jpg",
+    "checked": true
   },
   {
-    name: 'Hot-dip Galvanized Rectangular Pipe',
-    slug: 'hot-dip-galvanized-square-rectangular-pipe',
-    specification: '25x25mm-200x200mm, 25x50mm-150x200mm',
-    uses: 'Widely used in curtain wall, construction, machinery manufacturing, shipbuilding, photovoltaic support, steel structure engineering, automobile chassis',
-    image: '/src/assets/images/hot-dip-galvanized-square-rectangular-pipe.webp',
-    checked: true,
+    "name": "Hot-dip Galvanized Rectangular Pipe",
+    "slug": "hot-dip-galvanized-square-rectangular-pipe",
+    "specification": "25x25mm-200x200mm, 25x50mm-150x200mm",
+    "uses": "Widely used in curtain wall, construction, machinery manufacturing, shipbuilding, photovoltaic support, steel structure engineering, automobile chassis",
+    "image": "/src/assets/images/hot-dip-galvanized-square-rectangular-pipe.webp",
+    "checked": true
   },
   {
-    name: 'Black Carbon Steel Rectangular Pipe (Self Color)',
-    slug: 'black-carbon-steel-square-rectangular-pipe',
-    specification: '25x25mm-400x400mm, 25x40mm-300x500mm',
-    uses: 'Widely used in steel structure construction, machinery manufacturing, construction engineering, automobile manufacturing, shipbuilding, electric power',
-    image: '/src/assets/images/black-carbon-steel-square-rectangular-pipe.webp',
-    checked: true,
+    "name": "Black Carbon Steel Rectangular Pipe (Self Color)",
+    "slug": "black-carbon-steel-square-rectangular-pipe",
+    "specification": "25x25mm-400x400mm, 25x40mm-300x500mm",
+    "uses": "Widely used in steel structure construction, machinery manufacturing, construction engineering, automobile manufacturing, shipbuilding, electric power",
+    "image": "/src/assets/images/black-carbon-steel-square-rectangular-pipe.webp",
+    "checked": true
   },
   {
-    name: 'Pipe fitting',
-    slug: 'tube-fittings-scaffolding',
-    specification: 'Elbows, tees, reducers, couplings, flanges',
-    uses: 'Pipeline connection, direction changing, branching and high-pressure sealing across industrial fluid distribution networks',
-    image: '/src/assets/images/scaffold-tubes-fittings.jpg',
-    checked: false,
+    "name": "Pipe fitting",
+    "slug": "couplers",
+    "specification": "Elbows, tees, reducers, couplings, flanges",
+    "uses": "Pipeline connection, direction changing, branching and high-pressure sealing across industrial fluid distribution networks",
+    "image": "/src/assets/images/scaffold-tubes-fittings.jpg",
+    "checked": false
   },
   {
-    name: 'socket type scaffold',
-    slug: 'ringlock-system',
-    specification: 'Ø 48.3 mm x 3.2 mm / Q355 Grade',
-    uses: 'Heavy civil bridge shoring, building facade access, power plant maintenance, and industrial high-load falsework support',
-    image: '/src/assets/images/ringlock-scaffolding.jpg',
-    checked: false,
-  },
+    "name": "socket type scaffold",
+    "slug": "ringlock-system",
+    "specification": "Ø 48.3 mm x 3.2 mm / Q355 Grade",
+    "uses": "Heavy civil bridge shoring, building facade access, power plant maintenance, and industrial high-load falsework support",
+    "image": "/src/assets/images/ringlock-scaffolding.jpg",
+    "checked": false
+  }
 ];
