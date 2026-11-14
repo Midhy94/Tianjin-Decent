@@ -2128,18 +2128,6 @@ export const PRODUCTS = [
     ],
     "accessories": [
       {
-        "name": "Ring Lock Base Collar",
-        "image": "/src/assets/images/ringlock-base-collar.jpg",
-        "sizes": "240 mm / 300 mm / 430 mm / 500 mm",
-        "sizeList": [
-          "240 mm",
-          "300 mm",
-          "430 mm",
-          "500 mm"
-        ],
-        "description": "Precision-manufactured base collar component (48.3 mm OD tube × 3.2 mm wall) featuring an integrated welded 8-hole rosette ring and upper spigot sleeve. Slides directly over the adjustable base screw jack stem to initiate the lowest ledger node connection."
-      },
-      {
         "name": "Ring Lock Post / Vertical Standard",
         "image": "/src/assets/images/ringlock-standard-post.jpg",
         "sizes": "0.5 m (1 Ring) / 1.0 m (2 Rings) / 1.5 m (3 Rings) / 2.0 m (4 Rings) / 3.0 m (6 Rings)",
@@ -2181,6 +2169,18 @@ export const PRODUCTS = [
           "3.07 × 2.0 m"
         ],
         "description": "Triangulation diagonal brace members equipped with pivoting swivel wedge heads that insert into the wide rosette holes, transferring dynamic lateral and wind forces to maintain rigid structural squaring."
+      },
+      {
+        "name": "Ring Lock Base Collar",
+        "image": "/src/assets/images/ringlock-base-collar.jpg",
+        "sizes": "240 mm / 300 mm / 430 mm / 500 mm",
+        "sizeList": [
+          "240 mm",
+          "300 mm",
+          "430 mm",
+          "500 mm"
+        ],
+        "description": "Precision-manufactured base collar component (48.3 mm OD tube × 3.2 mm wall) featuring an integrated welded 8-hole rosette ring and upper spigot sleeve. Slides directly over the adjustable base screw jack stem to initiate the lowest ledger node connection."
       },
       {
         "name": "Adjustable Base Screw Jack & Plate",
