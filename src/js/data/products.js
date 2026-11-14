@@ -3285,94 +3285,6 @@ export const PRODUCTS = [
     "subcategory": "Staircase/beam ladder/ladder"
   },
   {
-    "slug": "aluminum-extension-ladder",
-    "category": "scaffolding-accessories",
-    "name": "Industrial Aluminum Extension Ladder (Rope-Operated)",
-    "shortDescription": "Heavy-duty 2-section rope-and-pulley operated extension ladder (SWL 150 kg) with serrated D-rungs and swell rubber safety feet.",
-    "description": "Industrial-grade 2-section aluminum extension ladder engineered for heavy civil, industrial, and electrical utility access. Features a smooth nylon rope-and-pulley deployment system, spring-loaded gravity lock hooks that engage rungs automatically, and deeply serrated slip-resistant D-rungs crimped into heavy box-section stiles.\n\nFitted with heavy-duty swell rubber pivoting safety shoes with serrated ice/gravel picks for reliable ground traction and non-marring molded rubber top wall caps that protect building surfaces while preventing lateral slide. Fully compliant with EN 131 Professional standards.",
-    "heroImage": "/src/assets/images/aluminum-extension-ladder.jpg",
-    "gallery": [
-      "/src/assets/images/aluminum-extension-ladder.jpg",
-      "/src/assets/images/aluminum-tower.jpg"
-    ],
-    "specifications": [
-      {
-        "label": "Ladder Type",
-        "value": "2-section rope-and-pulley operated extension ladder"
-      },
-      {
-        "label": "Working Height Range",
-        "value": "Available in 2\u00d75 up to 2\u00d719 rungs (extended lengths from 3.0 m up to 11.4 m)"
-      },
-      {
-        "label": "Safe Working Load (SWL)",
-        "value": "150 kg (330 lbs) conforming to EN 131 Professional standard"
-      },
-      {
-        "label": "Material & Alloy",
-        "value": "High-strength extruded architectural aluminum alloy (6061-T6 / 6063-T6)"
-      },
-      {
-        "label": "Rung Profile",
-        "value": "Deeply serrated anti-slip D-rungs with 3-piece hydraulic crimped joints"
-      },
-      {
-        "label": "Deployment Mechanism",
-        "value": "Low-friction nylon grooved pulley with braided polyester haul rope"
-      },
-      {
-        "label": "Rung Locking Mechanism",
-        "value": "Spring-loaded cast alloy gravity lock hooks with automatic rung engagement"
-      },
-      {
-        "label": "Safety Foot Design",
-        "value": "Dual-action pivoting swell rubber safety shoes with serrated steel ice picks"
-      },
-      {
-        "label": "Top Wall Protection",
-        "value": "Heavy-duty non-marring molded rubber wall caps to prevent facade damage and slip"
-      },
-      {
-        "label": "Standards Compliance",
-        "value": "Certified to EN 131, BS 2037 Class 1 Industrial, and OSHA 1926.1053"
-      }
-    ],
-    "features": [
-      "Smooth rope-and-pulley system allows single-operator extension from ground level without pinching",
-      "Automatic gravity lock hooks engage rungs securely at each height tier for fail-safe ascent",
-      "Deep serrated D-rungs provide flat, comfortable, slip-resistant standing surface underfoot",
-      "Pivoting swell rubber shoes adjust automatically to ground slope with flip-down ice pick spurs",
-      "Molded rubber top caps grip smooth brick, tile, and metal surfaces without marring or slipping",
-      "Corrosion-resistant extruded aluminum construction suitable for humid outdoor and marine job sites"
-    ],
-    "applications": [
-      "Industrial scaffolding erection, access staging, and platform crossover inspection",
-      "Petrochemical refinery maintenance, electrical cable trays, and pipe bridge inspection",
-      "Commercial building construction, roofing access, and telecommunications cabling"
-    ],
-    "standards": [
-      {
-        "name": "EN 131",
-        "description": "Ladders \u2014 Professional heavy-duty industrial specification"
-      },
-      {
-        "name": "BS 2037 Class 1",
-        "description": "Specification for portable aluminium ladders and steps"
-      },
-      {
-        "name": "OSHA 1926.1053",
-        "description": "Safety standards for ladders used in construction"
-      }
-    ],
-    "relatedProducts": [
-      "aluminum-tower",
-      "scaffolding-accessories",
-      "steel-scaffold-planks"
-    ],
-    "categoryName": "Scaffolding & Accessories",
-    "subcategory": "Staircase/beam ladder/ladder"
-  },
-  {
     "slug": "aluminum-tower",
     "category": "scaffolding-accessories",
     "name": "Mobile Aluminum Scaffolding Tower",
@@ -3381,8 +3293,7 @@ export const PRODUCTS = [
     "heroImage": "/src/assets/images/aluminum-tower.jpg",
     "gallery": [
       "/src/assets/images/aluminum-tower.jpg",
-      "/src/assets/images/platform-board.jpg",
-      "/src/assets/images/aluminum-extension-ladder.jpg"
+      "/src/assets/images/platform-board.jpg"
     ],
     "specifications": [
       {
@@ -3450,7 +3361,7 @@ export const PRODUCTS = [
     ],
     "relatedProducts": [
       "steel-scaffold-planks",
-      "aluminum-extension-ladder",
+      "scaffold-staircase",
       "scaffolding-accessories"
     ],
     "categoryName": "Scaffolding & Accessories",
