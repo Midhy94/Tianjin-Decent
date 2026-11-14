@@ -2043,4 +2043,10 @@ export const en = {
   "φ219–2020 mm (Wall up to 20 mm)": "φ219–2020 mm (Wall up to 20 mm)",
   "φ219–2020 mm double-sided submerged arc welded spiral steel pipes for long-distance oil/gas pipelines, urban water transmission, and foundation piling.": "φ219–2020 mm double-sided submerged arc welded spiral steel pipes for long-distance oil/gas pipelines, urban water transmission, and foundation piling.",
   "φ219–2020 mm, wall thickness up to 20 mm": "φ219–2020 mm, wall thickness up to 20 mm",
+  "Extruded Aluminum Scaffold Platform Boards Stack": "Extruded Aluminum Scaffold Platform Boards Stack",
+  "Anti-Slip Ribbed Profile & Heavy-Duty End Hooks Detail": "Anti-Slip Ribbed Profile & Heavy-Duty End Hooks Detail",
+  "Factory Warehouse Export Stillage of Aluminum Planks": "Factory Warehouse Export Stillage of Aluminum Planks",
+  "Precision-extruded structural aluminum scaffold platform planks with continuous anti-slip longitudinal traction ribs and cast safety end hooks.": "Precision-extruded structural aluminum scaffold platform planks with continuous anti-slip longitudinal traction ribs and cast safety end hooks.",
+  "Close-up engineering view of the extruded hollow-box aluminum profile with integrated traction grooves and reinforced triple end hook connections.": "Close-up engineering view of the extruded hollow-box aluminum profile with integrated traction grooves and reinforced triple end hook connections.",
+  "High-density factory stillage stacks of protective film-wrapped aluminum scaffold boards with reinforced perimeter banding ready for export shipping.": "High-density factory stillage stacks of protective film-wrapped aluminum scaffold boards with reinforced perimeter banding ready for export shipping.",
 };

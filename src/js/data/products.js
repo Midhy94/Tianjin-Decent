@@ -3037,12 +3037,77 @@ export const PRODUCTS = [
       }
     ],
     "relatedProducts": [
+      "aluminum-platform",
       "scaffold-staircase",
       "frame-scaffolding-system",
       "scaffolding-accessories"
     ],
     "categoryName": "Scaffolding & Accessories",
     "subcategory": "Steel plank/board"
+  },
+  {
+    "slug": "aluminum-platform",
+    "category": "scaffolding-accessories",
+    "categoryName": "Scaffolding & Accessories",
+    "subcategory": "Steel plank/board",
+    "name": "Aluminum Scaffold Platform Board",
+    "shortDescription": "Lightweight aluminum working deck with perforated anti-slip surface and safety locking hooks.",
+    "description": "High-strength aluminum alloy scaffold platform board designed for ease of handling, corrosion resistance, and safe worker footing. Features non-slip textured surfaces, water-drainage perforations, and wind-lock clips.",
+    "heroImage": "/src/assets/images/aluminum-platform-board-stack.jpg",
+    "gallery": [
+      {
+        "src": "/src/assets/images/aluminum-platform-board-stack.jpg",
+        "title": "Extruded Aluminum Scaffold Platform Boards Stack",
+        "note": "Precision-extruded structural aluminum scaffold platform planks with continuous anti-slip longitudinal traction ribs and cast safety end hooks."
+      },
+      {
+        "src": "/src/assets/images/aluminum-platform-board-hook-detail.jpg",
+        "title": "Anti-Slip Ribbed Profile & Heavy-Duty End Hooks Detail",
+        "note": "Close-up engineering view of the extruded hollow-box aluminum profile with integrated traction grooves and reinforced triple end hook connections."
+      },
+      {
+        "src": "/src/assets/images/aluminum-platform-board-warehouse-stillage.jpg",
+        "title": "Factory Warehouse Export Stillage of Aluminum Planks",
+        "note": "High-density factory stillage stacks of protective film-wrapped aluminum scaffold boards with reinforced perimeter banding ready for export shipping."
+      }
+    ],
+    "specifications": [
+      {
+        "label": "Material",
+        "value": "Aluminum Alloy 6061-T6 / 6082-T6"
+      },
+      {
+        "label": "Platform Width",
+        "value": "320 mm / 480 mm / 600 mm"
+      },
+      {
+        "label": "Lengths Available",
+        "value": "1.5 m, 2.0 m, 2.5 m, 3.0 m"
+      },
+      {
+        "label": "Load Rating",
+        "value": "EN 12811 Class 3 (2.0 kN/m²) to Class 5"
+      }
+    ],
+    "features": [
+      "Lightweight aluminum design reduces worker handling fatigue",
+      "Perforated anti-slip profile for wet and oily environments",
+      "Integrated wind-lock safety hooks"
+    ],
+    "applications": [
+      "Working platforms on facade scaffolding and mobile towers"
+    ],
+    "standards": [
+      {
+        "name": "EN 12811",
+        "description": "Temporary works equipment — Working platforms"
+      }
+    ],
+    "relatedProducts": [
+      "steel-scaffold-planks",
+      "aluminum-tower",
+      "scaffold-staircase"
+    ]
   },
   {
     "slug": "scaffold-staircase",

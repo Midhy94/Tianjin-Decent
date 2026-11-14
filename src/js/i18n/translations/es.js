@@ -2043,4 +2043,10 @@ export const es = {
   "φ219–2020 mm (Wall up to 20 mm)": "φ219–2020 mm (Pared hasta 20 mm)",
   "φ219–2020 mm double-sided submerged arc welded spiral steel pipes for long-distance oil/gas pipelines, urban water transmission, and foundation piling.": "Tubos de acero en espiral soldados por arco sumergido de doble cara de φ219–2020 mm para oleoductos y gasoductos de larga distancia, transmisión de agua urbana y pilotes de cimientos.",
   "φ219–2020 mm, wall thickness up to 20 mm": "φ219–2020 mm, espesor de pared de hasta 20 mm",
+  "Extruded Aluminum Scaffold Platform Boards Stack": "Pila de tablas de plataforma de andamio de aluminio extruido",
+  "Anti-Slip Ribbed Profile & Heavy-Duty End Hooks Detail": "Detalle de perfil acanalado antideslizante y ganchos finales de alta resistencia",
+  "Factory Warehouse Export Stillage of Aluminum Planks": "Estructura de exportación de almacén de fábrica de tablones de aluminio",
+  "Precision-extruded structural aluminum scaffold platform planks with continuous anti-slip longitudinal traction ribs and cast safety end hooks.": "Tablones de plataforma de andamio de aluminio estructural extruidos con precisión con nervaduras de tracción longitudinales antideslizantes continuas y ganchos de seguridad fundidos en los extremos.",
+  "Close-up engineering view of the extruded hollow-box aluminum profile with integrated traction grooves and reinforced triple end hook connections.": "Vista de ingeniería en primer plano del perfil de aluminio de caja hueca extruida con ranuras de tracción integradas y conexiones reforzadas de gancho de triple extremo.",
+  "High-density factory stillage stacks of protective film-wrapped aluminum scaffold boards with reinforced perimeter banding ready for export shipping.": "Pilas de almacenamiento de fábrica de alta densidad de tablas de andamio de aluminio envueltas en película protectora con bandas perimetrales reforzadas listas para su envío de exportación.",
 };

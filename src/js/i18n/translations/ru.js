@@ -2043,4 +2043,10 @@ export const ru = {
   "φ219–2020 mm (Wall up to 20 mm)": "φ219–2020 мм (Стенка до 20 мм)",
   "φ219–2020 mm double-sided submerged arc welded spiral steel pipes for long-distance oil/gas pipelines, urban water transmission, and foundation piling.": "φ219–2020 мм, двухсторонние спиральные стальные трубы, сваренные под флюсом, для магистральных нефте- и газопроводов, городского водоснабжения и забивки фундаментов.",
   "φ219–2020 mm, wall thickness up to 20 mm": "φ219–2020 мм, толщина стенки до 20 мм",
+  "Extruded Aluminum Scaffold Platform Boards Stack": "Штабель досок платформы лесов из экструдированного алюминия",
+  "Anti-Slip Ribbed Profile & Heavy-Duty End Hooks Detail": "Деталь ребристого противоскользящего профиля и сверхпрочных концевых крюков",
+  "Factory Warehouse Export Stillage of Aluminum Planks": "Заводская складская тара для экспорта алюминиевых планок",
+  "Precision-extruded structural aluminum scaffold platform planks with continuous anti-slip longitudinal traction ribs and cast safety end hooks.": "Прецизионно экструдированные конструкционные алюминиевые планки рабочей платформы строительных лесов с непрерывными продольными ребрами сцепления и литыми концевыми крюками безопасности.",
+  "Close-up engineering view of the extruded hollow-box aluminum profile with integrated traction grooves and reinforced triple end hook connections.": "Инженерный вид крупным планом экструдированного полого алюминиевого коробчатого профиля со встроенными канавками сцепления и усиленными тройными концевыми крюковыми соединениями.",
+  "High-density factory stillage stacks of protective film-wrapped aluminum scaffold boards with reinforced perimeter banding ready for export shipping.": "Штабели заводских тар высокой плотности с алюминиевыми щитами строительных лесов, обернутыми защитной пленкой и усиленными бандажными лентами, готовые к отправке на экспорт.",
 };

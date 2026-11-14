@@ -2043,4 +2043,10 @@ export const fr = {
   "φ219–2020 mm (Wall up to 20 mm)": "φ219–2020 mm (Mur jusqu'à 20 mm)",
   "φ219–2020 mm double-sided submerged arc welded spiral steel pipes for long-distance oil/gas pipelines, urban water transmission, and foundation piling.": "Tubes en acier en spirale soudés à l'arc submergé double face de φ219–2020 mm pour les oléoducs/gazoducs longue distance, le transport d'eau urbain et les pieux de fondation.",
   "φ219–2020 mm, wall thickness up to 20 mm": "φ219–2020 mm, épaisseur de paroi jusqu'à 20 mm",
+  "Extruded Aluminum Scaffold Platform Boards Stack": "Pile de planches de plate-forme d'échafaudage en aluminium extrudé",
+  "Anti-Slip Ribbed Profile & Heavy-Duty End Hooks Detail": "Détail du profil nervuré antidérapant et des crochets d'extrémité robustes",
+  "Factory Warehouse Export Stillage of Aluminum Planks": "Stockage d'exportation en entrepôt d'usine de planches d'aluminium",
+  "Precision-extruded structural aluminum scaffold platform planks with continuous anti-slip longitudinal traction ribs and cast safety end hooks.": "Planches de plate-forme d'échafaudage en aluminium structurel extrudé avec précision avec nervures de traction longitudinales antidérapantes continues et crochets d'extrémité de sécurité coulés.",
+  "Close-up engineering view of the extruded hollow-box aluminum profile with integrated traction grooves and reinforced triple end hook connections.": "Vue technique en gros plan du profilé en aluminium à caisson creux extrudé avec rainures de traction intégrées et connexions de crochet à triple extrémité renforcées.",
+  "High-density factory stillage stacks of protective film-wrapped aluminum scaffold boards with reinforced perimeter banding ready for export shipping.": "Piles de stockage d'usine haute densité de planches d'échafaudage en aluminium enveloppées d'un film protecteur avec cerclage périphérique renforcé prêtes pour l'expédition à l'exportation.",
 };
