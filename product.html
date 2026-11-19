@@ -69,10 +69,9 @@
     }
     
     .detail-image-card {
-      background-color: var(--color-canvas-soft);
-      border: 1px solid var(--color-hairline);
-      border-radius: var(--radius-sm);
-      padding: 16px;
+      background: transparent;
+      border: none;
+      padding: 0;
       text-align: center;
     }
     
@@ -87,9 +86,9 @@
       border-radius: var(--radius-sm);
       overflow: hidden;
       width: 100%;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 4 / 3;
       box-shadow: var(--shadow-product);
-      padding: 18px 46px;
+      padding: 4px;
       box-sizing: border-box;
     }
 
@@ -115,23 +114,23 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 38px;
-      height: 38px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(11, 21, 36, 0.72);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(0, 0, 0, 0.14);
-      color: var(--color-ink, #081830);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       z-index: 5;
       padding: 0;
-      opacity: 0.92;
+      opacity: 0.88;
     }
     .slider-arrow:hover {
       opacity: 1;
@@ -145,10 +144,10 @@
       transform: translateY(-50%) scale(0.94);
     }
     .slider-arrow--prev {
-      left: 8px;
+      left: 10px;
     }
     .slider-arrow--next {
-      right: 8px;
+      right: 10px;
     }
 
     /* Thumbnail Wrapper & Scroller */
@@ -425,7 +424,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 8px;
+      padding: 4px;
       box-sizing: border-box;
     }
     .accessory-img {
@@ -534,7 +533,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      padding: 12px;
+      padding: 6px;
       box-sizing: border-box;
       border-bottom: 1px solid var(--color-hairline);
     }
@@ -600,7 +599,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 8px;
+      padding: 4px;
       box-sizing: border-box;
     }
     .fitting-img {
@@ -668,7 +667,7 @@
 
     @media (max-width: 640px) {
       .detail-slider-stage {
-        padding: 14px 38px;
+        padding: 4px;
       }
       .slider-arrow {
         width: 32px;
